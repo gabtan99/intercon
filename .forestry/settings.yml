@@ -15,6 +15,14 @@ sections:
   templates:
   - project
 - type: directory
+  path: testimonies
+  label: Testimonies
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: ".md"
+  templates:
+  - testimony
+- type: directory
   path: journal
   label: Journal
   create: documents
