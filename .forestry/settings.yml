@@ -5,6 +5,14 @@ admin_path: "/static/admin"
 webhook_url: 
 sections:
 - type: directory
+  path: target
+  label: Targets
+  create: all
+  match: "**/*"
+  new_doc_ext: ".md"
+  templates:
+  - target
+- type: directory
   path: services
   label: Services
   create: all
@@ -12,9 +20,6 @@ sections:
   new_doc_ext: md
   templates:
   - services
-- type: document
-  path: targets/**/*.md
-  label: Targets
 - type: directory
   path: projects
   label: Projects
