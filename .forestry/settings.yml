@@ -9,23 +9,23 @@ sections:
   label: Testimonies
   create: documents
   match: "**/*.md"
-  new_doc_ext: ".md"
+  new_doc_ext: md
   templates:
   - testimony
 - type: directory
   path: targets
   label: Targets
   create: all
-  match: "**/*"
-  new_doc_ext: md
+  match: "**/*.md"
+  new_doc_ext: ".md"
   templates:
   - target
 - type: directory
   path: services
   label: Services
   create: all
-  match: "**/*"
-  new_doc_ext: md
+  match: "**/*.md"
+  new_doc_ext: ".md"
   templates:
   - services
 - type: directory
