@@ -7,8 +7,6 @@ sections:
 - type: document
   path: targets/**/*.md
   label: Targets
-  match: "**/*"
-  read_only: false
 - type: directory
   path: projects
   label: Projects
