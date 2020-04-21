@@ -17,7 +17,7 @@ sections:
   label: Targets
   create: all
   match: "**/*.md"
-  new_doc_ext: ".md"
+  new_doc_ext: md
   templates:
   - target
 - type: directory
@@ -25,7 +25,7 @@ sections:
   label: Services
   create: all
   match: "**/*.md"
-  new_doc_ext: ".md"
+  new_doc_ext: md
   templates:
   - services
 - type: directory
