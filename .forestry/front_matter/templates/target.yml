@@ -8,3 +8,5 @@ fields:
     required: false
   label: Title
   description: title of the target
+pages:
+- targets/target-1.md
