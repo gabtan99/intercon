@@ -5,11 +5,19 @@ admin_path: "/static/admin"
 webhook_url: 
 sections:
 - type: directory
+  path: testimonies
+  label: Testimonies
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: ".md"
+  templates:
+  - testimony
+- type: directory
   path: targets
   label: Targets
   create: all
   match: "**/*"
-  new_doc_ext: ".md"
+  new_doc_ext: md
   templates:
   - target
 - type: directory
