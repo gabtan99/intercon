@@ -6,7 +6,7 @@ webhook_url:
 sections:
 - type: directory
   path: services
-  label: Projects
+  label: Services
   create: all
   match: "**/*"
   new_doc_ext: md
