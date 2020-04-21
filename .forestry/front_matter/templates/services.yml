@@ -18,3 +18,5 @@ fields:
       format: markdown
   label: Description
   description: description of the service
+pages:
+- services/service-1.md
