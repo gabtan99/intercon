@@ -9,7 +9,7 @@ sections:
   label: Projects
   create: all
   match: "**/*"
-  new_doc_ext: ".md"
+  new_doc_ext: md
   templates:
   - services
 - type: document
