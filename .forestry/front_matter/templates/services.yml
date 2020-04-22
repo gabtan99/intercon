@@ -36,28 +36,10 @@ fields:
   description: Write a summary that will give the user an idea of what the service
     is
 - name: benefits
-  type: field_group_list
-  fields:
-  - name: benefit
-    type: text
-    config:
-      required: false
-    label: Benefit
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: Benefits
-- name: test
   type: field_group
   config: {}
   fields:
   - name: content
-    type: text
-    config:
-      required: false
-    label: Content
-  - name: benef
     type: textarea
     default: ''
     config:
@@ -65,7 +47,21 @@ fields:
       wysiwyg: false
       schema:
         format: markdown
-    label: BEnef
-  label: test
+    label: Content
+    description: Write a description about the benefits of the service
+  - name: benefit
+    type: field_group_list
+    fields:
+    - name: benefit
+      type: text
+      config:
+        required: false
+      label: Benefit
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Benefit
+  label: Benefits
 pages:
 - services/service-1.md
