@@ -16,9 +16,24 @@
           <div class="col-sm-5">
             <h3>Contact Us</h3>
             <div class="horizontal">
-              <p>210B Del Monte Ave, La Loma, Quezon City, 1114 Metro Manila</p>
-              <p>+63 9171234567 | +8888 1234</p>
-              <p>info@interconregenerative.com</p>
+              <div class="row" style=" margin: 0;">
+                <font-awesome :icon="'map-marker-alt'" class="icon" />
+                <p>
+                  210B Del Monte Ave, La Loma, Quezon City, 1114 Metro Manila
+                </p>
+              </div>
+              <div class="row contactInfo">
+                <font-awesome :icon="'phone-alt'" class="icon" />
+                <p>
+                  +63 9171234567 | +8888 1234
+                </p>
+              </div>
+              <div class="row contactInfo">
+                <font-awesome :icon="'envelope'" class="icon" />
+                <p>
+                  info@interconregenerative.com
+                </p>
+              </div>
             </div>
           </div>
           <div class="col-sm">
@@ -49,6 +64,16 @@
               <p v-if="showSuccess" class="successMsg">
                 Thank You for Subscribing!
               </p>
+              <div class="row" style="margin-left: 5px;">
+                <a href="https://www.facebook.com/interconregenerative/">
+                  <font-awesome
+                    :icon="['fab', 'facebook-square']"
+                    class="social"
+                /></a>
+                <a href="https://www.instagram.com/interconregenerative/">
+                  <font-awesome :icon="['fab', 'instagram']" class="social" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -135,7 +160,7 @@ p {
   display: flex;
   flex-direction: column;
   padding-bottom: 1.5rem;
-  padding-top: 0.2rem;
+  padding-top: 0.5rem;
 }
 
 .link {
@@ -170,5 +195,20 @@ p {
 .successMsg {
   color: #8bf38b;
   padding: 10px 0px;
+}
+
+.icon {
+  font-size: 18px;
+  margin-right: 15px;
+}
+
+.social {
+  font-size: 30px;
+  margin: 30px 10px;
+  color: white;
+}
+
+.social:hover {
+  color: rgba(255, 255, 255, 0.468);
 }
 </style>
