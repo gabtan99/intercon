@@ -35,5 +35,27 @@ fields:
   label: Introduction
   description: Write a summary that will give the user an idea of what the service
     is
+- name: benefits
+  type: field_group_list
+  fields:
+  - name: benefit
+    type: text
+    config:
+      required: false
+    label: Benefit
+  - name: content
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Content
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Benefits
 pages:
 - services/service-1.md
