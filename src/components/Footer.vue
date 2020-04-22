@@ -15,8 +15,8 @@
           </div>
           <div class="col-sm-5">
             <h3>Contact Us</h3>
-            <div class="horizontal">
-              <div class="row" style=" margin: 0;">
+            <div class="horizontal" style="margin: 0px 15px;">
+              <div class="row contactInfo">
                 <font-awesome :icon="'map-marker-alt'" class="icon" />
                 <p>
                   210B Del Monte Ave, La Loma, Quezon City, 1114 Metro Manila
