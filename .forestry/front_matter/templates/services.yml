@@ -8,7 +8,13 @@ fields:
     required: false
   label: Title
   description: Title of the service
-- name: description
+- name: image
+  type: file
+  config:
+    maxSize: 250
+  label: Image
+  description: put an image for the service
+- name: history
   type: textarea
   default: ''
   config:
@@ -16,13 +22,18 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: Description
-  description: description of the service
-- name: image
-  type: file
+  label: History
+  description: Some history of the service
+- name: introduction
+  type: textarea
+  default: ''
   config:
-    maxSize: 250
-  label: Image
-  description: put an image for the service
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Introduction
+  description: Write a summary that will give the user an idea of what the service
+    is
 pages:
 - services/service-1.md
