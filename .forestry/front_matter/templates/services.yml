@@ -90,5 +90,24 @@ fields:
       labelField: 
     label: Conditions
   label: Condition
+- name: statistics_and_analysis
+  type: field_group
+  config: {}
+  fields:
+  - name: content
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Content
+  - name: statistics_picture
+    type: file
+    config:
+      maxSize: 250
+    label: Statistics Picture
+  label: Statistics and Analysis
 pages:
 - services/service-1.md
