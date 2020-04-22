@@ -49,11 +49,23 @@ fields:
     labelField: 
   label: Benefits
 - name: test
-  type: blocks
-  label: Test
-  template_types: []
-  config:
-    min: 
-    max: 
+  type: field_group
+  config: {}
+  fields:
+  - name: content
+    type: text
+    config:
+      required: false
+    label: Content
+  - name: benef
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: BEnef
+  label: test
 pages:
 - services/service-1.md
