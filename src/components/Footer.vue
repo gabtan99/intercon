@@ -27,21 +27,28 @@
               <p>
                 You can trust us. we only send promo offers, not a single spam
               </p>
-              <form>
+              <form
+                @submit.prevent="handleSubmit"
+                style="box-shadow: 0px 30px 30px #00000029;"
+              >
                 <div class="input-group">
                   <input
                     type="text"
                     class="form-control emailInput"
                     name="email"
                     placeholder="Your email address"
+                    v-on:input="handleChange"
                   />
                   <span class="input-group-btn subscribe">
-                    <button class="btn btn-default subscribeBtn" type="button">
+                    <button class="btn btn-default subscribeBtn" type="submit">
                       Join
                     </button>
                   </span>
                 </div>
               </form>
+              <p v-if="showSuccess" class="successMsg">
+                Thank You for Subscribing!
+              </p>
             </div>
           </div>
         </div>
@@ -52,16 +59,62 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
       settings: require("../../data/theme.json"),
+      email: null,
+      showSuccess: false,
     };
+  },
+  methods: {
+    handleChange(text) {
+      this.email = text.target.value;
+      console.log(this.email);
+    },
+    handleSubmit() {
+      this.showSuccess = true;
+      //   const url = "https://us19.api.mailchimp.com/3.0/lists/42801b9de0";
+      //   const token = "c3566894e1b61bc0ee7c1bd61a1c810c-us19";
+      //   const data = {
+      //     members: [
+      //       {
+      //         email_address: "gabtanwdwad99@gmail.com",
+      //         status: "subscribed",
+      //       },
+      //     ],
+      //   };
+      //   axios
+      //     .post(url, {
+      //       headers: {
+      //         Authorization: `auth ${token}`,
+      //         "Access-Control-Allow-Origin": "http://localhost:8080",
+      //         "Content-Type": "application/json",
+      //       },
+      //       crossDomain: true,
+      //       body: {
+      //         data: JSON.stringify(data),
+      //       },
+      //     })
+      //     .then(function(response) {
+      //       this.showSuccess = true;
+      //       console.log(response);
+      //     })
+      //     .catch(function(error) {
+      //       console.log(error);
+      //     });
+    },
   },
 };
 </script>
 
 <style scoped>
+p {
+  font-size: 13px;
+}
+
 .footer {
   font-size: 0.8rem;
   background: #123450 0% 0% no-repeat padding-box;
@@ -82,11 +135,12 @@ export default {
   display: flex;
   flex-direction: column;
   padding-bottom: 1.5rem;
+  padding-top: 0.2rem;
 }
 
 .link {
   color: #ffffff;
-  padding: 5px;
+  padding: 5px 0px;
 }
 
 .mainContent {
@@ -110,6 +164,11 @@ export default {
 }
 
 .emailInput::placeholder {
-  opacity: 0.3;
+  opacity: 0.5;
+}
+
+.successMsg {
+  color: #8bf38b;
+  padding: 10px 0px;
 }
 </style>
