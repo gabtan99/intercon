@@ -63,5 +63,32 @@ fields:
       labelField: 
     label: Benefit
   label: Benefits
+- name: condition
+  type: field_group
+  config: {}
+  fields:
+  - name: content
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Content
+  - name: conditions
+    type: field_group_list
+    fields:
+    - name: condition
+      type: text
+      config:
+        required: false
+      label: Condition
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Conditions
+  label: Condition
 pages:
 - services/service-1.md
