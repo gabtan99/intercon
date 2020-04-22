@@ -18,5 +18,11 @@ fields:
       format: markdown
   label: Description
   description: description of the service
+- name: image
+  type: file
+  config:
+    maxSize: 250
+  label: Image
+  description: put an image for the service
 pages:
 - services/service-1.md
