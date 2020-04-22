@@ -4,7 +4,7 @@
  * @author Lea Verou
  */
 
-code[class*="language-"],
+/* code[class*="language-"],
 pre[class*="language-"] {
 	color: black;
 	background: none;
@@ -44,10 +44,10 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 	pre[class*="language-"] {
 		text-shadow: none;
 	}
-}
+} */
 
 /* Code blocks */
-pre[class*="language-"] {
+/* pre[class*="language-"] {
 	padding: 1em;
 	margin: .5em 0;
 	overflow: auto;
@@ -56,10 +56,10 @@ pre[class*="language-"] {
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
 	background: var(--color-base-1);
-}
+} */
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+/* :not(pre) > code[class*="language-"] {
 	padding: .1em;
 	border-radius: .3em;
 	white-space: normal;
@@ -134,4 +134,4 @@ pre[class*="language-"] {
 
 .token.entity {
 	cursor: help;
-}
+} */
