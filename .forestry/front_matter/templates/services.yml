@@ -43,19 +43,17 @@ fields:
     config:
       required: false
     label: Benefit
-  - name: content
-    type: textarea
-    default: ''
-    config:
-      required: false
-      wysiwyg: false
-      schema:
-        format: markdown
-    label: Content
   config:
     min: 
     max: 
     labelField: 
   label: Benefits
+- name: test
+  type: blocks
+  label: Test
+  template_types: []
+  config:
+    min: 
+    max: 
 pages:
 - services/service-1.md
