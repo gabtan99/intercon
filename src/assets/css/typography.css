@@ -41,109 +41,109 @@ html {
 
 @font-face {
   font-family: Gilroy-Regular;
-  src: url(/fonts/Gilroy-Regular.ttf);
+  src: url(../fonts/Gilroy-Regular.ttf);
   font-display: swap;
 }
 
 @font-face {
   font-family: Gilroy-Light;
-  src: url(/fonts/Gilroy-Light.ttf);
+  src: url(../fonts/Gilroy-Light.ttf);
   font-display: swap;
 }
 
 @font-face {
   font-family: Gilroy-Medium;
-  src: url(/fonts/Gilroy-Medium.ttf);
+  src: url(../fonts/Gilroy-Medium.ttf);
   font-display: swap;
 }
 
 @font-face {
   font-family: Gilroy-Heavy;
-  src: url(/fonts/Gilroy-Heavy.ttf);
+  src: url(../fonts/Gilroy-Heavy.ttf);
   font-display: swap;
 }
 
 @font-face {
   font-family: Gilroy-Bold;
-  src: url(/fonts/Gilroy-Bold.ttf);
+  src: url(../fonts/Gilroy-Bold.ttf);
   font-display: swap;
 }
 
 @font-face {
   font-family: Gilroy-ExtraBold;
-  src: url(/fonts/Gilroy-ExtraBold.otf);
+  src: url(../fonts/Gilroy-ExtraBold.otf);
   font-display: swap;
 }
 
 @font-face {
   font-family: Avenir-Black;
-  src: url(/fonts/Avenir-Black.otf);
+  src: url(../fonts/Avenir-Black.otf);
   font-display: swap;
 }
 
 @font-face {
   font-family: Avenir-BlackOblique;
-  src: url(/fonts/Avenir-BlackOblique.otf);
+  src: url(../fonts/Avenir-BlackOblique.otf);
   font-display: swap;
 }
 
 @font-face {
   font-family: Avenir-Book;
-  src: url(/fonts/Avenir-Book.otf);
+  src: url(../fonts/Avenir-Book.otf);
   font-display: swap;
 }
 
 @font-face {
   font-family: Avenir-BookOblique;
-  src: url(/fonts/Avenir-BookOblique.otf);
+  src: url(../fonts/Avenir-BookOblique.otf);
   font-display: swap;
 }
 
 @font-face {
   font-family: Avenir-Heavy;
-  src: url(/fonts/Avenir-Heavy.otf);
+  src: url(../fonts/Avenir-Heavy.otf);
   font-display: swap;
 }
 
 @font-face {
   font-family: Avenir-HeavyOblique;
-  src: url(/fonts/Avenir-HeavyOblique.otf);
+  src: url(../fonts/Avenir-HeavyOblique.otf);
   font-display: swap;
 }
 
 @font-face {
   font-family: Avenir-Light;
-  src: url(/fonts/Avenir-Light.otf);
+  src: url(../fonts/Avenir-Light.otf);
   font-display: swap;
 }
 
 @font-face {
   font-family: Avenir-LightOblique;
-  src: url(/fonts/Avenir-LightOblique.otf);
+  src: url(../fonts/Avenir-LightOblique.otf);
   font-display: swap;
 }
 
 @font-face {
   font-family: Avenir-Medium;
-  src: url(/fonts/Avenir-Medium.otf);
+  src: url(../fonts/Avenir-Medium.otf);
   font-display: swap;
 }
 
 @font-face {
   font-family: Avenir-MediumOblique;
-  src: url(/fonts/Avenir-MediumOblique.otf);
+  src: url(../fonts/Avenir-MediumOblique.otf);
   font-display: swap;
 }
 
 @font-face {
   font-family: Avenir-Oblique;
-  src: url(/fonts/Avenir-Oblique.otf);
+  src: url(../fonts/Avenir-Oblique.otf);
   font-display: swap;
 }
 
 @font-face {
   font-family: Avenir-Roman;
-  src: url(/fonts/Avenir-Roman.otf);
+  src: url(../fonts/Avenir-Roman.otf);
   font-display: swap;
 }
 
