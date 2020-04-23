@@ -1,83 +1,83 @@
 <template>
-    <header class="header" :class="{sticky: $route.path === '/' || $route.path.includes('/projects/')}">
-        <div class="container">
-            <div class="left">
-                <g-link :to="{ name: 'home' }" class="home-link">
-                    <img 
-                        src="../../static/logo.svg"
-                        :alt="settings.site_name" 
-                        class="logo"
-                    />
-                </g-link>
-            </div>
-            <nav class="nav right">
-                <g-link class="nav__link" to="/journal">Journal</g-link>
-                <g-link class="nav__link" to="/contact">Say Hi!</g-link>
-            </nav>
-        </div>
-    </header>
+	<b-navbar
+		toggleable="md"
+		type="light"
+	>
+		<div class="container">
+			<b-navbar-brand>
+				<img
+					src="@/assets/img/irc-logo-brand.png"
+					alt="Intercon Regenrative Center"
+				>
+			</b-navbar-brand>
+
+			<b-navbar-toggle
+				target="nav-collapse"
+			>
+			</b-navbar-toggle>
+
+			<b-collapse
+				id="nav-collapse"
+				is-nav
+			>
+				<b-navbar-nav
+					class="ml-auto"
+				>
+					<b-nav-item
+						v-for="item in routes"
+						:key="item.name"
+						:to="item.to"
+						exact
+						class="font-18 font-gilroy-bold mx-4"
+						active-class="header-nav-item--active"
+					>
+						{{item.name}}
+					</b-nav-item>
+				</b-navbar-nav>
+			</b-collapse>
+		</div>
+
+	</b-navbar>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-        logo: require("../../static/logo.svg"),
-        settings: require("../../data/theme.json")
-    }
-  }
-}
+	export default {
+		data() {
+			return{
+				routes: [
+					{
+						name: 'Home',
+						to: '/'
+					},
+					{
+						name: 'Services',
+						to: '/services'
+					},
+					{
+						name: 'Targets',
+						to: '/targets'
+					},
+					{
+						name: 'About Us',
+						to: '/about'
+					}
+				]
+			}
+		}
+	}
 </script>
 
 <style scoped>
-.header {
-    position: relative;
-    height: 6rem;
-    z-index: 10;
-}
-.header.sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-.header > .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-}
-.home-link {
-    text-decoration: none;
-}
-.logo {
-    height: 1.5rem;
-}
-.site-name {
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    text-transform: uppercase;   
-}
-.nav > * {
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-decoration: none;
-    margin-top: 4px;
-    margin-right: 3rem;
-    padding-bottom: 4px;
-    border-bottom: 1px solid;
-    border-color: transparent;
-    transition: border 0.15s;
-}
-.nav > *:last-of-type {
-    margin: 0;
-}
-.nav > *:hover {
-    border-color: inherit;
-}
-.nav > .active {
-    border-color: inherit;
-}
+	.nav-link {
+		color: var(--black-text) !important;
+		transition: all ease-in 0.15s;
+	}
+	.nav-link:hover {
+		transform: translateY(-0.3rem);
+		color: var(--blue-branding) !important;
+	}
+	.header-nav-item--active {
+		border-bottom: 0.3rem solid;
+		border-bottom-color:  var(--bluegreen-link);
+	}
 </style>
