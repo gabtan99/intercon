@@ -76,7 +76,10 @@
                   </span>
                 </div>
               </form>
-              <p v-if="showSuccess" class="successMsg">
+              <p
+                v-if="showSuccess"
+                class="successMsg font-avenir-light font-16"
+              >
                 Thank You for Subscribing!
               </p>
               <div class="row" style="margin-left: 5px;">
@@ -156,8 +159,8 @@ export default {
 <style scoped>
 .footer {
   font-size: 0.8rem;
-  background: #123450 0% 0% no-repeat padding-box;
-  color: #ffffff;
+  background: var(--blue-branding);
+  color: var(--white);
   padding-top: 30px;
   padding-bottom: 15px;
 }
@@ -176,7 +179,7 @@ export default {
 }
 
 .link {
-  color: #ffffff;
+  color: var(--white);
   padding: 5px 0px;
 }
 
@@ -185,13 +188,13 @@ export default {
 }
 
 .subscribe {
-  background: #0e95b6;
+  background: var(--blue-branding-light);
   padding: 0px 10px;
   border-radius: 0px 30px 30px 0px;
 }
 
 .subscribeBtn {
-  color: #ffffff;
+  color: var(--white);
 }
 
 .emailInput {
@@ -204,8 +207,8 @@ export default {
 }
 
 .successMsg {
-  color: #8bf38b;
-  padding: 10px 0px;
+  color: var(--green-branding-light);
+  padding-top: 10px;
 }
 
 .icon {
@@ -215,12 +218,12 @@ export default {
 
 .social {
   margin: 30px 10px;
-  color: white;
+  color: var(--white);
   font-size: 24px;
 }
 
 .social:hover {
-  color: rgba(255, 255, 255, 0.468);
+  color: var(--gray-3);
 }
 
 .contact-info {
