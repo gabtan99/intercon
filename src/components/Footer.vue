@@ -154,6 +154,10 @@ export default {
 </script>
 
 <style scoped>
+p {
+  font-size: 13px;
+}
+
 .footer {
   font-size: 0.8rem;
   background: #123450 0% 0% no-repeat padding-box;
