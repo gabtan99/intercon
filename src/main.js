@@ -1,38 +1,52 @@
-import DefaultLayout from "~/layouts/Default.vue";
-import settings from "../data/theme.json";
-import BootstrapVue from "bootstrap-vue";
+import DefaultLayout from '~/layouts/Default.vue'
+import settings from '../data/theme.json'
+import BootstrapVue from 'bootstrap-vue'
 
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue/dist/bootstrap-vue.css";
-import "@/assets/css/index.css";
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import '@/assets/css/index.css'
 
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { config, library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { config, library } from '@fortawesome/fontawesome-svg-core'
 import {
   faFacebookSquare,
   faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+} from '@fortawesome/free-brands-svg-icons'
+
 import {
   faMapMarkerAlt,
   faPhoneAlt,
   faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
-import "@fortawesome/fontawesome-svg-core/styles.css";
+  faSmileWink,
+  faDumbbell,
+  faFootballBall,
+  faLeaf,
+  faMale,
+  faFemale,
+} from '@fortawesome/free-solid-svg-icons'
 
-config.autoAddCss = false;
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
+config.autoAddCss = false
 library.add(
   faFacebookSquare,
   faInstagram,
   faMapMarkerAlt,
   faPhoneAlt,
-  faEnvelope
-);
+  faEnvelope,
+  faSmileWink,
+  faDumbbell,
+  faFootballBall,
+  faLeaf,
+  faMale,
+  faFemale,
+)
 
-export default function(Vue, { head }) {
-  Vue.use(BootstrapVue);
-  Vue.component("Layout", DefaultLayout);
-  Vue.component("font-awesome", FontAwesomeIcon);
+export default function (Vue, { head }) {
+  Vue.use(BootstrapVue)
+  Vue.component('Layout', DefaultLayout)
+  Vue.component('font-awesome', FontAwesomeIcon)
   head.bodyAttrs = {
-    class: settings.dark_mode ? "dark" : "",
-  };
+    class: settings.dark_mode ? 'dark' : '',
+  }
 }
