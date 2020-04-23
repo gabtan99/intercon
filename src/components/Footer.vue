@@ -217,7 +217,8 @@ export default {
 }
 
 .social {
-  margin: 30px 10px;
+  margin: 20px 0px;
+  margin-right: 15px;
   color: var(--white);
   font-size: 24px;
 }
