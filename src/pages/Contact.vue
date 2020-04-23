@@ -2,32 +2,49 @@
   <Layout>
     <div class="container">
 
-      <div class="contact-header">
-        <h1 class="contact-title">Say hi!</h1>
-        <p>Leave me a note with any questions you might have, I'll get back to you as soon as possible.</p>
-      </div>
+      <b-container>
+        <b-row>
+          <b-col sm="14">
+            <div class="contact-header">
+              <h1 class="contact-title">Get in touch</h1>
+              <p>We're here to help and answer any questions you might have. Looking forward to hearing from you!</p>
+            </div>
 
-      <form class="contact-form" name="contact">
+            <form class="contact-form" name="contact">
 
-        <div class="sender-info">
-          <div>
-            <label for="name" class="label">Your name</label>
-            <input type="text" name="name" />
-          </div>
-          <div>
-            <label for="email" class="label">Your email</label>
-            <input type="email" name="email" />
-          </div>
-        </div>
+              <div class="sender-info">
+                <div class="form-item">
+                  <label for="name" class="label required">Name</label>
+                  <input type="text" name="name"/>
+                </div>
+                <div class="form-item">
+                  <label for="email" class="label required">Email Address</label>
+                  <input type="email" name="email"/>
+                </div>
+                <div class="form-item">
+                  <label for="subject" class="label required">Subject</label>
+                  <select id="subject" name="subject">
+                    <option value="1">Apple</option>
+                    <option value="2">Banana</option>
+                    <option value="3">Pineapple</option>
+                  </select>
+                </div>
+                <div class="form-item">
+                  <label for="message" class="label required">Message</label>
+                  <textarea name="message"></textarea>
+                </div>
+              </div>
+        
+              <button class="button">Submit</button>
 
-        <div class="message">
-          <label for="message" class="label">Message</label>
-          <textarea name="message"></textarea>
-        </div>
+            </form>
+          </b-col>
 
-        <button class="button">Submit form</button>
-
-      </form>
+          <b-col sm="8">
+            hello world
+          </b-col>
+        </b-row>
+      </b-container>
 
     </div>
   </Layout>
