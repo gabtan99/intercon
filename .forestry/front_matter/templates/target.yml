@@ -1,4 +1,12 @@
 ---
 label: Target
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  description: title of the target
+pages:
+- targets/target-1.md

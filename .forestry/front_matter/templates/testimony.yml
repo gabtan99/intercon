@@ -24,4 +24,5 @@ fields:
     maxSize: 250
   label: Image
 pages:
+- testimonies/Sample.md
 - testimonies/testimony.md
