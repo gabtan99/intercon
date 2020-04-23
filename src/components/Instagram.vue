@@ -5,7 +5,24 @@
       <p class="subheader font-avenir-book font-21">@interconregenerative</p>
     </div>
 
-    <div class="img-container"></div>
+    <div class="img-container">
+      <b-row>
+        <div class="thumbnail">
+          <img src="../assets/img/colon-heart.png" />
+        </div>
+        <div class="thumbnail">
+          <img src="../assets/img/hyperbaric.png" />
+        </div>
+      </b-row>
+      <b-row>
+        <div class="thumbnail">
+          <img src="../assets/img/colon-hydrotherapy.png" />
+        </div>
+        <div class="thumbnail">
+          <img src="../assets/img/red-light.png" />
+        </div>
+      </b-row>
+    </div>
   </div>
 </template>
 
@@ -28,7 +45,7 @@ export default {
   );
   display: flex;
   flex-direction: row;
-  padding: 30px 20px;
+  padding: 80px 15px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -38,12 +55,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   margin-right: 10%;
-}
-
-.img-container {
-  width: 40%;
-  height: auto;
-  padding: 0px 30px;
 }
 
 .header {
@@ -56,8 +67,23 @@ export default {
 
 .thumbnail {
   position: relative;
+  overflow: hidden;
+  box-shadow: 0px 30px 30px #00000029;
+}
+
+img {
+  object-fit: cover;
   width: 200px;
   height: 200px;
-  overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .img-container {
+    padding-top: 30px;
+  }
+
+  img {
+    width: 140px;
+    height: 140px;
+  }
 }
 </style>

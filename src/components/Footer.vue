@@ -118,38 +118,37 @@ export default {
   methods: {
     handleChange(text) {
       this.email = text.target.value;
-      console.log(this.email);
     },
     handleSubmit() {
       this.showSuccess = true;
-      const url = "https://us19.api.mailchimp.com/3.0/lists/42801b9de0";
-      const token = "c3566894e1b61bc0ee7c1bd61a1c810c-us19";
-      const data = {
-        members: [
-          {
-            email_address: this.email,
-            status: "subscribed",
-          },
-        ],
-      };
-      axios
-        .post(url, {
-          headers: {
-            Authorization: `auth ${token}`,
-            "Access-Control-Allow-Origin": "*",
-          },
-          crossDomain: true,
-          body: {
-            data: JSON.stringify(data),
-          },
-        })
-        .then(function(response) {
-          this.showSuccess = true;
-          console.log(response);
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
+      // const url = "https://us19.api.mailchimp.com/3.0/lists/42801b9de0";
+      // const token = "c3566894e1b61bc0ee7c1bd61a1c810c-us19";
+      // const data = {
+      //   members: [
+      //     {
+      //       email_address: this.email,
+      //       status: "subscribed",
+      //     },
+      //   ],
+      // };
+      // axios
+      //   .post(url, {
+      //     headers: {
+      //       Authorization: `auth ${token}`,
+      //       "Access-Control-Allow-Origin": "*",
+      //     },
+      //     crossDomain: true,
+      //     body: {
+      //       data: JSON.stringify(data),
+      //     },
+      //   })
+      //   .then(function(response) {
+      //     this.showSuccess = true;
+      //     console.log(response);
+      //   })
+      //   .catch(function(error) {
+      //     console.log(error);
+      //   });
     },
   },
 };
