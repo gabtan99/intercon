@@ -4,42 +4,54 @@
       <div class="mainContent">
         <div class="row">
           <div class="col-sm-2">
-            <h3>Links</h3>
+            <h2 class="font-gilroy-bold font-24">Links</h2>
             <div class="horizontal">
-              <g-link to="/" class="link">Home</g-link>
-              <g-link to="/about/" class="link">About Us</g-link>
-              <g-link to="/services/" class="link">Services</g-link>
-              <g-link to="/targets/" class="link">Targets</g-link>
-              <g-link to="/contact/" class="link">Contact Us</g-link>
+              <g-link to="/" class="link font-avenir-light font-16"
+                >Home</g-link
+              >
+              <g-link to="/about/" class="link font-avenir-light font-16"
+                >About Us</g-link
+              >
+              <g-link to="/services/" class="link font-avenir-light font-16"
+                >Services</g-link
+              >
+              <g-link to="/targets/" class="link font-avenir-light font-16"
+                >Targets</g-link
+              >
+              <g-link to="/contact/" class="link font-avenir-light font-16"
+                >Contact Us</g-link
+              >
             </div>
           </div>
           <div class="col-sm-5">
-            <h3>Contact Us</h3>
-            <div class="horizontal" style="margin: 0px 15px;">
-              <div class="row contactInfo">
+            <h2 class="font-gilroy-bold font-24">Contact Us</h2>
+            <div class="horizontal">
+              <span class="contact-info">
                 <font-awesome :icon="'map-marker-alt'" class="icon" />
-                <p>
+                <p class="font-avenir-light font-16">
                   210B Del Monte Ave, La Loma, Quezon City, 1114 Metro Manila
                 </p>
-              </div>
-              <div class="row contactInfo">
+              </span>
+
+              <span class="contact-info">
                 <font-awesome :icon="'phone-alt'" class="icon" />
-                <p>
+                <p class="font-avenir-light font-16">
                   +63 9171234567 | +8888 1234
                 </p>
-              </div>
-              <div class="row contactInfo">
+              </span>
+
+              <span class="contact-info">
                 <font-awesome :icon="'envelope'" class="icon" />
-                <p>
+                <p class="font-avenir-light font-16">
                   info@interconregenerative.com
                 </p>
-              </div>
+              </span>
             </div>
           </div>
           <div class="col-sm">
-            <h3>Subscribe to Newsletter</h3>
+            <h2 class="font-gilroy-bold font-24">Subscribe to Newsletter</h2>
             <div class="horizontal">
-              <p>
+              <p class="font-avenir-light font-16">
                 You can trust us. we only send promo offers, not a single spam
               </p>
               <form
@@ -49,13 +61,16 @@
                 <div class="input-group">
                   <input
                     type="text"
-                    class="form-control emailInput"
+                    class="form-control emailInput font-avenir-light font-16"
                     name="email"
                     placeholder="Your email address"
                     v-on:input="handleChange"
                   />
                   <span class="input-group-btn subscribe">
-                    <button class="btn btn-default subscribeBtn" type="submit">
+                    <button
+                      class="btn btn-default subscribeBtn font-gilroy-extra-bold font-16"
+                      type="submit"
+                    >
                       Join
                     </button>
                   </span>
@@ -78,7 +93,10 @@
           </div>
         </div>
       </div>
-      <span v-html="settings.footer" class="copyright" />
+      <span
+        v-html="settings.footer"
+        class="copyright font-avenir-light font-16"
+      />
     </div>
   </footer>
 </template>
@@ -136,18 +154,12 @@ export default {
 </script>
 
 <style scoped>
-p {
-  font-size: 13px;
-}
-
 .footer {
   font-size: 0.8rem;
   background: #123450 0% 0% no-repeat padding-box;
   color: #ffffff;
-}
-
-.bold {
-  font-weight: bold;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
 .copyright {
@@ -180,7 +192,6 @@ p {
 
 .subscribeBtn {
   color: #ffffff;
-  font-weight: bold;
 }
 
 .emailInput {
@@ -198,17 +209,23 @@ p {
 }
 
 .icon {
-  font-size: 18px;
   margin-right: 15px;
+  font-size: 18px;
 }
 
 .social {
-  font-size: 30px;
   margin: 30px 10px;
   color: white;
+  font-size: 24px;
 }
 
 .social:hover {
   color: rgba(255, 255, 255, 0.468);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 0px;
 }
 </style>
