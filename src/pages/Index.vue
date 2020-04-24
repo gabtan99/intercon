@@ -6,6 +6,7 @@
     </div>
     <LatestJournals :journals="$page.journals.edges" />
     <Instagram />
+    <Testimonies />
   </Layout>
 </template>
 
@@ -40,6 +41,7 @@ import Hero from "@/components/Hero";
 import ProjectsGrid from "@/components/ProjectsGrid";
 import LatestJournals from "@/components/LatestJournals";
 import Instagram from "@/components/Instagram";
+import Testimonies from "@/components/Testimonies";
 
 export default {
   components: {
@@ -47,6 +49,7 @@ export default {
     ProjectsGrid,
     LatestJournals,
     Instagram,
+    Testimonies,
   },
 };
 </script>
