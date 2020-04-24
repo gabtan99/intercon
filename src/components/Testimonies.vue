@@ -4,6 +4,7 @@
     <div class="card-container">
       <carousel
         :autoplay="true"
+        :autoplayTimeout="20000"
         :perPageCustom="[[360, 1], [768, 2], [1024, 3]]"
       >
         <slide v-for="item in items" v-bind:key="item.id">
@@ -15,7 +16,6 @@
 </template>
 
 <script>
-import { Carousel, Slide } from "vue-carousel";
 import TestimonyCard from "@/components/TestimonyCard";
 
 export default {
@@ -27,8 +27,6 @@ export default {
   },
   components: {
     TestimonyCard,
-    Carousel,
-    Slide,
   },
 };
 </script>
@@ -47,6 +45,12 @@ export default {
 @media only screen and (max-width: 768px) {
   .main {
     padding: 10%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .card-container {
+    margin: 0px 100px;
   }
 }
 </style>
