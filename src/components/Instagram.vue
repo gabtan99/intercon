@@ -2,11 +2,15 @@
   <div class="main">
     <div class="text-container">
       <h1 class="header font-gilroy-bold font-42">Join Our <br />Community</h1>
+      <<<<<<< HEAD
       <a
         class="subheader font-avenir-book font-21"
         href="https://www.instagram.com/interconregenerative/"
         >@interconregenerative</a
       >
+      =======
+      <p class="subheader font-avenir-book font-21">@interconregenerative</p>
+      >>>>>>> 44a025a9772d28150003f5f45c916d55c550e4ce
     </div>
 
     <div class="img-container">
