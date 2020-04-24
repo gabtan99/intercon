@@ -9,7 +9,10 @@
                 <p class="font-avenir-light font-18 blue">We're here to help and answer any questions you might have. Looking forward to hearing from you!</p>
               </div>
 
-              <form class="contact-form" name="contact">
+              <form 
+                class="contact-form" 
+                name="contact"
+              >
 
                 <div class="sender-info">
                   <div class="form-item">
@@ -35,9 +38,13 @@
                     <textarea name="message" class="font-gilroy-regular font-16 blue required"></textarea>
                   </div>
                 </div>
-          
-                <button class="button font-gilroy-regular font-16">Submit</button>
 
+                <GreenButton class="submitBtn"
+                :onClick=submitForm
+                >
+                  Submit
+                  <font-awesome :icon="['fas', 'paper-plane']" class="plane-icon"/>
+                </GreenButton>
               </form>
             </div>
           </b-col>
@@ -93,7 +100,22 @@
 </template>
 
 <script>
-export default {}
+  import GreenButton from "@/components/GreenButton";
+
+    export default {
+      components: {
+        GreenButton
+      },
+      data() {
+        return{
+        }
+      },
+      methods: {
+        submitForm(){
+          
+        }
+      }
+    }
 </script>
 
 <style scoped>
@@ -225,5 +247,13 @@ textarea {
 
 .blue {
   color: #123450
+}
+
+.submitBtn {
+  float: right
+}
+
+.plane-icon {
+  margin-left: 10px;
 }
 </style>

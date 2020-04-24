@@ -16,6 +16,7 @@ import {
   faMapMarkerAlt,
   faPhoneAlt,
   faEnvelope,
+  faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
@@ -25,7 +26,8 @@ library.add(
   faInstagram,
   faMapMarkerAlt,
   faPhoneAlt,
-  faEnvelope
+  faEnvelope,
+  faPaperPlane,
 );
 
 export default function(Vue, { head }) {
