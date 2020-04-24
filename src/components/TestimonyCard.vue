@@ -1,6 +1,8 @@
 <template>
-  <div class="container">
-    <img src="../assets/img/red-light.png" />
+  <div class="testimony-card">
+    <div class="img-container">
+      <img src="../assets/img/red-light.png" />
+    </div>
     <p class="content font-avenir-oblique font-16">
       “My migraine is gone! Thank you Intercon for the service! Bless us O Lord
       for these thy gifts, which we are about to receive from thy bounty through
@@ -24,32 +26,37 @@ export default {
 
 <style scoped>
 img {
+  display: flex;
   border-radius: 50%;
   box-shadow: 0px 5px 5px #76767629;
   object-fit: cover;
   width: 130px;
   height: 130px;
   margin: 5px auto;
+  margin-top: 20px;
 }
 
-.container {
-  box-shadow: 0px 5px 5px #76767629;
+.img-container {
+  padding-top: 20px;
+}
+
+.testimony-card {
+  box-shadow: 0px 5px 10px #76767629;
+  margin: auto;
   border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  width: 260px;
-  padding: 15px 10px;
+  width: 270px;
 }
 
 .content {
-  padding: 20px;
+  padding: 30px;
   padding-bottom: 10px;
   color: var(--blue-branding-dark);
 }
 
 .author {
-  padding: 0px 20px;
+  padding: 0px 30px;
   color: var(--blue-branding-dark);
   text-align: right;
+  padding-bottom: 25px;
 }
 </style>
