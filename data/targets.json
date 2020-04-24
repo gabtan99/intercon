@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Skin Care",
+    "icon": "smile-wink",
+    "color": "#C1CA43",
+    "background": "#f3f3d3",
+    "height": "160px",
+    "margin": true
+  },
+  {
+    "name": "Immune Support",
+    "icon": "dumbbell",
+    "color": "#2C4C58",
+    "background": "#bed3e5",
+    "height": "120px"
+  },
+  {
+    "name": "Detoxification",
+    "icon": "leaf",
+    "color": "#006838",
+    "background": "#d7ebdd",
+    "height": "150px"
+  },
+  {
+    "name": "Athleticism",
+    "icon": "football-ball",
+    "color": "#463505",
+    "background": "#E2D8B9",
+    "height": "150px"
+  },
+  {
+    "name": "Male Issues",
+    "icon": "male",
+    "color": "#2C4C58",
+    "background": "#C0E1E8",
+    "height": "140px"
+  },
+  {
+    "name": "Female Issues",
+    "icon": "female",
+    "color": "#D912CC",
+    "background": "#F6CBED",
+    "height": "140px"
+  },
+  {
+    "name": "Immune Support",
+    "icon": "dumbbell",
+    "color": "#2C4C58",
+    "background": "#bed3e5",
+    "height": "140px"
+  },
+  {
+    "name": "Detoxification",
+    "icon": "leaf",
+    "color": "#006838",
+    "background": "#D7EBDD",
+    "height": "160px"
+  },
+  {
+    "name": "Athleticism",
+    "icon": "football-ball",
+    "color": "#463505",
+    "background": "#E2D8B9",
+    "height": "130px"
+  }
+]
