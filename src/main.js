@@ -23,6 +23,8 @@ import {
   faLeaf,
   faMale,
   faFemale,
+  faTimes,
+  faStarOfLife,
 } from '@fortawesome/free-solid-svg-icons'
 
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -40,6 +42,8 @@ library.add(
   faLeaf,
   faMale,
   faFemale,
+  faTimes,
+  faStarOfLife,
 )
 
 export default function (Vue, { head }) {
