@@ -1,10 +1,5 @@
 <template>
   <Layout>
-    <div class="container">
-      <Hero />
-      <ProjectsGrid :projects="$page.projects.edges" />
-    </div>
-    <LatestJournals :journals="$page.journals.edges" />
   </Layout>
 </template>
 
