@@ -2,21 +2,15 @@
   <div class="main">
     <h1 class="header font-gilroy-bold font-36">What Our Clients Say</h1>
     <div class="card-container">
-      <carousel
-        :autoplay="true"
-        :perPageCustom="[[360, 1], [768, 2], [1024, 3]]"
-      >
-        <slide v-for="item in items" v-bind:key="item.id">
-          <Testimony-card />
-        </slide>
-      </carousel>
+      <ClientOnly>
+        <testimony-carousel :items="this.items" />
+      </ClientOnly>
     </div>
   </div>
 </template>
 
 <script>
-import { Carousel, Slide } from "vue-carousel";
-import TestimonyCard from "@/components/TestimonyCard";
+import TestimonyCarousel from "./TestimonyCarousel";
 
 export default {
   data() {
@@ -26,9 +20,7 @@ export default {
     };
   },
   components: {
-    TestimonyCard,
-    Carousel,
-    Slide,
+    TestimonyCarousel,
   },
 };
 </script>
@@ -47,6 +39,12 @@ export default {
 @media only screen and (max-width: 768px) {
   .main {
     padding: 10%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .card-container {
+    margin: 0px 100px;
   }
 }
 </style>

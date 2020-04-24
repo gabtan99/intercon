@@ -218,7 +218,7 @@ export default {
 
 .icon {
   margin-right: 15px;
-  font-size: 18px;
+  font-size: 13px;
 }
 
 .social {
