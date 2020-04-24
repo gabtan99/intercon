@@ -18,11 +18,12 @@
     </span>
 
     <b-modal
-      id="modal-center"
       centered
       hide-header
       hide-footer
       size="lg"
+      id="modal-scrollable"
+      scrollable
       v-model="showModal"
     >
       <font-awesome

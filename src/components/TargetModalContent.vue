@@ -17,6 +17,7 @@
       <TargetModalCard />
       <TargetModalCard />
       <TargetModalCard />
+      <TargetModalCard />
     </div>
   </div>
 </template>
@@ -45,6 +46,8 @@ export default {
 
 .service-style {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 767px) {

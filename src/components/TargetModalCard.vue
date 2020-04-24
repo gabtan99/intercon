@@ -43,7 +43,10 @@ export default {}
 <style scoped>
 .service-card {
   position: relative;
+  width: 230px;
   margin: 5px;
+  border: none;
+  box-shadow: 0 3px 3px 1px var(--gray-1);
 }
 
 .service-icon-div {
@@ -81,6 +84,12 @@ export default {}
 }
 
 @media only screen and (max-width: 767px) {
+  .service-card {
+    position: relative;
+    width: 100%;
+    margin: 5px;
+  }
+
   .button-style {
     width: 150px;
   }
