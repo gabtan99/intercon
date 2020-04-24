@@ -12,17 +12,26 @@
 
     <div class="img-container">
       <div class="left thumbnail">
-        <img src="../assets/img/colon-heart.png" />
+        <a href="">
+          <img src="../assets/img/colon-heart.png" />
+        </a>
       </div>
+
       <div class="top thumbnail">
-        <img src="../assets/img/hyperbaric.png" />
+        <a href="">
+          <img src="../assets/img/hyperbaric.png" />
+        </a>
       </div>
 
       <div class="right thumbnail">
-        <img src="../assets/img/colon-hydrotherapy.png" />
+        <a href="">
+          <img src="../assets/img/colon-hydrotherapy.png" />
+        </a>
       </div>
       <div class="bottom thumbnail">
-        <img src="../assets/img/red-light.png" />
+        <a href="">
+          <img src="../assets/img/red-light.png" />
+        </a>
       </div>
     </div>
   </div>
@@ -102,6 +111,11 @@ export default {
   position: relative;
   overflow: hidden;
   box-shadow: 0px 30px 30px #00000029;
+  transition: all ease-in 0.15s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
 }
 
 .img-container {

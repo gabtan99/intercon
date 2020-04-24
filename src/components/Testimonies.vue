@@ -3,22 +3,14 @@
     <h1 class="header font-gilroy-bold font-36">What Our Clients Say</h1>
     <div class="card-container">
       <ClientOnly>
-        <carousel
-          :autoplay="true"
-          :autoplayTimeout="20000"
-          :perPageCustom="[[360, 1], [768, 2], [1024, 3]]"
-        >
-          <slide v-for="item in items" v-bind:key="item.id">
-            <Testimony-card />
-          </slide>
-        </carousel>
+        <testimony-carousel :items="this.items" />
       </ClientOnly>
     </div>
   </div>
 </template>
 
 <script>
-import TestimonyCard from "@/components/TestimonyCard";
+import TestimonyCarousel from "./TestimonyCarousel";
 
 export default {
   data() {
@@ -28,15 +20,7 @@ export default {
     };
   },
   components: {
-    TestimonyCard,
-    Carousel: () =>
-      import("vue-carousel")
-        .then((m) => m.Carousel)
-        .catch(),
-    Slide: () =>
-      import("vue-carousel")
-        .then((m) => m.Slide)
-        .catch(),
+    TestimonyCarousel,
   },
 };
 </script>
