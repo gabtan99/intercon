@@ -118,39 +118,37 @@ export default {
   methods: {
     handleChange(text) {
       this.email = text.target.value;
-      console.log(this.email);
     },
     handleSubmit() {
       this.showSuccess = true;
-      //   const url = "https://us19.api.mailchimp.com/3.0/lists/42801b9de0";
-      //   const token = "c3566894e1b61bc0ee7c1bd61a1c810c-us19";
-      //   const data = {
-      //     members: [
-      //       {
-      //         email_address: "gabtanwdwad99@gmail.com",
-      //         status: "subscribed",
-      //       },
-      //     ],
-      //   };
-      //   axios
-      //     .post(url, {
-      //       headers: {
-      //         Authorization: `auth ${token}`,
-      //         "Access-Control-Allow-Origin": "http://localhost:8080",
-      //         "Content-Type": "application/json",
-      //       },
-      //       crossDomain: true,
-      //       body: {
-      //         data: JSON.stringify(data),
-      //       },
-      //     })
-      //     .then(function(response) {
-      //       this.showSuccess = true;
-      //       console.log(response);
-      //     })
-      //     .catch(function(error) {
-      //       console.log(error);
-      //     });
+      // const url = "https://us19.api.mailchimp.com/3.0/lists/42801b9de0";
+      // const token = "c3566894e1b61bc0ee7c1bd61a1c810c-us19";
+      // const data = {
+      //   members: [
+      //     {
+      //       email_address: this.email,
+      //       status: "subscribed",
+      //     },
+      //   ],
+      // };
+      // axios
+      //   .post(url, {
+      //     headers: {
+      //       Authorization: `auth ${token}`,
+      //       "Access-Control-Allow-Origin": "*",
+      //     },
+      //     crossDomain: true,
+      //     body: {
+      //       data: JSON.stringify(data),
+      //     },
+      //   })
+      //   .then(function(response) {
+      //     this.showSuccess = true;
+      //     console.log(response);
+      //   })
+      //   .catch(function(error) {
+      //     console.log(error);
+      //   });
     },
   },
 };
@@ -181,6 +179,13 @@ export default {
 .link {
   color: var(--white);
   padding: 5px 0px;
+  transition: all ease-in 0.15s;
+  text-decoration: none;
+}
+
+.link:hover {
+  transform: translateY(-0.1rem);
+  color: var(--alt-blue-secondary);
 }
 
 .mainContent {
@@ -213,11 +218,12 @@ export default {
 
 .icon {
   margin-right: 15px;
-  font-size: 18px;
+  font-size: 13px;
 }
 
 .social {
-  margin: 30px 10px;
+  margin: 20px 0px;
+  margin-right: 15px;
   color: var(--white);
   font-size: 24px;
 }

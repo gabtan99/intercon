@@ -1,15 +1,19 @@
 <template>
   <Layout>
+    <div class="main">
       <b-container class="container">
-        <b-row class="row-container">
-          <b-col sm="5">
+        <b-row>
+          <b-col lg="5">
             <div class="form-container">
               <div class="contact-header">
                 <h1 class="font-gilroy-medium font-36 blue">Get in touch</h1>
                 <p class="font-avenir-light font-18 blue">We're here to help and answer any questions you might have. Looking forward to hearing from you!</p>
               </div>
 
-              <form class="contact-form" name="contact">
+              <form 
+                class="contact-form" 
+                name="contact"
+              >
 
                 <div class="sender-info">
                   <div class="form-item">
@@ -35,14 +39,18 @@
                     <textarea name="message" class="font-gilroy-regular font-16 blue required"></textarea>
                   </div>
                 </div>
-          
-                <button class="button font-gilroy-regular font-16">Submit</button>
 
+                <GreenButton class="submitBtn"
+                :onClick=submitForm
+                >
+                  Submit
+                  <font-awesome :icon="['fas', 'paper-plane']" class="plane-icon"/>
+                </GreenButton>
               </form>
             </div>
           </b-col>
-          <b-col sm="1"/>
-          <b-col sm="6">
+          <b-col lg="1"/>
+          <b-col lg="6">
             <div class="card-container">
               <div class="card">
                 <div class="map">
@@ -86,20 +94,40 @@
               </div>
             </div>
           </b-col>
-
         </b-row>
       </b-container>
+    </div>
+      
   </Layout>
 </template>
 
 <script>
-export default {}
+  import GreenButton from "@/components/GreenButton";
+
+    export default {
+      components: {
+        GreenButton
+      },
+      data() {
+        return{
+        }
+      },
+      methods: {
+        submitForm(){
+          
+        }
+      }
+    }
 </script>
 
 <style scoped>
-
-.row-container {
-  margin-bottom: 12rem;
+.main {
+  background-image: linear-gradient(
+    to bottom,
+    var(--white),
+    var(--lightblue-gradient)
+  );
+  padding-bottom: 12rem;
 }
 
 .contact-header {
@@ -185,28 +213,6 @@ textarea {
   height: 140px;
 }
 
-.button {
-  color: var(--white);
-  background: #006838;
-  outline: none;
-  border: 0;
-  padding: 0.8rem 0.8rem;
-  border-radius: 5rem;
-  cursor: pointer;
-  transition: opacity 0.25s ease;
-  letter-spacing: 0.035em;
-  width: 14rem;
-  float: right;
-}
-
-.button:hover {
-  opacity: 0.6;
-}
-
-.button:focus {
-  border: 1px solid var(--color-base-1);
-}
-
 .icon {
   margin-right: 20px;
   font-size: 18px;
@@ -225,5 +231,13 @@ textarea {
 
 .blue {
   color: #123450
+}
+
+.submitBtn {
+  float: right
+}
+
+.plane-icon {
+  margin-left: 10px;
 }
 </style>

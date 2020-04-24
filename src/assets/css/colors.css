@@ -5,49 +5,49 @@
  */
 
 :root {
-  --green-branding: #2D683C;
-  --green-branding-light: #7FBA58;
-  --green-branding-dark: #0D3016;
+  --green-branding: #2d683c;
+  --green-branding-light: #7fba58;
+  --green-branding-dark: #0d3016;
 
   --blue-branding: #123450;
-  --blue-branding-light: #4195B4;
-  --blue-branding-dark: #10304A;
+  --blue-branding-light: #4195b4;
+  --blue-branding-dark: #10304a;
 
-  --lightblue-gradient: #EEF6F8;
-  --lightgreen-gradient: #EEF8F1;
+  --lightblue-gradient: #eef6f8;
+  --lightgreen-gradient: #eef8f1;
 
-  --blue-content-text: #2E3338;
-  --blue-learn-more: #05729A;
-  --bluegreen-link: #2A9380;
-  --brightblue: #0E95B6;
-  --alt-blue-primary: #6C63FF;
-  --alt-blue-secondary: #779FBD;
+  --blue-content-text: #2e3338;
+  --blue-learn-more: #05729a;
+  --bluegreen-link: #2a9380;
+  --brightblue: #0e95b6;
+  --alt-blue-primary: #6c63ff;
+  --alt-blue-secondary: #779fbd;
 
-  --yellow-icon: #C1CA43;
+  --yellow-icon: #c1ca43;
   --yellow-icon-bg: rgb(250, 251, 200, 0.64);
 
-  --blue-icon: #2C4C58;
+  --blue-icon: #2c4c58;
   --blue-icon-bg: rgb(18, 52, 80, 0.22);
 
   --green-icon: #006838;
-  --green-icon-bg: #D7EBDD;
+  --green-icon-bg: #d7ebdd;
 
   --brown-icon: #463505;
-  --brown-icon-bg: #D3CFC2;
+  --brown-icon-bg: #d3cfc2;
 
-  --gray-1: #F1F1F1;
-  --gray-2: #E0DFDF;
-  --gray-3: #B9B9B9;
-  --gray-4: #A8A4A4;
+  --gray-1: #f1f1f1;
+  --gray-2: #e0dfdf;
+  --gray-3: #b9b9b9;
+  --gray-4: #a8a4a4;
   --gray-5: #707070;
   --gray-6: #727272;
-  --gray-7: #4B4B4B;
+  --gray-7: #4b4b4b;
 
-  --button-shadow: rgb(0,0,0, 0.16);
-  --card-shadow: rgb(0,0,0, 0.16);
+  --button-shadow: rgb(0, 0, 0, 0.16);
+  --card-shadow: rgb(0, 0, 0, 0.16);
 
-  --white: #FFFFFF;
-  --white-text: #FFFFFF;
+  --white: #ffffff;
+  --white-text: #ffffff;
 
   --black: #000000;
   --black-text: #000000;

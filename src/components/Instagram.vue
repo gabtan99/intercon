@@ -1,0 +1,142 @@
+<template>
+  <div class="main">
+    <div class="text-container">
+      <h1 class="header font-gilroy-bold font-48">Join Our <br />Community</h1>
+
+      <a
+        class="subheader font-avenir-book font-24"
+        href="https://www.instagram.com/interconregenerative/"
+        >@interconregenerative</a
+      >
+    </div>
+
+    <div class="img-container">
+      <div class="left thumbnail">
+        <a href="">
+          <img src="../assets/img/colon-heart.png" />
+        </a>
+      </div>
+
+      <div class="top thumbnail">
+        <a href="">
+          <img src="../assets/img/hyperbaric.png" />
+        </a>
+      </div>
+
+      <div class="right thumbnail">
+        <a href="">
+          <img src="../assets/img/colon-hydrotherapy.png" />
+        </a>
+      </div>
+      <div class="bottom thumbnail">
+        <a href="">
+          <img src="../assets/img/red-light.png" />
+        </a>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      settings: require("../../data/theme.json"),
+    };
+  },
+};
+</script>
+
+<style scoped>
+.left {
+  grid-row: 4 / span 6;
+  grid-column: 1 / span 6;
+}
+
+.top {
+  grid-row: 1 / span 6;
+  grid-column: 6 / span 6;
+  z-index: 3;
+}
+
+.right {
+  grid-row: 6 / span 6;
+  grid-column: 10 / span 6;
+  z-index: 2;
+}
+
+.bottom {
+  grid-row: 8 / span 6;
+  grid-column: 5 / span 6;
+  z-index: 1;
+}
+
+.main {
+  background-image: linear-gradient(
+    to bottom,
+    var(--white),
+    var(--lightblue-gradient)
+  );
+  display: flex;
+  flex-direction: row;
+  padding: 80px 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10%;
+  padding: 20px 0px;
+}
+
+.header {
+  color: var(--blue-branding-dark);
+}
+
+.subheader {
+  color: var(--blue-branding-dark);
+  transition: all ease-in 0.15s;
+  text-decoration: none;
+}
+
+.subheader:hover {
+  transform: translateY(-0.3rem);
+  color: var(--blue-branding-light);
+}
+
+.thumbnail {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 30px 30px #00000029;
+  transition: all ease-in 0.15s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(15, 0.2fr);
+  grid-template-rows: repeat(13, 0.2fr);
+}
+
+img {
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+}
+@media only screen and (max-width: 768px) {
+  .img-container {
+    padding-top: 30px;
+  }
+
+  img {
+    width: 130px;
+    height: 130px;
+  }
+}
+</style>

@@ -17,6 +17,7 @@ import {
   faPhoneAlt,
   faEnvelope,
   faBars,
+  faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
@@ -28,6 +29,7 @@ library.add(
   faPhoneAlt,
   faEnvelope,
   faBars,
+  faPaperPlane,
 );
 
 export default function(Vue, { head }) {

@@ -1,5 +1,12 @@
 <template>
   <Layout>
+    <div class="container">
+      <Hero />
+      <!-- <ProjectsGrid :projects="$page.projects.edges" /> -->
+    </div>
+    <!-- <LatestJournals :journals="$page.journals.edges" /> -->
+    <Instagram />
+    <Testimonies />
   </Layout>
 </template>
 
@@ -30,15 +37,19 @@ query Posts {
 </page-query>
 
 <script>
-import Hero from "@/components/Hero"
-import ProjectsGrid from "@/components/ProjectsGrid"
-import LatestJournals from "@/components/LatestJournals"
+import Hero from "@/components/Hero";
+import ProjectsGrid from "@/components/ProjectsGrid";
+import LatestJournals from "@/components/LatestJournals";
+import Instagram from "@/components/Instagram";
+import Testimonies from "@/components/Testimonies";
 
 export default {
   components: {
     Hero,
     ProjectsGrid,
-    LatestJournals
-  }
-}
+    LatestJournals,
+    Instagram,
+    Testimonies,
+  },
+};
 </script>
