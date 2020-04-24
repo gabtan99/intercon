@@ -1,7 +1,8 @@
 <template>
   <Layout>
+    <div class="main">
       <b-container class="container">
-        <b-row class="row-container">
+        <b-row>
           <b-col lg="5">
             <div class="form-container">
               <div class="contact-header">
@@ -93,9 +94,10 @@
               </div>
             </div>
           </b-col>
-
         </b-row>
       </b-container>
+    </div>
+      
   </Layout>
 </template>
 
@@ -119,9 +121,13 @@
 </script>
 
 <style scoped>
-
-.row-container {
-  margin-bottom: 12rem;
+.main {
+  background-image: linear-gradient(
+    to bottom,
+    var(--white),
+    var(--lightblue-gradient)
+  );
+  padding-bottom: 12rem;
 }
 
 .contact-header {
@@ -205,28 +211,6 @@ input,textarea,select {
 textarea {
   resize: none;
   height: 140px;
-}
-
-.button {
-  color: var(--white);
-  background: #006838;
-  outline: none;
-  border: 0;
-  padding: 0.8rem 0.8rem;
-  border-radius: 5rem;
-  cursor: pointer;
-  transition: opacity 0.25s ease;
-  letter-spacing: 0.035em;
-  width: 14rem;
-  float: right;
-}
-
-.button:hover {
-  opacity: 0.6;
-}
-
-.button:focus {
-  border: 1px solid var(--color-base-1);
 }
 
 .icon {
