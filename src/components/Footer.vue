@@ -179,6 +179,13 @@ export default {
 .link {
   color: var(--white);
   padding: 5px 0px;
+  transition: all ease-in 0.15s;
+  text-decoration: none;
+}
+
+.link:hover {
+  transform: translateY(-0.1rem);
+  color: var(--alt-blue-secondary);
 }
 
 .mainContent {

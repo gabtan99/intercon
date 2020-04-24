@@ -2,7 +2,11 @@
   <div class="main">
     <div class="text-container">
       <h1 class="header font-gilroy-bold font-42">Join Our <br />Community</h1>
-      <p class="subheader font-avenir-book font-21">@interconregenerative</p>
+      <a
+        class="subheader font-avenir-book font-21"
+        href="https://www.instagram.com/interconregenerative/"
+        >@interconregenerative</a
+      >
     </div>
 
     <div class="img-container">
@@ -63,6 +67,13 @@ export default {
 
 .subheader {
   color: var(--blue-branding-dark);
+  transition: all ease-in 0.15s;
+  text-decoration: none;
+}
+
+.subheader:hover {
+  transform: translateY(-0.3rem);
+  color: var(--blue-branding-light);
 }
 
 .thumbnail {
