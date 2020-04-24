@@ -1,32 +1,29 @@
 <template>
   <div class="main">
     <div class="text-container">
-      <h1 class="header font-gilroy-bold font-42">Join Our <br />Community</h1>
+      <h1 class="header font-gilroy-bold font-48">Join Our <br />Community</h1>
 
       <a
-        class="subheader font-avenir-book font-21"
+        class="subheader font-avenir-book font-24"
         href="https://www.instagram.com/interconregenerative/"
         >@interconregenerative</a
       >
     </div>
 
     <div class="img-container">
-      <b-row>
-        <div class="thumbnail">
-          <img src="../assets/img/colon-heart.png" />
-        </div>
-        <div class="thumbnail">
-          <img src="../assets/img/hyperbaric.png" />
-        </div>
-      </b-row>
-      <b-row>
-        <div class="thumbnail">
-          <img src="../assets/img/colon-hydrotherapy.png" />
-        </div>
-        <div class="thumbnail">
-          <img src="../assets/img/red-light.png" />
-        </div>
-      </b-row>
+      <div class="left thumbnail">
+        <img src="../assets/img/colon-heart.png" />
+      </div>
+      <div class="top thumbnail">
+        <img src="../assets/img/hyperbaric.png" />
+      </div>
+
+      <div class="right thumbnail">
+        <img src="../assets/img/colon-hydrotherapy.png" />
+      </div>
+      <div class="bottom thumbnail">
+        <img src="../assets/img/red-light.png" />
+      </div>
     </div>
   </div>
 </template>
@@ -42,6 +39,29 @@ export default {
 </script>
 
 <style scoped>
+.left {
+  grid-row: 4 / span 6;
+  grid-column: 1 / span 6;
+}
+
+.top {
+  grid-row: 1 / span 6;
+  grid-column: 6 / span 6;
+  z-index: 3;
+}
+
+.right {
+  grid-row: 6 / span 6;
+  grid-column: 10 / span 6;
+  z-index: 2;
+}
+
+.bottom {
+  grid-row: 8 / span 6;
+  grid-column: 5 / span 6;
+  z-index: 1;
+}
+
 .main {
   background-image: linear-gradient(
     to bottom,
@@ -60,6 +80,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   margin-right: 10%;
+  padding: 20px 0px;
 }
 
 .header {
@@ -81,6 +102,12 @@ export default {
   position: relative;
   overflow: hidden;
   box-shadow: 0px 30px 30px #00000029;
+}
+
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(16, 0.2fr);
+  grid-template-rows: repeat(13, 0.2fr);
 }
 
 img {
