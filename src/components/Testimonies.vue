@@ -2,15 +2,17 @@
   <div class="main">
     <h1 class="header font-gilroy-bold font-36">What Our Clients Say</h1>
     <div class="card-container">
-      <carousel
-        :autoplay="true"
-        :autoplayTimeout="20000"
-        :perPageCustom="[[360, 1], [768, 2], [1024, 3]]"
-      >
-        <slide v-for="item in items" v-bind:key="item.id">
-          <Testimony-card />
-        </slide>
-      </carousel>
+      <ClientOnly>
+        <carousel
+          :autoplay="true"
+          :autoplayTimeout="20000"
+          :perPageCustom="[[360, 1], [768, 2], [1024, 3]]"
+        >
+          <slide v-for="item in items" v-bind:key="item.id">
+            <Testimony-card />
+          </slide>
+        </carousel>
+      </ClientOnly>
     </div>
   </div>
 </template>
