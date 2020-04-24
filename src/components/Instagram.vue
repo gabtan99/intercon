@@ -106,7 +106,7 @@ export default {
 
 .img-container {
   display: grid;
-  grid-template-columns: repeat(16, 0.2fr);
+  grid-template-columns: repeat(15, 0.2fr);
   grid-template-rows: repeat(13, 0.2fr);
 }
 
@@ -121,8 +121,8 @@ img {
   }
 
   img {
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
   }
 }
 </style>
