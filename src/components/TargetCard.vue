@@ -41,7 +41,6 @@
 </template>
 
 <script>
-<<<<<<< HEAD
 import TargetModalContent from '@/components/TargetModalContent'
 
 export default {
@@ -54,14 +53,6 @@ export default {
   props: ['target'],
   components: {
     TargetModalContent,
-=======
-export default {
-  props: ['target'],
-  methods: {
-    handleClick: function (title) {
-      console.log(title)
-    },
->>>>>>> 6e072582a272e08522d5c2e1fbb922291ad98ba0
   },
 }
 </script>
@@ -97,7 +88,6 @@ export default {
   color: var(--icon-color);
 }
 
-<<<<<<< HEAD
 .close-icon {
   position: absolute;
   right: 20px;
@@ -107,15 +97,12 @@ export default {
   cursor: pointer;
 }
 
-=======
->>>>>>> 6e072582a272e08522d5c2e1fbb922291ad98ba0
 @media only screen and (max-width: 767px) {
   .card {
     position: relative;
     border: 1px solid #eeeeee;
     border-radius: 3px;
     width: 300px;
-<<<<<<< HEAD
     height: 180px;
   }
 
@@ -126,9 +113,6 @@ export default {
     font-size: 18pt;
     color: var(--gray-2);
     cursor: pointer;
-=======
-    height: 200px;
->>>>>>> 6e072582a272e08522d5c2e1fbb922291ad98ba0
   }
 }
 </style>
