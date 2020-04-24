@@ -2,7 +2,7 @@
   <Layout>
       <b-container class="container">
         <b-row class="row-container">
-          <b-col sm="5">
+          <b-col lg="5">
             <div class="form-container">
               <div class="contact-header">
                 <h1 class="font-gilroy-medium font-36 blue">Get in touch</h1>
@@ -48,8 +48,8 @@
               </form>
             </div>
           </b-col>
-          <b-col sm="1"/>
-          <b-col sm="6">
+          <b-col lg="1"/>
+          <b-col lg="6">
             <div class="card-container">
               <div class="card">
                 <div class="map">
