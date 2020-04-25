@@ -46,11 +46,11 @@ query Posts {
 </page-query>
 
 <script>
-import Hero from "@/components/Hero";
-import ProjectsGrid from "@/components/ProjectsGrid";
-import LatestJournals from "@/components/LatestJournals";
-import Instagram from "@/components/Instagram";
-import Testimonies from "@/components/Testimonies";
+import Hero from '@/components/Hero'
+import ProjectsGrid from '@/components/ProjectsGrid'
+import LatestJournals from '@/components/LatestJournals'
+import Instagram from '@/components/Instagram'
+import Testimonies from '@/components/Testimonies'
 
 export default {
   components: {
@@ -60,5 +60,5 @@ export default {
     Instagram,
     Testimonies,
   },
-};
+}
 </script>

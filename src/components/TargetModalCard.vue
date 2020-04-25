@@ -1,12 +1,12 @@
 <template>
   <div>
     <b-card
-      img-src="../assets/img/colon-hydrotherapy.png"
-      img-alt="Image"
-      img-height="118"
-      img-top
       tag="article"
       class="service-card"
+      img-top
+      img-alt="image"
+      img-height="118"
+      :img-src="servicesContent.service_image.src"
     >
       <div class="service-icon-div">
         <font-awesome class="service-icon" :icon="'star-of-life'" />
@@ -14,31 +14,34 @@
 
       <h4
         class="font-gilroy-medium font-18"
-        style="margin: 12px 0px 8px; color: var(--blue-branding);"
+        style="margin: 15px 0px 8px; color: var(--blue-branding);"
       >
-        Colon Hydrotherapy
+        {{ servicesContent.service_name }}
       </h4>
-
       <b-card-text
         class="font-avenir-light font-16"
         style="margin-bottom: 10px;"
       >
-        Just a little indication. And I know you're saying, 'Oh Bob, you've done
-        it this time.' And you may be right. I like to beat the brush. That's
-        crazy. Let your imagination be your guide. This piece of canvas is your
-        world.
+        {{ servicesContent.service_description }}
       </b-card-text>
 
       <div class="button-style">
-        <span class="font-gilroy-regular font-16" style="color: #057097;">
+        <!-- :href="servicesContent.service_name" -->
+        <a
+          href="/services"
+          class="font-gilroy-regular font-16"
+          style="color: #057097; text-decoration: none;"
+        >
           Learn More
-        </span>
+        </a>
       </div>
     </b-card>
   </div>
 </template>
 <script>
-export default {}
+export default {
+  props: ['servicesContent'],
+}
 </script>
 <style scoped>
 .service-card {
@@ -46,6 +49,7 @@ export default {}
   width: 230px;
   margin: 5px;
   border: none;
+  padding: 0px;
   box-shadow: 0 3px 3px 1px var(--gray-1);
 }
 
