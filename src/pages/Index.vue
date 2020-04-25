@@ -5,7 +5,7 @@
       <!-- <ProjectsGrid :projects="$page.projects.edges" /> -->
     </div>
     <!-- <LatestJournals :journals="$page.journals.edges" /> -->
-    <Instagram />
+    <Instagram :images="$page.images.edges" />
     <Testimonies />
   </Layout>
 </template>
@@ -32,8 +32,17 @@ query Posts {
         title
       }
     }
+  },
+  images: allInstagramPhoto {
+    edges {
+      node {
+        shortcode,
+        thumbnail_src
+      }
+    }
   }
 }
+
 </page-query>
 
 <script>

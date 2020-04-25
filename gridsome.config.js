@@ -16,9 +16,9 @@ module.exports = {
         resolveAbsolutePaths: true,
         remark: {
           externalLinksTarget: "_blank",
-          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
-        }
-      }
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+        },
+      },
     },
     {
       use: "@gridsome/source-filesystem",
@@ -28,14 +28,21 @@ module.exports = {
         resolveAbsolutePaths: true,
         remark: {
           externalLinksTarget: "_blank",
-          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
-        }
-      }
-    }
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+        },
+      },
+    },
+    {
+      use: "@zefman/gridsome-source-instagram",
+      options: {
+        username: "interconregenerative", // Instagram username
+        typeName: "InstagramPhoto", // The GraphQL type you want the photos to be added under. Defaults to InstagramPhoto
+      },
+    },
   ],
   transformers: {
     remark: {
-      plugins: ["@gridsome/remark-prismjs"]
-    }
-  }
+      plugins: ["@gridsome/remark-prismjs"],
+    },
+  },
 };

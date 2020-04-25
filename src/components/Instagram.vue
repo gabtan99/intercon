@@ -12,25 +12,25 @@
 
     <div class="img-container">
       <div class="left thumbnail">
-        <a :href="images[0].url">
-          <img :src="images[0].thumbnail" />
+        <a :href="recentImages[0].url">
+          <img :src="recentImages[0].thumbnail" />
         </a>
       </div>
 
       <div class="top thumbnail">
-        <a :href="images[1].url">
-          <img :src="images[1].thumbnail" />
+        <a :href="recentImages[1].url">
+          <img :src="recentImages[1].thumbnail" />
         </a>
       </div>
 
       <div class="right thumbnail">
-        <a :href="images[2].url">
-          <img :src="images[2].thumbnail" />
+        <a :href="recentImages[2].url">
+          <img :src="recentImages[2].thumbnail" />
         </a>
       </div>
       <div class="bottom thumbnail">
-        <a :href="images[3].url">
-          <img :src="images[3].thumbnail" />
+        <a :href="recentImages[3].url">
+          <img :src="recentImages[3].thumbnail" />
         </a>
       </div>
     </div>
@@ -38,17 +38,28 @@
 </template>
 
 <script>
-import { getRecentInstagram } from "@/services/instagram";
-
 export default {
   data() {
     return {
       settings: require("../../data/theme.json"),
-      images: [],
     };
   },
-  async beforeCreate() {
-    this.images = await getRecentInstagram(4);
+  computed: {
+    recentImages: function() {
+      const recent = this.images.slice(Math.max(this.images.length - 4, 0));
+      return recent.map((item) => {
+        return {
+          url: `https://www.instagram.com/p/${item.node.shortcode}/`,
+          thumbnail: item.node.thumbnail_src,
+        };
+      });
+    },
+  },
+  props: {
+    images: {
+      type: Array,
+      default: () => [],
+    },
   },
 };
 </script>
