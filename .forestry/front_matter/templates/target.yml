@@ -2,11 +2,58 @@
 label: Target
 hide_body: true
 fields:
-- name: title
+- name: target_icon
+  type: file
+  config:
+    maxSize: 250
+  label: Target Icon
+- name: target-name
   type: text
   config:
     required: false
-  label: Title
   description: title of the target
+  label: Target Name
+  hidden: false
+- name: target_description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Target Description
+- name: target_services
+  type: field_group_list
+  fields:
+  - name: service_name
+    type: text
+    config:
+      required: false
+    label: Service Name
+  - name: service_description
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Service Description
+  - name: service_icon
+    type: file
+    config:
+      maxSize: 250
+    label: Service Icon
+  - name: service-url
+    type: text
+    config:
+      required: false
+    label: service-url
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Target Services
 pages:
 - targets/target-1.md
