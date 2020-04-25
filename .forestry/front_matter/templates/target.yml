@@ -51,4 +51,5 @@ fields:
     labelField: 
   label: Target Services
 pages:
+- targets/skin-care.md
 - targets/target-1.md
