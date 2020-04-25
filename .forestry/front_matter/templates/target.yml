@@ -2,11 +2,6 @@
 label: Target
 hide_body: true
 fields:
-- name: target_icon
-  type: file
-  config:
-    maxSize: 250
-  label: Target Icon
 - name: target-name
   type: text
   config:
@@ -40,16 +35,11 @@ fields:
       schema:
         format: markdown
     label: Service Description
-  - name: service_icon
-    type: file
-    config:
-      maxSize: 250
-    label: Service Icon
   - name: service-url
     type: text
     config:
       required: false
-    label: service-url
+    label: Service URL
   - name: service_image
     type: file
     config:
