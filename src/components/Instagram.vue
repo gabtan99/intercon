@@ -12,25 +12,25 @@
 
     <div class="img-container">
       <div class="left thumbnail">
-        <a href="">
-          <img src="../assets/img/colon-heart.png" />
+        <a :href="images[0].url">
+          <img :src="images[0].thumbnail" />
         </a>
       </div>
 
       <div class="top thumbnail">
-        <a href="">
-          <img src="../assets/img/hyperbaric.png" />
+        <a :href="images[1].url">
+          <img :src="images[1].thumbnail" />
         </a>
       </div>
 
       <div class="right thumbnail">
-        <a href="">
-          <img src="../assets/img/colon-hydrotherapy.png" />
+        <a :href="images[2].url">
+          <img :src="images[2].thumbnail" />
         </a>
       </div>
       <div class="bottom thumbnail">
-        <a href="">
-          <img src="../assets/img/red-light.png" />
+        <a :href="images[3].url">
+          <img :src="images[3].thumbnail" />
         </a>
       </div>
     </div>
@@ -38,11 +38,17 @@
 </template>
 
 <script>
+import { getRecentInstagram } from "@/services/instagram";
+
 export default {
   data() {
     return {
       settings: require("../../data/theme.json"),
+      images: [],
     };
+  },
+  async beforeCreate() {
+    this.images = await getRecentInstagram(4);
   },
 };
 </script>
