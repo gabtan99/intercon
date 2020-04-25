@@ -9,6 +9,12 @@ fields:
   description: title of the target
   label: Target Name
   hidden: false
+- name: background_color
+  type: color
+  config:
+    required: false
+    color_format: Hex
+  label: Background Color
 - name: target_description
   type: textarea
   default: ''
