@@ -50,6 +50,11 @@ fields:
     config:
       required: false
     label: service-url
+  - name: service_image
+    type: file
+    config:
+      maxSize: 250
+    label: Service Image
   config:
     min: 
     max: 
