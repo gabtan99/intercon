@@ -2,7 +2,7 @@
 label: Target
 hide_body: true
 fields:
-- name: target-name
+- name: target_name
   type: text
   config:
     required: false
@@ -41,7 +41,7 @@ fields:
       schema:
         format: markdown
     label: Service Description
-  - name: service-url
+  - name: service_url
     type: text
     config:
       required: false
