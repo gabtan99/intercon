@@ -69,8 +69,7 @@ export default {
 }
 
 .card:hover {
-  transition-delay: 0.2s;
-  transform: scale(1.03);
+  transform: scale(1.05);
   cursor: pointer;
 }
 
