@@ -30,5 +30,6 @@ target_services:
   service_description: Just a little indication. And I know you're saying, 'Oh Bob,
     you've done it this time.' And you may be right. I like to beat the brush. That's
     crazy. Let your imagination be your guide. This piece of canvas is your world.
+background_color: "#F3F3D3"
 
 ---
