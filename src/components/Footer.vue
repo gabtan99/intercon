@@ -68,19 +68,35 @@
                   />
                   <span class="input-group-btn subscribe">
                     <button
+                      v-if="!isLoading"
                       class="btn btn-default subscribeBtn font-gilroy-extra-bold font-16"
                       type="submit"
                     >
                       Join
                     </button>
+
+                    <div v-else>
+                      <span
+                        class="spinner-border spinner-border-lg"
+                        role="status"
+                        aria-hidden="true"
+                      ></span>
+                    </div>
                   </span>
                 </div>
               </form>
+
               <p
-                v-if="showSuccess"
+                v-if="showMessage && isSuccess"
                 class="successMsg font-avenir-light font-16"
               >
-                Thank You for Subscribing!
+                Thank You for subscribing! A confirmation email will be sent.
+              </p>
+              <p
+                v-else-if="showMessage && !isSuccess"
+                class="errorMsg font-avenir-light font-16"
+              >
+                Uh oh! Something went wrong.
               </p>
               <div class="row" style="margin-left: 5px;">
                 <a href="https://www.facebook.com/interconregenerative/">
@@ -105,50 +121,43 @@
 </template>
 
 <script>
-import axios from "axios";
+import { signupNewsletter } from "@/services/newsletter";
 
 export default {
   data() {
     return {
       settings: require("../../data/theme.json"),
       email: null,
-      showSuccess: false,
+      isLoading: false,
+      isSuccess: false,
+      showMessage: null,
     };
   },
   methods: {
     handleChange(text) {
       this.email = text.target.value;
     },
+    showResult(ok) {
+      this.isLoading = false;
+      this.showMessage = true;
+      if (ok) {
+        this.isSuccess = true;
+      } else {
+        this.isSuccess = false;
+      }
+    },
     handleSubmit() {
-      this.showSuccess = true;
-      // const url = "https://us19.api.mailchimp.com/3.0/lists/42801b9de0";
-      // const token = "c3566894e1b61bc0ee7c1bd61a1c810c-us19";
-      // const data = {
-      //   members: [
-      //     {
-      //       email_address: this.email,
-      //       status: "subscribed",
-      //     },
-      //   ],
-      // };
-      // axios
-      //   .post(url, {
-      //     headers: {
-      //       Authorization: `auth ${token}`,
-      //       "Access-Control-Allow-Origin": "*",
-      //     },
-      //     crossDomain: true,
-      //     body: {
-      //       data: JSON.stringify(data),
-      //     },
-      //   })
-      //   .then(function(response) {
-      //     this.showSuccess = true;
-      //     console.log(response);
-      //   })
-      //   .catch(function(error) {
-      //     console.log(error);
-      //   });
+      if (this.email === null || this.email.length === 0) return null;
+
+      this.isLoading = true;
+      signupNewsletter(this.email)
+        .then((res) => {
+          this.showResult(true);
+        })
+        .catch((err) => {
+          this.showResult(false);
+          console.log("err", err);
+        });
     },
   },
 };
@@ -196,6 +205,9 @@ export default {
   background: var(--blue-branding-light);
   padding: 0px 10px;
   border-radius: 0px 30px 30px 0px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .subscribeBtn {
@@ -213,6 +225,11 @@ export default {
 
 .successMsg {
   color: var(--green-branding-light);
+  padding-top: 10px;
+}
+
+.errorMsg {
+  color: var(--white);
   padding-top: 10px;
 }
 
