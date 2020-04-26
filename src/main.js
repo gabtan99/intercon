@@ -51,7 +51,7 @@ library.add(
   faStarOfLife
 );
 
-export default function(Vue, { head, isClient }) {
+export default function(Vue, { head }) {
   Vue.use(BootstrapVue);
   Vue.use(VueYoutube);
   Vue.component("Layout", DefaultLayout);
