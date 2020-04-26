@@ -176,4 +176,5 @@ fields:
   label: External Reads
   description: Links to articles that you might want to interest the readers with
 pages:
+- services/hyperbaric-oxygen-therapy.md
 - services/service-1.md
