@@ -144,18 +144,34 @@ fields:
         maxSize: 250
       label: Figure
       description: Supporting statistical figure
+      showOnly:
+        field: with_supporting_image
+        value: true
     - name: caption
       type: text
       config:
         required: false
       label: Caption
       description: Caption for the figure
+      showOnly:
+        field: with_supporting_image
+        value: true
     config:
       min: 
       max: 
       labelField: 
     label: Stats List
     description: The statistics and their supporting images
+  - name: summary
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Summary
+    description: Summative information about statistics or other recommendations
   label: Statistics and Analysis
   description: Lists out some statistics and research claims for the service
 - name: external_reads
