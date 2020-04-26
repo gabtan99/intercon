@@ -159,7 +159,7 @@ fields:
     config:
       min: 
       max: 
-      labelField: 
+      labelField: content
     label: Stats List
     description: The statistics and their supporting images
   - name: summary
