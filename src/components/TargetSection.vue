@@ -5,7 +5,7 @@
     <div class="card-container">
       <TargetSectionCard :target="targets[0].node" />
       <TargetSectionCard :target="targets[1].node" />
-      <TargetSectionCard :target="targets[0].node" />
+      <TargetSectionCard :target="targets[2].node" />
 
       <div class="link-style">
         <span
@@ -46,7 +46,7 @@ export default {
 .main {
   display: block;
   text-align: center;
-  padding: 80px;
+  padding: 90px;
   background-image: linear-gradient(
     to top,
     var(--white),
@@ -59,7 +59,7 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 50px;
 }
 
 .link-style {

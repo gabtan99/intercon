@@ -7,7 +7,7 @@
     }"
   >
     <font-awesome class="icon-style" :icon="target.target_icon" />
-    <span class="target-name font-16 font-gilroy-bold">
+    <span class="target-name font-18 font-gilroy-bold">
       {{ target.target_name }}
     </span>
 
@@ -58,7 +58,7 @@ export default {
 <style scoped>
 .card {
   position: relative;
-  border: 1px solid #eeeeee;
+  border: none;
   border-radius: 3px;
   padding: 20px;
   margin: 10px;
@@ -66,10 +66,12 @@ export default {
   height: 180px;
   width: 220px;
   transition: all 0.2s ease-in-out;
+  box-shadow: 0 3px 3px 1px var(--gray-1);
 }
 
 .card:hover {
   transform: scale(1.05);
+  box-shadow: 1px 5px 8px 2px var(--gray-2);
   cursor: pointer;
 }
 
@@ -83,6 +85,7 @@ export default {
 
 .icon-style {
   font-size: 15pt;
+  color: var(--blue-branding);
 }
 
 .close-icon {
