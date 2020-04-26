@@ -30,7 +30,6 @@
       </b-img>
     </div>
 
-
     <b-modal centered hide-header hide-footer size="lg" v-model="showModal">
       <font-awesome
         class="close-icon"
@@ -55,11 +54,13 @@
 <script>
 import GreenButton from "@/components/GreenButton";
 import WhiteButton from "@/components/WhiteButton";
+import Waves from "@/components/Waves";
 
 export default {
   components: {
     GreenButton,
     WhiteButton,
+    Waves,
   },
   data() {
     return {

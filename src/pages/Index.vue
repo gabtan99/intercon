@@ -4,6 +4,9 @@
       <Hero />
       <!-- <ProjectsGrid :projects="$page.projects.edges" /> -->
     </div>
+    <b-container fluid>
+      <Waves/>
+    </b-container>
     <!-- <LatestJournals :journals="$page.journals.edges" /> -->
     <TargetSection :targets="$page.targets.edges" />
     <Instagram :images="$page.images.edges" />
@@ -58,6 +61,7 @@ query Posts {
 
 <script>
 import Hero from "@/components/Hero";
+import Waves from "@/components/Waves";
 import ProjectsGrid from "@/components/ProjectsGrid";
 import LatestJournals from "@/components/LatestJournals";
 import Instagram from "@/components/Instagram";
@@ -67,6 +71,7 @@ import Testimonies from "@/components/Testimonies";
 export default {
   components: {
     Hero,
+    Waves,
     ProjectsGrid,
     LatestJournals,
     TargetSection,
