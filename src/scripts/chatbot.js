@@ -1,9 +1,11 @@
-window.$crisp = [];
-window.CRISP_WEBSITE_ID = "1d7cfcb7-4d05-4266-8201-7221508f8119";
-(function() {
-  d = document;
-  s = d.createElement("script");
-  s.src = "https://client.crisp.chat/l.js";
-  s.async = 1;
-  d.getElementsByTagName("head")[0].appendChild(s);
-})();
+if (isClient) {
+  window.$crisp = [];
+  window.CRISP_WEBSITE_ID = "1d7cfcb7-4d05-4266-8201-7221508f8119";
+  (function() {
+    d = document;
+    s = d.createElement("script");
+    s.src = "https://client.crisp.chat/l.js";
+    s.async = 1;
+    d.getElementsByTagName("head")[0].appendChild(s);
+  })();
+}
