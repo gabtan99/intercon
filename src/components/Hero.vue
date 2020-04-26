@@ -1,8 +1,35 @@
 <template>
-  <div class="hero">
-    <h1 class="hero-title" v-html="settings.hero_title" />
-    <h2 class="hero-subtitle" v-html="settings.hero_subtitle" />
-    <button @click="showModal = true">Watch Video</button>
+  <div class="main">
+    
+
+    <div class="col-lg-6">
+      <h1 class="hero-title font-gilroy-bold font-42">The Future of <br/> Personalized Healthcare</h1>
+
+      <h1 class="hero-subtitle font-avenir-light font-24">
+        Enhance and optimize your body’s self <br/>
+        healing mechanisms in the most safest and <br/>
+        natural way possible.
+      </h1>
+
+      <div class="hero-buttons">
+        <GreenButton>
+          Learn More
+        </GreenButton>
+
+        <WhiteButton :onClick="watchVideo" >
+          Watch Video
+        </WhiteButton>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <b-img
+        fluid
+        class="hero-image" 
+        src="../assets/img/hero-img.png">
+      </b-img>
+    </div>
+
 
     <b-modal centered hide-header hide-footer size="lg" v-model="showModal">
       <font-awesome
@@ -26,43 +53,56 @@
 </template>
 
 <script>
+import GreenButton from "@/components/GreenButton";
+import WhiteButton from "@/components/WhiteButton";
+
 export default {
+  components: {
+    GreenButton,
+    WhiteButton,
+  },
   data() {
     return {
       settings: require("../../data/theme.json"),
       showModal: false,
     };
   },
+  methods: {
+    watchVideo() {
+      this.showModal = true
+    },
+  },
 };
 </script>
 
 <style>
-.hero {
-  text-align: center;
-  width: 480px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 4rem 0 8rem 0;
+.main {
+  display: flex;
+  flex-direction: row;
+  padding: 80px 15px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero-title {
-  font-size: 3rem;
-  font-weight: 700;
-  padding: 0;
-  margin: 0 0 2rem 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
-.hero-title p,
-.hero-subtitle p {
-  margin: 0;
-  padding: 0;
-}
+
 .hero-subtitle {
-  font-size: 1.15em;
-  font-weight: 400;
-  line-height: 1.68;
-  padding: 0;
-  margin: 0;
-  opacity: 0.6;
+  margin-bottom: 4rem;
+}
+
+.hero-buttons {
+  margin-bottom: 10rem;
+}
+
+.hero-image {
+  margin-top: -4rem;
+}
+
+.white-button {
+  margin-left: 2rem;
 }
 
 .close-icon {
