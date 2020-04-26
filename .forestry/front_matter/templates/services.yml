@@ -125,11 +125,15 @@ fields:
     type: field_group_list
     fields:
     - name: content
-      type: file
+      type: textarea
+      default: ''
       config:
-        maxSize: 250
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
       label: Content
-      description: Description of the statistic
+      description: A description of the statistic
     - name: with_supporting_image
       type: boolean
       label: With Supporting Image
