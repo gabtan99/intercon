@@ -33,7 +33,7 @@ conditions:
     therapy can effectively treat the following conditions:'
   conditions_list:
   - condition: Carbon monoxide poisoning
-  - condition: " Crushing injury"
+  - condition: Crushing injury
   - condition: Radiation injury
   - condition: AIDS/HIV
 stats:
