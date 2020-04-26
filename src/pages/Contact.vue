@@ -2,87 +2,130 @@
   <Layout>
     <div class="main">
       <b-container class="container">
-        <b-row>
+        <b-row class="form">
           <b-col lg="5">
             <div class="form-container">
-              <div class="contact-header">
-                <h1 class="font-gilroy-medium font-36 blue">Get in touch</h1>
-                <p class="font-avenir-light font-18 blue">We're here to help and answer any questions you might have. Looking forward to hearing from you!</p>
+              <div>
+                <h1 class="font-gilroy-bold font-42 blue">Get in touch</h1>
+                <p class="font-avenir-light font-18 blue">
+                  We're here to help and answer any questions you might have.
+                  Looking forward to hearing from you!
+                </p>
               </div>
 
-              <form 
-                class="contact-form" 
-                name="contact"
-              >
-
+              <form class="contact-form" name="contact" autocomplete="off">
                 <div class="sender-info">
                   <div class="form-item">
-                    <label for="name" class="font-gilroy-regular font-16 blue required">Name</label>
-                    <input type="text" class="font-gilroy-regular font-16 required" name="name" autocomplete="off"/>
+                    <label
+                      for="name"
+                      class="font-gilroy-medium font-16 blue required"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      class="font-gilroy-regular font-16 required"
+                      name="name"
+                      autocomplete="off"
+                    />
                   </div>
                   <div class="form-item">
-                    <label for="email" class="font-gilroy-regular font-16 blue required">Email Address</label>
-                    <input type="email" class="font-gilroy-regular font-16 required" name="email" autocomplete="off"/>
+                    <label
+                      for="email"
+                      class="font-gilroy-medium font-16 blue required"
+                      >Email Address</label
+                    >
+                    <input
+                      type="email"
+                      class="font-gilroy-regular font-16 required"
+                      name="email"
+                      autocomplete="off"
+                    />
                   </div>
                   <div class="form-item">
-                    <label for="subject" class="font-gilroy-regular font-16 blue required">Subject</label>
-                    <select id="subject" name="subject" class="options font-gilroy-regular font-16 blue">
-                      <option disabled selected value style="display:none"> -- select a subject -- </option>
-                      <option value="prices">Prices</option>
-                      <option value="services">Services</option>
-                      <option value="targets">Targets</option>
+                    <label
+                      for="subject"
+                      class="font-gilroy-medium font-16 blue required"
+                      >Subject</label
+                    >
+                    <select
+                      id="subject"
+                      name="subject"
+                      class="options font-gilroy-regular font-16 blue"
+                    >
+                      <option disabled selected value style="display:none;">
+                        ( Select a subject )
+                      </option>
+                      <option value="prices">Inquiry</option>
+                      <option value="services">Appointment</option>
+                      <option value="targets">Customer Service</option>
                       <option value="others">Others</option>
                     </select>
                   </div>
                   <div class="form-item">
-                    <label for="message" class="font-gilroy-regular font-16 blue required">Message</label>
-                    <textarea name="message" class="font-gilroy-regular font-16 blue required"></textarea>
+                    <label
+                      for="message"
+                      class="font-gilroy-medium font-16 blue required"
+                      >Message</label
+                    >
+                    <textarea
+                      name="message"
+                      class="font-gilroy-regular font-16 blue required"
+                    ></textarea>
                   </div>
                 </div>
 
-                <GreenButton class="submitBtn"
-                :onClick=submitForm
-                >
+                <GreenButton class="submitBtn" :onClick="submitForm">
                   Submit
-                  <font-awesome :icon="['fas', 'paper-plane']" class="plane-icon"/>
+                  <font-awesome
+                    :icon="['fas', 'paper-plane']"
+                    class="plane-icon"
+                  />
                 </GreenButton>
               </form>
             </div>
           </b-col>
-          <b-col lg="1"/>
-          <b-col lg="6">
+
+          <b-col>
             <div class="card-container">
               <div class="card">
                 <div class="map">
                   <!-- insert map here -->
                 </div>
                 <div class="card-details">
-
-                  <b-row> 
-
-                    <div class="col-sm-6 visit-us">
-                      <h2 class="font-gilroy-medium font-18 blue">Visit Us</h2>
+                  <b-row>
+                    <div class="col-sm-7 visit-us">
+                      <h2 class="font-gilroy-bold font-18 blue">Visit Us</h2>
                       <span class="contact-info">
                         <p class="font-avenir-light font-16 blue">
-                          210B Del Monte Ave, La Loma, Quezon City, 1114 Metro Manila
+                          210B Del Monte Ave, La Loma, Quezon City, 1114 Metro
+                          Manila
                         </p>
-                        <br>
+                        <br />
                         <p class="font-avenir-light font-16 blue">
                           8AM - 8PM
                         </p>
                       </span>
                     </div>
-                    <div class="col-sm-1"/>
+
                     <div class="col-sm-5">
-                      <h2 class="font-gilroy-medium font-18 blue">Get Social</h2>
+                      <h2 class="font-gilroy-bold font-18 blue">
+                        Get Social
+                      </h2>
                       <span class="contact-info">
-                        <a href="https://www.facebook.com/interconregenerative/">
+                        <a
+                          href="https://www.facebook.com/interconregenerative/"
+                        >
                           <font-awesome
                             :icon="['fab', 'facebook-square']"
                             class="social"
                         /></a>
-                        <a href="https://www.instagram.com/interconregenerative/">
-                          <font-awesome :icon="['fab', 'instagram']" class="social" />
+                        <a
+                          href="https://www.instagram.com/interconregenerative/"
+                        >
+                          <font-awesome
+                            :icon="['fab', 'instagram']"
+                            class="social"
+                          />
                         </a>
                         <a class="font-avenir-light font-16">
                           <font-awesome :icon="'envelope'" class="social" />
@@ -97,27 +140,23 @@
         </b-row>
       </b-container>
     </div>
-      
   </Layout>
 </template>
 
 <script>
-  import GreenButton from "@/components/GreenButton";
+import GreenButton from "@/components/GreenButton";
 
-    export default {
-      components: {
-        GreenButton
-      },
-      data() {
-        return{
-        }
-      },
-      methods: {
-        submitForm(){
-          
-        }
-      }
-    }
+export default {
+  components: {
+    GreenButton,
+  },
+  data() {
+    return {};
+  },
+  methods: {
+    submitForm() {},
+  },
+};
 </script>
 
 <style scoped>
@@ -127,13 +166,7 @@
     var(--white),
     var(--lightblue-gradient)
   );
-  padding-bottom: 12rem;
 }
-
-.contact-header {
-  padding: 6rem 0 2rem 0;
-}
-
 .form-item {
   width: 100%;
 }
@@ -146,33 +179,31 @@ select {
 }
 
 .card {
-  margin-top: 9rem;
   width: 100%;
   height: 450px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 4px 0 rgba(155, 155, 155, 0.2);
   transition: 0.3s;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 0px;
+  margin: 50px 0px;
 }
 
 .card-details {
-  height: 46%;
-  padding: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
+  padding: 35px;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(155, 155, 155, 0.2);
 }
 
-.label {
+label {
   font-weight: 0;
 }
 
 label.required::after {
-  content: '*';
+  content: "*";
   margin-left: 4px;
   color: red;
 }
@@ -181,7 +212,6 @@ label.required::after {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
 }
 
 .sender-info > div {
@@ -193,19 +223,22 @@ label.required::after {
   margin: 0;
 }
 
-input:focus,textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #006838;
 }
 
-input,textarea,select {
-  background: transparent;
+input,
+textarea,
+select {
   border: 1px solid var(--gray-2);
   outline: none;
   border-radius: 0.3rem;
   padding: 0.8rem 1rem;
   color: inherit;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--white);
 }
 
 textarea {
@@ -221,7 +254,7 @@ textarea {
 .social {
   margin: 2px;
   margin-right: 10px;
-  color: var(--gray-5);
+  color: var(--gray-3);
   font-size: 24px;
 }
 
@@ -230,14 +263,20 @@ textarea {
 }
 
 .blue {
-  color: #123450
+  color: var(--blue-branding-dark);
 }
 
 .submitBtn {
-  float: right
+  float: right;
 }
 
 .plane-icon {
   margin-left: 10px;
+}
+
+.form {
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 85px;
 }
 </style>
