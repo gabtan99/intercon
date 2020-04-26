@@ -5,6 +5,7 @@
       <!-- <ProjectsGrid :projects="$page.projects.edges" /> -->
     </div>
     <!-- <LatestJournals :journals="$page.journals.edges" /> -->
+    <TargetSection :targets="$page.targets.edges" />
     <Instagram :images="$page.images.edges" />
     <Testimonies />
   </Layout>
@@ -40,6 +41,16 @@ query Posts {
         thumbnail_src
       }
     }
+  },
+  targets: allTargets {
+    edges {
+      node {
+        id
+        target_name
+        target_description
+        target_icon
+      }
+    }
   }
 }
 
@@ -50,6 +61,7 @@ import Hero from "@/components/Hero";
 import ProjectsGrid from "@/components/ProjectsGrid";
 import LatestJournals from "@/components/LatestJournals";
 import Instagram from "@/components/Instagram";
+import TargetSection from "@/components/TargetSection";
 import Testimonies from "@/components/Testimonies";
 
 export default {
@@ -57,6 +69,7 @@ export default {
     Hero,
     ProjectsGrid,
     LatestJournals,
+    TargetSection,
     Instagram,
     Testimonies,
   },

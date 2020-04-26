@@ -14,7 +14,10 @@
         <youtube
           :fitParent="true"
           :resize="true"
-          :player-vars="{ autoplay: 1 }"
+          :resizeDelay="0"
+          :player-vars="{
+            autoplay: 1,
+          }"
           video-id="WZdEP1L-EZE"
         />
       </div>

@@ -1,23 +1,20 @@
 <template>
   <div class="target-content">
     <div style="display: flex; margin-bottom: 15px;">
-      <font-awesome class="icon-style" :icon="targetIcon" />
-      <h1 class="font-gilroy-bold">{{ targetName }}</h1>
+      <font-awesome class="icon-style" :icon="targetContent.target_icon" />
+      <h1 class="font-gilroy-bold">{{ targetContent.target_name }}</h1>
     </div>
 
     <p class="font-avenir-light font-18" style="margin-bottom: 15px;">
-      In this world, everything can be happy. This is where you take out all
-      your hostilities and frustrations. It's better than kicking the puppy dog
-      around and all that so. With practice comes confidence. Everything is
-      happy if you choose to make it that way. Don't fight it, use what happens.
-      God gave you this gift of imagination. Use it.
+      {{ targetContent.target_description }}
     </p>
 
     <div class="service-style">
-      <TargetModalCard />
-      <TargetModalCard />
-      <TargetModalCard />
-      <TargetModalCard />
+      <TargetModalCard
+        v-for="item in targetServices"
+        :key="item.service_name"
+        :servicesContent="item"
+      />
     </div>
   </div>
 </template>
@@ -26,7 +23,7 @@
 import TargetModalCard from '@/components/TargetModalCard'
 
 export default {
-  props: ['targetName', 'targetIcon'],
+  props: ['targetContent', 'targetServices'],
   components: {
     TargetModalCard,
   },

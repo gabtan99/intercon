@@ -3,18 +3,12 @@
     @click="showModal = !showModal"
     class="card"
     :style="{
-      '--card-height': target.item.height,
-      '--background-color': target.item.background,
-      '--margin-style': target.item.margin ? 0 + 'px' : 15 + 'px',
+      '--background-color': target.background_color,
     }"
   >
-    <font-awesome
-      class="icon-style"
-      :icon="target.item.icon"
-      :style="{ '--icon-color': target.item.color }"
-    />
+    <font-awesome class="icon-style" :icon="target.target_icon" />
     <span class="target-name font-16 font-gilroy-bold">
-      {{ target.item.name }}
+      {{ target.target_name }}
     </span>
 
     <b-modal
@@ -31,11 +25,9 @@
         :icon="'times'"
         @click="showModal = false"
       />
-
       <TargetModalContent
-        :targetName="target.item.name"
-        :targetIcon="target.item.icon"
-        :color="target.item.color"
+        :targetContent="target"
+        :targetServices="target.target_services"
       />
     </b-modal>
   </div>
@@ -55,6 +47,11 @@ export default {
   components: {
     TargetModalContent,
   },
+  methods: {
+    log: function (e) {
+      console.log(e)
+    },
+  },
 }
 </script>
 
@@ -64,15 +61,15 @@ export default {
   border: 1px solid #eeeeee;
   border-radius: 3px;
   padding: 20px;
-  margin-top: var(--margin-style);
+  margin: 10px;
   background-color: var(--background-color);
-  height: var(--card-height);
+  height: 180px;
+  width: 220px;
   transition: all 0.2s ease-in-out;
 }
 
 .card:hover {
-  transition-delay: 0.2s;
-  transform: scale(1.03);
+  transform: scale(1.05);
   cursor: pointer;
 }
 
@@ -86,7 +83,6 @@ export default {
 
 .icon-style {
   font-size: 15pt;
-  color: var(--icon-color);
 }
 
 .close-icon {

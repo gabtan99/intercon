@@ -56,6 +56,11 @@ export default function(Vue, { head }) {
   Vue.use(VueYoutube);
   Vue.component("Layout", DefaultLayout);
   Vue.component("font-awesome", FontAwesomeIcon);
+
+  head.script.push({
+    src: require("./scripts/chatbot.js"),
+  });
+
   head.bodyAttrs = {
     class: settings.dark_mode ? "dark" : "",
   };
