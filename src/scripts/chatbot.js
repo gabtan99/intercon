@@ -1,4 +1,4 @@
-if (isClient) {
+if (process.isClient) {
   window.$crisp = [];
   window.CRISP_WEBSITE_ID = "1d7cfcb7-4d05-4266-8201-7221508f8119";
   (function() {

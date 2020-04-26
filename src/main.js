@@ -57,11 +57,9 @@ export default function(Vue, { head }) {
   Vue.component("Layout", DefaultLayout);
   Vue.component("font-awesome", FontAwesomeIcon);
 
-  if (process.isClient) {
-    head.script.push({
-      src: require("./scripts/chatbot.js"),
-    });
-  }
+  head.script.push({
+    src: require("./scripts/chatbot.js"),
+  });
 
   head.bodyAttrs = {
     class: settings.dark_mode ? "dark" : "",
