@@ -67,6 +67,12 @@ fields:
       format: markdown
   label: Introduction
   description: Your article introduction.
+- name: introduction_image
+  type: file
+  config:
+    maxSize: 250
+  label: Introduction Image
+  description: A supporting image for the introduction, you may leave this blank
 - name: history
   type: textarea
   default: ''
