@@ -152,13 +152,11 @@ export default {
       }
     },
   },
-  created() {
-    let vue = this;
-    // window.addEventListener("scroll", vue.handleScroll);
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
   },
-  destroyed() {
-    let vue = this;
-    // window.removeEventListener("scroll", vue.handleScroll);
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
   },
 };
 </script>
@@ -169,11 +167,11 @@ export default {
 }
 
 .navbar--scroll-shadow {
-  box-shadow: 0px 2px 3px var(--button-shadow);
-  -webkit-box-shadow: 0px 2px 3px var(--button-shadow);
-  -moz-box-shadow: 0px 2px 3px var(--button-shadow);
-  -o-box-shadow: 0px 2px 3px var(--button-shadow);
-  -ms-box-shadow: 0px 2px 3px var(--button-shadow);
+  box-shadow: 0px 2px 3px var(--gray-2);
+  -webkit-box-shadow: 0px 2px 3px var(--gray-2);
+  -moz-box-shadow: 0px 2px 3px var(--gray-2);
+  -o-box-shadow: 0px 2px 3px var(--gray-2);
+  -ms-box-shadow: 0px 2px 3px var(--gray-2);
 }
 .navbar__brand-img {
   height: 9rem;
