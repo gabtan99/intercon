@@ -51,11 +51,16 @@ library.add(
   faStarOfLife
 );
 
-export default function(Vue, { head }) {
+export default function(Vue, { head, isClient }) {
   Vue.use(BootstrapVue);
   Vue.use(VueYoutube);
   Vue.component("Layout", DefaultLayout);
   Vue.component("font-awesome", FontAwesomeIcon);
+  if (isClient) {
+    head.script.push({
+      src: "@/scripts/chatbot.js",
+    });
+  }
   head.bodyAttrs = {
     class: settings.dark_mode ? "dark" : "",
   };
