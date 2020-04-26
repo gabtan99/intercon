@@ -66,5 +66,13 @@ external_reads:
   link: https://emedicine.medscape.com/article/1464149-overview
 - title: Mayo Clinic - Hyperbaric Oxygen Therapy
   link: https://www.mayoclinic.org/tests-procedures/hyperbaric-oxygen-therapy/about/pac-20394380
+preview_conditions:
+- condition: One-on-one Consultations
+- condition: Prevents Disease Progression
+- condition: Optimizes Health
+preview_benefits:
+- benefit: Optimizes Health
+- benefit: Prevents Disease Progression
+- benefit: One-on-one consultations
 
 ---
