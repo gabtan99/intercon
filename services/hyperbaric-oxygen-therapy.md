@@ -43,7 +43,28 @@ stats:
     fuel, you may need to remove hair and skin care products that are petroleum based
     and potentially a fire hazard. Ask a member of your health care team for specific
     instructions before your first hyperbaric oxygen therapy session.
-  stats_list: []
-external_reads: []
+  stats_list:
+  - with_supporting_image: false
+    figure: ''
+    caption: ''
+    content: In 9 out of 10 scenarios, people don't live up to others' expectations.
+  - with_supporting_image: true
+    figure: "/uploads/markus-spiske-516263-unsplash.jpg"
+    caption: This teen is a squeamish yellow tone and has a film of fat surrounding
+      it.
+    content: In general teens are getting heavier as they grow more. However this
+      can be curved whenever they start to exercise. This can be seen in the figure
+      below.
+  summary: |-
+    To benefit from hyperbaric oxygen therapy, you'll likely need more than one session. The number of sessions depends on your medical condition. Some conditions, such as carbon monoxide poisoning, might be treated in three visits. Others, such as nonhealing wounds, may require 20 to 40 treatments.
+
+    Hyperbaric oxygen therapy alone can often effectively treat decompression sickness, arterial gas embolism and severe carbon monoxide poisoning.
+
+    To effectively treat other conditions, hyperbaric oxygen therapy is used as part of a comprehensive treatment plan and administered with other therapies and drugs that fit your individual needs.
+external_reads:
+- title: Medscape - Hyperbaric Oxygen Therapy
+  link: https://emedicine.medscape.com/article/1464149-overview
+- title: Mayo Clinic - Hyperbaric Oxygen Therapy
+  link: https://www.mayoclinic.org/tests-procedures/hyperbaric-oxygen-therapy/about/pac-20394380
 
 ---
