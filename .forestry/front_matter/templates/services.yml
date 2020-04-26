@@ -6,15 +6,9 @@ fields:
   type: text
   config:
     required: false
-  label: Title
-  description: Title of the service
-- name: image
-  type: file
-  config:
-    maxSize: 250
-  label: Image
-  description: put an image for the service
-- name: history
+  label: Service Name
+  description: Name of the service
+- name: preview_description
   type: textarea
   default: ''
   config:
@@ -22,8 +16,16 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: History
-  description: Some history of the service
+  label: Preview Description
+  description: A brief description for the preview of the service which should give
+    an idea what there service is about.
+- name: header_image
+  type: file
+  config:
+    maxSize: 250
+  label: Header Image
+  description: This image serves as the thumbnail for the preview of the service and
+    the header for the image for the article.
 - name: introduction
   type: textarea
   default: ''
@@ -33,13 +35,22 @@ fields:
     schema:
       format: markdown
   label: Introduction
-  description: Write a summary that will give the user an idea of what the service
-    is
+  description: Your article introduction.
+- name: history
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: History
+  description: Some history of the service for the article.
 - name: benefits
   type: field_group
   config: {}
   fields:
-  - name: content
+  - name: introduction
     type: textarea
     default: ''
     config:
@@ -47,9 +58,9 @@ fields:
       wysiwyg: false
       schema:
         format: markdown
-    label: Content
-    description: Write a description about the benefits of the service
-  - name: benefit
+    label: Intro
+    description: Introductory paragraph for the benefits of the service
+  - name: benefits_list
     type: field_group_list
     fields:
     - name: benefit
@@ -57,17 +68,19 @@ fields:
       config:
         required: false
       label: Benefit
+      description: Single benefit description
     config:
       min: 
       max: 
       labelField: 
-    label: Benefit
+    label: Benefits List
+    description: List of benefits
   label: Benefits
-- name: condition
+- name: conditions
   type: field_group
   config: {}
   fields:
-  - name: content
+  - name: introduction
     type: textarea
     default: ''
     config:
@@ -75,8 +88,9 @@ fields:
       wysiwyg: false
       schema:
         format: markdown
-    label: Content
-  - name: conditions
+    label: Intro
+    description: Introductory paragraph for the conditions of the service
+  - name: conditions_list
     type: field_group_list
     fields:
     - name: condition
@@ -84,17 +98,19 @@ fields:
       config:
         required: false
       label: Condition
+      description: Single condition description
     config:
       min: 
       max: 
       labelField: 
-    label: Conditions
-  label: Condition
-- name: statistics_and_analysis
+    label: Conditions List
+    description: List of conditions
+  label: Conditions
+- name: stats
   type: field_group
   config: {}
   fields:
-  - name: content
+  - name: intro
     type: textarea
     default: ''
     config:
@@ -102,12 +118,61 @@ fields:
       wysiwyg: false
       schema:
         format: markdown
-    label: Content
-  - name: statistics_picture
-    type: file
+    label: Introduction
+    description: Introductory paragraph for the stats of the service
+  - name: stats_list
+    type: field_group_list
+    fields:
+    - name: content
+      type: file
+      config:
+        maxSize: 250
+      label: Content
+      description: Description of the statistic
+    - name: with_supporting_image
+      type: boolean
+      label: With Supporting Image
+      description: Toggle this if you have supporting image for the statistic
+    - name: figure
+      type: file
+      config:
+        maxSize: 250
+      label: Figure
+      description: Supporting statistical figure
+    - name: caption
+      type: text
+      config:
+        required: false
+      label: Caption
+      description: Caption for the figure
     config:
-      maxSize: 250
-    label: Statistics Picture
+      min: 
+      max: 
+      labelField: 
+    label: Stats List
+    description: The statistics and their supporting images
   label: Statistics and Analysis
+  description: Lists out some statistics and research claims for the service
+- name: external_reads
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: The title of the article or the idea of the article
+  - name: link
+    type: text
+    config:
+      required: false
+    label: Link
+    description: The link to the article
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: External Reads
+  description: Links to articles that you might want to interest the readers with
 pages:
 - services/service-1.md
