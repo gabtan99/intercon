@@ -57,7 +57,7 @@ export default function(Vue, { head, isClient }) {
   Vue.component("Layout", DefaultLayout);
   Vue.component("font-awesome", FontAwesomeIcon);
 
-  if (isClient) {
+  if (process.isClient) {
     head.script.push({
       src: require("./scripts/chatbot.js"),
     });
