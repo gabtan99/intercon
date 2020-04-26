@@ -74,5 +74,6 @@ preview_benefits:
 - benefit: Optimizes Health
 - benefit: Prevents Disease Progression
 - benefit: One-on-one consultations
+introduction_image: "/uploads/cody-davis-253925-unsplash.jpg"
 
 ---
