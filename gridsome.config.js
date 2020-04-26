@@ -45,6 +45,18 @@ module.exports = {
       },
     },
     {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'services/**/*.md',
+        typeName: 'Services',
+        resolveAbsolutePaths: true,
+        remark: {
+          externalLinksTarget: '_blank',
+          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+        },
+      },
+    },
+    {
       use: '@zefman/gridsome-source-instagram',
       options: {
         username: 'interconregenerative', // Instagram username

@@ -1,14 +1,15 @@
 ---
 label: Services
-hide_body: false
+hide_body: true
+display_field: title
 fields:
 - name: title
   type: text
   config:
     required: false
-  label: Title
-  description: Title of the service
-- name: description
+  label: Service Name
+  description: Name of the service
+- name: preview_description
   type: textarea
   default: ''
   config:
@@ -16,7 +17,223 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: Description
-  description: description of the service
+  label: Preview Description
+  description: A brief description for the preview of the service which should give
+    an idea what there service is about.
+- name: preview_conditions
+  type: field_group_list
+  fields:
+  - name: condition
+    type: text
+    config:
+      required: false
+    label: Condition
+    description: A primary condition for preview of the service, keep this short
+  config:
+    min: 0
+    max: 3
+    labelField:
+  label: Preview Conditions
+  description: A short preview list of conditions, maximum of 3 items
+- name: preview_benefits
+  type: field_group_list
+  fields:
+  - name: benefit
+    type: text
+    config:
+      required: false
+    label: Benefit
+    description: A primary benefit for preview of the service, keep this short
+  config:
+    min: 0
+    max: 3
+    labelField:
+  label: Preview Benefits
+  description: A short preview list of benefits, maximum of 3 items
+- name: header_image
+  type: file
+  config:
+    maxSize: 250
+  label: Header Image
+  description: This image serves as the thumbnail for the preview of the service and
+    the header for the image for the article.
+- name: introduction
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Introduction
+  description: Your article introduction.
+- name: introduction_image
+  type: file
+  config:
+    maxSize: 250
+  label: Introduction Image
+  description: A supporting image for the introduction, you may leave this blank
+- name: history
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: History
+  description: Some history of the service for the article.
+- name: benefits
+  type: field_group
+  config: {}
+  fields:
+  - name: introduction
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Intro
+    description: Introductory paragraph for the benefits of the service
+  - name: benefits_list
+    type: field_group_list
+    fields:
+    - name: benefit
+      type: text
+      config:
+        required: false
+      label: Benefit
+      description: Single benefit description
+    config:
+      min:
+      max:
+      labelField:
+    label: Benefits List
+    description: List of benefits
+  label: Benefits
+- name: conditions
+  type: field_group
+  config: {}
+  fields:
+  - name: introduction
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Intro
+    description: Introductory paragraph for the conditions of the service
+  - name: conditions_list
+    type: field_group_list
+    fields:
+    - name: condition
+      type: text
+      config:
+        required: false
+      label: Condition
+      description: Single condition description
+    config:
+      min:
+      max:
+      labelField:
+    label: Conditions List
+    description: List of conditions
+  label: Conditions
+- name: stats
+  type: field_group
+  config: {}
+  fields:
+  - name: intro
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Introduction
+    description: Introductory paragraph for the stats of the service
+  - name: stats_list
+    type: field_group_list
+    fields:
+    - name: content
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: Content
+      description: A description of the statistic
+    - name: with_supporting_image
+      type: boolean
+      label: With Supporting Image
+      description: Toggle this if you have supporting image for the statistic
+    - name: figure
+      type: file
+      config:
+        maxSize: 250
+      label: Figure
+      description: Supporting statistical figure
+      showOnly:
+        field: with_supporting_image
+        value: true
+    - name: caption
+      type: text
+      config:
+        required: false
+      label: Caption
+      description: Caption for the figure
+      showOnly:
+        field: with_supporting_image
+        value: true
+    config:
+      min:
+      max:
+      labelField: content
+    label: Stats List
+    description: The statistics and their supporting images
+  - name: summary
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Summary
+    description: Summative information about statistics or other recommendations
+  label: Statistics and Analysis
+  description: Lists out some statistics and research claims for the service
+- name: external_reads
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: The title of the article or the idea of the article
+  - name: link
+    type: text
+    config:
+      required: false
+    label: Link
+    description: The link to the article
+  config:
+    min:
+    max:
+    labelField:
+  label: External Reads
+  description: Links to articles that you might want to interest the readers with
 pages:
-- services/service-1.md
+- services/hyperbaric-oxygen-therapy.md
+- services/colon-therapy.md
+- services/eating-food.md
+- services/infrared-sauna.md
+- services/red-light-therapy.md
