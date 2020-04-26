@@ -20,6 +20,36 @@ fields:
   label: Preview Description
   description: A brief description for the preview of the service which should give
     an idea what there service is about.
+- name: preview_conditions
+  type: field_group_list
+  fields:
+  - name: condition
+    type: text
+    config:
+      required: false
+    label: Condition
+    description: A primary condition for preview of the service, keep this short
+  config:
+    min: 0
+    max: 3
+    labelField: 
+  label: Preview Conditions
+  description: A short preview list of conditions, maximum of 3 items
+- name: preview_benefits
+  type: field_group_list
+  fields:
+  - name: benefit
+    type: text
+    config:
+      required: false
+    label: Benefit
+    description: A primary benefit for preview of the service, keep this short
+  config:
+    min: 0
+    max: 3
+    labelField: 
+  label: Preview Benefits
+  description: A short preview list of benefits, maximum of 3 items
 - name: header_image
   type: file
   config:
