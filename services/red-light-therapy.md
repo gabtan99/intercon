@@ -74,5 +74,6 @@ preview_benefits:
 - benefit: Makes lips pinker
 - benefit: Detoxified blood
 introduction_image: "/uploads/red-light.png"
+header_color: "#000000"
 
 ---

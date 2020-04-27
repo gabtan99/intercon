@@ -4,9 +4,9 @@ preview_description: Infrared sauna involves breathing pure oxygen in a
   pressurized room or tube. Our blood carries this oxygen throughout your body. This
   helps fight bacteria and stimulate the release of substances called growth factors
   and stem cells, which promote healing.
-header_image: "/uploads/hyperbaric.png"
+header_image: "/uploads/ian-dooley-281897-unsplash.jpg"
 introduction: |-
-  Hyperbaric oxygen therapy involves breathing pure oxygen in a pressurized room or tube. Hyperbaric oxygen therapy is a well-established treatment for decompression sickness, a hazard of scuba diving. Other conditions treated with hyperbaric oxygen therapy include serious infections, bubbles of air in your blood vessels, and wounds that won't heal as a result of diabetes or radiation injury.
+  Hyperbaric oxygen therapy involves breathing pure oxygen in a pressurized room or tube. Hyperbaric oxygen therapy is a well-established treatment for decompression sickness, a hazard of scuba diving. Other conditions treated with hyperbaric oxygen therapy include serious infections, bubbles of air in your blood vessels, and wounds that won't heal as a result of diabetes or radiation injury. putang
 
   In a hyperbaric oxygen therapy chamber, the air pressure is increased to three times higher than normal air pressure. Under these conditions, your lungs can gather more oxygen than would be possible breathing pure oxygen at normal air pressure.
 
@@ -45,7 +45,7 @@ stats:
     instructions before your first hyperbaric oxygen therapy session.
   stats_list:
   - with_supporting_image: true
-    figure: '/uploads/stats.png'
+    figure: "/uploads/stats.png"
     caption: Here are some stats.
     content: In 9 out of 10 scenarios, people don't live up to others' expectations.
   summary: |-
@@ -67,5 +67,6 @@ preview_benefits:
 - benefit: Makes lips pinker
 - benefit: Detoxified blood
 introduction_image: "/uploads/services-header.png"
+header_color: "#000000"
 
 ---

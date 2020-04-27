@@ -62,5 +62,6 @@ preview_benefits:
 - benefit: You Look Good
 - benefit: You Feel Good
 introduction_image: "/uploads/david-nuescheler-gUBJ9vSlky0-unsplash.jpg"
+header_color: "#000000"
 
 ---

@@ -28,6 +28,7 @@ import {
   faFemale,
   faTimes,
   faStarOfLife,
+  faCheck,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -48,7 +49,8 @@ library.add(
   faMale,
   faFemale,
   faTimes,
-  faStarOfLife
+  faStarOfLife,
+  faCheck,
 );
 
 export default function(Vue, { head }) {

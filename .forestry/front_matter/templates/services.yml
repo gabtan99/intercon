@@ -17,6 +17,7 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
+    max: 300
   label: Preview Description
   description: A brief description for the preview of the service which should give
     an idea what there service is about.
@@ -27,6 +28,7 @@ fields:
     type: text
     config:
       required: false
+      max: 36
     label: Condition
     description: A primary condition for preview of the service, keep this short
   config:
@@ -42,6 +44,7 @@ fields:
     type: text
     config:
       required: false
+      max: 36
     label: Benefit
     description: A primary benefit for preview of the service, keep this short
   config:
@@ -57,6 +60,14 @@ fields:
   label: Header Image
   description: This image serves as the thumbnail for the preview of the service and
     the header for the image for the article.
+- name: header_color
+  type: color
+  label: Header Color
+  config:
+    required: false
+    color_format: Hex
+  description: The service name will be overlaid on top of the header image, provide
+    a complementing color so text appears visible.
 - name: introduction
   type: textarea
   default: ''

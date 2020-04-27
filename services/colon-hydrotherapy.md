@@ -45,7 +45,7 @@ stats:
     instructions before your first hyperbaric oxygen therapy session.
   stats_list:
   - with_supporting_image: true
-    figure: '/uploads/stats.png'
+    figure: "/uploads/stats.png"
     caption: Here are some stats.
     content: In 9 out of 10 scenarios, people don't live up to others' expectations.
   summary: |-
@@ -67,5 +67,6 @@ preview_benefits:
 - benefit: Makes lips pinker
 - benefit: Detoxified blood
 introduction_image: "/uploads/sauna.png"
+header_color: "#000000"
 
 ---
