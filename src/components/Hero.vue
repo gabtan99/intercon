@@ -12,7 +12,7 @@
       </h1>
 
       <div class="hero-buttons">
-        <GreenButton>
+        <GreenButton :onClick="learnMore">
           Learn More
         </GreenButton>
 
@@ -26,8 +26,7 @@
       <b-img
         fluid
         class="hero-image" 
-        src="../assets/img/hero-img.png">
-      </b-img>
+        src="../assets/img/hero-img.png"/>
     </div>
 
     <b-modal centered hide-header hide-footer size="lg" v-model="showModal">
@@ -72,6 +71,9 @@ export default {
     watchVideo() {
       this.showModal = true
     },
+    learnMore() {
+      this.$router.push("/about")
+    }
   },
 };
 </script>
@@ -86,6 +88,7 @@ export default {
 }
 
 .hero-title {
+  color: var(--blue-branding-dark);
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
