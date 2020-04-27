@@ -139,7 +139,6 @@ export default {
     localStorage.modalShown = false;
     if (localStorage.isFirstVisit === "true") {
       setTimeout(() => {
-        console.log(localStorage.isModalShown !== "true", "hsaiudha")
         if (localStorage.isModalShown !== "true")
           this.showModal();
       }, 3000);
