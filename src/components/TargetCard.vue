@@ -92,15 +92,6 @@ export default {
   cursor: pointer;
 }
 
-.close-icon:hover {
-  position: absolute;
-  right: 20px;
-  margin: 18px;
-  font-size: 13pt;
-  color: var(--gray-5);
-  cursor: pointer;
-}
-
 @media only screen and (max-width: 767px) {
   .card {
     position: relative;
