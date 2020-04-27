@@ -127,7 +127,10 @@
                             class="social"
                           />
                         </a>
-                        <a class="font-avenir-light font-16">
+                        <a
+                          href="mailto:info@interconregenerative.com"
+                          target="_top"
+                        >
                           <font-awesome :icon="'envelope'" class="social" />
                         </a>
                       </span>
@@ -259,7 +262,7 @@ textarea {
 }
 
 .social:hover {
-  color: var(--gray-3);
+  color: var(--gray-5);
 }
 
 .blue {

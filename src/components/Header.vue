@@ -215,11 +215,11 @@ export default {
 .green-button {
   background-color: var(--green-branding);
   border: none;
-  box-shadow: 0px 3px 6px var(--button-shadow);
-  -webkit-box-shadow: 0px 3px 6px var(--button-shadow);
-  -moz-box-shadow: 0px 3px 6px var(--button-shadow);
-  -o-box-shadow: 0px 3px 6px var(--button-shadow);
-  -ms-box-shadow: 0px 3px 6px var(--button-shadow);
+  box-shadow: 0px 2px 3px var(--button-shadow);
+  -webkit-box-shadow: 0px 2px 3px var(--button-shadow);
+  -moz-box-shadow: 0px 2px 3px var(--button-shadow);
+  -o-box-shadow: 0px 2px 3px var(--button-shadow);
+  -ms-box-shadow: 0px 2px 3px var(--button-shadow);
   color: var(--white-text);
   transition: all ease-in 0.15s;
 }
