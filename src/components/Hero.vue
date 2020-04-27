@@ -80,8 +80,8 @@ export default {
 .main {
   display: flex;
   flex-direction: row;
-  padding: 80px 15px;
   flex-wrap: wrap;
+  padding: 80px 15px;
   justify-content: center;
   padding-bottom: 40px;
 }
@@ -123,7 +123,12 @@ export default {
   }
 
   .main {
-    padding-bottom: 0px;
+    padding: 10px 10px;
+    padding-top: 25px;
+  }
+  .white-button {
+    margin: 0rem;
+    margin-top: 10px;
   }
 }
 </style>
