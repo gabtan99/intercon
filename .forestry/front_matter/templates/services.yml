@@ -17,6 +17,7 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
+    max: 300
   label: Preview Description
   description: A brief description for the preview of the service which should give
     an idea what there service is about.
