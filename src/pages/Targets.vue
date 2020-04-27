@@ -1,14 +1,16 @@
 <template>
   <Layout>
-    <div class="description">
-      <h1 class="heading font-gilroy-bold font-36">Target Groups</h1>
-      <p class="font-avenir-light font-16 subheading">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in
+    <PageHeader :page_name="page_name" :image="image" />
+
+    <div class="header-text" style="">
+      <h1 class="font-gilroy-bold font-36">
+        {{ settings.targets_header_text }}
+      </h1>
+      <p class="font-avenir-light font-18">
+        {{ settings.targets_page_description }}
       </p>
     </div>
+
     <div class="main-container">
       <TargetCard
         v-for="item in $page.targets.edges"
@@ -42,13 +44,22 @@ query Target {
 </page-query>
 
 <script>
-import TargetCard from "@/components/TargetCard";
+import TargetCard from '@/components/TargetCard'
+import PageHeader from '@/components/PageHeader'
 
 export default {
+  data() {
+    return {
+      settings: require('../../data/theme.json'),
+      page_name: 'Targets',
+      image: '../assets/img/target-header.png',
+    }
+  },
   components: {
     TargetCard,
+    PageHeader,
   },
-};
+}
 </script>
 
 <style scoped>
@@ -74,17 +85,30 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  padding: 50px 20px;
+  padding: 50px 160px;
+}
+
+.header-text {
+  display: block;
+  text-align: center;
+  width: 70%;
+  padding-top: 50px;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 767px) {
   .main-container {
-    /* display: block; */
     column-count: 1;
     column-gap: 1em;
     margin: 0 auto;
-    padding: 50px;
+    padding: 30px 0px 50px;
     width: 100%;
+  }
+
+  .header-text {
+    display: block;
+    text-align: left;
+    width: 70%;
   }
 }
 </style>

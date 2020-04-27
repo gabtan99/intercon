@@ -14,27 +14,23 @@ target_services:
     service_image: '/uploads/sauna.png'
     service_description:
       Just a little indication. And I know you're saying, 'Oh Bob,
-      you've done it this time.' And you may be right. I like to beat the brush. That's
-      crazy. Let your imagination be your guide. This piece of canvas is your world.
+      you've done it this time.' And you may be right. I like to beat the brush.
   - service_name: Hyperbaric Therapy
     service_url: services/hyperbaric
     service_image: '/uploads/hyperbaric.png'
     service_description:
       Just a little indication. And I know you're saying, 'Oh Bob,
-      you've done it this time.' And you may be right. I like to beat the brush. That's
-      crazy. Let your imagination be your guide. This piece of canvas is your world.
+      you've done it this time.' And you may be right. I like to beat the brush.
   - service_name: Red Light Therapy
     service_url: services/red-light
     service_image: '/uploads/red-light.png'
     service_description:
       Just a little indication. And I know you're saying, 'Oh Bob,
-      you've done it this time.' And you may be right. I like to beat the brush. That's
-      crazy. Let your imagination be your guide. This piece of canvas is your world.
+      you've done it this time.' And you may be right. I like to beat the brush.
   - service_name: Colon Hydrotherapy
     service_url: services/colon-hydrotherapy
     service_image: '/uploads/colon-hydrotherapy.png'
     service_description:
       Just a little indication. And I know you're saying, 'Oh Bob,
-      you've done it this time.' And you may be right. I like to beat the brush. That's
-      crazy. Let your imagination be your guide. This piece of canvas is your world.
+      you've done it this time.' And you may be right. I like to beat the brush.
 ---

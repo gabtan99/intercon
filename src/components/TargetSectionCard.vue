@@ -33,7 +33,7 @@ export default {
   height: 200px;
   width: 250px;
   margin: 15px;
-  padding: 10px;
+  padding: 5px;
   cursor: pointer;
   border: none;
   box-shadow: 0 3px 3px 1px var(--gray-1);
@@ -53,11 +53,11 @@ export default {
 }
 
 .text-style {
-  margin: 15px;
+  margin: 10px;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
 
