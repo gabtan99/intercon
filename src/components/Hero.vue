@@ -56,7 +56,7 @@
           :player-vars="{
             autoplay: 1,
           }"
-          video-id="eO_YeV1BIzk"
+          video-id="r1ZLSbQ0r0I"
         />
       </div>
     </b-modal>
