@@ -71,19 +71,27 @@
               <div>
                 <ul>
                   <li>
-                    <a class="mob-link font-gilroy-bold" href="#">Home</a>
+                    <a class="mob-link font-gilroy-bold" href="/">Home</a>
                   </li>
                   <li>
-                    <a class="mob-link font-gilroy-bold" href="#">Services</a>
+                    <a class="mob-link font-gilroy-bold" href="/services"
+                      >Services</a
+                    >
                   </li>
                   <li>
-                    <a class="mob-link font-gilroy-bold" href="#">Targets</a>
+                    <a class="mob-link font-gilroy-bold" href="/targets"
+                      >Targets</a
+                    >
                   </li>
                   <li>
-                    <a class="mob-link font-gilroy-bold" href="#">About Us</a>
+                    <a class="mob-link font-gilroy-bold" href="/about"
+                      >About Us</a
+                    >
                   </li>
                   <li>
-                    <a class="mob-link font-gilroy-bold" href="#">Contact Us</a>
+                    <a class="mob-link font-gilroy-bold" href="/contact"
+                      >Contact Us</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -191,10 +199,6 @@ export default {
 .green-button:focus {
   background-color: var(--green-branding) !important;
 }
-.green-button--active,
-.green-button--active:hover {
-  text-decoration: underline;
-}
 
 @media only screen and (min-width: 868px) {
   .mobile-nav.container {
@@ -228,7 +232,7 @@ export default {
   width: 60px;
   height: 60px;
   opacity: 0;
-  margin-right: 10px;
+
   margin-top: 10px;
 }
 .outer-menu .checkbox-toggle:checked + .hamburger > div {
@@ -286,7 +290,6 @@ export default {
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
-  margin-right: 10px;
   margin-top: 10px;
 }
 .outer-menu .hamburger > div {
@@ -344,7 +347,7 @@ export default {
   width: 200vw;
   height: 200vw;
   color: #fefefe;
-  background: rgba(247, 247, 247, 0.92);
+  background: var(--white);
   border-radius: 50%;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
