@@ -2,8 +2,8 @@
   <footer class="footer">
     <div class="container">
       <div class="mainContent">
-        <div class="row">
-          <div class="col-sm-2">
+        <div class="row ">
+          <div class="col-md-2 links">
             <h2 class="font-gilroy-bold font-24">Links</h2>
             <div class="horizontal">
               <g-link to="/" class="link font-avenir-light font-16"
@@ -23,7 +23,7 @@
               >
             </div>
           </div>
-          <div class="col-sm-5">
+          <div class="col-md-5 contact">
             <h2 class="font-gilroy-bold font-24">Contact Us</h2>
             <div class="horizontal">
               <span class="contact-info">
@@ -48,7 +48,7 @@
               </span>
             </div>
           </div>
-          <div class="col-sm">
+          <div class="col-md newsletter">
             <h2 class="font-gilroy-bold font-24">Subscribe to Newsletter</h2>
             <div class="horizontal">
               <p class="font-avenir-light font-16">
