@@ -4,9 +4,7 @@
       <Hero />
       <!-- <ProjectsGrid :projects="$page.projects.edges" /> -->
     </div>
-    <b-container fluid>
-      <Waves/>
-    </b-container>
+    <Waves/>
     <!-- <LatestJournals :journals="$page.journals.edges" /> -->
     <TargetSection :targets="$page.targets.edges" />
     <Instagram :images="$page.images.edges" />
