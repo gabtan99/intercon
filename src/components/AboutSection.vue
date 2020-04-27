@@ -26,7 +26,8 @@
                         <b-row>
                             <b-img
                             fluid
-                            :src="require('../assets/img/about-detail-1.png')"/>
+                            :src="require('../assets/img/about-detail-1.png')"
+                            class="about-detail-image"/>
                             <h1 
                             class="detail-title font-gilroy-bold font-24">
                                 Optimize Health and Lifetyle
@@ -43,7 +44,8 @@
                         <b-row>
                             <b-img
                             fluid
-                            :src="require('../assets/img/about-detail-2.png')"/>
+                            :src="require('../assets/img/about-detail-2.png')"
+                            class="about-detail-image"/>
                             <h1 
                             class="detail-title font-gilroy-bold font-24">
                                 Prevent and Halt Disease Prevention
@@ -105,6 +107,10 @@ export default {
 
 .about-detail-item {
     margin-top: 4rem;
+}
+
+.about-detail-image {
+    margin-left: 2rem;
 }
 
 .detail-items {
