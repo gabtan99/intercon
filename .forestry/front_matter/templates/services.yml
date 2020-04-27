@@ -57,6 +57,14 @@ fields:
   label: Header Image
   description: This image serves as the thumbnail for the preview of the service and
     the header for the image for the article.
+- name: header_color
+  type: color
+  label: Header Color
+  config:
+    required: false
+    color_format: Hex
+  description: The service name will be overlaid on top of the header image, provide
+    a complementing color so text appears visible.
 - name: introduction
   type: textarea
   default: ''
