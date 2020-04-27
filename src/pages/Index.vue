@@ -6,6 +6,7 @@
     </div>
     <Waves/>
     <!-- <LatestJournals :journals="$page.journals.edges" /> -->
+    <AboutSection/>
     <TargetSection :targets="$page.targets.edges" />
     <Instagram :images="$page.images.edges" />
     <Testimonies />
@@ -63,6 +64,7 @@ import Waves from "@/components/Waves";
 import ProjectsGrid from "@/components/ProjectsGrid";
 import LatestJournals from "@/components/LatestJournals";
 import Instagram from "@/components/Instagram";
+import AboutSection from "@/components/AboutSection"
 import TargetSection from "@/components/TargetSection";
 import Testimonies from "@/components/Testimonies";
 
@@ -72,6 +74,7 @@ export default {
     Waves,
     ProjectsGrid,
     LatestJournals,
+    AboutSection,
     TargetSection,
     Instagram,
     Testimonies,
