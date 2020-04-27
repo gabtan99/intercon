@@ -28,6 +28,7 @@ fields:
     type: text
     config:
       required: false
+      max: 36
     label: Condition
     description: A primary condition for preview of the service, keep this short
   config:
@@ -43,6 +44,7 @@ fields:
     type: text
     config:
       required: false
+      max: 36
     label: Benefit
     description: A primary benefit for preview of the service, keep this short
   config:
