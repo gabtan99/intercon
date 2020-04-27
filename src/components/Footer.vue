@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="container">
       <div class="mainContent">
-        <div class="row">
+        <div class="row ">
           <div class="col-sm-2">
             <h2 class="font-gilroy-bold font-24">Links</h2>
             <div class="horizontal">
