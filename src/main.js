@@ -2,10 +2,12 @@ import DefaultLayout from "~/layouts/Default.vue";
 import settings from "../data/theme.json";
 import BootstrapVue from "bootstrap-vue";
 import VueYoutube from "vue-youtube";
+import VueLayers from 'vuelayers'
 
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import "@/assets/css/index.css";
+import 'vuelayers/lib/style.css'
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
@@ -54,6 +56,7 @@ library.add(
 export default function(Vue, { head }) {
   Vue.use(BootstrapVue);
   Vue.use(VueYoutube);
+  Vue.use(VueLayers)
   Vue.component("Layout", DefaultLayout);
   Vue.component("font-awesome", FontAwesomeIcon);
 

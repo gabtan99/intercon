@@ -23,7 +23,8 @@
     "gridsome": "^0.7.13",
     "vue": "^2.6.11",
     "vue-carousel": "^0.18.0",
-    "vue-youtube": "^1.4.0"
+    "vue-youtube": "^1.4.0",
+    "vuelayers": "^0.11.23"
   },
   "devDependencies": {
     "minimist": "^1.2.5"
