@@ -67,6 +67,10 @@ import TargetSection from "@/components/TargetSection";
 import Testimonies from "@/components/Testimonies";
 
 export default {
+  metaInfo: {
+    title: "Intercon Regenerative Center",
+    meta: [{ name: "author", content: "John Doe" }],
+  },
   components: {
     Hero,
     Waves,
