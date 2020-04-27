@@ -16,13 +16,13 @@
 
 <script>
 export default {
-  props: ["target"],
+  props: ['target'],
   methods: {
-    log: function(e) {
-      console.log(e);
+    log: function (e) {
+      console.log(e)
     },
   },
-};
+}
 </script>
 
 <style scoped>
