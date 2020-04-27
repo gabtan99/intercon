@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <NewsletterModal currPage="LANDING"/>
     <div class="container">
       <Hero />
       <!-- <ProjectsGrid :projects="$page.projects.edges" /> -->
@@ -9,6 +10,7 @@
     <TargetSection :targets="$page.targets.edges" />
     <Instagram :images="$page.images.edges" />
     <Testimonies />
+    
   </Layout>
 </template>
 
@@ -65,6 +67,7 @@ import LatestJournals from "@/components/LatestJournals";
 import Instagram from "@/components/Instagram";
 import TargetSection from "@/components/TargetSection";
 import Testimonies from "@/components/Testimonies";
+import NewsletterModal from "@/components/NewsletterModal"
 
 export default {
   metaInfo: {
@@ -79,6 +82,7 @@ export default {
     TargetSection,
     Instagram,
     Testimonies,
+    NewsletterModal,
   },
 };
 </script>

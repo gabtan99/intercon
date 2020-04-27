@@ -122,6 +122,7 @@
 
 <script>
 import { signupNewsletter } from "@/services/newsletter";
+import { setSubscribed } from "@/util/localStorage" 
 
 export default {
   data() {
@@ -153,6 +154,7 @@ export default {
       signupNewsletter(this.email)
         .then((res) => {
           this.showResult(true);
+          setSubscribed(true)
         })
         .catch((err) => {
           this.showResult(false);

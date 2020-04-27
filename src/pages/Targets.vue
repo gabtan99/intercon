@@ -16,6 +16,7 @@
         :target="item.node"
       />
     </div>
+    <NewsletterModal currPage="TARGETS"/>
   </Layout>
 </template>
 
@@ -43,10 +44,12 @@ query Target {
 
 <script>
 import TargetCard from "@/components/TargetCard";
+import NewsletterModal from "@/components/NewsletterModal"
 
 export default {
   components: {
     TargetCard,
+    NewsletterModal,
   },
 };
 </script>
