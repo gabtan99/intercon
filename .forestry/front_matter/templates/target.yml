@@ -56,6 +56,13 @@ fields:
     max: 
     labelField: 
   label: Target Services
+- name: page_name
+  type: text
+  config:
+    required: false
+  hidden: true
+  label: Page Name
+  description: Target
 pages:
 - targets/skin-care.md
 - targets/target-1.md
