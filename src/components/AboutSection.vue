@@ -118,6 +118,7 @@ export default {
 }
 
 .detail-title {
+    color: var(--blue-branding-dark);
     padding-top: 2rem;
     padding-left: 2rem;
 }
