@@ -30,11 +30,17 @@
       </form>
 
     </div>
+    <NewsletterModal currPage="SERVICES"/>
   </Layout>
 </template>
 
 <script>
-export default {}
+import NewsletterModal from "@/components/NewsletterModal"
+export default {
+  components: {
+    NewsletterModal,
+  }
+}
 </script>
 
 <style scoped>
