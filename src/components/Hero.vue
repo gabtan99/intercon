@@ -1,13 +1,14 @@
 <template>
   <div class="main">
-    
-
     <div class="col-lg-6">
-      <h1 class="hero-title font-gilroy-bold font-42">The Future of <br/> Personalized Healthcare</h1>
+      <h1 class="hero-title font-gilroy-bold font-42">
+        The Future of <br />
+        Personalized Healthcare
+      </h1>
 
       <h1 class="hero-subtitle font-avenir-light font-24">
-        Enhance and optimize your body’s self <br/>
-        healing mechanisms in the most safest and <br/>
+        Enhance and optimize your body’s self <br />
+        healing mechanisms in the most safest and <br />
         natural way possible.
       </h1>
 
@@ -16,17 +17,14 @@
           Learn More
         </GreenButton>
 
-        <WhiteButton :onClick="watchVideo" >
+        <WhiteButton :onClick="watchVideo">
           Watch Video
         </WhiteButton>
       </div>
     </div>
 
-    <div class="col-lg-6">
-      <b-img
-        fluid
-        class="hero-image" 
-        src="../assets/img/hero-img.png"/>
+    <div class="col-lg-6 image">
+      <b-img :src="require('../assets/img/hero-img.png')" fluid />
     </div>
 
     <b-modal centered hide-header hide-footer size="lg" v-model="showModal">
@@ -69,11 +67,11 @@ export default {
   },
   methods: {
     watchVideo() {
-      this.showModal = true
+      this.showModal = true;
     },
     learnMore() {
-      this.$router.push("/about")
-    }
+      this.$router.push("/about");
+    },
   },
 };
 </script>
@@ -85,6 +83,7 @@ export default {
   padding: 80px 15px;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 40px;
 }
 
 .hero-title {
@@ -116,5 +115,15 @@ export default {
   font-size: 13pt;
   color: var(--white);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  .image {
+    display: none;
+  }
+
+  .main {
+    padding-bottom: 0px;
+  }
 }
 </style>

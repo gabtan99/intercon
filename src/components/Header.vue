@@ -1,5 +1,5 @@
 <template>
-  <b-navbar type="light" sticky :class="scrollingShadow">
+  <b-navbar type="light" sticky :class="scrollingShadow" style="z-index: 999">
     <b-container fluid="lg" class="desktop-nav">
       <b-navbar-brand>
         <img
