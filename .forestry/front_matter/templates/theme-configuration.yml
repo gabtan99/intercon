@@ -30,5 +30,19 @@ fields:
 - type: boolean
   name: dark_mode
   label: Dark mode
+- name: targets_header_text
+  type: text
+  config:
+    required: false
+  label: Targets Header Text
+- name: targets_page_description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Targets Page Description
 pages:
 - data/theme.json
