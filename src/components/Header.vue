@@ -2,11 +2,13 @@
   <b-navbar type="light" sticky :class="scrollingShadow" style="z-index: 999">
     <b-container fluid="lg" class="desktop-nav">
       <b-navbar-brand>
-        <img
-          src="@/assets/img/irc-logo-brand.png"
-          alt="Intercon Regenrative Center"
-          class="navbar__brand-img"
-        />
+        <a href="/">
+          <img
+            src="@/assets/img/irc-logo-brand.png"
+            alt="Intercon Regenrative Center"
+            class="navbar__brand-img"
+          />
+        </a>
       </b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <b-nav-item
@@ -54,11 +56,13 @@
 
     <b-container class="mobile-nav">
       <b-navbar-brand>
-        <img
-          src="@/assets/img/irc-logo-brand.png"
-          alt="Intercon Regenrative Center"
-          class="navbar__brand-img"
-        />
+        <a href="/">
+          <img
+            src="@/assets/img/irc-logo-brand.png"
+            alt="Intercon Regenrative Center"
+            class="navbar__brand-img"
+          />
+        </a>
       </b-navbar-brand>
       <b-container class="ml-auto font-21 d-flex justify-content-end ">
         <div class="outer-menu">
@@ -263,8 +267,7 @@ export default {
   -webkit-transition: opacity 0.4s ease 0.4s;
   transition: opacity 0.4s ease 0.4s;
 }
-.outer-menu .checkbox-toggle:hover + .hamburger {
-}
+
 .outer-menu .checkbox-toggle:checked:hover + .hamburger > div {
   -webkit-transform: rotate(225deg);
   transform: rotate(225deg);
