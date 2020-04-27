@@ -11,14 +11,20 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import NewsletterModal from '@/components/NewsletterModal'
+import { setFirstVisit } from "@/util/localStorage";
 
 export default {
   components: {
     Header,
     Footer,
-    NewsletterModal,
+    NewsletterModal
   },
-}
+  mounted() {
+    setFirstVisit();
+  }
+};
 </script>
 
-<style></style>
+
+<style>
+</style>
