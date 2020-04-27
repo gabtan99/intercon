@@ -1,6 +1,15 @@
 <template>
   <div>
-    <b-modal id="modal-lg" ref="newsletter" class="newsletter" size="lg" hide-footer hide-header body-class="p-0">
+    <b-modal
+      id="modal-lg"
+      ref="newsletter"
+      class="newsletter desktop"
+      size="lg"
+      hide-footer
+      hide-header
+      body-class="p-0"
+      centered
+    >
       <img src="../assets/img/icon-exit.png" class="exit" @click="$bvModal.hide('modal-lg')" />
       <div id="container">
         <img src="../assets/img/modal-picture.png" class="picture" />
@@ -14,8 +23,31 @@
           </div>
           <div id="form-container">
             <form @submit.prevent="handleSubmit">
-              <input placeholder="Your email address" type="email" />
-              <b-button id="submit" type="submit">Join Now</b-button>
+              <input
+                type="email"
+                class="form-control emailInput font-avenir-light font-16"
+                name="email"
+                placeholder="Your email address"
+                v-on:input="handleChange"
+              />
+
+              <p
+                v-if="showMessage && isSuccess"
+                class="successMsg font-avenir-light font-16"
+              >
+                Thank You for subscribing! A confirmation email will be sent.
+              </p>
+              <p
+                v-else-if="showMessage && !isSuccess"
+                class="errorMsg font-avenir-light font-16"
+              >
+                Uh oh! Something went wrong.
+              </p>
+
+              <b-button id="submit" type="submit">
+                <span v-if="!isLoading">Join Now</span>
+                <span v-if="isLoading" class="spinner-border spinner-border-lg" role="status" aria-hidden="true"></span>
+              </b-button>
             </form>
           </div>
         </div>
@@ -25,19 +57,114 @@
 </template>
 
 <script>
+import { signupNewsletter } from "@/services/newsletter";
+import * as ls from "@/util/localStorage";
+import { setSubscribed } from "@/util/localStorage" 
+
 export default {
+  props: ["currPage"],
+  data() {
+    return {
+      settings: require("../../data/theme.json"),
+      email: null,
+      isLoading: false,
+      isSuccess: false,
+      showMessage: null
+    };
+  },
   methods: {
-    handleSubmit() {},
+    handleChange(text) {
+      this.email = text.target.value.trim();
+    },
+    handleSubmit() {
+      this.showMessage = false
+      if (this.email === null || this.email.length === 0) return null;
+
+      this.isLoading = true;
+      signupNewsletter(this.email)
+        .then(res => {
+          this.showResult(true);
+          setSubscribed(true);
+        })
+        .catch(err => {
+          this.showResult(false);
+          console.log("err", err);
+        });
+    },
+    showResult(ok) {
+      this.isLoading = false;
+      this.showMessage = true;
+      if (ok) {
+        this.isSuccess = true;
+      } else {
+        this.isSuccess = false;
+      }
+    },
     showModal() {
-      this.$refs["newsletter"].show();
+      if (localStorage.isSubscribed !== "true") this.$refs["newsletter"].show();
     },
     hideModal() {
       this.$refs["newsletter"].hide();
+    },
+    scroll() {
+      window.onscroll = () => {
+        let bottomOfWindow =
+          Math.max(
+            window.pageYOffset,
+            document.documentElement.scrollTop,
+            document.body.scrollTop
+          ) +
+            window.innerHeight >=
+          document.documentElement.offsetHeight * 0.9;
+        if (bottomOfWindow) {
+          switch (this.currPage) {
+            case "LANDING":
+            case "SPECIFIC_SERVICE":
+            case "TARGETS":
+            case "SERVICES":
+              if (localStorage.modalShown === "false") {
+                this.showModal();
+                localStorage.modalShown = true;
+              }
+              break;
+          }
+        } else {
+          localStorage.bottom = false;
+        }
+      };
     }
   },
   mounted() {
-    // put when to show modal here
-    // this.showModal()
+    this.scroll();
+    localStorage.modalShown = false;
+    if (localStorage.isFirstVisit === "true") {
+      setTimeout(() => {
+        if (localStorage.isModalShown !== "true")
+          this.showModal();
+      }, 3000);
+    } else {
+      const chance = Math.random() * 100;
+      switch (this.currPage) {
+        case "LANDING":
+          if (chance >= 50) {
+            setTimeout(() => {
+              if (localStorage.isModalShown !== "true")
+                this.showModal();
+            }, 4000);
+          }
+          break;
+        case "SPECIFIC_SERVICE":
+        case "TARGETS":
+        case "SERVICES":
+        default:
+          if (chance >= 40) {
+            setTimeout(() => {
+              if (localStorage.isModalShown !== "true")
+                this.showModal();
+            }, 4000);
+          }
+      }
+    }
   }
 };
 </script>
@@ -100,5 +227,21 @@ input {
 
 ::placeholder {
   color: #a8a4a4;
+}
+
+.successMsg {
+  color: var(--green-branding-light);
+  padding-top: 10px;
+}
+
+.errorMsg {
+  color: var(--red);
+  padding-top: 10px;
+}
+
+@media only screen and (max-width: 991px) {
+  .picture {
+    display: none;
+  }
 }
 </style>
