@@ -2,7 +2,7 @@
   <div>
     <a href="/targets" style="text-decoration: none; color: inherit;">
       <b-card class="card-style">
-        <font-awesome class="icon-style" :icon="target.target_icon" />
+        <img class="icon-style" :src="target.target_icon.src" alt="icon" />
         <h4
           class="font-gilroy-regular font-24"
           style="color: var(--blue-branding);"
@@ -47,7 +47,9 @@ export default {
 }
 
 .icon-style {
-  font-size: 18pt;
+  width: 32px;
+  height: 32px;
+  border-radius: 500px;
   margin: 10px;
   color: var(--blue-branding);
 }

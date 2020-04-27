@@ -2,13 +2,16 @@
   <div class="main">
     <div class="col-lg-6">
       <h1 class="hero-title font-gilroy-bold font-42">
-        The Future of <br />
+        The Future of
+        <br />
         Personalized Healthcare
       </h1>
 
       <h1 class="hero-subtitle font-avenir-light font-24">
-        Enhance and optimize your body’s self <br />
-        healing mechanisms in the most safest and <br />
+        Enhance and optimize your body’s self
+        <br />
+        healing mechanisms in the most safest and
+        <br />
         natural way possible.
       </h1>
 
@@ -33,6 +36,18 @@
         :icon="'times'"
         @click="showModal = false"
       />
+      <div class="modal-style">
+        <h1 class="font-avenir-light">
+          Subscribe to our channel and be part of our growing community!
+        </h1>
+        <a
+          class="font-gilroy-light font-18 youtube-link"
+          :href="settings.youtube_link"
+        >
+          <font-awesome class="youtube-icon" :icon="['fab', 'youtube']" />
+          {{ settings.youtube_handle }}
+        </a>
+      </div>
       <div>
         <youtube
           :fitParent="true"
@@ -41,7 +56,7 @@
           :player-vars="{
             autoplay: 1,
           }"
-          video-id="WZdEP1L-EZE"
+          video-id="eO_YeV1BIzk"
         />
       </div>
     </b-modal>
@@ -49,9 +64,9 @@
 </template>
 
 <script>
-import GreenButton from "@/components/GreenButton";
-import WhiteButton from "@/components/WhiteButton";
-import Waves from "@/components/Waves";
+import GreenButton from '@/components/GreenButton'
+import WhiteButton from '@/components/WhiteButton'
+import Waves from '@/components/Waves'
 
 export default {
   components: {
@@ -61,19 +76,19 @@ export default {
   },
   data() {
     return {
-      settings: require("../../data/theme.json"),
+      settings: require('../../data/theme.json'),
       showModal: false,
-    };
+    }
   },
   methods: {
     watchVideo() {
-      this.showModal = true;
+      this.showModal = true
     },
     learnMore() {
-      this.$router.push("/about");
+      this.$router.push('/about')
     },
   },
-};
+}
 </script>
 
 <style scoped>
@@ -108,12 +123,36 @@ export default {
   margin-left: 2rem;
 }
 
+.modal-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0px 20px;
+}
+
+.youtube-icon {
+  color: #ff0000;
+  margin: 2px 5px;
+}
+
+.youtube-link {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  padding: 5px 0px 0px;
+}
+
+.youtube-link:hover {
+  color: var(--green-branding-light);
+  text-decoration: underline;
+}
+
 .close-icon {
   position: absolute;
   right: 10px;
   margin: 10px;
   font-size: 13pt;
-  color: var(--white);
+  color: var(--gray-2);
   cursor: pointer;
 }
 
