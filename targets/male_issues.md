@@ -7,7 +7,7 @@ target_description:
   choose to make it that way. Don't fight it, use what happens. God gave you this
   gift of imagination. Use it.
 background_color: '#C0E1E8'
-target_icon: male
+target_icon: '/uploads/male.png'
 target_services:
   - service_name: Wooden Sauna
     service_url: services/sauna

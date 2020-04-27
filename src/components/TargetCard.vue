@@ -6,7 +6,7 @@
       '--background-color': target.background_color,
     }"
   >
-    <font-awesome class="icon-style" :icon="target.target_icon" />
+    <img class="icon-style" :src="target.target_icon.src" alt="icon" />
     <span class="target-name font-18 font-gilroy-bold">
       {{ target.target_name }}
     </span>
@@ -40,17 +40,11 @@ export default {
   data() {
     return {
       showModal: false,
-      selectedTarget: '',
     }
   },
   props: ['target'],
   components: {
     TargetModalContent,
-  },
-  methods: {
-    log: function (e) {
-      console.log(e)
-    },
   },
 }
 </script>
@@ -84,8 +78,9 @@ export default {
 }
 
 .icon-style {
-  font-size: 15pt;
-  color: var(--blue-branding);
+  width: 32px;
+  height: 32px;
+  border-radius: 500px;
 }
 
 .close-icon {
@@ -94,15 +89,6 @@ export default {
   margin: 18px;
   font-size: 13pt;
   color: var(--gray-2);
-  cursor: pointer;
-}
-
-.close-icon:hover {
-  position: absolute;
-  right: 20px;
-  margin: 18px;
-  font-size: 13pt;
-  color: var(--gray-5);
   cursor: pointer;
 }
 

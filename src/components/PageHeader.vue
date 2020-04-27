@@ -1,7 +1,11 @@
 <template>
   <div class="image-container">
     <h1 class="font-avenir-heavy font-42 page-title">{{ page_name }}</h1>
-    <img :src="image" alt="header" class="img-style" />
+    <img
+      :src="require('@/assets/img/' + image)"
+      alt="header"
+      class="img-style"
+    />
   </div>
 </template>
 

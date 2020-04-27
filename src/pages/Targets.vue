@@ -52,7 +52,7 @@ export default {
     return {
       settings: require('../../data/theme.json'),
       page_name: 'Targets',
-      image: '../assets/img/target-header.png',
+      image: 'target-header.png',
     }
   },
   components: {
