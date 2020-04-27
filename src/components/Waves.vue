@@ -90,8 +90,8 @@ transform: translate3d(85px, 0, 0);
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
 .waves {
-height: 40px;
-min-height: 40px;
+height: 80px;
+min-height: 80px;
 }
 .content {
 height: 30vh;
