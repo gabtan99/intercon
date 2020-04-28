@@ -121,25 +121,18 @@ export default {
       }
     },
     handleScroll(e) {
-      // fix: testing
-      // if (process.isClient) {
-      //   if (window.scrollY > 0) {
-      //     this.scrollingShadow = "navbar--scroll-shadow";
-      //   } else {
-      //     this.scrollingShadow = "";
-      //   }
-      // }
+      if (window.scrollY > 0) {
+        this.scrollingShadow = "navbar--scroll-shadow";
+      } else {
+        this.scrollingShadow = "";
+      }
     },
   },
   mounted() {
-    // if (process.isClient) {
-    //   window.addEventListener("scroll", this.handleScroll);
-    // }
+    window.addEventListener("scroll", this.handleScroll);
   },
   beforeDestroy() {
-    // if (process.isClient) {
-    //   window.removeEventListener("scroll", this.handleScroll);
-    // }
+    window.removeEventListener("scroll", this.handleScroll);
   },
 };
 </script>
