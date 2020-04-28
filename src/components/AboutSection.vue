@@ -22,25 +22,29 @@
 
         <div class="col-lg-6">
           <div class="about-detail-item">
-            <b-row>
+            <div class="title-div">
               <b-img
                 class="icon-style"
                 :src="require('../../uploads/skin.png')"
                 alt="icon"
               />
+
               <h1 class="detail-title font-gilroy-bold font-21">
                 Optimize Health and Lifetyle
               </h1>
-            </b-row>
-            <p class="detail-info font-avenir-light font-18">
-              We seek to enhance health and address issues by identifying
-              primary causes of illness and disease, through in-depth one-on-one
-              consultations and specialized tests.
-            </p>
+            </div>
+
+            <div>
+              <p class="detail-info font-avenir-light font-18">
+                We seek to enhance health and address issues by identifying
+                primary causes of illness and disease, through in-depth
+                one-on-one consultations and specialized tests.
+              </p>
+            </div>
           </div>
 
           <div class="about-detail-item">
-            <b-row>
+            <div class="title-div">
               <b-img
                 class="icon-style"
                 :src="require('../../uploads/leaf.png')"
@@ -51,12 +55,15 @@
                   Prevent and Halt Disease Prevention
                 </h1>
               </div>
-            </b-row>
-            <p class="detail-info font-avenir-light font-18">
-              We seek to enhance health and address issues by identifying
-              primary causes of illness and disease, through in-depth one-on-one
-              consultations and specialized tests.
-            </p>
+            </div>
+
+            <div>
+              <p class="detail-info font-avenir-light font-18">
+                We seek to enhance health and address issues by identifying
+                primary causes of illness and disease, through in-depth
+                one-on-one consultations and specialized tests.
+              </p>
+            </div>
           </div>
         </div>
       </b-row>
@@ -78,6 +85,13 @@ export default {
 <style scoped>
 p {
   line-height: 2.7rem;
+}
+
+.title-div {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
 }
 
 .icon-style {
@@ -134,6 +148,7 @@ p {
 
 .detail-title {
   margin: auto 0px;
+  margin-left: 2rem;
 }
 
 .detail-info {

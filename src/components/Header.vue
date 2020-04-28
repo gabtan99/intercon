@@ -74,29 +74,45 @@
             <div>
               <div>
                 <ul>
-                  <li>
-                    <a class="mob-link font-gilroy-bold" href="/">Home</a>
-                  </li>
-                  <li>
-                    <a class="mob-link font-gilroy-bold" href="/services"
-                      >Services</a
-                    >
-                  </li>
-                  <li>
-                    <a class="mob-link font-gilroy-bold" href="/targets"
-                      >Targets</a
-                    >
-                  </li>
-                  <li>
-                    <a class="mob-link font-gilroy-bold" href="/about"
-                      >About Us</a
-                    >
-                  </li>
-                  <li>
-                    <a class="mob-link font-gilroy-bold" href="/contact"
-                      >Contact Us</a
-                    >
-                  </li>
+                  <b-nav-item
+                    to="/"
+                    exact
+                    class="mx-4 font-18 font-gilroy-bold header-nav-item "
+                    exact-active-class="header-nav-item--active"
+                  >
+                    Home
+                  </b-nav-item>
+                  <b-nav-item
+                    to="/services"
+                    class="mx-4 font-18 font-gilroy-bold header-nav-item "
+                    active-class="header-nav-item--active"
+                  >
+                    Services
+                  </b-nav-item>
+                  <b-nav-item
+                    to="/targets"
+                    exact
+                    class="mx-4 font-18 font-gilroy-bold header-nav-item "
+                    exact-active-class="header-nav-item--active"
+                  >
+                    Targets
+                  </b-nav-item>
+                  <b-nav-item
+                    to="/about"
+                    exact
+                    class="mx-4 font-18 font-gilroy-bold header-nav-item "
+                    exact-active-class="header-nav-item--active"
+                  >
+                    About Us
+                  </b-nav-item>
+                  <b-nav-item
+                    to="/contact"
+                    exact
+                    class="mx-4 font-18 font-gilroy-bold header-nav-item "
+                    exact-active-class="header-nav-item--active"
+                  >
+                    Contact Us
+                  </b-nav-item>
                 </ul>
               </div>
             </div>
@@ -415,8 +431,8 @@ export default {
   bottom: -0.15em;
   right: 0;
   width: 0;
-  height: 2px;
-  background: #e5e5e5;
+  height: 3px;
+  background: var(--bluegreen-link);
   -webkit-transition: width 0.4s ease;
   transition: width 0.4s ease;
 }
