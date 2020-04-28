@@ -1,129 +1,152 @@
 <template>
-    <div class="main">
-        <div class="about-description">
-            <h1 class="about-title font-gilroy-bold font-42">About Our Company</h1>
+  <div class="main">
+    <div class="about-description">
+      <h1 class="about-title font-gilroy-bold font-36">About Our Company</h1>
 
-            <p class="about-subtitle font-avenir-book font-24">
-                We seek to enhance health and address issues by identifying <br/>
-                primary causes of illness and disease, through in-depth <br/>
-                one-on-one consultations and specialized tests / diagnostics.
-            </p>
-        </div>
-
-        <div class="about-details">
-            <b-row>
-                <div class="col-lg-5">
-                    <b-img
-                        fluid
-                        :src="require('../assets/img/about-section.png')"
-                        class="about-image"/>
-                </div>
-
-                <div class="col-lg-1"/>
-
-                <div class="col-lg-6">
-                    <div class="about-detail-item">
-                        <b-row>
-                            <b-img
-                            fluid
-                            :src="require('../assets/img/about-detail-1.png')"
-                            class="about-detail-image"/>
-                            <h1 
-                            class="detail-title font-gilroy-bold font-24">
-                                Optimize Health and Lifetyle
-                            </h1>
-                        </b-row>
-                        <p class="detail-info font-avenir-light font-21">
-                            We seek to enhance health and address issues by identifying 
-                            primary causes of illness and disease, through in-depth  
-                            one-on-one consultations and specialized tests.
-                        </p>
-                    </div>
-
-                    <div class="about-detail-item">
-                        <b-row>
-                            <b-img
-                            fluid
-                            :src="require('../assets/img/about-detail-2.png')"
-                            class="about-detail-image"/>
-                            <h1 
-                            class="detail-title font-gilroy-bold font-24">
-                                Prevent and Halt Disease Prevention
-                            </h1>
-                        </b-row>
-                        <p class="detail-info font-avenir-light font-21">
-                            We seek to enhance health and address issues by identifying 
-                            primary causes of illness and disease, through in-depth  
-                            one-on-one consultations and specialized tests.
-                        </p>
-                    </div>
-                </div>
-            </b-row>
-        </div>
+      <p class="about-subtitle font-avenir-book font-18">
+        We seek to enhance health and address issues by identifying primary
+        causes of illness and disease, through in-depth one-on-one consultations
+        and specialized tests / diagnostics.
+      </p>
     </div>
+
+    <div class="about-details">
+      <b-row class="lower">
+        <div class="col-lg-5 image">
+          <b-img
+            fluid
+            :src="require('../assets/img/about-section.png')"
+            class="about-image"
+          />
+        </div>
+
+        <div class="col-lg-6">
+          <div class="about-detail-item">
+            <b-row>
+              <b-img
+                class="icon-style"
+                :src="require('../../uploads/skin.png')"
+                alt="icon"
+              />
+              <h1 class="detail-title font-gilroy-bold font-21">
+                Optimize Health and Lifetyle
+              </h1>
+            </b-row>
+            <p class="detail-info font-avenir-light font-18">
+              We seek to enhance health and address issues by identifying
+              primary causes of illness and disease, through in-depth one-on-one
+              consultations and specialized tests.
+            </p>
+          </div>
+
+          <div class="about-detail-item">
+            <b-row>
+              <b-img
+                class="icon-style"
+                :src="require('../../uploads/leaf.png')"
+                alt="icon"
+              />
+              <div>
+                <h1 class="detail-title font-gilroy-bold font-21">
+                  Prevent and Halt Disease Prevention
+                </h1>
+              </div>
+            </b-row>
+            <p class="detail-info font-avenir-light font-18">
+              We seek to enhance health and address issues by identifying
+              primary causes of illness and disease, through in-depth one-on-one
+              consultations and specialized tests.
+            </p>
+          </div>
+        </div>
+      </b-row>
+    </div>
+  </div>
 </template>
 
 <script>
-
 export default {
-    components: {
-        
-    },
-    data() {
-        return {
-        settings: require("../../data/theme.json"),
-        };
-    },
+  components: {},
+  data() {
+    return {
+      settings: require("../../data/theme.json"),
+    };
+  },
 };
 </script>
 
 <style scoped>
+p {
+  line-height: 2.7rem;
+}
+
+.icon-style {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
 .main {
-    display: flex;
-    flex-direction: row;
-    padding: 80px 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-    background: var(--lightgreen-gradient);
+  display: flex;
+  flex-direction: row;
+  padding: 80px 15px;
+  padding-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: var(--lightgreen-gradient);
 }
 
 .about-description {
-    text-align: center;
+  text-align: center;
 }
 
 .about-title {
-    color: var(--blue-branding-dark);
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+  color: var(--blue-branding-dark);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .about-subtitle {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
+  max-width: 60rem;
+  padding: 0 2rem;
 }
 
 .about-details {
-    width: 90%;
+  width: 90%;
+}
+
+.lower {
+  justify-content: center;
 }
 
 .about-detail-item {
-    margin-top: 4rem;
+  margin-top: 4rem;
 }
 
 .about-detail-image {
-    margin-left: 2rem;
+  margin-left: 2rem;
 }
 
 .detail-items {
-    margin-left: 2rem;
+  margin-left: 2rem;
 }
 
 .detail-title {
-    padding-top: 2rem;
-    padding-left: 2rem;
+  margin: auto 0px;
 }
 
 .detail-info {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
+.image {
+  align-self: center;
+}
+
+@media only screen and (min-width: 1000px) {
+  .about-subtitle {
+    margin-bottom: 0rem;
+  }
+}
 </style>
