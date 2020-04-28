@@ -30,7 +30,6 @@ export default {
   height: 200px;
   width: 250px;
   margin: 15px;
-  padding: 5px;
   cursor: pointer;
   border: none;
   box-shadow: 0 3px 3px 1px var(--gray-1);
