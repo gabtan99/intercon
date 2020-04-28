@@ -20,11 +20,6 @@
 <script>
 export default {
   props: ['target'],
-  methods: {
-    log: function (e) {
-      console.log(e)
-    },
-  },
 }
 </script>
 
