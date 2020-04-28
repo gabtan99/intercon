@@ -18,7 +18,7 @@
         </GreenButton>
 
         <WhiteButton :onClick="watchVideo">
-          Watch Video
+          Watch <font-awesome :icon="['fab', 'youtube']" class="social" />
         </WhiteButton>
       </div>
     </div>
@@ -99,6 +99,7 @@ export default {
 
 .white-button {
   margin-left: 2rem;
+  /* margin-top: 2rem; */
 }
 
 @media only screen and (max-width: 1000px) {
