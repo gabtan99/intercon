@@ -2,14 +2,14 @@
   <div class="main">
     <div class="col-lg-6">
       <h1 class="hero-title font-gilroy-bold font-42">
-        The Future of <br />
+        The Future of
+        <br />
         Personalized Healthcare
       </h1>
 
       <h1 class="hero-subtitle font-avenir-light font-24">
-        Enhance and optimize your body’s self <br />
-        healing mechanisms in the most safest and <br />
-        natural way possible.
+        Enhance and optimize your body’s self healing mechanisms in the most
+        safest and natural way possible.
       </h1>
 
       <div class="hero-buttons">
@@ -18,7 +18,7 @@
         </GreenButton>
 
         <WhiteButton :onClick="watchVideo">
-          Watch Video
+          Watch <font-awesome :icon="['fab', 'youtube']" class="social" />
         </WhiteButton>
       </div>
     </div>
@@ -27,24 +27,12 @@
       <b-img :src="require('../assets/img/hero-img.png')" fluid />
     </div>
 
-    <b-modal centered hide-header hide-footer size="lg" v-model="showModal">
-      <font-awesome
-        class="close-icon"
-        :icon="'times'"
-        @click="showModal = false"
-      />
-      <div>
-        <youtube
-          :fitParent="true"
-          :resize="true"
-          :resizeDelay="0"
-          :player-vars="{
-            autoplay: 1,
-          }"
-          video-id="WZdEP1L-EZE"
-        />
-      </div>
-    </b-modal>
+    <youtube-modal
+      :showModal="showModal"
+      :hideModal="closeVideo"
+      :youtubeLink="settings.youtube_link"
+      :youtubeHandle="settings.youtube_handle"
+    />
   </div>
 </template>
 
@@ -52,12 +40,14 @@
 import GreenButton from "@/components/GreenButton";
 import WhiteButton from "@/components/WhiteButton";
 import Waves from "@/components/Waves";
+import YoutubeModal from "@/components/YoutubeModal";
 
 export default {
   components: {
     GreenButton,
     WhiteButton,
     Waves,
+    YoutubeModal,
   },
   data() {
     return {
@@ -68,6 +58,9 @@ export default {
   methods: {
     watchVideo() {
       this.showModal = true;
+    },
+    closeVideo() {
+      this.showModal = false;
     },
     learnMore() {
       this.$router.push("/about");
@@ -106,15 +99,7 @@ export default {
 
 .white-button {
   margin-left: 2rem;
-}
-
-.close-icon {
-  position: absolute;
-  right: 10px;
-  margin: 10px;
-  font-size: 13pt;
-  color: var(--white);
-  cursor: pointer;
+  /* margin-top: 2rem; */
 }
 
 @media only screen and (max-width: 1000px) {
@@ -123,12 +108,7 @@ export default {
   }
 
   .main {
-    padding: 10px 10px;
-    padding-top: 25px;
-  }
-  .white-button {
-    margin: 0rem;
-    margin-top: 10px;
+    padding: 4rem 1rem;
   }
 }
 </style>

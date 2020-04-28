@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <h1 class="font-gilroy-bold font-48">Target Groups</h1>
+    <h1 class="font-gilroy-bold font-36 heading">Target Groups</h1>
 
     <div class="card-container">
       <TargetSectionCard :target="targets[0].node" />
@@ -28,30 +28,33 @@
 </template>
 
 <script>
-import TargetSectionCard from '@/components/TargetSectionCard'
+import TargetSectionCard from "@/components/TargetSectionCard";
 export default {
-  props: ['targets'],
+  props: ["targets"],
   methods: {
-    log: function (e) {
-      console.log(e)
+    log: function(e) {
+      console.log(e);
     },
   },
   components: {
     TargetSectionCard,
   },
-}
+};
 </script>
 
 <style scoped>
+.heading {
+  color: var(--blue-branding);
+}
 .main {
   display: block;
   text-align: center;
-  padding: 90px;
   background-image: linear-gradient(
     to top,
     var(--white),
     var(--lightgreen-gradient)
   );
+  padding: 10rem 0;
 }
 
 .card-container {

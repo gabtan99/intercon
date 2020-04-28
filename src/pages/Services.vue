@@ -1,104 +1,83 @@
 <template>
   <Layout>
-    <div class="container">
-
-      <div class="contact-header">
-        <h1 class="contact-title">Services</h1>
-        <p>Leave me a note with any questions you might have, I'll get back to you as soon as possible.</p>
-      </div>
-
-      <form class="contact-form" name="contact">
-
-        <div class="sender-info">
-          <div>
-            <label for="name" class="label">Your name</label>
-            <input type="text" name="name" />
-          </div>
-          <div>
-            <label for="email" class="label">Your email</label>
-            <input type="email" name="email" />
-          </div>
-        </div>
-
-        <div class="message">
-          <label for="message" class="label">Message</label>
-          <textarea name="message"></textarea>
-        </div>
-
-        <button class="button">Submit form</button>
-
-      </form>
-
-    </div>
+    <PageHeader :page_name="page_name" :image="image" />
+    <ServicesSection :services="$page.services.edges"/>
     <NewsletterModal currPage="SERVICES"/>
   </Layout>
 </template>
 
-<script>
-import NewsletterModal from "@/components/NewsletterModal"
-export default {
-  components: {
-    NewsletterModal,
+<page-query>
+query Service {
+	services: allServices{
+    edges {
+      node {
+        id
+        title
+        path
+        preview_description
+        header_image
+        preview_benefits{
+          benefit
+        }
+        preview_conditions{
+          condition
+        }
+      }
+    }
   }
 }
+</page-query>
+
+<script>
+  import ServicesSection from '@/components/ServicesSection';
+  import NewsletterModal from '@/components/NewsletterModal';
+  import PageHeader from '@/components/PageHeader';
+
+  export default {
+    metaInfo: {
+      title: 'Services | Intercon Regenerative Center',
+      meta: [
+        {
+          key: 'description',
+          name: 'description',
+          content: 'Services available for your target needs'
+        },
+        {
+          key: 'og:title',
+          name: 'og:title',
+          content: 'Services | Intercon Regenerative Center',
+        },
+        {
+          key: 'og:site_name',
+          name: 'og:site_name',
+          content: 'Intercon Regenerative Center',
+        },
+        {
+          key: 'og:image',
+          name: 'og:image',
+          content: require('@/assets/img/services-header.png'),
+        },
+        {
+          name: 'og:description',
+          name: 'og:description',
+          content: 'Here are the variety of services you can avail at Intercon Regenerative Center',
+        },
+      ],
+    },
+    components: {
+      ServicesSection,
+      NewsletterModal,
+      PageHeader
+    },
+    data() {
+      return {
+        page_name: 'Services',
+        image: 'services-header.png',
+      }
+    }
+  }
 </script>
 
 <style scoped>
-.contact-header {
-  padding: 2rem 0 4rem 0;
-}
-.contact-title {
-  font-size: 4rem;
-  margin: 0 0 4rem 0;
-  padding: 0;
-}
-.sender-info {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-}
-.sender-info > div {
-  flex: 1;
-  margin-right: 4rem;
-}
-.sender-info > div:last-of-type {
-  margin: 0;
-}
-input:focus,textarea:focus {
-  border-color: var(--color-contrast-1);
-}
-input,textarea {
-  background: transparent;
-  border: 1px solid var(--color-base-1);
-  outline: none;
-  border-radius: 0.3rem;
-  padding: 0.8rem 1rem;
-  color: inherit;
-  font-size: 1rem;
-  width: 100%;
-}
-textarea {
-  resize: none;
-  height: 140px;
-}
-.button {
-  color: var(--color-base);
-  background: var(--color-contrast);
-  outline: none;
-  border: 0;
-  font-size: 0.8rem;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.3rem;
-  margin-top: 2rem;
-  cursor: pointer;
-  transition: opacity 0.25s ease;
-  font-size: 500;
-  letter-spacing: 0.035em;
-}
-.button:hover {
-  opacity: 0.6;
-}
-.button:focus {
-  border: 1px solid var(--color-base-1);
-}
+
 </style>

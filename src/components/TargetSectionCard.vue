@@ -2,11 +2,8 @@
   <div>
     <a href="/targets" style="text-decoration: none; color: inherit;">
       <b-card class="card-style">
-        <font-awesome class="icon-style" :icon="target.target_icon" />
-        <h4
-          class="font-gilroy-regular font-24"
-          style="color: var(--blue-branding);"
-        >
+        <img class="icon-style" :src="target.target_icon.src" alt="icon" />
+        <h4 class="font-gilroy-medium font-24">
           {{ target.target_name }}
         </h4>
         <b-card-text class="font-avenir-light font-16 text-style">
@@ -19,13 +16,13 @@
 
 <script>
 export default {
-  props: ['target'],
+  props: ["target"],
   methods: {
-    log: function (e) {
-      console.log(e)
+    log: function(e) {
+      console.log(e);
     },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -33,7 +30,6 @@ export default {
   height: 200px;
   width: 250px;
   margin: 15px;
-  padding: 5px;
   cursor: pointer;
   border: none;
   box-shadow: 0 3px 3px 1px var(--gray-1);
@@ -47,7 +43,9 @@ export default {
 }
 
 .icon-style {
-  font-size: 18pt;
+  width: 32px;
+  height: 32px;
+  border-radius: 500px;
   margin: 10px;
   color: var(--blue-branding);
 }

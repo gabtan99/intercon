@@ -2,19 +2,20 @@ import DefaultLayout from "~/layouts/Default.vue";
 import settings from "../data/theme.json";
 import BootstrapVue from "bootstrap-vue";
 import VueYoutube from "vue-youtube";
-import VueLayers from 'vuelayers'
+//import VueLayers from 'vuelayers'
 import VueScrollReveal from 'gridsome-scroll-reveal';
 
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import "@/assets/css/index.css";
-import 'vuelayers/lib/style.css'
+import "vuelayers/lib/style.css";
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import {
   faFacebookSquare,
   faInstagram,
+  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
@@ -31,6 +32,7 @@ import {
   faFemale,
   faTimes,
   faStarOfLife,
+  faCheck,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -39,6 +41,7 @@ config.autoAddCss = false;
 library.add(
   faFacebookSquare,
   faInstagram,
+  faYoutube,
   faMapMarkerAlt,
   faPhoneAlt,
   faEnvelope,
@@ -51,13 +54,14 @@ library.add(
   faMale,
   faFemale,
   faTimes,
-  faStarOfLife
+  faStarOfLife,
+  faCheck
 );
 
 export default function(Vue, { head }) {
   Vue.use(BootstrapVue);
   Vue.use(VueYoutube);
-  Vue.use(VueLayers);
+  //Vue.use(VueLayers);
   Vue.use(VueScrollReveal, 
     {
       class: 'js--fadeInLeft',

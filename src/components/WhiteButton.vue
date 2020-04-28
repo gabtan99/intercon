@@ -1,7 +1,7 @@
 <template>
   <b-button
     class="px-5 py-3 white-button"
-    :class="styles ? styles : 'font-18 font-gilroy-bold'"
+    :class="styles ? styles : 'font-16 font-gilroy-bold'"
     pill
     @click="onClick"
   >

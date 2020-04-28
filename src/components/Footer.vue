@@ -98,7 +98,7 @@
               >
                 Uh oh! Something went wrong.
               </p>
-              <div class="row" style="margin-left: 5px;">
+              <div class="row social-icons">
                 <a href="https://www.facebook.com/interconregenerative/">
                   <font-awesome
                     :icon="['fab', 'facebook-square']"
@@ -106,6 +106,9 @@
                 /></a>
                 <a href="https://www.instagram.com/interconregenerative/">
                   <font-awesome :icon="['fab', 'instagram']" class="social" />
+                </a>
+                <a href="https://www.instagram.com/interconregenerative/">
+                  <font-awesome :icon="['fab', 'youtube']" class="social" />
                 </a>
               </div>
             </div>
@@ -122,7 +125,7 @@
 
 <script>
 import { signupNewsletter } from "@/services/newsletter";
-import { setSubscribed } from "@/util/localStorage" 
+import { setSubscribed } from "@/util/localStorage";
 
 export default {
   data() {
@@ -154,7 +157,7 @@ export default {
       signupNewsletter(this.email)
         .then((res) => {
           this.showResult(true);
-          setSubscribed(true)
+          setSubscribed(true);
         })
         .catch((err) => {
           this.showResult(false);
@@ -178,6 +181,7 @@ export default {
   display: flex;
   justify-content: center;
   padding: 1.4rem 0;
+  text-align: center;
 }
 
 .horizontal {
@@ -255,5 +259,16 @@ export default {
   display: flex;
   flex-direction: row;
   margin: 5px 0px;
+}
+
+.social-icons {
+  margin-left: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .social-icons {
+    margin: auto;
+    margin-top: 10px;
+  }
 }
 </style>
