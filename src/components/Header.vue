@@ -121,6 +121,7 @@ export default {
       }
     },
     handleScroll(e) {
+      // fix: testing
       if (process.isClient) {
         if (window.scrollY > 0) {
           this.scrollingShadow = "navbar--scroll-shadow";
