@@ -121,10 +121,12 @@ export default {
       }
     },
     handleScroll(e) {
-      if (window.scrollY > 0) {
-        this.scrollingShadow = "navbar--scroll-shadow";
-      } else {
-        this.scrollingShadow = "";
+      if (process.isClient) {
+        if (window.scrollY > 0) {
+          this.scrollingShadow = "navbar--scroll-shadow";
+        } else {
+          this.scrollingShadow = "";
+        }
       }
     },
   },
