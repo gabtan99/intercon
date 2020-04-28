@@ -107,6 +107,9 @@
                 <a href="https://www.instagram.com/interconregenerative/">
                   <font-awesome :icon="['fab', 'instagram']" class="social" />
                 </a>
+                <a href="https://www.instagram.com/interconregenerative/">
+                  <font-awesome :icon="['fab', 'youtube']" class="social" />
+                </a>
               </div>
             </div>
           </div>

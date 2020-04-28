@@ -13,7 +13,14 @@
                 </p>
               </div>
 
-              <form action="https://formspree.io/xknqwwll" method="POST" ref="contactform" class="contact-form" name="contact" autocomplete="off">
+              <form
+                action="https://formspree.io/xknqwwll"
+                method="POST"
+                ref="contactform"
+                class="contact-form"
+                name="contact"
+                autocomplete="off"
+              >
                 <div class="sender-info">
                   <div class="form-item">
                     <label
@@ -88,9 +95,11 @@
           <b-col>
             <div class="card-container">
               <div class="card">
-                <div class="map">
-                  <Map />
-                </div>
+                <ClientOnly>
+                  <div class="map">
+                    <Map />
+                  </div>
+                </ClientOnly>
                 <div class="card-details">
                   <b-row>
                     <div class="col-sm-7 visit-us">
@@ -148,19 +157,19 @@
 
 <script>
 import GreenButton from "@/components/GreenButton";
-import Map from "@/components/Map"
+import Map from "@/components/Map";
 
 export default {
   components: {
     GreenButton,
-    Map
+    Map,
   },
   data() {
     return {};
   },
   methods: {
     submitForm() {
-      this.$refs.contactform.submit()
+      this.$refs.contactform.submit();
     },
   },
 };
