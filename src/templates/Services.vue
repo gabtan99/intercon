@@ -47,21 +47,27 @@
             What is {{service.title}}?
           </h2>
           <b-img
-            fluid
+            fluid-grow
             center
             v-if="service.introduction_image"
             :src="service.introduction_image.src"
           >
           </b-img>
-          <p>
+          <p
+            class="font-18"
+          >
             {{service.introduction}}
           </p>
           <h4 id="service-history">Some History</h4>
-          <p>
+          <p
+            class="font-18"
+          >
             {{service.history}}
           </p>
           <h4  id="service-benefits">Benefits</h4>
-          <p>
+          <p
+            class="font-18"
+          >
             {{service.benefits.introduction}}
           </p>
           <ul>
@@ -73,7 +79,9 @@
             </li>
           </ul>
           <h4 id="service-conditions">Conditions</h4>
-          <p>
+          <p
+            class="font-18"
+          >
             {{service.conditions.introduction}}
           </p>
           <ul>
@@ -85,7 +93,9 @@
             </li>
           </ul>
           <h4 id="service-statistics">Some Statistics and Analysis</h4>
-          <p>
+          <p
+            class="font-18"
+          >
             {{service.stats.intro}}
           </p>
           <template
@@ -93,6 +103,7 @@
           >
             <p
               :key="index + stat.content"
+              class="font-18"
             >
               {{stat.content}}
             </p>
@@ -113,7 +124,9 @@
               </figcaption>
             </figure>
           </template>
-          <p>
+          <p
+            class="font-18"
+          >
             {{service.stats.summary}}
           </p>
           <hr
