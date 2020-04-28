@@ -117,33 +117,31 @@ export default {
       this.$refs["newsletter"].hide();
     },
     scroll() {
-      if (process.isClient) {
-        window.onscroll = () => {
-          let bottomOfWindow =
-            Math.max(
-              window.pageYOffset,
-              document.documentElement.scrollTop,
-              document.body.scrollTop
-            ) +
-              window.innerHeight >=
-            document.documentElement.offsetHeight * 0.9;
-          if (bottomOfWindow) {
-            switch (this.currPage) {
-              case "LANDING":
-              case "SPECIFIC_SERVICE":
-              case "TARGETS":
-              case "SERVICES":
-                if (localStorage.modalShown === "false") {
-                  this.showModal();
-                  localStorage.modalShown = true;
-                }
-                break;
-            }
-          } else {
-            localStorage.bottom = false;
+      window.onscroll = () => {
+        let bottomOfWindow =
+          Math.max(
+            window.pageYOffset,
+            document.documentElement.scrollTop,
+            document.body.scrollTop
+          ) +
+            window.innerHeight >=
+          document.documentElement.offsetHeight * 0.9;
+        if (bottomOfWindow) {
+          switch (this.currPage) {
+            case "LANDING":
+            case "SPECIFIC_SERVICE":
+            case "TARGETS":
+            case "SERVICES":
+              if (localStorage.modalShown === "false") {
+                this.showModal();
+                localStorage.modalShown = true;
+              }
+              break;
           }
-        };
-      }
+        } else {
+          localStorage.bottom = false;
+        }
+      };
     },
   },
   mounted() {
