@@ -1,21 +1,21 @@
-import DefaultLayout from '~/layouts/Default.vue'
-import settings from '../data/theme.json'
-import BootstrapVue from 'bootstrap-vue'
-import VueYoutube from 'vue-youtube'
-import VueLayers from 'vuelayers'
+import DefaultLayout from "~/layouts/Default.vue";
+import settings from "../data/theme.json";
+import BootstrapVue from "bootstrap-vue";
+import VueYoutube from "vue-youtube";
+import VueLayers from "vuelayers";
 
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-import '@/assets/css/index.css'
-import 'vuelayers/lib/style.css'
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+import "@/assets/css/index.css";
+import "vuelayers/lib/style.css";
 
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { config, library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { config, library } from "@fortawesome/fontawesome-svg-core";
 import {
   faFacebookSquare,
   faInstagram,
   faYoutube,
-} from '@fortawesome/free-brands-svg-icons'
+} from "@fortawesome/free-brands-svg-icons";
 
 import {
   faMapMarkerAlt,
@@ -31,11 +31,11 @@ import {
   faFemale,
   faTimes,
   faStarOfLife,
-} from '@fortawesome/free-solid-svg-icons'
+} from "@fortawesome/free-solid-svg-icons";
 
-import '@fortawesome/fontawesome-svg-core/styles.css'
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
-config.autoAddCss = false
+config.autoAddCss = false;
 library.add(
   faFacebookSquare,
   faInstagram,
@@ -52,21 +52,23 @@ library.add(
   faMale,
   faFemale,
   faTimes,
-  faStarOfLife,
-)
+  faStarOfLife
+);
 
-export default function (Vue, { head }) {
-  Vue.use(BootstrapVue)
-  Vue.use(VueYoutube)
-  Vue.use(VueLayers)
-  Vue.component('Layout', DefaultLayout)
-  Vue.component('font-awesome', FontAwesomeIcon)
+export default function(Vue, { head }) {
+  Vue.use(BootstrapVue);
+  Vue.use(VueYoutube);
+  Vue.use(VueLayers);
+  Vue.component("Layout", DefaultLayout);
+  Vue.component("font-awesome", FontAwesomeIcon);
 
-  head.script.push({
-    src: require('./scripts/chatbot.js'),
-  })
+  if (process.isClient) {
+    head.script.push({
+      src: require("./scripts/chatbot.js"),
+    });
+  }
 
   head.bodyAttrs = {
-    class: settings.dark_mode ? 'dark' : '',
-  }
+    class: settings.dark_mode ? "dark" : "",
+  };
 }
