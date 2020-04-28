@@ -3,6 +3,7 @@
       align-v="center"
       class="mx-4 mb-5 service-card-block"
       no-gutters
+      v-on:click="goToService(service.node.path)"
     >
       <div
         class="col-lg-4 service-card__thumbnail-container"
@@ -79,16 +80,6 @@
           </div>
 
         </b-row>
-        <b-row
-          align-h="end"
-        >
-          <g-link
-            :to="service.node.path"
-            class="mt-3 mr-5 font-18 font-avenir-book service-card__learn-more"
-          >
-            Learn More
-          </g-link>
-        </b-row>
       </div>
 
     </b-row>
@@ -97,17 +88,33 @@
 <script>
   export default {
     props: ['service'],
+    methods: {
+      goToService(path){
+        this.$router.push(path);
+      }
+    }
   }
 </script>
 
 <style scoped>
   .service-card-block {
+    cursor: pointer;
     border-radius: 0.5rem;
     box-shadow: 0px 3px 6px var(--gray-2);
     -webkit-box-shadow: 0px 3px 6px var(--gray-2);
     -moz-box-shadow: 0px 3px 6px var(--gray-2);
     -o-box-shadow: 0px 3px 6px var(--gray-2);
     -ms-box-shadow: 0px 3px 6px var(--gray-2);
+    transition: all ease-in 0.15s;
+  }
+  .service-card-block:hover {
+    transform: translateX(0.5rem);
+    transform: scale(1.01);
+    box-shadow: 0px 6px 9px var(--gray-2);
+    -webkit-box-shadow: 0px 6px 9px var(--gray-2);
+    -moz-box-shadow: 0px 6px 9px var(--gray-2);
+    -o-box-shadow: 0px 6px 9px var(--gray-2);
+    -ms-box-shadow: 0px 6px 9px var(--gray-2);
   }
 
   .service-card__thumbnail {
@@ -142,7 +149,4 @@
     color: var(--blue-content-text);
   }
 
-  .service-card__learn-more {
-    color: var(--blue-learn-more);
-  }
 </style>

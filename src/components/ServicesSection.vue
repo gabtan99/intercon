@@ -1,6 +1,5 @@
 <template>
   <b-container
-    fluid
     class="mt-5"
   >
     <ServicesServiceCard
