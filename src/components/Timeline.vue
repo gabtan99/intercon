@@ -120,55 +120,52 @@ export default {
         let sr = ScrollReveal({ reset: true });
 
         if ($(window).width() < 768) {
+            if ($('.timeline-content').hasClass('js--fadeInLeft')) {
+                $('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
+            }
 
-        if ($('.timeline-content').hasClass('js--fadeInLeft')) {
-            $('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
+            sr.reveal('.js--fadeInRight', {
+                origin: 'right',
+                distance: '300px',
+                easing: 'ease-in-out',
+                duration: 800,
+                });
+        } else {
+            sr.reveal('.js--fadeInLeft', {
+            origin: 'left',
+            distance: '300px',
+            easing: 'ease-in-out',
+            duration: 800,
+            });
+
+            sr.reveal('.js--fadeInRight', {
+            origin: 'right',
+            distance: '300px',
+            easing: 'ease-in-out',
+            duration: 800,
+            });
         }
+
+        sr.reveal('.js--fadeInLeft', {
+        origin: 'left',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800,
+        });
 
         sr.reveal('.js--fadeInRight', {
-            origin: 'right',
-            distance: '300px',
-            easing: 'ease-in-out',
-            duration: 800,
-            });
-
-        } else {
-
-        sr.reveal('.js--fadeInLeft', {
-            origin: 'left',
-            distance: '300px',
-                easing: 'ease-in-out',
-            duration: 800,
-            });
-
-            sr.reveal('.js--fadeInRight', {
-            origin: 'right',
-            distance: '300px',
-            easing: 'ease-in-out',
-            duration: 800,
-            });
-
-        }
-
-        sr.reveal('.js--fadeInLeft', {
-            origin: 'left',
-            distance: '300px',
-                easing: 'ease-in-out',
-            duration: 800,
-            });
-
-            sr.reveal('.js--fadeInRight', {
-            origin: 'right',
-            distance: '300px',
-            easing: 'ease-in-out',
-            duration: 800,
-            });
+        origin: 'right',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800,
+        });
         });
     },
 }
 </script>
 
 <style lang="scss" scoped>
+
 $primary: #3F51B5;
 $dark-primary: #303F9F;
 $light-primary: #C5CAE9;
@@ -178,25 +175,25 @@ $secondary-text: #757575;
 $accent: #FF4081;
 
 section {
-  padding: 100px 0;
+    padding: 100px 0;
 }
 
 html, body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 body {
-  font-family: 'Roboto';
-  font-size: 17px;
-  font-weight: 400;
-  background-color: #eee;
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-weight: 400;
+    background-color: #eee;
 }
 
 h1 {
-  font-size: 200%;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 400;
+    font-size: 200%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
 }
 
 header {
