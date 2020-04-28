@@ -1,23 +1,17 @@
 ---
-target_name: Skin Care
+target_name: Immune Support
 target_description:
-  Skin Care is very essential. In this world, everything can be happy. This is where you take
+  With all of the diseases we have, we ned to help our immune system. In this world, everything can be happy. This is where you take
   out all your hostilities and frustrations. It's better than kicking the puppy dog
   around and all that so. With practice comes confidence. Everything is happy if you
   choose to make it that way. Don't fight it, use what happens. God gave you this
   gift of imagination. Use it.
-background_color: '#F3F3D3'
-target_icon: '/uploads/skin.png'
+background_color: '#BED3E5'
+target_icon: '/uploads/gym.png'
 target_services:
   - service_name: Wooden Sauna
     service_url: services/sauna
     service_image: '/uploads/sauna.png'
-    service_description:
-      Just a little indication. And I know you're saying, 'Oh Bob,
-      you've done it this time.' And you may be right. I like to beat the brush.
-  - service_name: Hyperbaric Therapy
-    service_url: services/hyperbaric
-    service_image: '/uploads/hyperbaric.png'
     service_description:
       Just a little indication. And I know you're saying, 'Oh Bob,
       you've done it this time.' And you may be right. I like to beat the brush.

@@ -2,33 +2,47 @@
 label: Theme configuration
 hide_body: true
 fields:
-- type: text
-  name: site_name
-  label: Site name
-- type: textarea
-  name: site_description
-  label: Site description
-- type: textarea
-  name: hero_title
-  label: Hero title
-  config:
-    wysiwyg: true
-    schema:
-      format: html
-- type: textarea
-  name: hero_subtitle
-  label: Hero subtitle
-  config:
-    wysiwyg: true
-    schema:
-      format: html
-- name: footer
-  label: Footer text
-  type: text
-  hidden: false
-  default: ''
-- type: boolean
-  name: dark_mode
-  label: Dark mode
+  - type: text
+    name: site_name
+    label: Site name
+  - type: textarea
+    name: site_description
+    label: Site description
+  - type: textarea
+    name: hero_title
+    label: Hero title
+    config:
+      wysiwyg: true
+      schema:
+        format: html
+  - type: textarea
+    name: hero_subtitle
+    label: Hero subtitle
+    config:
+      wysiwyg: true
+      schema:
+        format: html
+  - name: footer
+    label: Footer text
+    type: text
+    hidden: false
+    default: ''
+  - type: boolean
+    name: dark_mode
+    label: Dark mode
+  - name: targets_header_text
+    type: text
+    config:
+      required: false
+    label: Targets Header Text
+  - name: targets_page_description
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Targets Page Description
 pages:
-- data/theme.json
+  - data/theme.json

@@ -2,7 +2,7 @@
   <div>
     <a href="/targets" style="text-decoration: none; color: inherit;">
       <b-card class="card-style">
-        <font-awesome class="icon-style" :icon="target.target_icon" />
+        <img class="icon-style" :src="target.target_icon.src" alt="icon" />
         <h4
           class="font-gilroy-regular font-24"
           style="color: var(--blue-branding);"
@@ -33,7 +33,7 @@ export default {
   height: 200px;
   width: 250px;
   margin: 15px;
-  padding: 10px;
+  padding: 5px;
   cursor: pointer;
   border: none;
   box-shadow: 0 3px 3px 1px var(--gray-1);
@@ -47,16 +47,19 @@ export default {
 }
 
 .icon-style {
-  font-size: 18pt;
+  width: 32px;
+  height: 32px;
+  border-radius: 500px;
   margin: 10px;
+  color: var(--blue-branding);
 }
 
 .text-style {
-  margin: 15px;
+  margin: 10px;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
 

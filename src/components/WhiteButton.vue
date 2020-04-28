@@ -5,32 +5,35 @@
     pill
     @click="onClick"
   >
-    <slot/>
+    <slot />
   </b-button>
 </template>
 
 <script>
-  export default {
-    props: {
-      onClick: Function,
-      styles: String
-    }
-  }
+export default {
+  props: {
+    onClick: Function,
+    styles: String,
+  },
+};
 </script>
 
 <style scoped>
-  .white-button{
-    background-color: var(--white);
-    border: none;
-    box-shadow: 0 3px 6px var(--button-shadow);
-    color: var(--black-text);
-		transition: all ease-in 0.15s;
-  }
-  .white-button:hover {
-    transform: translateY(-0.3rem);
-    background-color: var(--white);
-  }
-  .white-button:active, .white-button:focus {
-    background-color: var(--white) !important;
-  }
+.white-button {
+  background-color: var(--white);
+  border: none;
+  box-shadow: 0 3px 6px var(--button-shadow);
+  color: var(--black-text);
+  transition: all ease-in 0.15s;
+}
+
+.white-button:hover {
+  transform: translateY(-0.3rem);
+  background-color: var(--white);
+}
+
+.white-button:active,
+.white-button:focus {
+  background-color: var(--white) !important;
+}
 </style>

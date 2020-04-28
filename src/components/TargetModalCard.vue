@@ -5,16 +5,12 @@
       class="service-card"
       img-top
       img-alt="image"
-      img-height="118"
+      img-height="130"
       :img-src="servicesContent.service_image.src"
     >
-      <div class="service-icon-div">
-        <font-awesome class="service-icon" :icon="'star-of-life'" />
-      </div>
-
       <h4
         class="font-gilroy-medium font-18"
-        style="margin: 15px 0px 8px; color: var(--blue-branding);"
+        style="margin: 8px 0px 8px; color: var(--blue-branding);"
       >
         {{ servicesContent.service_name }}
       </h4>
@@ -53,29 +49,11 @@ export default {
   box-shadow: 0 3px 3px 1px var(--gray-1);
 }
 
-.service-icon-div {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  height: 28px;
-  width: 29px;
-  top: 103px;
-  background-color: white;
-  box-shadow: 0 3px 3px 1px var(--gray-2);
-  border-radius: 50%;
-}
-
-.service-icon {
-  font-size: 8pt;
-  color: var(--blue-branding);
-}
-
 .button-style {
   display: block;
   margin: 0 auto;
-  width: 100px;
-  padding: 6px;
+  width: 110px;
+  padding: 5px;
   text-align: center;
   border-radius: 500px;
   background: transparent;

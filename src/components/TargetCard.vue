@@ -6,8 +6,8 @@
       '--background-color': target.background_color,
     }"
   >
-    <font-awesome class="icon-style" :icon="target.target_icon" />
-    <span class="target-name font-16 font-gilroy-bold">
+    <img class="icon-style" :src="target.target_icon.src" alt="icon" />
+    <span class="target-name font-18 font-gilroy-bold">
       {{ target.target_name }}
     </span>
 
@@ -40,17 +40,11 @@ export default {
   data() {
     return {
       showModal: false,
-      selectedTarget: '',
     }
   },
   props: ['target'],
   components: {
     TargetModalContent,
-  },
-  methods: {
-    log: function (e) {
-      console.log(e)
-    },
   },
 }
 </script>
@@ -58,7 +52,7 @@ export default {
 <style scoped>
 .card {
   position: relative;
-  border: 1px solid #eeeeee;
+  border: none;
   border-radius: 3px;
   padding: 20px;
   margin: 10px;
@@ -66,10 +60,12 @@ export default {
   height: 180px;
   width: 220px;
   transition: all 0.2s ease-in-out;
+  box-shadow: 0 3px 3px 1px var(--gray-1);
 }
 
 .card:hover {
   transform: scale(1.05);
+  box-shadow: 1px 5px 8px 2px var(--gray-2);
   cursor: pointer;
 }
 
@@ -82,7 +78,9 @@ export default {
 }
 
 .icon-style {
-  font-size: 15pt;
+  width: 32px;
+  height: 32px;
+  border-radius: 500px;
 }
 
 .close-icon {

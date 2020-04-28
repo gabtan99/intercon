@@ -1,24 +1,30 @@
 <template>
   <div class="layout" :class="{ 'sticky-header': $route.path === '/' }">
     <Header />
-    <slot/>
+    <slot />
+    <NewsletterModal />
     <Footer />
   </div>
 </template>
 
 <script>
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import NewsletterModal from '@/components/NewsletterModal'
+import { setFirstVisit } from "@/util/localStorage";
 
 export default {
   components: {
     Header,
-    Footer
+    Footer,
+    NewsletterModal
+  },
+  mounted() {
+    setFirstVisit();
   }
-}
+};
 </script>
 
 
 <style>
-
 </style>

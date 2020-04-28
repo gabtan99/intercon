@@ -1,6 +1,7 @@
 <template>
   <Layout>
     <ServicesSection :services="$page.services.edges"/>
+    <NewsletterModal currPage="SERVICES"/>
   </Layout>
 </template>
 
@@ -28,10 +29,12 @@ query Service {
 
 <script>
   import ServicesSection from '@/components/ServicesSection';
+  import NewsletterModal from '@/components/NewsletterModal';
 
   export default {
     components: {
       ServicesSection,
+      NewsletterModal
     }
   }
 </script>

@@ -1,5 +1,16 @@
 <template>
   <Layout>
+    <PageHeader :page_name="page_name" :image="image" />
+
+    <div class="header-text" style="">
+      <h1 class="font-gilroy-bold font-36">
+        {{ settings.targets_header_text }}
+      </h1>
+      <p class="font-avenir-light font-18">
+        {{ settings.targets_page_description }}
+      </p>
+    </div>
+
     <div class="main-container">
       <TargetCard
         v-for="item in $page.targets.edges"
@@ -7,6 +18,7 @@
         :target="item.node"
       />
     </div>
+    <NewsletterModal currPage="TARGETS"/>
   </Layout>
 </template>
 
@@ -34,31 +46,72 @@ query Target {
 
 <script>
 import TargetCard from '@/components/TargetCard'
+import PageHeader from '@/components/PageHeader'
+import NewsletterModal from "@/components/NewsletterModal"
 
 export default {
+  data() {
+    return {
+      settings: require('../../data/theme.json'),
+      page_name: 'Targets',
+      image: 'target-header.png',
+    }
+  },
   components: {
     TargetCard,
+    PageHeader,
+    NewsletterModal,
   },
 }
 </script>
 
 <style scoped>
+.heading {
+  color: var(--blue-branding-dark);
+  margin: 10px 0px;
+}
+
+.subheading {
+  text-align: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+}
+
 .main-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  padding: 50px 90px;
+  padding: 50px 160px;
+}
+
+.header-text {
+  display: block;
+  text-align: center;
+  width: 70%;
+  padding-top: 50px;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 767px) {
   .main-container {
-    /* display: block; */
     column-count: 1;
     column-gap: 1em;
     margin: 0 auto;
-    padding: 50px;
+    padding: 30px 0px 50px;
     width: 100%;
+  }
+
+  .header-text {
+    display: block;
+    text-align: left;
+    width: 70%;
   }
 }
 </style>
