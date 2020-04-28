@@ -54,7 +54,7 @@ library.add(
   faFemale,
   faTimes,
   faStarOfLife,
-  faCheck,
+  faCheck
 );
 
 export default function(Vue, { head }) {
