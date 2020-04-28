@@ -3,6 +3,7 @@ import settings from "../data/theme.json";
 import BootstrapVue from "bootstrap-vue";
 import VueYoutube from "vue-youtube";
 import VueLayers from 'vuelayers'
+import VueScrollReveal from 'gridsome-scroll-reveal';
 
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
@@ -56,7 +57,23 @@ library.add(
 export default function(Vue, { head }) {
   Vue.use(BootstrapVue);
   Vue.use(VueYoutube);
-  Vue.use(VueLayers)
+  Vue.use(VueLayers);
+  Vue.use(VueScrollReveal, 
+    {
+      class: 'js--fadeInLeft',
+      duration: 800,
+      scale: 1,
+      distance: '10px',
+      mobile: false,
+    },
+    // {
+    //   class: 'js--fadeInRight',
+    //   origin: 'right',
+    //   distance: '300px',
+    //   easing: 'ease-in-out',
+    //   duration: 800,
+    // },
+  );
   Vue.component("Layout", DefaultLayout);
   Vue.component("font-awesome", FontAwesomeIcon);
 
