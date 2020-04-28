@@ -1,7 +1,8 @@
 <template>
   <Layout>
-    <PageHeader :page_name="page_name" :image="image" />
+    {{ setAutoModal() }}
 
+    <PageHeader :page_name="page_name" :image="image" />
     <div class="header-text" style="">
       <h1 class="font-gilroy-bold font-36">
         {{ settings.targets_header_text }}
@@ -10,12 +11,12 @@
         {{ settings.targets_page_description }}
       </p>
     </div>
-
     <div class="main-container">
       <TargetCard
         v-for="item in $page.targets.edges"
         :key="item.node.id"
         :target="item.node"
+        :selectedTarget="selectedTarget"
       />
     </div>
     <NewsletterModal currPage="TARGETS" />
@@ -34,8 +35,6 @@ query Target {
         target_icon
         target_services {
           service_name
-          service_url
-          service_image
           service_description
         }
       }
@@ -50,17 +49,56 @@ import PageHeader from '@/components/PageHeader'
 import NewsletterModal from '@/components/NewsletterModal'
 
 export default {
+  metaInfo: {
+    title: 'Targets | Intercon Regenerative Center',
+    meta: [
+      {
+        key: 'description',
+        name: 'description',
+        content:
+          'Target groups that we offer to restore and regenerate for you!',
+      },
+      {
+        key: 'og:title',
+        name: 'og:title',
+        content: 'Targets | Intercon Regenerative Center',
+      },
+      {
+        key: 'og:site_name',
+        name: 'og:site_name',
+        content: 'Intercon Regenerative Center',
+      },
+      {
+        key: 'og:image',
+        name: 'og:image',
+        content: require('@/assets/img/target-header.png'),
+      },
+      {
+        name: 'og:description',
+        name: 'og:description',
+        content:
+          'Check out the target groups that you wish to restore with the services we offer!',
+      },
+    ],
+  },
   data() {
     return {
       settings: require('../../data/theme.json'),
       page_name: 'Targets',
       image: 'target-header.png',
+      selectedTarget: '',
     }
   },
   components: {
     TargetCard,
     PageHeader,
     NewsletterModal,
+  },
+  methods: {
+    setAutoModal: function () {
+      if (this.$route.params)
+        this.selectedTarget = this.$route.params.selectedTarget
+    },
   },
 }
 </script>

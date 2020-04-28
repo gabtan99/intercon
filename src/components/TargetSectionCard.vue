@@ -1,6 +1,9 @@
 <template>
   <div>
-    <a href="/targets" style="text-decoration: none; color: inherit;">
+    <router-link
+      :to="{ name: 'targets', params: { selectedTarget: target.target_name } }"
+      style="text-decoration: none; color: inherit;"
+    >
       <b-card class="card-style">
         <img class="icon-style" :src="target.target_icon.src" alt="icon" />
         <h4 class="font-gilroy-medium font-24">
@@ -10,18 +13,13 @@
           {{ target.target_description }}
         </b-card-text>
       </b-card>
-    </a>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
   props: ['target'],
-  methods: {
-    log: function (e) {
-      console.log(e)
-    },
-  },
 }
 </script>
 

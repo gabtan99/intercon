@@ -1,11 +1,12 @@
 <template>
   <div
-    @click="showModal = !showModal"
+    v-on:click="show(target.target_name)"
     class="card"
     :style="{
       '--background-color': target.background_color,
     }"
   >
+    {{ sectionTargetModal() }}
     <img class="icon-style" :src="target.target_icon.src" alt="icon" />
     <span class="target-name font-18 font-gilroy-bold">
       {{ target.target_name }}
@@ -26,8 +27,8 @@
         @click="showModal = false"
       />
       <TargetModalContent
-        :targetContent="target"
-        :targetServices="target.target_services"
+        :targetContent="selectedTargetContent"
+        :targetServices="selectedTargetServices"
       />
     </b-modal>
   </div>
@@ -40,11 +41,27 @@ export default {
   data() {
     return {
       showModal: false,
+      selected: this.selectedTarget,
+      selectedTargetContent: {},
+      selectedTargetServices: [],
     }
   },
-  props: ['target'],
+  props: ['target', 'selectedTarget'],
   components: {
     TargetModalContent,
+  },
+  methods: {
+    show: function (target) {
+      this.selectedTargetContent = this.target
+      this.selectedTargetServices = this.target.target_services
+      this.showModal = true
+    },
+    sectionTargetModal: function () {
+      if (this.selectedTarget) {
+        if (this.selectedTarget === this.target.target_name)
+          this.show(this.selectedTarget)
+      }
+    },
   },
 }
 </script>
