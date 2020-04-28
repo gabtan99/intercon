@@ -132,14 +132,14 @@ export default {
     },
   },
   mounted() {
-    if (process.isClient) {
-      window.addEventListener("scroll", this.handleScroll);
-    }
+    // if (process.isClient) {
+    //   window.addEventListener("scroll", this.handleScroll);
+    // }
   },
   beforeDestroy() {
-    if (process.isClient) {
-      window.removeEventListener("scroll", this.handleScroll);
-    }
+    // if (process.isClient) {
+    //   window.removeEventListener("scroll", this.handleScroll);
+    // }
   },
 };
 </script>

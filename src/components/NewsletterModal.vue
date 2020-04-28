@@ -1,72 +1,69 @@
 <template>
-  <ClientOnly>
-    <div>
-      <b-modal
-        id="modal-lg"
-        ref="newsletter"
-        class="newsletter desktop"
-        size="lg"
-        hide-footer
-        hide-header
-        body-class="p-0"
-        centered
-      >
-        <img
-          src="../assets/img/icon-exit.png"
-          class="exit"
-          @click="$bvModal.hide('modal-lg')"
-        />
-        <div id="container">
-          <img src="../assets/img/modal-picture.png" class="picture" />
-          <div id="content-container">
-            <div id="text-container">
-              <h1 style="text-align:center" class="font-gilroy-medium font-36">
-                Join Our Community!
-              </h1>
-              <h3 style="text-align:center" class="font-gilroy-light font-21">
-                Get the most recent news for Health, Therapy, Wellness, and
-                more.
-              </h3>
-            </div>
-            <div id="form-container">
-              <form @submit.prevent="handleSubmit">
-                <input
-                  type="email"
-                  class="form-control emailInput font-avenir-light font-16"
-                  name="email"
-                  placeholder="Your email address"
-                  v-on:input="handleChange"
-                />
+  <div>
+    <b-modal
+      id="modal-lg"
+      ref="newsletter"
+      class="newsletter desktop"
+      size="lg"
+      hide-footer
+      hide-header
+      body-class="p-0"
+      centered
+    >
+      <img
+        src="../assets/img/icon-exit.png"
+        class="exit"
+        @click="$bvModal.hide('modal-lg')"
+      />
+      <div id="container">
+        <img src="../assets/img/modal-picture.png" class="picture" />
+        <div id="content-container">
+          <div id="text-container">
+            <h1 style="text-align:center" class="font-gilroy-medium font-36">
+              Join Our Community!
+            </h1>
+            <h3 style="text-align:center" class="font-gilroy-light font-21">
+              Get the most recent news for Health, Therapy, Wellness, and more.
+            </h3>
+          </div>
+          <div id="form-container">
+            <form @submit.prevent="handleSubmit">
+              <input
+                type="email"
+                class="form-control emailInput font-avenir-light font-16"
+                name="email"
+                placeholder="Your email address"
+                v-on:input="handleChange"
+              />
 
-                <p
-                  v-if="showMessage && isSuccess"
-                  class="successMsg font-avenir-light font-16"
-                >
-                  Thank You for subscribing! A confirmation email will be sent.
-                </p>
-                <p
-                  v-else-if="showMessage && !isSuccess"
-                  class="errorMsg font-avenir-light font-16"
-                >
-                  Uh oh! Something went wrong.
-                </p>
+              <p
+                v-if="showMessage && isSuccess"
+                class="successMsg font-avenir-light font-16"
+              >
+                Thank You for subscribing! A confirmation email will be sent.
+              </p>
+              <p
+                v-else-if="showMessage && !isSuccess"
+                class="errorMsg font-avenir-light font-16"
+              >
+                Uh oh! Something went wrong.
+              </p>
 
-                <b-button id="submit" type="submit">
-                  <span v-if="!isLoading">Join Now</span>
-                  <span
-                    v-if="isLoading"
-                    class="spinner-border spinner-border-lg"
-                    role="status"
-                    aria-hidden="true"
-                  ></span>
-                </b-button>
-              </form>
-            </div>
+              <b-button id="submit" type="submit">
+                <span v-if="!isLoading">Join Now</span>
+                <span
+                  v-if="isLoading"
+                  class="spinner-border spinner-border-lg"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+              </b-button>
+            </form>
           </div>
         </div>
-      </b-modal>
-    </div>
-  </ClientOnly>
+      </div>
+    </b-modal>
+  </div>
 </template>
 
 <script>
@@ -120,33 +117,33 @@ export default {
       this.$refs["newsletter"].hide();
     },
     scroll() {
-      //   if (process.isClient) {
-      //     window.onscroll = () => {
-      //       let bottomOfWindow =
-      //         Math.max(
-      //           window.pageYOffset,
-      //           document.documentElement.scrollTop,
-      //           document.body.scrollTop
-      //         ) +
-      //           window.innerHeight >=
-      //         document.documentElement.offsetHeight * 0.9;
-      //       if (bottomOfWindow) {
-      //         switch (this.currPage) {
-      //           case "LANDING":
-      //           case "SPECIFIC_SERVICE":
-      //           case "TARGETS":
-      //           case "SERVICES":
-      //             if (localStorage.modalShown === "false") {
-      //               this.showModal();
-      //               localStorage.modalShown = true;
-      //             }
-      //             break;
-      //         }
-      //       } else {
-      //         localStorage.bottom = false;
+      // if (process.isClient) {
+      //   window.onscroll = () => {
+      //     let bottomOfWindow =
+      //       Math.max(
+      //         window.pageYOffset,
+      //         document.documentElement.scrollTop,
+      //         document.body.scrollTop
+      //       ) +
+      //         window.innerHeight >=
+      //       document.documentElement.offsetHeight * 0.9;
+      //     if (bottomOfWindow) {
+      //       switch (this.currPage) {
+      //         case "LANDING":
+      //         case "SPECIFIC_SERVICE":
+      //         case "TARGETS":
+      //         case "SERVICES":
+      //           if (localStorage.modalShown === "false") {
+      //             this.showModal();
+      //             localStorage.modalShown = true;
+      //           }
+      //           break;
       //       }
-      //     };
-      //   }
+      //     } else {
+      //       localStorage.bottom = false;
+      //     }
+      //   };
+      // }
     },
   },
   mounted() {
