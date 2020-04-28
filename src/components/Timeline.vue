@@ -51,11 +51,11 @@
 
 
 <script>
-import ScrollReveal from 'scrollreveal'
+// import ScrollReveal from 'scrollreveal'
 
 export default {
     mounted() {
-        let sr = ScrollReveal({ reset: true });
+        // let sr = ScrollReveal({ reset: true });
 
         // if ($(window).width() < 768) {
         //     if ($('.timeline-content').hasClass('js--fadeInLeft')) {
@@ -84,19 +84,19 @@ export default {
         //     });
         // }
 
-        sr.reveal('.js--fadeInLeft', {
-        origin: 'left',
-        distance: '300px',
-        easing: 'ease-in-out',
-        duration: 800,
-        });
+        // sr.reveal('.js--fadeInLeft', {
+        // origin: 'left',
+        // distance: '300px',
+        // easing: 'ease-in-out',
+        // duration: 800,
+        // });
 
-        sr.reveal('.js--fadeInRight', {
-        origin: 'right',
-        distance: '300px',
-        easing: 'ease-in-out',
-        duration: 800,
-        });
+        // sr.reveal('.js--fadeInRight', {
+        // origin: 'right',
+        // distance: '300px',
+        // easing: 'ease-in-out',
+        // duration: 800,
+        // });
         
     },
 }
