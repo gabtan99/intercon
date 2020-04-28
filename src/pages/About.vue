@@ -59,6 +59,8 @@
             utaliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
           </h1>
       </b-row>
+
+      <Timeline/>
     </div>
   </Layout>
 </template>
@@ -66,6 +68,7 @@
 <script>
 import PageHeader from '@/components/PageHeader'
 import NewsletterModal from "@/components/NewsletterModal"
+import Timeline from "@/components/Timeline"
 
 export default {
   data(){
@@ -77,6 +80,7 @@ export default {
   components: {
     PageHeader,
     NewsletterModal,
+    Timeline,
   },
 }
 </script>
