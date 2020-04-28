@@ -16,9 +16,9 @@
     </div>
     <b-container>
       <div
-        class="service-body"
+        class="mb-5 service-body"
       >
-        <article
+        <div
           class="font-18 service-body__main"
         >
           <div
@@ -42,6 +42,7 @@
           </div>
           <h2
             class="mt-4 font-26"
+            id="service-introduction"
           >
             What is {{service.title}}?
           </h2>
@@ -55,11 +56,11 @@
           <p>
             {{service.introduction}}
           </p>
-          <h4>Some History</h4>
+          <h4 id="service-history">Some History</h4>
           <p>
             {{service.history}}
           </p>
-          <h4>Benefits</h4>
+          <h4  id="service-benefits">Benefits</h4>
           <p>
             {{service.benefits.introduction}}
           </p>
@@ -71,7 +72,7 @@
               {{benefit.benefit}}
             </li>
           </ul>
-          <h4>Conditions</h4>
+          <h4 id="service-conditions">Conditions</h4>
           <p>
             {{service.conditions.introduction}}
           </p>
@@ -83,7 +84,7 @@
               {{condition.condition}}
             </li>
           </ul>
-          <h4>Some Statistics and Analysis</h4>
+          <h4 id="service-statistics">Some Statistics and Analysis</h4>
           <p>
             {{service.stats.intro}}
           </p>
@@ -136,10 +137,45 @@
               {{external.title}}
             </a>
           </div>
-        </article>
+        </div>
         <aside
-          class="service-body__aside"
+          class="d-flex flex-column align-items-center justify-content-center py-5 service-body__aside"
         >
+          <div
+            class="py-2 font-avenir-book font-18 service-aside__link"
+            v-on:click="scrollToLocation('service-introduction')"
+            id="service-introduction-button"
+          >
+            Introduction
+          </div>
+          <div
+            class="py-2 font-avenir-book font-18 service-aside__link"
+            v-on:click="scrollToLocation('service-history')"
+            id="service-history-button"
+          >
+            History
+          </div>
+          <div
+            class="py-2 font-avenir-book font-18 service-aside__link"
+            v-on:click="scrollToLocation('service-benefits')"
+            id="service-benefits-button"
+          >
+            Benefits
+          </div>
+          <div
+            class="py-2 font-avenir-book font-18 service-aside__link"
+            v-on:click="scrollToLocation('service-conditions')"
+            id="service-conditions-button"
+          >
+            Conditions
+          </div>
+          <div
+            class="py-2 font-avenir-book font-18 service-aside__link"
+            v-on:click="scrollToLocation('service-statistics')"
+            id="service-statistics-button"
+          >
+            Statistics
+          </div>
         </aside>
       </div>
     </b-container>
@@ -189,15 +225,111 @@ query Services ($path: String!) {
 <script>
 
 export default {
+  metaInfo() {
+    return {
+      title: `${this.$page.service.title} | Services | Intercon Regenerative Center`,
+      meta: [
+        {
+          key: 'description',
+          name: 'description',
+          content: `Learn more about ${this.$page.service.title}`
+        },
+        {
+          key: 'og:title',
+          name: 'og:title',
+          content: `${this.$page.service.title} | Intercon Regenerative Center`,
+        },
+        {
+          key: 'og:site_name',
+          name: 'og:site_name',
+          content: 'Intercon Regenerative Center',
+        },
+        {
+          key: 'og:image',
+          name: 'og:image',
+          content: `${this.$page.service.header_image.src}`,
+        },
+        {
+          name: 'og:description',
+          name: 'og:description',
+          content:`A comprehensive read about ${this.$page.service.title}`,
+        },
+      ],
+    }
+  },
   data(){
     return {
     }
   },
-  computed : {
+  methods: {
+    scrollToLocation(hash) {
+      let links = document.getElementsByClassName('service-aside__link');
+      for (let i  = 0; i < links.length ; i++ ){
+        links[i].classList.remove('service-aside__link--active');
+      }
+      let button = document.getElementById(`${hash}-button`);
+      button.classList.add('service-aside__link--active');
+      let section = document.getElementById(hash);
+      let rect = section.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      window.scrollTo(scrollLeft + rect.left, scrollTop + rect.top - 150);
+    },
+    handleScroll(e) {
+      let introductionSection = document.getElementById('service-introduction'),
+        historySection = document.getElementById('service-history'),
+        benefitsSection = document.getElementById('service-benefits'),
+        conditionsSection = document.getElementById('service-conditions'),
+        statisticsSection = document.getElementById('service-statistics');
+
+      let introductionRect = introductionSection.getBoundingClientRect(),
+        historyRect = historySection.getBoundingClientRect(),
+        benefitsRect = benefitsSection.getBoundingClientRect(),
+        conditionsRect = conditionsSection.getBoundingClientRect(),
+        statisticsRect = statisticsSection.getBoundingClientRect();
+
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop,
+        offset = -160;
+
+      let introductionY = introductionRect.top + scrollTop + offset,
+        historyY = historyRect.top + scrollTop + offset,
+        benefitsY = benefitsRect.top + scrollTop + offset,
+        conditionsY = conditionsRect.top + scrollTop + offset,
+        statisticsY = statisticsRect.top + scrollTop + offset;
+
+      let currentY = window.scrollY,
+        hash = 'service-introduction';
+
+      if (currentY > introductionY && currentY <= historyY) {
+        hash = 'service-introduction';
+      } else if (currentY > historyY && currentY <= benefitsY) {
+        hash = 'service-history';
+      } else if (currentY > benefitsY && currentY <= conditionsY) {
+        hash = 'service-benefits';
+      } else if (currentY > conditionsY && currentY <= statisticsY) {
+        hash = 'service-conditions';
+      } else if (currentY > statisticsY) {
+        hash = 'service-statistics';
+      }
+
+      let links = document.getElementsByClassName('service-aside__link');
+      for (let i  = 0; i < links.length ; i++ ){
+        links[i].classList.remove('service-aside__link--active');
+      }
+      let button = document.getElementById(`${hash}-button`);
+      button.classList.add('service-aside__link--active');
+    },
+  },
+  computed: {
     service() {
-      console.log(this.$page.service);
       return this.$page.service;
     }
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
   }
 }
 </script>
@@ -220,10 +352,11 @@ export default {
   }
 
   .service-header__title {
+    width: 100%;
     top: 50%;
     left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
   .service-body {
     display: grid;
@@ -235,9 +368,8 @@ export default {
 
   @media only screen and (max-width: 992px) {
     .service-body{
-      grid-template-columns: minmax(0, 1fr);
-      grid-template-areas:
-        "article";
+      grid-template-columns: minmax(0, 1fr) 0px;
+      grid-gap: 00px;
     }
   }
 
@@ -256,13 +388,41 @@ export default {
   }
 
   .service-body__aside {
-    border: 10px solid red;
-    height: 100px;
+    margin: auto;
+    width: 80%;
+    height: auto;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    margin-top: 4rem;
+    top: 15rem;
     grid-area: aside;
+    border-radius: 0.5rem;
+    box-shadow: 0px 3px 6px var(--gray-2);
+    -webkit-box-shadow: 0px 3px 6px var(--gray-2);
+    -moz-box-shadow: 0px 3px 6px var(--gray-2);
+    -o-box-shadow: 0px 3px 6px var(--gray-2);
+    -ms-box-shadow: 0px 3px 6px var(--gray-2);
+  }
+
+  .service-aside__link {
+    cursor: pointer;
+  }
+
+  .service-aside__link--active {
+    font-family: Avenir-Black;
+  }
+
+  .service-aside__link:hover {
+    text-decoration: underline;
   }
 
   @media only screen and (max-width: 992px) {
     .service-body__aside{
+      display: none;
+    }
+
+
+    .service-aside__link {
       display: none;
     }
   }
@@ -302,6 +462,10 @@ export default {
 
   li {
     margin-bottom: 1rem;
+  }
+
+  figure {
+    margin-top: 2rem;
   }
 
   figcaption {

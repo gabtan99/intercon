@@ -45,7 +45,7 @@ stats:
     instructions before your first hyperbaric oxygen therapy session.
   stats_list:
   - with_supporting_image: true
-    figure: 'Ing-JohnAndrew-Y.jpg'
+    figure: '/uploads/Ing-JohnAndrew-Y.jpg'
     caption: A gangly teen who did not live up to anyone's expectations.
     content: In 9 out of 10 scenarios, people don't live up to others' expectations.
   - with_supporting_image: true
