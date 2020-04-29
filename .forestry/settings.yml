@@ -7,7 +7,6 @@ sections:
 - type: document
   path: data/target_page.json
   label: Target Page
-  match: "**/*"
 - type: directory
   path: testimonies
   label: Testimonies

@@ -10,7 +10,7 @@ fields:
 - name: header_image
   type: file
   config:
-    maxSize: 250
+    maxSize: 
   label: Header Image
 - name: description_title
   type: text
