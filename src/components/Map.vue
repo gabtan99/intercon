@@ -1,9 +1,8 @@
 <template>
-<div>
-
-  <div id="testmap"></div>
-  <img id="pointer" src="@/assets/img/map-marker.png" height="50px" />
-</div>
+  <div>
+    <div id="testmap"></div>
+    <img id="pointer" src="@/assets/img/map-marker.png" height="50px" />
+  </div>
   <!-- <vl-map
     :load-tiles-while-animating="true"
     :load-tiles-while-interacting="true"
@@ -26,13 +25,13 @@
 
 <script>
 import "ol/ol.css";
-import { Map, View } from "ol";
-import TileLayer from "ol/layer/Tile";
-import OSM from "ol/source/OSM";
-import { transform } from "ol/proj";
-import Overlay from "ol/Overlay";
-
 function initMap() {
+  const Map = require("ol/Map").default;
+  const View = require("ol/View").default;
+  const TileLayer = require("ol/layer/Tile").default;
+  const OSM = require("ol/source/OSM").default;
+  const Overlay = require("ol/Overlay").default;
+
   let map = new Map({
     target: "testmap",
     layers: [new TileLayer({ source: new OSM() })],
@@ -44,7 +43,7 @@ function initMap() {
   });
 
   var popup = new Overlay({
-    element: document.getElementById('pointer'),
+    element: document.getElementById("pointer"),
     positioning: "bottom-center"
   });
   popup.setPosition([120.995388, 14.63757]);
