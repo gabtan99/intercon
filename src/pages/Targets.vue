@@ -2,13 +2,16 @@
   <Layout>
     {{ setAutoModal() }}
 
-    <PageHeader :page_name="page_name" :image="image" />
+    <PageHeader
+      :page_name="settings.page_name"
+      :image="settings.header_image"
+    />
     <div class="header-text" style="">
       <h1 class="font-gilroy-bold font-36">
-        {{ settings.targets_header_text }}
+        {{ settings.page_text }}
       </h1>
       <p class="font-avenir-light font-18">
-        {{ settings.targets_page_description }}
+        {{ settings.page_description }}
       </p>
     </div>
     <div class="main-container">
@@ -44,50 +47,48 @@ query Target {
 </page-query>
 
 <script>
-import TargetCard from "@/components/TargetCard";
-import PageHeader from "@/components/PageHeader";
-import NewsletterModal from "@/components/NewsletterModal";
+import TargetCard from '@/components/TargetCard'
+import PageHeader from '@/components/PageHeader'
+import NewsletterModal from '@/components/NewsletterModal'
 
 export default {
   metaInfo: {
-    title: "Targets | Intercon Regenerative Center",
+    title: 'Targets | Intercon Regenerative Center',
     meta: [
       {
-        key: "description",
-        name: "description",
+        key: 'description',
+        name: 'description',
         content:
-          "Target groups that we offer to restore and regenerate for you!",
+          'Target groups that we offer to restore and regenerate for you!',
       },
       {
-        key: "og:title",
-        name: "og:title",
-        content: "Targets | Intercon Regenerative Center",
+        key: 'og:title',
+        name: 'og:title',
+        content: 'Targets | Intercon Regenerative Center',
       },
       {
-        key: "og:site_name",
-        name: "og:site_name",
-        content: "Intercon Regenerative Center",
+        key: 'og:site_name',
+        name: 'og:site_name',
+        content: 'Intercon Regenerative Center',
       },
       {
-        key: "og:image",
-        name: "og:image",
-        content: require("@/assets/img/target-header.png"),
+        key: 'og:image',
+        name: 'og:image',
+        content: require('@/assets/img/target-header.png'),
       },
       {
-        name: "og:description",
-        name: "og:description",
+        name: 'og:description',
+        name: 'og:description',
         content:
-          "Check out the target groups that you wish to restore with the services we offer!",
+          'Check out the target groups that you wish to restore with the services we offer!',
       },
     ],
   },
   data() {
     return {
-      settings: require("../../data/theme.json"),
-      page_name: "Targets",
-      image: "target-header.png",
-      selectedTarget: "",
-    };
+      settings: require('../../data/targets-page.json'),
+      selectedTarget: '',
+    }
   },
   components: {
     TargetCard,
@@ -95,12 +96,12 @@ export default {
     NewsletterModal,
   },
   methods: {
-    setAutoModal: function() {
+    setAutoModal: function () {
       if (this.$route.params)
-        this.selectedTarget = this.$route.query.selectedTarget;
+        this.selectedTarget = this.$route.query.selectedTarget
     },
   },
-};
+}
 </script>
 
 <style scoped>
@@ -137,7 +138,7 @@ export default {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1000px) {
   .main-container {
     column-count: 1;
     column-gap: 1em;

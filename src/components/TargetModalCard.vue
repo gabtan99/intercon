@@ -4,10 +4,10 @@
 
     <b-card
       tag="article"
-      class="service-card"
+      class="service-card card-img-top"
       img-top
       img-alt="image"
-      img-height="130"
+      img-height="150"
       :img-src="singleService.header_image.src"
     >
       <h4
@@ -82,6 +82,10 @@ export default {
   box-shadow: 0 3px 3px 1px var(--gray-1);
 }
 
+.card-img-top {
+  object-fit: cover;
+}
+
 .ellipsis {
   margin: 8px 0px 8px;
   color: var(--blue-branding);
@@ -108,7 +112,7 @@ export default {
   box-shadow: 0 2px 2px 1px var(--gray-1);
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1000px) {
   .service-card {
     position: relative;
     width: 100%;

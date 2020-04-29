@@ -1,17 +1,19 @@
 <template>
   <div class="image-container">
     <h1 class="font-avenir-heavy font-42 page-title">{{ page_name }}</h1>
-    <img
-      :src="require('@/assets/img/' + image)"
-      alt="header"
-      class="img-style"
-    />
+    <img alt="header" :src="image" class="img-style" />
+    {{ log() }}
   </div>
 </template>
 
 <script>
 export default {
   props: ['page_name', 'image'],
+  methods: {
+    log: function () {
+      console.log(this.image)
+    },
+  },
 }
 </script>
 
@@ -33,7 +35,7 @@ export default {
   height: 670px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1000px) {
   .img-style {
     object-position: 80% 100%;
   }
