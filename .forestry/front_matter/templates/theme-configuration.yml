@@ -98,10 +98,5 @@ fields:
     schema:
       format: markdown
   label: Targets Page Description
-- name: test
-  type: file
-  config:
-    maxSize: 250
-  label: test
 pages:
 - data/theme.json
