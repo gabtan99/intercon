@@ -80,6 +80,17 @@ import Testimonies from "@/components/Testimonies";
 import NewsletterModal from "@/components/NewsletterModal";
 
 export default {
+  components: {
+    Hero,
+    Waves,
+    ProjectsGrid,
+    LatestJournals,
+    AboutSection,
+    TargetSection,
+    Instagram,
+    Testimonies,
+    NewsletterModal,
+  },
   metaInfo() {
     return {
       title: `Intercon Regenerative Center`,
@@ -102,7 +113,7 @@ export default {
         {
           key: "og:image",
           name: "og:image",
-          content: "/src/assets/img/meta.jpg",
+          content: require("@/assets/img/meta.jpg"),
         },
         {
           name: "og:description",
@@ -111,17 +122,6 @@ export default {
         },
       ],
     };
-  },
-  components: {
-    Hero,
-    Waves,
-    ProjectsGrid,
-    LatestJournals,
-    AboutSection,
-    TargetSection,
-    Instagram,
-    Testimonies,
-    NewsletterModal,
   },
 };
 </script>
