@@ -26,6 +26,7 @@
     "gridsome-scroll-reveal": "^1.0.11",
     "jquery": "^3.5.0",
     "scrollreveal": "^4.0.6",
+    "ol": "^6.3.1",
     "vue": "^2.6.11",
     "vue-carousel": "^0.18.0",
     "vue-youtube": "^1.4.0",
