@@ -4,7 +4,7 @@
       <img class="icon-style" :src="targetContent.target_icon.src" alt="icon" />
       <h1
         class="font-gilroy-bold"
-        style="padding-top: 1rem;  padding-left: 0.5rem;"
+        style="padding-top: 1rem; padding-left: 0.5rem;"
       >
         {{ targetContent.target_name }}
       </h1>
@@ -25,19 +25,14 @@
 </template>
 
 <script>
-import TargetModalCard from "@/components/TargetModalCard";
+import TargetModalCard from '@/components/TargetModalCard'
 
 export default {
-  props: ["targetContent", "targetServices"],
+  props: ['targetContent', 'targetServices'],
   components: {
     TargetModalCard,
   },
-  methods: {
-    log: function(e) {
-      console.log(e);
-    },
-  },
-};
+}
 </script>
 
 <style scoped>
@@ -48,7 +43,7 @@ export default {
 .icon-style {
   width: 36px;
   height: 36px;
-  margin: 0px 10px;
+  margin-right: 10px;
   border-radius: 500px;
 }
 
@@ -57,7 +52,7 @@ export default {
   flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1000px) {
   .service-style {
     display: flex;
     flex-direction: column;
