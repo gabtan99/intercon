@@ -4,6 +4,11 @@ auto_deploy: false
 admin_path: "/static/admin"
 webhook_url: 
 sections:
+- type: document
+  path: about/**/*.md
+  label: About Us
+  match: "**/*"
+  read_only: false
 - type: directory
   path: testimonies
   label: Testimonies
