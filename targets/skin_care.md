@@ -9,27 +9,19 @@ target_description:
 background_color: '#F3F3D3'
 target_icon: '/uploads/skin.png'
 target_services:
-  - service_name: Wooden Sauna
-    service_url: services/sauna
-    service_image: '/uploads/sauna.png'
+  - service_name: Infrared Sauna
     service_description:
       Just a little indication. And I know you're saying, 'Oh Bob,
       you've done it this time.' And you may be right. I like to beat the brush.
-  - service_name: Hyperbaric Therapy
-    service_url: services/hyperbaric
-    service_image: '/uploads/hyperbaric.png'
+  - service_name: Hyperbaric Oxygen Therapy
     service_description:
       Just a little indication. And I know you're saying, 'Oh Bob,
       you've done it this time.' And you may be right. I like to beat the brush.
   - service_name: Red Light Therapy
-    service_url: services/red-light
-    service_image: '/uploads/red-light.png'
     service_description:
       Just a little indication. And I know you're saying, 'Oh Bob,
       you've done it this time.' And you may be right. I like to beat the brush.
-  - service_name: Colon Hydrotherapy
-    service_url: services/colon-hydrotherapy
-    service_image: '/uploads/colon-hydrotherapy.png'
+  - service_name: Colon Hydroscopy
     service_description:
       Just a little indication. And I know you're saying, 'Oh Bob,
       you've done it this time.' And you may be right. I like to beat the brush.

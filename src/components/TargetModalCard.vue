@@ -1,18 +1,23 @@
 <template>
   <div>
+    {{ getServiceInfo(servicesContent.service_name) }}
+
     <b-card
       tag="article"
       class="service-card"
       img-top
       img-alt="image"
       img-height="130"
-      :img-src="servicesContent.service_image.src"
+      :img-src="singleService.header_image.src"
     >
       <h4
-        class="font-gilroy-medium font-18"
-        style="margin: 8px 0px 8px; color: var(--blue-branding);"
+        v-b-popover.hover.top="{
+          title: this.singleService.title,
+          customClass: 'font-avenir-medium font-16',
+        }"
+        class="font-gilroy-medium font-18 ellipsis"
       >
-        {{ servicesContent.service_name }}
+        {{ singleService.title }}
       </h4>
       <b-card-text
         class="font-avenir-light font-16"
@@ -22,21 +27,49 @@
       </b-card-text>
 
       <div class="button-style">
-        <!-- :href="servicesContent.service_name" -->
-        <a
-          href="/services"
+        <g-link
+          :to="singleService.path"
           class="font-gilroy-regular font-16"
           style="color: #057097; text-decoration: none;"
         >
           Learn More
-        </a>
+        </g-link>
       </div>
     </b-card>
   </div>
 </template>
+
+<static-query>
+query {
+  services: allServices {
+    edges {
+      node {
+        title
+        path
+        header_image
+      }
+    }
+  }
+}
+</static-query>
+
 <script>
 export default {
   props: ['servicesContent'],
+  data() {
+    return {
+      singleService: {},
+    }
+  },
+  methods: {
+    getServiceInfo: function (title) {
+      this.$static.services.edges.map((item) => {
+        if (title === item.node.title) {
+          this.singleService = item.node
+        }
+      })
+    },
+  },
 }
 </script>
 <style scoped>
@@ -49,6 +82,15 @@ export default {
   box-shadow: 0 3px 3px 1px var(--gray-1);
 }
 
+.ellipsis {
+  margin: 8px 0px 8px;
+  color: var(--blue-branding);
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .button-style {
   display: block;
   margin: 0 auto;
@@ -58,6 +100,7 @@ export default {
   border-radius: 500px;
   background: transparent;
   border: 0.5px solid #e5e3e3;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 

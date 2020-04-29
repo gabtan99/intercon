@@ -8,7 +8,7 @@
         Subscribe to our channel and be part of our growing community!
       </h1>
       <a class="font-gilroy-light font-18 youtube-link" :href="youtubeLink">
-        <font-awesome :icon="['fab', 'youtube']" class="social" />
+        <font-awesome :icon="['fab', 'youtube']" class="youtube-icon" />
         {{ youtubeHandle }}
       </a>
     </div>
@@ -27,14 +27,14 @@
 </template>
 
 <script>
-import GreenButton from "@/components/GreenButton";
-import WhiteButton from "@/components/WhiteButton";
-import Waves from "@/components/Waves";
-import YoutubeModal from "@/components/YoutubeModal";
+import GreenButton from '@/components/GreenButton'
+import WhiteButton from '@/components/WhiteButton'
+import Waves from '@/components/Waves'
+import YoutubeModal from '@/components/YoutubeModal'
 
 export default {
-  props: ["showModal", "youtubeLink", "youtubeHandle", "hideModal"],
-};
+  props: ['showModal', 'youtubeLink', 'youtubeHandle', 'hideModal'],
+}
 </script>
 
 <style scoped>
@@ -73,5 +73,18 @@ export default {
   font-size: 13pt;
   color: var(--gray-2);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  .title {
+    text-align: center;
+    font-size: 2.4rem;
+    padding: 0px 15px;
+  }
+
+  .close-icon {
+    top: 13px;
+    right: 13px;
+  }
 }
 </style>

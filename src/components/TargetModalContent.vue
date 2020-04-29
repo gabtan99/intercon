@@ -1,8 +1,10 @@
 <template>
   <div class="target-content">
-    <div style="display: flex; margin-bottom: 15px;">
-      <font-awesome class="icon-style" :icon="targetContent.target_icon" />
-      <h1 class="font-gilroy-bold">{{ targetContent.target_name }}</h1>
+    <div style="display: flex; margin-bottom: 10px; align-items: center;">
+      <img class="icon-style" :src="targetContent.target_icon.src" alt="icon" />
+      <h1 class="font-gilroy-bold" style="padding-top: 5px;">
+        {{ targetContent.target_name }}
+      </h1>
     </div>
 
     <p class="font-avenir-light font-18" style="margin-bottom: 15px;">
@@ -27,6 +29,11 @@ export default {
   components: {
     TargetModalCard,
   },
+  methods: {
+    log: function (e) {
+      console.log(e)
+    },
+  },
 }
 </script>
 
@@ -36,9 +43,10 @@ export default {
 }
 
 .icon-style {
-  font-size: 15pt;
-  color: var(--blue-icon);
-  margin-right: 10px;
+  width: 28px;
+  height: 28px;
+  margin: 0px 10px;
+  border-radius: 500px;
 }
 
 .service-style {
