@@ -19,6 +19,7 @@
       size="lg"
       id="modal-scrollable"
       scrollable
+      @hide="close"
       v-model="showModal"
     >
       <font-awesome class="close-icon" :icon="'times'" v-on:click="close" />
