@@ -6,6 +6,8 @@
       :page_name="settings.page_name"
       :image="settings.header_image"
     />
+    {{ log(settings.header_image) }}
+
     <div class="header-text" style="">
       <h1 class="font-gilroy-bold font-36">
         {{ settings.page_text }}
@@ -86,7 +88,7 @@ export default {
   },
   data() {
     return {
-      settings: require('../../data/targets-page.json'),
+      settings: require('../../data/target_page.json'),
       selectedTarget: '',
     }
   },
@@ -99,6 +101,9 @@ export default {
     setAutoModal: function () {
       if (this.$route.params)
         this.selectedTarget = this.$route.query.selectedTarget
+    },
+    log: function (e) {
+      console.log(e)
     },
   },
 }

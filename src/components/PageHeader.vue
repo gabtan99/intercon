@@ -1,7 +1,7 @@
 <template>
   <div class="image-container">
     <h1 class="font-avenir-heavy font-42 page-title">{{ page_name }}</h1>
-    <img alt="header" :src="image" class="img-style" />
+    <g-image alt="header" :src="image" class="img-style" />
     {{ log() }}
   </div>
 </template>

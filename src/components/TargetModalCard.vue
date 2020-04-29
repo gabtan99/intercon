@@ -69,6 +69,9 @@ export default {
         }
       })
     },
+    log: function (e) {
+      console.log(e)
+    },
   },
 }
 </script>
