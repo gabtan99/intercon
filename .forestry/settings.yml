@@ -4,9 +4,6 @@ auto_deploy: false
 admin_path: "/static/admin"
 webhook_url: 
 sections:
-- type: document
-  path: data/home_page.json
-  label: Home Page
 - type: directory
   path: testimonies
   label: Testimonies
@@ -15,6 +12,9 @@ sections:
   new_doc_ext: md
   templates:
   - testimony
+- type: document
+  path: data/home_page.json
+  label: Home Page
 - type: directory
   path: targets
   label: Targets
