@@ -3,42 +3,42 @@
         <section class="timeline">
             <div class="container">
 
-                <div js--fadeInLeft class="timeline-item js--fadeInLeft">
+                <div class="timeline-item">
                     <div class="timeline-img"></div>
-                    <div class="timeline-content js--fadeInLeft">
-                        <h2 class="font-gilroy-bold font-24 blue">2020</h2>
+                    <div v-scroll-reveal.reset class="timeline-content">
+                        <h2 class="font-gilroy-bold font-24 blue">2006</h2>
                         <p class="font-avenir-light font-18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
                     </div>
                 </div>
 
-                <div js--fadeInLeft class="timeline-item js--fadeInLeft">
+                <div class="timeline-item">
                     <div class="timeline-img"></div>
-                    <div class="timeline-content js--fadeInLeft">
-                        <h2 class="font-gilroy-bold font-24 blue">2020</h2>
+                    <div v-scroll-reveal.reset class="timeline-content">
+                        <h2 class="font-gilroy-bold font-24 blue">2010</h2>
                         <p class="font-avenir-light font-18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
                     </div>
                 </div> 
 
-                <div js--fadeInLeft class="timeline-item js--fadeInLeft">
+                <div class="timeline-item">
                     <div class="timeline-img"></div>
-                    <div class="timeline-content js--fadeInLeft">
-                        <h2 class="font-gilroy-bold font-24 blue">2020</h2>
+                    <div v-scroll-reveal.reset class="timeline-content">
+                        <h2 class="font-gilroy-bold font-24 blue">2012</h2>
                         <p class="font-avenir-light font-18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
                     </div>
                 </div> 
 
-                <div js--fadeInLeft class="timeline-item js--fadeInLeft">
+                <div class="timeline-item">
                     <div class="timeline-img"></div>
-                    <div class="timeline-content js--fadeInLeft">
-                        <h2 class="font-gilroy-bold font-24 blue">2020</h2>
+                    <div v-scroll-reveal.reset class="timeline-content">
+                        <h2 class="font-gilroy-bold font-24 blue">2016</h2>
                         <p class="font-avenir-light font-18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
                     </div>
                 </div> 
 
-                <div js--fadeInLeft class="timeline-item js--fadeInLeft">
+                <div class="timeline-item">
                     <div class="timeline-img"></div>
-                    <div class="timeline-content js--fadeInLeft">
-                        <h2 class="font-gilroy-bold font-24 blue">2020</h2>
+                    <div v-scroll-reveal.reset class="timeline-content">
+                        <h2 class="font-gilroy-bold font-24 blue">Now</h2>
                         <p class="font-avenir-light font-18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
                     </div>
                 </div> 
@@ -51,39 +51,8 @@
 
 
 <script>
-// import ScrollReveal from 'scrollreveal'
-
 export default {
     mounted() {
-        // let sr = ScrollReveal({ reset: true });
-
-        // if ($(window).width() < 768) {
-        //     if ($('.timeline-content').hasClass('js--fadeInLeft')) {
-        //         $('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
-        //     }
-
-        //     sr.reveal('.js--fadeInRight', {
-        //         origin: 'right',
-        //         distance: '300px',
-        //         easing: 'ease-in-out',
-        //         duration: 800,
-        //         });
-        // } else {
-        //     sr.reveal('.js--fadeInLeft', {
-        //     origin: 'left',
-        //     distance: '300px',
-        //     easing: 'ease-in-out',
-        //     duration: 800,
-        //     });
-
-        //     sr.reveal('.js--fadeInRight', {
-        //     origin: 'right',
-        //     distance: '300px',
-        //     easing: 'ease-in-out',
-        //     duration: 800,
-        //     });
-        // }
-
         // sr.reveal('.js--fadeInLeft', {
         // origin: 'left',
         // distance: '300px',

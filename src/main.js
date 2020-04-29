@@ -64,20 +64,12 @@ export default function(Vue, { head }) {
   //Vue.use(VueLayers);
   Vue.use(VueScrollReveal, 
     {
-      class: 'js--fadeInLeft',
+      class: 'v-scroll-reveal',
+      origin: 'right',
+      distance: '300px',
+      easing: 'ease-in-out',
       duration: 800,
-      scale: 1,
-      distance: '10px',
-      mobile: false,
-    },
-    // {
-    //   class: 'js--fadeInRight',
-    //   origin: 'right',
-    //   distance: '300px',
-    //   easing: 'ease-in-out',
-    //   duration: 800,
-    // },
-  );
+    });
   Vue.component("Layout", DefaultLayout);
   Vue.component("font-awesome", FontAwesomeIcon);
 
