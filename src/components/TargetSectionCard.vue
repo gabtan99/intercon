@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-link
-      :to="{ name: 'targets', params: { selectedTarget: target.target_name } }"
+      :to="{ path: '/targets', query: { selectedTarget: target.target_name } }"
       style="text-decoration: none; color: inherit;"
     >
       <b-card class="card-style">

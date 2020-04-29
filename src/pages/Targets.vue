@@ -97,7 +97,7 @@ export default {
   methods: {
     setAutoModal: function () {
       if (this.$route.params)
-        this.selectedTarget = this.$route.params.selectedTarget
+        this.selectedTarget = this.$route.query.selectedTarget
     },
   },
 }
