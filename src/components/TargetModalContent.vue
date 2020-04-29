@@ -2,7 +2,10 @@
   <div class="target-content">
     <div style="display: flex; margin-bottom: 10px; align-items: center;">
       <img class="icon-style" :src="targetContent.target_icon.src" alt="icon" />
-      <h1 class="font-gilroy-bold" style="padding-top: 5px;">
+      <h1
+        class="font-gilroy-bold"
+        style="padding-top: 1rem;  padding-left: 0.5rem;"
+      >
         {{ targetContent.target_name }}
       </h1>
     </div>
@@ -22,19 +25,19 @@
 </template>
 
 <script>
-import TargetModalCard from '@/components/TargetModalCard'
+import TargetModalCard from "@/components/TargetModalCard";
 
 export default {
-  props: ['targetContent', 'targetServices'],
+  props: ["targetContent", "targetServices"],
   components: {
     TargetModalCard,
   },
   methods: {
-    log: function (e) {
-      console.log(e)
+    log: function(e) {
+      console.log(e);
     },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -43,8 +46,8 @@ export default {
 }
 
 .icon-style {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   margin: 0px 10px;
   border-radius: 500px;
 }

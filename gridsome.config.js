@@ -68,11 +68,29 @@ module.exports = {
       },
     },
     {
+      use: "@gridsome/plugin-sitemap",
+      options: {
+        cacheTime: 600000, // default
+        config: {
+          "/*": {
+            changefreq: "weekly",
+            priority: 0.5,
+          },
+        },
+      },
+    },
+    {
       use: "@zefman/gridsome-source-instagram",
       options: {
         username: "interconregenerative", // Instagram username
         typeName: "InstagramPhoto", // The GraphQL type you want the photos to be added under. Defaults to InstagramPhoto
       },
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: process.env.GA_TRACKING_ID || 'UA-164792439-1'
+      }
     },
   ],
   transformers: {

@@ -50,7 +50,9 @@
               </p>
 
               <b-button id="submit" type="submit">
-                <span v-if="!isLoading">Join Now</span>
+                <span v-if="!isLoading" class="font-gilroy-bold font-16"
+                  >Join Now</span
+                >
                 <span
                   v-if="isLoading"
                   class="spinner-border spinner-border-lg"
@@ -212,8 +214,11 @@ b-modal.newsletter {
 #submit {
   margin-top: 20px;
   width: 100%;
-  height: 30px;
   background-color: var(--green-branding);
+  transition: all ease-in 0.15s;
+}
+#submit:hover {
+  transform: translateY(-0.3rem);
 }
 
 #form-container {
