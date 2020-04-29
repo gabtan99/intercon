@@ -2,14 +2,11 @@
   <div class="main">
     <div class="col-lg-6">
       <h1 class="hero-title font-gilroy-bold font-42">
-        The Future of
-        <br />
-        Personalized Healthcare
+        {{ settings.hero_title }}
       </h1>
 
       <h1 class="hero-subtitle font-avenir-light font-24">
-        Enhance and optimize your body’s self healing mechanisms in the most
-        safest and natural way possible.
+        {{ settings.hero_subtitle }}
       </h1>
 
       <div class="hero-buttons">
