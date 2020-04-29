@@ -56,7 +56,7 @@ fields:
 - name: header_image
   type: file
   config:
-    maxSize: 250
+    maxSize: 64
   label: Header Image
   description: This image serves as the thumbnail for the preview of the service and
     the header for the image for the article.
@@ -81,7 +81,7 @@ fields:
 - name: introduction_image
   type: file
   config:
-    maxSize: 250
+    maxSize: 64
   label: Introduction Image
   description: A supporting image for the introduction, you may leave this blank
 - name: history
@@ -188,7 +188,7 @@ fields:
     - name: figure
       type: file
       config:
-        maxSize: 250
+        maxSize: 64
       label: Figure
       description: Supporting statistical figure
       showOnly:
