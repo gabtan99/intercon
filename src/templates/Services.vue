@@ -46,13 +46,13 @@
           >
             What is {{service.title}}?
           </h2>
-          <b-img
+          <b-img-lazy
             fluid-grow
             center
             v-if="service.introduction_image"
             :src="service.introduction_image.src"
           >
-          </b-img>
+          </b-img-lazy>
           <p
             class="font-18"
           >
@@ -111,12 +111,13 @@
               :key="index"
               v-if="stat.with_supporting_image"
             >
-              <b-img
+              <b-img-lazy
                 fluid
                 center
                 :src="stat.figure.src"
+                :alt="stat.content"
               >
-              </b-img>
+              </b-img-lazy>
               <figcaption
                 class="mt-2 text-center font-16 font-avenir-book-oblique"
               >

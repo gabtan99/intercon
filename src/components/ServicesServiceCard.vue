@@ -8,9 +8,10 @@
       <div
         class="col-lg-4 service-card__thumbnail-container"
       >
-        <img
+        <g-image
           :alt="service.node.title"
           :src="service.node.header_image.src"
+          height="330"
           class="service-card__thumbnail"
         />
       </div>
