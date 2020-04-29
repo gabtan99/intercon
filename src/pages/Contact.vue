@@ -172,6 +172,38 @@ export default {
       this.$refs.contactform.submit();
     },
   },
+  metaInfo() {
+    return {
+      title: `Contact Us - Intercon Regenerative Center`,
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: `At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. `,
+        },
+        {
+          key: "og:title",
+          name: "og:title",
+          content: `Contact Us - Intercon Regenerative Center`,
+        },
+        {
+          key: "og:site_name",
+          name: "og:site_name",
+          content: "Intercon Regenerative Center",
+        },
+        {
+          key: "og:image",
+          name: "og:image",
+          content: require("@/assets/img/meta.jpg"),
+        },
+        {
+          name: "og:description",
+          name: "og:description",
+          content: `At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. `,
+        },
+      ],
+    };
+  },
 };
 </script>
 
