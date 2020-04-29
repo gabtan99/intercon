@@ -110,7 +110,7 @@ export default {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1000px) {
   .card {
     position: relative;
     border: 1px solid #eeeeee;
