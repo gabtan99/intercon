@@ -7,7 +7,6 @@ sections:
 - type: document
   path: data/home_page.json
   label: Home Page
-  match: "**/*"
 - type: directory
   path: testimonies
   label: Testimonies
