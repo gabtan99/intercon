@@ -55,6 +55,7 @@ export default {
     var(--lightgreen-gradient)
   );
   padding: 10rem 0;
+  padding-bottom: 5rem;
 }
 
 .card-container {

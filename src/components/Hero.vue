@@ -106,9 +106,5 @@ export default {
   .image {
     display: none;
   }
-
-  .main {
-    padding: 4rem 1rem;
-  }
 }
 </style>
