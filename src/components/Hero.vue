@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <div class="col-lg-6">
+    <div class="col-lg-6 centered">
       <h1 class="hero-title font-gilroy-bold font-42">
         The Future of
         <br />
@@ -23,7 +23,7 @@
       </div>
     </div>
 
-    <div class="col-lg-6 image">
+    <div class="col-lg-6 image centered">
       <b-img :src="require('../assets/img/hero-img.png')" fluid />
     </div>
 
@@ -74,9 +74,8 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 80px 15px;
+  margin: 10% auto;
   justify-content: center;
-  padding-bottom: 40px;
 }
 
 .hero-title {
@@ -90,7 +89,7 @@ export default {
 }
 
 .hero-buttons {
-  margin-bottom: 10rem;
+  margin-bottom: 3rem;
 }
 
 .hero-image {
@@ -100,6 +99,10 @@ export default {
 .white-button {
   margin-left: 2rem;
   /* margin-top: 2rem; */
+}
+
+.centered {
+  align-self: center;
 }
 
 @media only screen and (max-width: 1000px) {
