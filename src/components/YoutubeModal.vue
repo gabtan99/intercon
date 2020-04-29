@@ -1,5 +1,12 @@
 <template>
-  <b-modal centered hide-header hide-footer size="lg" v-model="showModal">
+  <b-modal
+    centered
+    hide-header
+    hide-footer
+    size="lg"
+    v-model="showModal"
+    no-close-on-backdrop
+  >
     <b-row>
       <font-awesome class="close-icon" :icon="'times'" @click="hideModal" />
     </b-row>
@@ -16,7 +23,6 @@
       <youtube
         :fitParent="true"
         :resize="true"
-        :resizeDelay="0"
         :player-vars="{
           autoplay: 1,
         }"
@@ -27,14 +33,14 @@
 </template>
 
 <script>
-import GreenButton from '@/components/GreenButton'
-import WhiteButton from '@/components/WhiteButton'
-import Waves from '@/components/Waves'
-import YoutubeModal from '@/components/YoutubeModal'
+import GreenButton from "@/components/GreenButton";
+import WhiteButton from "@/components/WhiteButton";
+import Waves from "@/components/Waves";
+import YoutubeModal from "@/components/YoutubeModal";
 
 export default {
-  props: ['showModal', 'youtubeLink', 'youtubeHandle', 'hideModal'],
-}
+  props: ["showModal", "youtubeLink", "youtubeHandle", "hideModal"],
+};
 </script>
 
 <style scoped>
