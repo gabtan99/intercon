@@ -148,8 +148,6 @@ p {
 
 .detail-title {
   color: var(--blue-branding-dark);
-  padding-top: 2rem;
-  padding-left: 2rem;
   margin: auto 0px;
   margin-left: 2rem;
 }
