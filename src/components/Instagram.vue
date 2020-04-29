@@ -18,8 +18,8 @@
       </div>
 
       <div class="top thumbnail">
-        <a :href="recentImages[1].url">
-          <img :src="recentImages[1].thumbnail" />
+        <a :href="recentImages[3].url">
+          <img :src="recentImages[3].thumbnail" />
         </a>
       </div>
 
@@ -29,8 +29,8 @@
         </a>
       </div>
       <div class="bottom thumbnail">
-        <a :href="recentImages[3].url">
-          <img :src="recentImages[3].thumbnail" />
+        <a :href="recentImages[1].url">
+          <img :src="recentImages[1].thumbnail" />
         </a>
       </div>
     </div>

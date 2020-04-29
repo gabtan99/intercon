@@ -1,15 +1,12 @@
 <template>
   <div class="main">
-    <div class="col-lg-6 centered">
+    <div class="col-lg-6">
       <h1 class="hero-title font-gilroy-bold font-42">
-        The Future of
-        <br />
-        Personalized Healthcare
+        {{ settings.hero_title }}
       </h1>
 
       <h1 class="hero-subtitle font-avenir-light font-24">
-        Enhance and optimize your body’s self healing mechanisms in the most
-        safest and natural way possible.
+        {{ settings.hero_subtitle }}
       </h1>
 
       <div class="hero-buttons">
@@ -23,7 +20,7 @@
       </div>
     </div>
 
-    <div class="col-lg-6 image centered">
+    <div class="col-lg-6 image">
       <b-img :src="require('../assets/img/hero-img.png')" fluid />
     </div>
 
@@ -74,8 +71,8 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 10% auto;
   justify-content: center;
+  margin: 10% 1rem;
 }
 
 .hero-title {
@@ -89,7 +86,7 @@ export default {
 }
 
 .hero-buttons {
-  margin-bottom: 3rem;
+  margin-bottom: 10rem;
 }
 
 .hero-image {
@@ -99,10 +96,6 @@ export default {
 .white-button {
   margin-left: 2rem;
   /* margin-top: 2rem; */
-}
-
-.centered {
-  align-self: center;
 }
 
 @media only screen and (max-width: 1000px) {

@@ -44,50 +44,50 @@ query Target {
 </page-query>
 
 <script>
-import TargetCard from '@/components/TargetCard'
-import PageHeader from '@/components/PageHeader'
-import NewsletterModal from '@/components/NewsletterModal'
+import TargetCard from "@/components/TargetCard";
+import PageHeader from "@/components/PageHeader";
+import NewsletterModal from "@/components/NewsletterModal";
 
 export default {
   metaInfo: {
-    title: 'Targets | Intercon Regenerative Center',
+    title: "Targets | Intercon Regenerative Center",
     meta: [
       {
-        key: 'description',
-        name: 'description',
+        key: "description",
+        name: "description",
         content:
-          'Target groups that we offer to restore and regenerate for you!',
+          "Target groups that we offer to restore and regenerate for you!",
       },
       {
-        key: 'og:title',
-        name: 'og:title',
-        content: 'Targets | Intercon Regenerative Center',
+        key: "og:title",
+        name: "og:title",
+        content: "Targets | Intercon Regenerative Center",
       },
       {
-        key: 'og:site_name',
-        name: 'og:site_name',
-        content: 'Intercon Regenerative Center',
+        key: "og:site_name",
+        name: "og:site_name",
+        content: "Intercon Regenerative Center",
       },
       {
-        key: 'og:image',
-        name: 'og:image',
-        content: require('@/assets/img/target-header.png'),
+        key: "og:image",
+        name: "og:image",
+        content: require("@/assets/img/target-header.png"),
       },
       {
-        name: 'og:description',
-        name: 'og:description',
+        name: "og:description",
+        name: "og:description",
         content:
-          'Check out the target groups that you wish to restore with the services we offer!',
+          "Check out the target groups that you wish to restore with the services we offer!",
       },
     ],
   },
   data() {
     return {
-      settings: require('../../data/theme.json'),
-      page_name: 'Targets',
-      image: 'target-header.png',
-      selectedTarget: '',
-    }
+      settings: require("../../data/theme.json"),
+      page_name: "Targets",
+      image: "target-header.png",
+      selectedTarget: "",
+    };
   },
   components: {
     TargetCard,
@@ -95,12 +95,12 @@ export default {
     NewsletterModal,
   },
   methods: {
-    setAutoModal: function () {
+    setAutoModal: function() {
       if (this.$route.params)
-        this.selectedTarget = this.$route.query.selectedTarget
+        this.selectedTarget = this.$route.query.selectedTarget;
     },
   },
-}
+};
 </script>
 
 <style scoped>

@@ -3,7 +3,7 @@ import settings from "../data/theme.json";
 import BootstrapVue from "bootstrap-vue";
 import VueYoutube from "vue-youtube";
 //import VueLayers from 'vuelayers'
-import VueScrollReveal from 'gridsome-scroll-reveal';
+import VueScrollReveal from "gridsome-scroll-reveal";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
@@ -62,14 +62,13 @@ export default function(Vue, { head }) {
   Vue.use(BootstrapVue);
   Vue.use(VueYoutube);
   //Vue.use(VueLayers);
-  Vue.use(VueScrollReveal, 
-    {
-      class: 'v-scroll-reveal',
-      origin: 'right',
-      distance: '300px',
-      easing: 'ease-in-out',
-      duration: 800,
-    });
+  Vue.use(VueScrollReveal, {
+    class: "v-scroll-reveal",
+    origin: "right",
+    distance: "300px",
+    easing: "ease-in-out",
+    duration: 800,
+  });
   Vue.component("Layout", DefaultLayout);
   Vue.component("font-awesome", FontAwesomeIcon);
 
@@ -80,4 +79,9 @@ export default function(Vue, { head }) {
   head.bodyAttrs = {
     class: settings.dark_mode ? "dark" : "",
   };
+
+  head.meta.push({
+    name: "keywords",
+    content: "Health,Wellness,Healing,Self-care,Therapy,Injury,Recover",
+  });
 }
