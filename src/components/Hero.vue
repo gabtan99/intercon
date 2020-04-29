@@ -71,9 +71,8 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 80px 15px;
   justify-content: center;
-  padding-bottom: 40px;
+  margin: 10% 1rem;
 }
 
 .hero-title {

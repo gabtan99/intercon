@@ -99,7 +99,7 @@ p {
 .main {
   display: flex;
   flex-direction: row;
-  padding: 80px 15px;
+  padding: 20px 20px;
   padding-bottom: 40px;
   flex-wrap: wrap;
   justify-content: center;
