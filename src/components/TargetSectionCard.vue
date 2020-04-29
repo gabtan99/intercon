@@ -19,11 +19,16 @@
 
 <script>
 export default {
-  props: ['target'],
-}
+  props: ["target"],
+};
 </script>
 
 <style scoped>
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
 .card-style {
   height: 200px;
   width: 250px;
@@ -44,8 +49,8 @@ export default {
   width: 32px;
   height: 32px;
   border-radius: 500px;
-  margin: 10px;
   color: var(--blue-branding);
+  margin: auto;
 }
 
 .text-style {
