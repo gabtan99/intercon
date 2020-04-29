@@ -96,7 +96,9 @@ export default {
   );
   display: flex;
   flex-direction: row;
-  padding: 80px 15px;
+  padding: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
   flex-wrap: wrap;
   justify-content: center;
 }

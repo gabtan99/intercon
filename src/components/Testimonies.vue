@@ -3,7 +3,7 @@
     <h1 class="header font-gilroy-bold font-36">What Our Clients Say</h1>
     <div class="card-container">
       <ClientOnly>
-        <testimony-carousel :items="this.items" />
+        <testimony-carousel :testimonies="this.testimonies" />
       </ClientOnly>
     </div>
   </div>
@@ -22,6 +22,7 @@ export default {
   components: {
     TestimonyCarousel,
   },
+  props: ["testimonies"],
 };
 </script>
 

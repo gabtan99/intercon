@@ -30,7 +30,7 @@ export default {
 .img-style {
   object-fit: cover;
   width: 100%;
-  height: 500px;
+  height: 670px;
 }
 
 @media only screen and (max-width: 767px) {

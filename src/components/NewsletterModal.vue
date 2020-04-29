@@ -10,16 +10,21 @@
       body-class="p-0"
       centered
     >
-      <img src="../assets/img/icon-exit.png" class="exit" @click="$bvModal.hide('modal-lg')" />
+      <img
+        src="../assets/img/icon-exit.png"
+        class="exit"
+        @click="$bvModal.hide('modal-lg')"
+      />
       <div id="container">
         <img src="../assets/img/modal-picture.png" class="picture" />
         <div id="content-container">
           <div id="text-container">
-            <h1 style="text-align:center" class="font-gilroy-medium font-36">Join Our Community!</h1>
-            <h3
-              style="text-align:center"
-              class="font-gilroy-light font-21"
-            >Get the most recent news for Health, Therapy, Wellness, and more.</h3>
+            <h1 style="text-align:center" class="font-gilroy-medium font-36">
+              Join Our Community!
+            </h1>
+            <h3 style="text-align:center" class="font-gilroy-light font-21">
+              Get the most recent news for Health, Therapy, Wellness, and more.
+            </h3>
           </div>
           <div id="form-container">
             <form @submit.prevent="handleSubmit">
@@ -45,8 +50,15 @@
               </p>
 
               <b-button id="submit" type="submit">
-                <span v-if="!isLoading">Join Now</span>
-                <span v-if="isLoading" class="spinner-border spinner-border-lg" role="status" aria-hidden="true"></span>
+                <span v-if="!isLoading" class="font-gilroy-bold font-16"
+                  >Join Now</span
+                >
+                <span
+                  v-if="isLoading"
+                  class="spinner-border spinner-border-lg"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
               </b-button>
             </form>
           </div>
@@ -59,7 +71,7 @@
 <script>
 import { signupNewsletter } from "@/services/newsletter";
 import * as ls from "@/util/localStorage";
-import { setSubscribed } from "@/util/localStorage" 
+import { setSubscribed } from "@/util/localStorage";
 
 export default {
   props: ["currPage"],
@@ -69,7 +81,7 @@ export default {
       email: null,
       isLoading: false,
       isSuccess: false,
-      showMessage: null
+      showMessage: null,
     };
   },
   methods: {
@@ -77,16 +89,16 @@ export default {
       this.email = text.target.value.trim();
     },
     handleSubmit() {
-      this.showMessage = false
+      this.showMessage = false;
       if (this.email === null || this.email.length === 0) return null;
 
       this.isLoading = true;
       signupNewsletter(this.email)
-        .then(res => {
+        .then((res) => {
           this.showResult(true);
           setSubscribed(true);
         })
-        .catch(err => {
+        .catch((err) => {
           this.showResult(false);
           console.log("err", err);
         });
@@ -132,15 +144,14 @@ export default {
           localStorage.bottom = false;
         }
       };
-    }
+    },
   },
   mounted() {
     this.scroll();
     localStorage.modalShown = false;
     if (localStorage.isFirstVisit === "true") {
       setTimeout(() => {
-        if (localStorage.isModalShown !== "true")
-          this.showModal();
+        if (localStorage.isModalShown !== "true") this.showModal();
       }, 3000);
     } else {
       const chance = Math.random() * 100;
@@ -148,8 +159,7 @@ export default {
         case "LANDING":
           if (chance >= 50) {
             setTimeout(() => {
-              if (localStorage.isModalShown !== "true")
-                this.showModal();
+              if (localStorage.isModalShown !== "true") this.showModal();
             }, 4000);
           }
           break;
@@ -159,13 +169,12 @@ export default {
         default:
           if (chance >= 40) {
             setTimeout(() => {
-              if (localStorage.isModalShown !== "true")
-                this.showModal();
+              if (localStorage.isModalShown !== "true") this.showModal();
             }, 4000);
           }
       }
     }
-  }
+  },
 };
 </script>
 
@@ -205,8 +214,11 @@ b-modal.newsletter {
 #submit {
   margin-top: 20px;
   width: 100%;
-  height: 30px;
   background-color: var(--green-branding);
+  transition: all ease-in 0.15s;
+}
+#submit:hover {
+  transform: translateY(-0.3rem);
 }
 
 #form-container {

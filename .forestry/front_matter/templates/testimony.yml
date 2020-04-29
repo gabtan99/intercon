@@ -2,27 +2,28 @@
 label: Testimony
 hide_body: true
 fields:
-- name: name
-  type: text
-  config:
-    required: false
-  label: Name
-  description: Author of the testimony
-- name: content
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Content
-  description: Testimony Content
-- name: image
-  type: file
-  config:
-    maxSize: 250
-  label: Image
+  - name: name
+    type: text
+    config:
+      required: false
+    label: Name
+    description: Author of the testimony
+  - name: message
+    type: textarea
+    default: ""
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Message
+    description: Testimony Content
+  - name: image
+    type: file
+    config:
+      maxSize: 250
+    label: Image
 pages:
-- testimonies/Sample.md
-- testimonies/testimony.md
+  - testimonies/Sample.md
+  - testimonies/testimony.md
+  - testimonies/test.md

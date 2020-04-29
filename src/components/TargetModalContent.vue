@@ -1,8 +1,13 @@
 <template>
   <div class="target-content">
-    <div style="display: flex; margin-bottom: 15px;">
-      <font-awesome class="icon-style" :icon="targetContent.target_icon" />
-      <h1 class="font-gilroy-bold">{{ targetContent.target_name }}</h1>
+    <div style="display: flex; margin-bottom: 10px; align-items: center;">
+      <img class="icon-style" :src="targetContent.target_icon.src" alt="icon" />
+      <h1
+        class="font-gilroy-bold"
+        style="padding-top: 1rem;  padding-left: 0.5rem;"
+      >
+        {{ targetContent.target_name }}
+      </h1>
     </div>
 
     <p class="font-avenir-light font-18" style="margin-bottom: 15px;">
@@ -20,14 +25,19 @@
 </template>
 
 <script>
-import TargetModalCard from '@/components/TargetModalCard'
+import TargetModalCard from "@/components/TargetModalCard";
 
 export default {
-  props: ['targetContent', 'targetServices'],
+  props: ["targetContent", "targetServices"],
   components: {
     TargetModalCard,
   },
-}
+  methods: {
+    log: function(e) {
+      console.log(e);
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -36,9 +46,10 @@ export default {
 }
 
 .icon-style {
-  font-size: 15pt;
-  color: var(--blue-icon);
-  margin-right: 10px;
+  width: 36px;
+  height: 36px;
+  margin: 0px 10px;
+  border-radius: 500px;
 }
 
 .service-style {

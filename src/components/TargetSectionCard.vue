@@ -1,30 +1,25 @@
 <template>
   <div>
-    <a href="/targets" style="text-decoration: none; color: inherit;">
+    <router-link
+      :to="{ path: '/targets', query: { selectedTarget: target.target_name } }"
+      style="text-decoration: none; color: inherit;"
+    >
       <b-card class="card-style">
         <img class="icon-style" :src="target.target_icon.src" alt="icon" />
-        <h4
-          class="font-gilroy-regular font-24"
-          style="color: var(--blue-branding);"
-        >
+        <h4 class="font-gilroy-medium font-24">
           {{ target.target_name }}
         </h4>
         <b-card-text class="font-avenir-light font-16 text-style">
           {{ target.target_description }}
         </b-card-text>
       </b-card>
-    </a>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
   props: ['target'],
-  methods: {
-    log: function (e) {
-      console.log(e)
-    },
-  },
 }
 </script>
 
@@ -33,7 +28,6 @@ export default {
   height: 200px;
   width: 250px;
   margin: 15px;
-  padding: 5px;
   cursor: pointer;
   border: none;
   box-shadow: 0 3px 3px 1px var(--gray-1);
