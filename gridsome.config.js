@@ -44,19 +44,31 @@ module.exports = {
       },
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'services/**/*.md',
-        typeName: 'Services',
+        path: "services/**/*.md",
+        typeName: "Services",
         resolveAbsolutePaths: true,
         remark: {
-          externalLinksTarget: '_blank',
-          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
         },
       },
     },
     {
-      use: '@zefman/gridsome-source-instagram',
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "testimonies/**/*.md",
+        typeName: "Testimonies",
+        resolveAbsolutePaths: true,
+        remark: {
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+        },
+      },
+    },
+    {
+      use: "@zefman/gridsome-source-instagram",
       options: {
         username: "interconregenerative", // Instagram username
         typeName: "InstagramPhoto", // The GraphQL type you want the photos to be added under. Defaults to InstagramPhoto

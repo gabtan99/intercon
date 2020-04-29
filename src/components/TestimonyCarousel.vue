@@ -4,8 +4,12 @@
     :autoplayTimeout="20000"
     :perPageCustom="[[360, 1], [768, 2], [1024, 3]]"
   >
-    <slide v-for="item in items" v-bind:key="item.id">
-      <Testimony-card />
+    <slide v-for="item in testimonies" v-bind:key="item.id">
+      <Testimony-card
+        :image="item.node.image"
+        :message="item.node.message"
+        :name="item.node.name"
+      />
     </slide>
   </carousel>
 </template>
@@ -25,11 +29,6 @@ export default {
         .then((m) => m.Slide)
         .catch(),
   },
-  props: {
-    items: {
-      type: Array,
-      default: () => [],
-    },
-  },
+  props: ["testimonies"],
 };
 </script>

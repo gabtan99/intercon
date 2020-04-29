@@ -1,17 +1,16 @@
 <template>
   <Layout>
-    <NewsletterModal currPage="LANDING"/>
+    <NewsletterModal currPage="LANDING" />
     <div class="container">
       <Hero />
       <!-- <ProjectsGrid :projects="$page.projects.edges" /> -->
     </div>
-    <Waves/>
+    <Waves />
     <!-- <LatestJournals :journals="$page.journals.edges" /> -->
-    <AboutSection/>
+    <AboutSection />
     <TargetSection :targets="$page.targets.edges" />
     <Instagram :images="$page.images.edges" />
-    <Testimonies />
-    
+    <Testimonies :testimonies="$page.testimonies.edges" />
   </Layout>
 </template>
 
@@ -55,6 +54,15 @@ query Posts {
         target_icon
       }
     }
+  },
+  testimonies: allTestimonies {
+    edges {
+      node {
+        name,
+        message,
+        image
+      }
+    }
   }
 }
 
@@ -66,10 +74,10 @@ import Waves from "@/components/Waves";
 import ProjectsGrid from "@/components/ProjectsGrid";
 import LatestJournals from "@/components/LatestJournals";
 import Instagram from "@/components/Instagram";
-import AboutSection from "@/components/AboutSection"
+import AboutSection from "@/components/AboutSection";
 import TargetSection from "@/components/TargetSection";
 import Testimonies from "@/components/Testimonies";
-import NewsletterModal from "@/components/NewsletterModal"
+import NewsletterModal from "@/components/NewsletterModal";
 
 export default {
   metaInfo: {

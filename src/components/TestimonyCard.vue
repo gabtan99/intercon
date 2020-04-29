@@ -1,16 +1,10 @@
 <template>
   <div class="testimony-card">
     <div class="img-container">
-      <img src="../assets/img/red-light.png" />
+      <img :src="this.image.src" />
     </div>
-    <p class="content font-avenir-oblique font-16">
-      “My migraine is gone! Thank you Intercon for the service! Bless us O Lord
-      for these thy gifts, which we are about to receive from thy bounty through
-      Christ our Lord. Amen”
-    </p>
-    <p class="author font-avenir-book font-16">
-      - Schuyler Ng
-    </p>
+    <p class="content font-avenir-oblique font-16">"{{ this.message }}"</p>
+    <p class="author font-avenir-book font-16">- {{ this.name }}</p>
   </div>
 </template>
 
@@ -21,6 +15,7 @@ export default {
       settings: require("../../data/theme.json"),
     };
   },
+  props: ["image", "message", "name"],
 };
 </script>
 
@@ -48,9 +43,11 @@ img {
 }
 
 .content {
-  padding: 30px;
+  margin: 30px;
   padding-bottom: 10px;
   color: var(--blue-branding-dark);
+  height: 19rem;
+  overflow: scroll;
 }
 
 .author {
