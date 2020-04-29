@@ -21,11 +21,7 @@
       scrollable
       v-model="showModal"
     >
-      <font-awesome
-        class="close-icon"
-        :icon="'times'"
-        @click="showModal = false"
-      />
+      <font-awesome class="close-icon" :icon="'times'" v-on:click="close" />
       <TargetModalContent
         :targetContent="selectedTargetContent"
         :targetServices="selectedTargetServices"
@@ -55,6 +51,10 @@ export default {
       this.selectedTargetContent = this.target
       this.selectedTargetServices = this.target.target_services
       this.showModal = true
+    },
+    close: function () {
+      this.showModal = false
+      this.$router.push('/targets')
     },
     sectionTargetModal: function () {
       if (this.selectedTarget) {
