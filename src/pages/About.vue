@@ -79,7 +79,7 @@
       </b-row>
     </div>
 
-    <Circles/>
+    <!-- <Circles/> -->
     <Testimonies :testimonies="$page.testimonies.edges" />
   
   </Layout>
