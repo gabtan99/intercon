@@ -84,5 +84,10 @@ fields:
 - type: boolean
   name: dark_mode
   label: Dark mode
+- name: img_test
+  type: file
+  config:
+    maxSize: 250
+  label: Image Test
 pages:
 - data/theme.json
