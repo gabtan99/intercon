@@ -2,9 +2,59 @@
   <Layout>
     <PageHeader :page_name="page_name" :image="image" />
 
-    <div class="main">
-      <b-row class="founder-section about-component">
-        <div class="col-lg-6">
+    <div class="who-section">
+      <b-row fluid class="who-card about-component">
+        <h1 class="font-gilroy-bold font-36 blue">
+          Who we are
+        </h1>
+
+        <h1 class="font-avenir-light font-21">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip
+          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        </h1>
+      </b-row>
+    </div>
+
+    <div class="values-section">
+      <b-row class="values-card about-component">
+        <h1 class="font-gilroy-bold font-36 blue">
+          Our Values
+        </h1>
+
+        <h1 class="font-gilroy-bold font-24 blue">
+          Our Mission
+        </h1>
+        <h1 class="font-avenir-light font-21">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco
+        </h1>
+
+        <h1 class="font-gilroy-bold font-24 blue">
+          Our Vision
+        </h1>
+        <h1 class="font-avenir-light font-21">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco
+        </h1>
+
+        <h1 class="font-gilroy-bold font-24 blue">
+          Our Goal
+        </h1>
+        <h1 class="font-avenir-light font-21">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco
+        </h1>
+      </b-row>
+    </div>
+
+    <div class="founder-section">
+      <b-row class="founder-card about-component">
+        <div class="col-lg-2">
           <b-img
             class="founder-image"
             :src="require('../assets/img/founder-img.png')"
@@ -12,83 +62,48 @@
           />
         </div>
 
-        <div class="founder-info col-lg-6">
-          <h1 class="font-gilroy-bold font-36 blue">
-            The Founder
+        <div class="col-lg-10">
+          <h1 class="font-gilroy-bold font-18">
+            Janise Tang Piap
           </h1>
-
-          <h1 class="font-avenir-light font-21">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
+          <h1 class="font-gilroy-bold font-16 light-blue">
+            Founder
           </h1>
-        </div>
-      </b-row>
-
-      <b-row class="mission-vision-section about-component">
-        <div class="col-lg-5">
-          <h1 class="font-gilroy-bold font-36 blue">
-            Our Goal
-          </h1>
-
-          <h1 class="font-avenir-light font-21">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
-          </h1>
-        </div>
-
-        <div class="col-lg-1" />
-
-        <div class="col-lg-5">
-          <h1 class="mission-section font-gilroy-bold font-36 blue">
-            Our Mission
-          </h1>
-
-          <h1 class="font-avenir-light font-21">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
+          <h1 class="font-gilroy-light font-16">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+            utaliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in Lorem ipsum dolor sit 
+            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
           </h1>
         </div>
       </b-row>
-
-      <b-row class="history-section about-component">
-        <h1 class="mission-section font-gilroy-bold font-36 blue">
-          Our History
-        </h1>
-
-        <h1 class="font-avenir-light font-21">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip
-          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        </h1>
-      </b-row>
-
-  
-      <Circles />
-
-      <b-row class="history-section about-component">
-        <h1 class="mission-section font-gilroy-bold font-36 blue">
-          Our History
-        </h1>
-
-        <h1 class="font-avenir-light font-21">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip
-          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        </h1>
-      </b-row>
-
     </div>
+
+    <Circles/>
+    <Testimonies :testimonies="$page.testimonies.edges" />
+  
   </Layout>
 </template>
+
+<page-query>
+query Posts {
+  testimonies: allTestimonies {
+    edges {
+      node {
+        name,
+        message,
+        image
+      }
+    }
+  }
+}
+
+</page-query>
 
 <script>
 import PageHeader from "@/components/PageHeader";
 import NewsletterModal from "@/components/NewsletterModal";
+import Testimonies from "@/components/Testimonies";
 import Circles from "@/components/Circles";
 
 export default {
@@ -101,6 +116,7 @@ export default {
   components: {
     PageHeader,
     NewsletterModal,
+    Testimonies,
     Circles,
   },
   metaInfo() {
@@ -139,7 +155,22 @@ export default {
 </script>
 
 <style scoped>
-.main {
+
+.who-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 80px 160px;
+  justify-content: center;
+  padding-bottom: 40px;
+  background-image: linear-gradient(
+    to top,
+    var(--white),
+    var(--lightblue-gradient)
+  );
+}
+
+.values-section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -148,17 +179,53 @@ export default {
   padding-bottom: 40px;
 }
 
+.founder-section {
+  height: 320px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 80px;
+  justify-content: center;
+  padding-bottom: 40px;
+  background-image: linear-gradient(
+    to bottom,
+    var(--white),
+    var(--lightgreen-gradient)
+  );
+}
+
 .about-component {
   margin-top: 6rem;
   margin-bottom: 6rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  justify-content: center;
+}
+
+.who-card {
+  padding: 40px;
+  box-shadow: 0px 5px 10px #76767629;
+  margin: auto;
+  width: 600px;
+}
+
+.values-card {
+  padding: 40px;
+  box-shadow: 0px 5px 10px #76767629;
+  margin: auto;
+  width: 800px;
+  display: block;
+}
+
+.founder-card {
+  padding: 40px;
+  box-shadow: 0px 5px 10px #76767629;
+  margin: auto;
+  width: 90%;
 }
 
 .founder-image {
-  max-width: 354px;
-  max-height: 354px;
+  max-width: 120px;
+  max-height: 120px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -172,39 +239,19 @@ export default {
   color: var(--blue-branding-dark);
 }
 
-.history-section {
-  text-align: center;
+.light-blue {
+  color: var(--blue-branding-light);
 }
 
 @media only screen and (max-width: 1000px) {
   .founder-image {
-    max-width: 254px;
-    max-height: 254px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 50px;
+    max-height: 50px;
     display: block;
   }
 
   .founder-info {
     margin-top: 50px;
-  }
-
-  .mission-vision-section {
-    margin-top: -2rem;
-  }
-
-  .history-section {
-    margin-top: -2rem;
-    text-align: center;
-  }
-
-  .mission-section {
-    margin-top: 30px;
-  }
-
-  .main {
-    padding: 10px 10px;
-    padding-top: 25px;
   }
 }
 </style>
