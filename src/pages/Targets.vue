@@ -16,12 +16,14 @@
       </p>
     </div>
     <div class="main-container">
-      <TargetCard
-        v-for="item in $page.targets.edges"
-        :key="item.node.id"
-        :target="item.node"
-        :selectedTarget="selectedTarget"
-      />
+      <div class="cards-container">
+        <TargetCard
+          v-for="item in $page.targets.edges"
+          :key="item.node.id"
+          :target="item.node"
+          :selectedTarget="selectedTarget"
+        />
+      </div>
     </div>
     <NewsletterModal currPage="TARGETS" />
   </Layout>
@@ -141,10 +143,18 @@ export default {
 
 .main-container {
   display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.cards-container {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
-  padding: 30px 160px;
+  align-content: center;
+  width: 70%;
+  padding: 30px;
 }
 
 .header-text {
