@@ -1,19 +1,18 @@
 <template>
   <Layout>
     {{ setAutoModal() }}
+    {{ getPageConfig() }}
 
     <PageHeader
-      :page_name="settings.page_name"
-      :image="settings.header_image"
+      :page_name="pageConfig.node.page_name"
+      :image="pageConfig.node.header_image"
     />
-    {{ log(settings.header_image) }}
-
     <div class="header-text" style="">
       <h1 class="font-gilroy-bold font-36">
-        {{ settings.description_title }}
+        {{ pageConfig.node.description_title }}
       </h1>
       <p class="font-avenir-light font-18">
-        {{ settings.page_description }}
+        {{ pageConfig.node.page_description }}
       </p>
     </div>
     <div class="main-container">
@@ -29,7 +28,18 @@
 </template>
 
 <page-query>
-query Target {
+query {
+  pages: allPages {
+    edges {
+      node {
+        id
+        page_name
+        header_image
+        description_title
+        page_description
+      }
+    }
+  },
 	targets: allTargets {
     edges {
       node {
@@ -88,8 +98,8 @@ export default {
   },
   data() {
     return {
-      settings: require('../../data/targets_page.json'),
       selectedTarget: '',
+      pageConfig: {},
     }
   },
   components: {
@@ -102,8 +112,10 @@ export default {
       if (this.$route.params)
         this.selectedTarget = this.$route.query.selectedTarget
     },
-    log: function (e) {
-      console.log(e)
+    getPageConfig: function () {
+      this.pageConfig = this.$page.pages.edges.find(
+        (item) => item.node.id === '2326b85ba2fc7937f801cec3a4d93d96',
+      )
     },
   },
 }
