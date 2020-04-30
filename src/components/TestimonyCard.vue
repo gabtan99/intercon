@@ -46,10 +46,9 @@ img {
 }
 
 .content {
-  padding: 10px;
-  padding-top: 6px;
+  padding: 0px 10px;
   color: var(--blue-branding-dark);
-  height: 14rem;
+  height: 15rem;
   overflow: scroll;
 }
 
