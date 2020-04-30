@@ -41,7 +41,8 @@ img {
   border-radius: 5px;
   padding: 20px;
   width: 270px;
-  margin: 10px;
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 .content {
