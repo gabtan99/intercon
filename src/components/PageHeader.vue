@@ -1,8 +1,11 @@
 <template>
   <div class="image-container">
     <h1 class="font-avenir-heavy font-42 page-title">{{ page_name }}</h1>
-    <g-image alt="header" :src="image" class="img-style" />
-    {{ log() }}
+    <g-image
+      alt="header"
+      src="../assets/img/target-header.png"
+      class="img-style"
+    />
   </div>
 </template>
 

@@ -10,7 +10,7 @@
 
     <div class="header-text" style="">
       <h1 class="font-gilroy-bold font-36">
-        {{ settings.page_text }}
+        {{ settings.description_title }}
       </h1>
       <p class="font-avenir-light font-18">
         {{ settings.page_description }}
@@ -88,7 +88,7 @@ export default {
   },
   data() {
     return {
-      settings: require('../../data/target_page.json'),
+      settings: require('../../data/targets_page.json'),
       selectedTarget: '',
     }
   },
@@ -132,7 +132,7 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  padding: 50px 160px;
+  padding: 30px 160px;
 }
 
 .header-text {
