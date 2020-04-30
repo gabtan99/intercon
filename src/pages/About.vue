@@ -66,7 +66,22 @@
         </h1>
       </b-row>
 
-      <Timeline />
+  
+      <Circles />
+
+      <b-row class="history-section about-component">
+        <h1 class="mission-section font-gilroy-bold font-36 blue">
+          Our History
+        </h1>
+
+        <h1 class="font-avenir-light font-21">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip
+          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        </h1>
+      </b-row>
+
     </div>
   </Layout>
 </template>
@@ -74,7 +89,7 @@
 <script>
 import PageHeader from "@/components/PageHeader";
 import NewsletterModal from "@/components/NewsletterModal";
-import Timeline from "@/components/Timeline";
+import Circles from "@/components/Circles";
 
 export default {
   data() {
@@ -86,7 +101,7 @@ export default {
   components: {
     PageHeader,
     NewsletterModal,
-    Timeline,
+    Circles,
   },
   metaInfo() {
     return {
