@@ -31,7 +31,6 @@
 <page-query>
 query {
   pageConfig: pages (path: "/data/targets-page/"){
-    path
     page_name
     header_image
     description_title
