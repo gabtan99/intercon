@@ -85,12 +85,12 @@ export default {
   margin-bottom: 4rem;
 }
 
-.hero-buttons {
-  margin-bottom: 10rem;
-}
-
 .hero-image {
   margin-top: -4rem;
+}
+
+.hero-buttons {
+  margin-bottom: 1rem;
 }
 
 .white-button {

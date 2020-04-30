@@ -92,7 +92,7 @@
             </div>
           </b-col>
 
-          <b-col>
+          <b-col lg="6">
             <div class="card-container">
               <div class="card">
                 <ClientOnly>
@@ -228,14 +228,14 @@ select {
 
 .card {
   width: 100%;
-  height: 450px;
+
   box-shadow: 0 4px 4px 0 rgba(155, 155, 155, 0.2);
   transition: 0.3s;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border: 0px;
-  margin: 50px 0px;
+  margin: 5% 0px;
 }
 
 .card-details {
@@ -326,5 +326,6 @@ textarea {
   margin: 0;
   padding-top: 40px;
   padding-bottom: 85px;
+  justify-content: center;
 }
 </style>
