@@ -5,8 +5,8 @@
       :image="$page.pageConfig.header_image" 
     />
     <div class="who-section">
-      <b-row fluid class="who-card about-component">
-        <h1 class="font-gilroy-bold font-36 blue">
+      <b-row fluid class="who-card">
+        <h1 class="font-gilroy-bold font-36 blue title">
           Who we are
         </h1>
 
@@ -25,75 +25,77 @@
       />
     </div>
 
-    <div class="values-section">
+    <div class="green-gradient">
 
-      <b-img
-        class="values-img"
-        :src="require('../assets/img/our-values.png')"
-        fluid
-      />
+      <div class="values-section">
 
-      <b-row class="values-card about-component">
-        <h1 class="font-gilroy-bold font-36 blue">
-          Our Values
-        </h1>
+        <b-img
+          class="values-img"
+          :src="require('../assets/img/our-values.png')"
+          fluid
+        />
 
-        <h1 class="font-gilroy-bold font-24 blue">
-          Our Mission
-        </h1>
-        <h1 class="font-avenir-light font-21">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco
-        </h1>
-
-        <h1 class="font-gilroy-bold font-24 blue">
-          Our Vision
-        </h1>
-        <h1 class="font-avenir-light font-21">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco
-        </h1>
-
-        <h1 class="font-gilroy-bold font-24 blue">
-          Our Goal
-        </h1>
-        <h1 class="font-avenir-light font-21">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco
-        </h1>
-      </b-row>
-    </div>
-
-    <Circles/>
-
-    <div class="founder-section">
-      <b-row class="founder-card about-component">
-        <div class="col-lg-2">
-          <b-img
-            class="founder-image"
-            :src="require('../assets/img/founder-img.png')"
-            fluid
-          />
-        </div>
-
-        <div class="col-lg-10">
-          <h1 class="font-gilroy-bold font-18">
-            Janise Tang Piap
+        <b-row class="values-card">
+          <h1 class="font-gilroy-bold font-36 blue title">
+            Our Values
           </h1>
-          <h1 class="font-gilroy-bold font-16 light-blue">
-            Founder
+
+          <h1 class="font-gilroy-bold font-24 blue">
+            Our Mission
           </h1>
-          <h1 class="font-gilroy-light font-16">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-            utaliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in Lorem ipsum dolor sit 
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          <h1 class="font-avenir-light font-21 value-item">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco
           </h1>
-        </div>
-      </b-row>
+
+          <h1 class="font-gilroy-bold font-24 blue">
+            Our Vision
+          </h1>
+          <h1 class="font-avenir-light font-21 value-item">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco
+          </h1>
+
+          <h1 class="font-gilroy-bold font-24 blue">
+            Our Goal
+          </h1>
+          <h1 class="font-avenir-light font-21 value-item">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco
+          </h1>
+        </b-row>
+      </div>
+
+      <div class="founder-section">
+        <b-row class="founder-card">
+          <div class="col-lg-2">
+            <b-img
+              class="founder-image"
+              :src="require('../assets/img/founder-img.png')"
+              fluid
+            />
+          </div>
+
+          <div class="col-lg-10">
+            <h1 class="font-gilroy-bold font-18">
+              Janise Tang Piap
+            </h1>
+            <h1 class="font-gilroy-bold font-16 light-blue">
+              Founder
+            </h1>
+            <h1 class="font-gilroy-light font-16">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+              utaliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in Lorem ipsum dolor sit 
+              amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            </h1>
+          </div>
+        </b-row>
+      </div>
+
     </div>
 
     <Testimonies :testimonies="$page.testimonies.edges" />
@@ -177,6 +179,10 @@ export default {
 
 <style scoped>
 
+.section {
+  
+}
+
 .who-section {
   display: grid;
   flex-direction: row;
@@ -213,19 +219,23 @@ export default {
   padding: 80px;
   justify-content: center;
   padding-bottom: 40px;
+  margin-bottom: 100px;
+}
+
+.green-gradient {
   background-image: linear-gradient(
     to bottom,
     var(--white),
     var(--lightgreen-gradient)
   );
-  margin-bottom: 100px;
 }
 
-.about-component {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+.title {
+  margin-bottom: 2rem;
+}
+
+.value-item {
+  margin-bottom: 2rem;
 }
 
 .who-card {
@@ -294,14 +304,45 @@ export default {
 }
 
 @media only screen and (max-width: 1000px) {
+
+  .founder-section {
+    max-height: 250px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 80px;
+    justify-content: center;
+    padding-bottom: 40px;
+    margin-bottom: 40%;
+  }
+
   .founder-image {
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 100px;
+    max-height: 100px;
     display: block;
+    margin-bottom: 2rem;
   }
 
   .founder-info {
     margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .founder-section {
+    margin-bottom: 60%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .founder-section {
+    margin-bottom: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .founder-section {
+    margin-bottom: 100%;
   }
 }
 </style>
