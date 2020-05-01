@@ -306,18 +306,31 @@ export default {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 80px;
+    padding: 5px;
     justify-content: center;
     padding-bottom: 40px;
-    margin-bottom: 40%;
+    margin-bottom: 20%;
   }
 
   .who-section {
     display: flex;
+    padding: 20px;
+    padding-top: 80px;
+  }
+
+  .who-img {
+    max-width: 321px;
+    max-height: 321px;
+  }
+
+  .values-img {
+    max-width: 290px;
+    max-height: 687px;
   }
 
   .values-section {
     display: flex;
+    padding: 20px;
   }
 
   .founder-image {
@@ -334,19 +347,23 @@ export default {
 
 @media only screen and (max-width: 800px) {
   .founder-section {
-    margin-bottom: 50%;
+    margin-bottom: 40%;
+  }
+
+  .who-img {
+    margin-top: -50px;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .founder-section {
-    margin-bottom: 80%;
+    margin-bottom: 50%;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .founder-section {
-    margin-bottom: 100%;
+    margin-bottom: 60%;
   }
 }
 </style>
