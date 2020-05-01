@@ -1,4 +1,16 @@
 {
     "page_name": "About Us",
-    "header_image": "/uploads/about-header.png"
+    "header_image": "/uploads/about-header.png",
+    "about_company_title": "Who we are",
+    "about_company_description": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisi utaliquipex ea commodo consequat. Duis aute irure dolor in reprehenderit in",
+    "values_title": "Our Values",
+    "mission_title": "Our Mission",
+    "mission_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco",
+    "vision_title": "Our Vision",
+    "vision_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco",
+    "goal_title": "Our Goal",
+    "goal_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco",
+    "founder_name": "Janise Tang Piap",
+    "founder_label": "Founder",
+    "founder_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"
 }

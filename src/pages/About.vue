@@ -7,14 +7,11 @@
     <b-container fluid class="who-section">
       <b-row fluid class="who-card">
         <h1 class="font-gilroy-bold font-26 blue title">
-          Who we are
+          {{ $page.pageConfig.about_company_title }}
         </h1>
 
         <h1 class="font-avenir-light font-18">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip
-          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          {{ $page.pageConfig.about_company_description }}
         </h1>
       </b-row>
 
@@ -35,34 +32,28 @@
 
         <b-row class="values-card">
           <h1 class="font-gilroy-bold font-26 blue title">
-            Our Values
+            {{ $page.pageConfig.values_title }}
           </h1>
 
           <h1 class="font-gilroy-bold font-21 blue">
-            Our Mission
+            {{ $page.pageConfig.mission_title }}
           </h1>
           <h1 class="font-avenir-light font-18 value-item">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
+            {{ $page.pageConfig.mission_description }}
           </h1>
 
           <h1 class="font-gilroy-bold font-21 blue">
-            Our Vision
+            {{ $page.pageConfig.vision_title }}
           </h1>
           <h1 class="font-avenir-light font-18 value-item">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
+            {{ $page.pageConfig.vision_description }}
           </h1>
 
           <h1 class="font-gilroy-bold font-21 blue">
-            Our Goal
+            {{ $page.pageConfig.goal_title }}
           </h1>
           <h1 class="font-avenir-light font-18 value-item">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
+            {{ $page.pageConfig.goal_description }}
           </h1>
         </b-row>
       </b-container>
@@ -79,16 +70,13 @@
 
           <div class="col-lg-10">
             <h1 class="font-gilroy-bold font-18">
-              Janise Tang Piap
+              {{ $page.pageConfig.founder_name }}
             </h1>
             <h1 class="font-gilroy-bold font-16 light-blue">
-              Founder
+              {{ $page.pageConfig.founder_label }}
             </h1>
             <h1 class="font-gilroy-light font-16">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-              utaliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in Lorem ipsum dolor sit 
-              amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              {{ $page.pageConfig.founder_description }}
             </h1>
           </div>
         </b-row>
@@ -106,6 +94,18 @@ query Posts {
   pageConfig: pages (path: "/data/about-page/"){
     page_name
     header_image
+    about_company_title
+    about_company_description
+    values_title
+    mission_title
+    mission_description
+    vision_title
+    vision_description
+    goal_title
+    goal_description
+    founder_name
+    founder_label
+    founder_description
   },
   testimonies: allTestimonies {
     edges {
