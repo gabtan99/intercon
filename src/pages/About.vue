@@ -15,9 +15,22 @@
           ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
         </h1>
       </b-row>
+
+      <b-img
+        class="who-img"
+        :src="require('../assets/img/who-we-are.png')"
+        fluid
+      />
     </div>
 
     <div class="values-section">
+
+      <b-img
+        class="values-img"
+        :src="require('../assets/img/our-values.png')"
+        fluid
+      />
+
       <b-row class="values-card about-component">
         <h1 class="font-gilroy-bold font-36 blue">
           Our Values
@@ -157,7 +170,7 @@ export default {
 <style scoped>
 
 .who-section {
-  display: flex;
+  display: grid;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 80px 160px;
@@ -168,19 +181,24 @@ export default {
     var(--white),
     var(--lightblue-gradient)
   );
+  grid-template-columns: repeat(4, 0.18fr);
+  grid-template-rows: repeat(1, 0.1fr);
 }
 
 .values-section {
-  display: flex;
+  display: grid;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 80px 160px;
   justify-content: center;
   padding-bottom: 40px;
+  padding-top: 0px; 
+  grid-template-columns: repeat(15, 0.2fr);
+  grid-template-rows: repeat(2, 0.1fr);
 }
 
 .founder-section {
-  height: 320px;
+  height: 250px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -192,6 +210,7 @@ export default {
     var(--white),
     var(--lightgreen-gradient)
   );
+  margin-bottom: 100px;
 }
 
 .about-component {
@@ -206,7 +225,17 @@ export default {
   box-shadow: 0px 5px 10px #76767629;
   margin: auto;
   width: 600px;
-  z-index: 2;
+  background-color: #fff;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  padding-right: 80px;
+}
+
+.who-img {
+  max-width: 421px;
+  max-height: 421px;
+  grid-column: 5 / span 1;
+  grid-row: 3 / span 1;
 }
 
 .values-card {
@@ -215,6 +244,16 @@ export default {
   margin: auto;
   width: 800px;
   display: block;
+  background-color: #fff;
+  grid-column: 5 / span 2;
+  grid-row: 3 / span 2;
+}
+
+.values-img {
+  max-width: 390px;
+  max-height: 787px;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
 }
 
 .founder-card {
@@ -222,6 +261,8 @@ export default {
   box-shadow: 0px 5px 10px #76767629;
   margin: auto;
   width: 90%;
+  background-color: #fff;
+  margin-top: 60px;
 }
 
 .founder-image {
