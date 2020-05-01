@@ -1,7 +1,9 @@
 <template>
   <Layout>
-    <PageHeader :page_name="page_name" :image="image" />
-
+    <PageHeader 
+      :page_name="$page.pageConfig.page_name" 
+      :image="$page.pageConfig.header_image" 
+    />
     <div class="who-section">
       <b-row fluid class="who-card about-component">
         <h1 class="font-gilroy-bold font-36 blue">
@@ -65,6 +67,8 @@
       </b-row>
     </div>
 
+    <Circles/>
+
     <div class="founder-section">
       <b-row class="founder-card about-component">
         <div class="col-lg-2">
@@ -92,14 +96,19 @@
       </b-row>
     </div>
 
-    <!-- <Circles/> -->
     <Testimonies :testimonies="$page.testimonies.edges" />
-  
+
   </Layout>
 </template>
 
 <page-query>
 query Posts {
+  pageConfig: pages (path: "/data/about-page/"){
+    page_name
+    header_image
+    description_title
+    page_description
+  },
   testimonies: allTestimonies {
     edges {
       node {
@@ -122,8 +131,7 @@ import Circles from "@/components/Circles";
 export default {
   data() {
     return {
-      page_name: "About Us",
-      image: require("../assets/img/about-header.png"),
+      pageConfig: {}
     };
   },
   components: {
