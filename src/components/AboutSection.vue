@@ -2,11 +2,13 @@
   <div class="main">
     <div class="about-description">
       <h1 class="about-title font-gilroy-bold font-36">
-        {{ settings.about_title }}
+        About Our Company
       </h1>
 
       <p class="about-subtitle font-avenir-book font-18">
-        {{ settings.about_subtitle }}
+        We seek to enhance health and address issues by identifying
+        primary causes of illness and disease, through in-depth 
+        one-on-one consultations and specialized tests / diagnostics.
       </p>
     </div>
 
@@ -30,13 +32,15 @@
               />
 
               <h1 class="detail-title font-gilroy-bold font-21">
-                {{ settings.about_item_one_title }}
+                Optimize Health & Lifestyle
               </h1>
             </div>
 
             <div>
               <p class="detail-info font-avenir-light font-18">
-                {{ settings.about_item_one_subtitle }}
+                We seek to enhance health and address issues by identifying 
+                primary causes of illness and disease, through in-depth one-on-one 
+                consultations and specialized tests.
               </p>
             </div>
           </div>
@@ -50,14 +54,16 @@
               />
               <div>
                 <h1 class="detail-title font-gilroy-bold font-21">
-                  {{ settings.about_item_two_title }}
+                  Prevent and Halt Disease Prevention
                 </h1>
               </div>
             </div>
 
             <div>
               <p class="detail-info font-avenir-light font-18">
-                {{ settings.about_item_two_subtitle }}
+                We seek to enhance health and address issues by identifying 
+                primary causes of illness and disease, through in-depth one-on-one 
+                consultations and specialized tests.
               </p>
             </div>
           </div>

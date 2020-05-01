@@ -110,7 +110,7 @@ export default {
   data() {
     return {
       page_name: "About Us",
-      image: "about-header.png",
+      image: require("../assets/img/about-header.png"),
     };
   },
   components: {
@@ -206,6 +206,7 @@ export default {
   box-shadow: 0px 5px 10px #76767629;
   margin: auto;
   width: 600px;
+  z-index: 2;
 }
 
 .values-card {
