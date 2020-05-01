@@ -4,13 +4,13 @@
       :page_name="$page.pageConfig.page_name" 
       :image="$page.pageConfig.header_image" 
     />
-    <div class="who-section">
+    <b-container fluid class="who-section">
       <b-row fluid class="who-card">
-        <h1 class="font-gilroy-bold font-36 blue title">
+        <h1 class="font-gilroy-bold font-26 blue title">
           Who we are
         </h1>
 
-        <h1 class="font-avenir-light font-21">
+        <h1 class="font-avenir-light font-18">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip
@@ -23,11 +23,11 @@
         :src="require('../assets/img/who-we-are.png')"
         fluid
       />
-    </div>
+    </b-container>
 
     <div class="green-gradient">
 
-      <div class="values-section">
+      <b-container fluid class="values-section">
 
         <b-img
           class="values-img"
@@ -36,38 +36,38 @@
         />
 
         <b-row class="values-card">
-          <h1 class="font-gilroy-bold font-36 blue title">
+          <h1 class="font-gilroy-bold font-26 blue title">
             Our Values
           </h1>
 
-          <h1 class="font-gilroy-bold font-24 blue">
+          <h1 class="font-gilroy-bold font-21 blue">
             Our Mission
           </h1>
-          <h1 class="font-avenir-light font-21 value-item">
+          <h1 class="font-avenir-light font-18 value-item">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco
           </h1>
 
-          <h1 class="font-gilroy-bold font-24 blue">
+          <h1 class="font-gilroy-bold font-21 blue">
             Our Vision
           </h1>
-          <h1 class="font-avenir-light font-21 value-item">
+          <h1 class="font-avenir-light font-18 value-item">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco
           </h1>
 
-          <h1 class="font-gilroy-bold font-24 blue">
+          <h1 class="font-gilroy-bold font-21 blue">
             Our Goal
           </h1>
-          <h1 class="font-avenir-light font-21 value-item">
+          <h1 class="font-avenir-light font-18 value-item">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco
           </h1>
         </b-row>
-      </div>
+      </b-container>
 
       <div class="founder-section">
         <b-row class="founder-card">
@@ -178,10 +178,6 @@ export default {
 </script>
 
 <style scoped>
-
-.section {
-  
-}
 
 .who-section {
   display: grid;
@@ -316,6 +312,14 @@ export default {
     margin-bottom: 40%;
   }
 
+  .who-section {
+    display: flex;
+  }
+
+  .values-section {
+    display: flex;
+  }
+
   .founder-image {
     max-width: 100px;
     max-height: 100px;
@@ -330,7 +334,7 @@ export default {
 
 @media only screen and (max-width: 800px) {
   .founder-section {
-    margin-bottom: 60%;
+    margin-bottom: 50%;
   }
 }
 
