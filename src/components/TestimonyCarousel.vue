@@ -2,7 +2,7 @@
   <carousel
     :autoplay="true"
     :autoplayTimeout="20000"
-    :perPageCustom="[[360, 1], [768, 2], [1024, 3]]"
+    :perPageCustom="[[360, 1], [768, 2], [1180, 3]]"
   >
     <slide v-for="item in testimonies" v-bind:key="item.id">
       <Testimony-card

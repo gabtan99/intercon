@@ -62,7 +62,7 @@ export default {
   -webkit-box-orient: vertical;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1000px) {
   .card-style {
     width: 300px;
   }

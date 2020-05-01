@@ -2,9 +2,9 @@
   <div class="testimony-card">
     <div class="img-container">
       <img :src="this.image.src" />
+      <p class="author font-gilroy-bold font-16">{{ this.name }}</p>
     </div>
     <p class="content font-avenir-oblique font-16">"{{ this.message }}"</p>
-    <p class="author font-avenir-book font-16">- {{ this.name }}</p>
   </div>
 </template>
 
@@ -25,35 +25,34 @@ img {
   border-radius: 50%;
   box-shadow: 0px 5px 5px #76767629;
   object-fit: cover;
-  width: 130px;
-  height: 130px;
-  margin: 5px auto;
-  margin-top: 20px;
+  width: 50px;
+  height: 50px;
 }
 
 .img-container {
-  padding-top: 20px;
+  display: flex;
+  align-items: center;
+
+  padding: 10px;
 }
 
 .testimony-card {
-  box-shadow: 0px 5px 10px #76767629;
-  margin: auto;
-  border-radius: 20px;
+  box-shadow: 0px 3px 6px #76767629;
+  border-radius: 5px;
+  padding: 20px;
   width: 270px;
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 .content {
-  margin: 30px;
-  padding-bottom: 10px;
+  padding: 0px 10px;
   color: var(--blue-branding-dark);
-  height: 19rem;
+  height: 15rem;
   overflow: scroll;
 }
 
 .author {
-  padding: 0px 30px;
-  color: var(--blue-branding-dark);
-  text-align: right;
-  padding-bottom: 25px;
+  margin: 0px 20px;
 }
 </style>

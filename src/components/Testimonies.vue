@@ -28,7 +28,7 @@ export default {
 
 <style scoped>
 .main {
-  padding: 7% 10%;
+  padding: 7% 13%;
 }
 
 .header {

@@ -87,10 +87,22 @@ module.exports = {
       },
     },
     {
-      use: '@gridsome/plugin-google-analytics',
+      use: "@gridsome/plugin-google-analytics",
       options: {
-        id: process.env.GA_TRACKING_ID || 'UA-164792439-1'
-      }
+        id: process.env.GA_TRACKING_ID || "UA-164792439-1",
+      },
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "data/**/*.json",
+        typeName: "Pages",
+        resolveAbsolutePaths: true,
+        remark: {
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+        },
+      },
     },
   ],
   transformers: {
