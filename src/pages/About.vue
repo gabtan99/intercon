@@ -26,9 +26,7 @@
     </b-container>
 
     <div class="green-gradient">
-
       <b-container fluid class="values-section">
-
         <b-img
           class="values-img"
           :src="require('../assets/img/our-values.png')"
@@ -108,8 +106,6 @@ query Posts {
   pageConfig: pages (path: "/data/about-page/"){
     page_name
     header_image
-    description_title
-    page_description
   },
   testimonies: allTestimonies {
     edges {
@@ -128,7 +124,6 @@ query Posts {
 import PageHeader from "@/components/PageHeader";
 import NewsletterModal from "@/components/NewsletterModal";
 import Testimonies from "@/components/Testimonies";
-import Circles from "@/components/Circles";
 
 export default {
   data() {
@@ -140,7 +135,6 @@ export default {
     PageHeader,
     NewsletterModal,
     Testimonies,
-    Circles,
   },
   metaInfo() {
     return {
@@ -184,6 +178,7 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   padding: 80px 160px;
+  padding-left: 200px;
   justify-content: center;
   padding-bottom: 40px;
   background-image: linear-gradient(
@@ -191,8 +186,9 @@ export default {
     var(--white),
     var(--lightblue-gradient)
   );
-  grid-template-columns: repeat(4, 0.18fr);
   grid-template-rows: repeat(1, 0.1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: center;
 }
 
 .values-section {
@@ -203,7 +199,7 @@ export default {
   justify-content: center;
   padding-bottom: 40px;
   padding-top: 0px; 
-  grid-template-columns: repeat(15, 0.2fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-template-rows: repeat(2, 0.1fr);
 }
 
@@ -240,16 +236,39 @@ export default {
   margin: auto;
   width: 600px;
   background-color: #fff;
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 3;
   grid-row: 1 / span 2;
-  padding-right: 80px;
+  padding-right: 150px;
 }
 
 .who-img {
   max-width: 421px;
   max-height: 421px;
-  grid-column: 5 / span 1;
+  grid-column: 3 / span 2;
   grid-row: 3 / span 1;
+}
+
+@media only screen and (max-width: 1300px) {
+  .who-section{
+    padding: 80px 160px;
+  }
+  .who-card {
+    padding: 40px;
+    box-shadow: 0px 5px 10px #76767629;
+    margin: auto;
+    width: 600px;
+    background-color: #fff;
+    grid-column: 2 / span 3;
+    grid-row: 1 / span 2;
+    padding-right: 130px;
+  }
+
+  .who-img {
+    max-width: 421px;
+    max-height: 421px;
+    grid-column: 4 / span 2;
+    grid-row: 3 / span 1;
+  }
 }
 
 .values-card {
@@ -259,14 +278,14 @@ export default {
   width: 800px;
   display: block;
   background-color: #fff;
-  grid-column: 5 / span 2;
+  grid-column: 5 / span 1;
   grid-row: 3 / span 2;
 }
 
 .values-img {
   max-width: 390px;
   max-height: 787px;
-  grid-column: 1 / span 2;
+  grid-column: 2 / span 1;
   grid-row: 1 / span 2;
 }
 
@@ -299,7 +318,7 @@ export default {
   color: var(--blue-branding-light);
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1054px) {
 
   .founder-section {
     max-height: 250px;
@@ -318,16 +337,19 @@ export default {
     padding-top: 80px;
   }
 
+  .who-card {
+    padding-right: 40px;
+  }
+
   .who-img {
     max-width: 321px;
     max-height: 321px;
   }
 
   .values-img {
-    max-width: 290px;
-    max-height: 687px;
+    display: none;
   }
-
+  
   .values-section {
     display: flex;
     padding: 20px;
@@ -345,25 +367,26 @@ export default {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 975px) {
   .founder-section {
-    margin-bottom: 40%;
+    margin-bottom: 30%;
   }
 
   .who-img {
     margin-top: -50px;
   }
+
 }
 
 @media only screen and (max-width: 600px) {
   .founder-section {
-    margin-bottom: 50%;
+    margin-bottom: 60%;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .founder-section {
-    margin-bottom: 60%;
+    margin-bottom: 100%;
   }
 }
 </style>
