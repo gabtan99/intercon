@@ -1,6 +1,9 @@
 <template>
   <Layout>
-    <PageHeader :page_name="page_name" :image="image" />
+    <PageHeader
+      :page_name="$page.pageConfig.page_name"
+      :image="$page.pageConfig.header_image"
+    />
     <ServicesSection :services="$page.services.edges"/>
     <NewsletterModal currPage="SERVICES"/>
   </Layout>
@@ -8,6 +11,10 @@
 
 <page-query>
 query Service {
+  pageConfig: pages (path: "/data/services-page/"){
+    page_name
+    header_image
+  },
 	services: allServices{
     edges {
       node {

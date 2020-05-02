@@ -11,6 +11,7 @@
         <g-image
           :alt="service.node.title"
           :src="service.node.header_image.src"
+          :srcset="service.node.header_image.srcset"
           height="330"
           class="service-card__thumbnail"
         />

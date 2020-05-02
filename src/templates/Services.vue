@@ -1,7 +1,12 @@
 <template>
   <Layout>
     <div class="mb-5 position-relative service-header">
-      <img class="service-header__image" :src="service.header_image.src" />
+      <b-img-lazy
+        class="service-header__image"
+        :srcset="service.header_image.srcset"
+        :src="service.header_image.src"
+      >
+      </b-img-lazy>
       <h1
         class="font-48 text-center position-absolute service-header__title"
         v-bind:style="{ color: service.header_color }"
@@ -30,6 +35,7 @@
             fluid-grow
             center
             v-if="service.introduction_image"
+            :srcset="service.introduction_image.srcset"
             :src="service.introduction_image.src"
           >
           </b-img-lazy>
@@ -76,8 +82,9 @@
               <b-img-lazy
                 fluid
                 center
+                :srcset="stat.figure.srcset"
                 :src="stat.figure.src"
-                :alt="stat.content"
+                :alt="stat.caption"
               >
               </b-img-lazy>
               <figcaption
@@ -294,6 +301,7 @@ export default {
     },
   },
   mounted() {
+    console.log(this.$page.service);
     window.addEventListener("scroll", this.handleScroll);
   },
   beforeDestroy() {
