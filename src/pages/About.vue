@@ -17,7 +17,7 @@
 
       <b-img
         class="who-img"
-        :src="require('../assets/img/who-we-are.png')"
+        :src="$page.pageConfig.about_company_image.src"
         fluid
       />
     </b-container>
@@ -26,7 +26,7 @@
       <b-container fluid class="values-section">
         <b-img
           class="values-img"
-          :src="require('../assets/img/our-values.png')"
+          :src="$page.pageConfig.values_image.src"
           fluid
         />
 
@@ -63,7 +63,7 @@
           <div class="col-lg-2">
             <b-img
               class="founder-image"
-              :src="require('../assets/img/founder-img.png')"
+              :src="$page.pageConfig.founder_image.src"
               fluid
             />
           </div>
@@ -94,8 +94,10 @@ query Posts {
   pageConfig: pages (path: "/data/about-page/"){
     page_name
     header_image
+    about_company_image
     about_company_title
     about_company_description
+    values_image
     values_title
     mission_title
     mission_description
@@ -103,6 +105,7 @@ query Posts {
     vision_description
     goal_title
     goal_description
+    founder_image
     founder_name
     founder_label
     founder_description
