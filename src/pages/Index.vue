@@ -9,8 +9,8 @@
     <!-- <LatestJournals :journals="$page.journals.edges" /> -->
     <AboutSection />
     <TargetSection :targets="$page.targets.edges" />
-    <Instagram :images="$page.images.edges" />
     <Testimonies :testimonies="$page.testimonies.edges" />
+    <Instagram :images="$page.images.edges" />
   </Layout>
 </template>
 

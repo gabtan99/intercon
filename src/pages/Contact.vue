@@ -3,8 +3,8 @@
     <div class="main">
       <b-container class="container">
         <b-row class="form">
-          <b-col lg="5">
-            <div class="form-container">
+          <b-col lg="5" class="form-container">
+            <div>
               <div>
                 <h1 class="font-gilroy-bold font-42 blue">Get in touch</h1>
                 <p class="font-avenir-light font-18 blue">
@@ -327,5 +327,9 @@ textarea {
   padding-top: 40px;
   padding-bottom: 85px;
   justify-content: center;
+}
+
+.form-container {
+  padding-bottom: 40px;
 }
 </style>

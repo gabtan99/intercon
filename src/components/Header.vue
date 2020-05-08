@@ -48,7 +48,7 @@
           class="mx-4 font-18 font-gilroy-bold header-nav-item "
           exact-active-class="header-nav-item--active"
         >
-          About
+          About Us
         </b-nav-item>
         <b-button
           pill
@@ -119,7 +119,7 @@
                     class="mx-4 font-18 font-gilroy-bold header-nav-item "
                     exact-active-class="header-nav-item--active"
                   >
-                    About
+                    About Us
                   </b-nav-item>
                   <b-nav-item
                     to="/contact"
