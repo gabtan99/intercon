@@ -35,12 +35,20 @@
           Targets
         </b-nav-item>
         <b-nav-item
+          to="/blog"
+          exact
+          class="mx-4 font-18 font-gilroy-bold header-nav-item "
+          exact-active-class="header-nav-item--active"
+        >
+          Blog
+        </b-nav-item>
+        <b-nav-item
           to="/about"
           exact
           class="mx-4 font-18 font-gilroy-bold header-nav-item "
           exact-active-class="header-nav-item--active"
         >
-          About Us
+          About
         </b-nav-item>
         <b-button
           pill
@@ -98,12 +106,20 @@
                     Targets
                   </b-nav-item>
                   <b-nav-item
+                    to="/blog"
+                    exact
+                    class="mx-4 font-18 font-gilroy-bold header-nav-item "
+                    exact-active-class="header-nav-item--active"
+                  >
+                    Blog
+                  </b-nav-item>
+                  <b-nav-item
                     to="/about"
                     exact
                     class="mx-4 font-18 font-gilroy-bold header-nav-item "
                     exact-active-class="header-nav-item--active"
                   >
-                    About Us
+                    About
                   </b-nav-item>
                   <b-nav-item
                     to="/contact"
@@ -168,12 +184,12 @@ export default {
   height: 9rem;
   width: auto;
 }
-@media only screen and (max-width: 867px) {
+@media only screen and (max-width: 950px) {
   .desktop-nav.container-lg {
     display: none;
   }
 }
-@media only screen and (max-width: 867px) {
+@media only screen and (max-width: 950px) {
   .navbar__brand-img {
     height: 7rem;
     width: auto;
@@ -220,7 +236,7 @@ export default {
   background-color: var(--green-branding) !important;
 }
 
-@media only screen and (min-width: 868px) {
+@media only screen and (min-width: 951px) {
   .mobile-nav.container {
     display: none;
   }

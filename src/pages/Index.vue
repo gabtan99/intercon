@@ -16,19 +16,7 @@
 
 <page-query>
 query Posts {
-	projects: allProjectPost {
-    edges {
-      node {
-        id
-        date (format: "YYYY")
-        title
-        categories
-        thumbnail (quality: 90)
-        path
-      }
-    }
-  },
-  journals: allJournalPost (perPage: 4) {
+  blog: allBlogPost (perPage: 4) {
     edges {
       node {
         id

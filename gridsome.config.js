@@ -10,20 +10,8 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
-        path: "projects/**/*.md",
-        typeName: "ProjectPost",
-        resolveAbsolutePaths: true,
-        remark: {
-          externalLinksTarget: "_blank",
-          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
-        },
-      },
-    },
-    {
-      use: "@gridsome/source-filesystem",
-      options: {
-        path: "journal/**/*.md",
-        typeName: "JournalPost",
+        path: "blog/**/*.md",
+        typeName: "BlogPost",
         resolveAbsolutePaths: true,
         remark: {
           externalLinksTarget: "_blank",
