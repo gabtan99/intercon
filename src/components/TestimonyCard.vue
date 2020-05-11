@@ -43,6 +43,11 @@ img {
   width: 270px;
   margin: auto;
   margin-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.testimony-card:hover {
+  transform: scale(1.02);
 }
 
 .content {

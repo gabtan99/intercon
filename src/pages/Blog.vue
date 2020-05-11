@@ -30,7 +30,38 @@ query Blog {
 </page-query>
 
 <script>
-export default {};
+export default {
+  metaInfo: {
+    title: "Blog | Intercon Regenerative Center",
+    meta: [
+      {
+        key: "description",
+        name: "description",
+        content: "Our Blog - Intercon Regenerative Center!",
+      },
+      {
+        key: "og:title",
+        name: "og:title",
+        content: "Blog | Intercon Regenerative Center",
+      },
+      {
+        key: "og:site_name",
+        name: "og:site_name",
+        content: "Intercon Regenerative Center",
+      },
+      {
+        key: "og:image",
+        name: "og:image",
+        content: require("@/assets/img/target-header.png"),
+      },
+      {
+        name: "og:description",
+        name: "og:description",
+        content: "Check out our blog!",
+      },
+    ],
+  },
+};
 </script>
 
 <style scoped>
