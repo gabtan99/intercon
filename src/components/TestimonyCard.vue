@@ -53,7 +53,7 @@ img {
 .content {
   padding: 10px;
   color: var(--blue-branding-dark);
-  height: 22rem;
+  height: 18rem;
   overflow: scroll;
 }
 

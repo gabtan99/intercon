@@ -1,12 +1,12 @@
 <template>
   <Layout>
-    <PageHeader 
-      :page_name="$page.pageConfig.page_name" 
-      :image="$page.pageConfig.header_image" 
+    <PageHeader
+      :page_name="$page.pageConfig.page_name"
+      :image="$page.pageConfig.header_image"
     />
     <b-container fluid class="who-section">
       <b-row fluid class="who-card">
-        <h1 class="font-gilroy-bold font-26 blue title">
+        <h1 class="font-gilroy-bold font-36 blue title">
           {{ $page.pageConfig.about_company_title }}
         </h1>
 
@@ -31,30 +31,36 @@
         />
 
         <b-row class="values-card">
-          <h1 class="font-gilroy-bold font-26 blue title">
+          <h1 class="font-gilroy-bold font-36 blue title">
             {{ $page.pageConfig.values_title }}
           </h1>
 
-          <h1 class="font-gilroy-bold font-21 blue">
-            {{ $page.pageConfig.mission_title }}
-          </h1>
-          <h1 class="font-avenir-light font-18 value-item">
-            {{ $page.pageConfig.mission_description }}
-          </h1>
+          <div class="value-container">
+            <h1 class="font-gilroy-bold font-21 light-blue">
+              {{ $page.pageConfig.mission_title }}
+            </h1>
+            <h1 class="font-avenir-light font-18 value-item">
+              {{ $page.pageConfig.mission_description }}
+            </h1>
+          </div>
 
-          <h1 class="font-gilroy-bold font-21 blue">
-            {{ $page.pageConfig.vision_title }}
-          </h1>
-          <h1 class="font-avenir-light font-18 value-item">
-            {{ $page.pageConfig.vision_description }}
-          </h1>
+          <div class="value-container">
+            <h1 class="font-gilroy-bold font-21 light-blue">
+              {{ $page.pageConfig.vision_title }}
+            </h1>
+            <h1 class="font-avenir-light font-18 value-item">
+              {{ $page.pageConfig.vision_description }}
+            </h1>
+          </div>
 
-          <h1 class="font-gilroy-bold font-21 blue">
-            {{ $page.pageConfig.goal_title }}
-          </h1>
-          <h1 class="font-avenir-light font-18 value-item">
-            {{ $page.pageConfig.goal_description }}
-          </h1>
+          <div class="value-container">
+            <h1 class="font-gilroy-bold font-21 light-blue">
+              {{ $page.pageConfig.goal_title }}
+            </h1>
+            <h1 class="font-avenir-light font-18 value-item">
+              {{ $page.pageConfig.goal_description }}
+            </h1>
+          </div>
         </b-row>
       </b-container>
 
@@ -68,8 +74,8 @@
             />
           </div>
 
-          <div class="col-lg-10">
-            <h1 class="font-gilroy-bold font-18">
+          <div class="col-lg-10 founder-info">
+            <h1 class="font-gilroy-bold font-18 name">
               {{ $page.pageConfig.founder_name }}
             </h1>
             <h1 class="font-gilroy-bold font-16 light-blue">
@@ -81,11 +87,9 @@
           </div>
         </b-row>
       </div>
-
     </div>
 
     <Testimonies :testimonies="$page.testimonies.edges" />
-
   </Layout>
 </template>
 
@@ -131,7 +135,7 @@ import Testimonies from "@/components/Testimonies";
 export default {
   data() {
     return {
-      pageConfig: {}
+      pageConfig: {},
     };
   },
   components: {
@@ -175,7 +179,6 @@ export default {
 </script>
 
 <style scoped>
-
 .who-section {
   display: grid;
   flex-direction: row;
@@ -201,9 +204,10 @@ export default {
   padding: 80px 160px;
   justify-content: center;
   padding-bottom: 40px;
-  padding-top: 0px; 
+  padding-top: 0px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-template-rows: repeat(2, 0.1fr);
+  margin-top: -80px;
 }
 
 .founder-section {
@@ -229,8 +233,8 @@ export default {
   margin-bottom: 2rem;
 }
 
-.value-item {
-  margin-bottom: 2rem;
+.value-container {
+  margin: 2rem 0px;
 }
 
 .who-card {
@@ -252,7 +256,7 @@ export default {
 }
 
 @media only screen and (max-width: 1300px) {
-  .who-section{
+  .who-section {
     padding: 80px 160px;
   }
   .who-card {
@@ -293,10 +297,10 @@ export default {
 }
 
 .founder-card {
-  padding: 40px;
+  padding: 40px 20px;
   box-shadow: 0px 5px 10px #76767629;
   margin: auto;
-  width: 90%;
+  width: 80%;
   background-color: #fff;
   margin-top: 60px;
 }
@@ -304,13 +308,8 @@ export default {
 .founder-image {
   max-width: 120px;
   max-height: 120px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   display: block;
-}
-
-.founder-info {
-  margin-top: 100px;
 }
 
 .blue {
@@ -322,7 +321,6 @@ export default {
 }
 
 @media only screen and (max-width: 1054px) {
-
   .founder-section {
     max-height: 250px;
     display: flex;
@@ -331,7 +329,11 @@ export default {
     padding: 5px;
     justify-content: center;
     padding-bottom: 40px;
-    margin-bottom: 20%;
+    margin-bottom: 50px;
+  }
+
+  .founder-card {
+    width: 95%;
   }
 
   .who-section {
@@ -352,10 +354,11 @@ export default {
   .values-img {
     display: none;
   }
-  
+
   .values-section {
     display: flex;
     padding: 20px;
+    margin-top: 0px;
   }
 
   .founder-image {
@@ -363,10 +366,6 @@ export default {
     max-height: 100px;
     display: block;
     margin-bottom: 2rem;
-  }
-
-  .founder-info {
-    margin-top: 50px;
   }
 }
 
@@ -379,6 +378,9 @@ export default {
     margin-top: -50px;
   }
 
+  .founder-info {
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -389,7 +391,7 @@ export default {
 
 @media only screen and (max-width: 500px) {
   .founder-section {
-    margin-bottom: 100%;
+    margin-bottom: 80%;
   }
 }
 </style>
