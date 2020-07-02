@@ -14,7 +14,7 @@
               </div>
 
               <form
-                action="https://formspree.io/xknqwwll"
+                action="https://formspree.io/xzbjjppn"
                 method="POST"
                 ref="contactform"
                 class="contact-form"
@@ -62,10 +62,10 @@
                       <option disabled selected value style="display:none;">
                         ( Select a subject )
                       </option>
-                      <option value="prices">Inquiry</option>
-                      <option value="services">Appointment</option>
-                      <option value="targets">Customer Service</option>
-                      <option value="others">Others</option>
+                      <option value="Inquiry">Inquiry</option>
+                      <option value="Appointment">Appointment</option>
+                      <option value="Customer Service">Customer Service</option>
+                      <option value="Others">Others</option>
                     </select>
                   </div>
                   <div class="form-item">
