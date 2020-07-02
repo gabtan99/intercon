@@ -28,7 +28,6 @@ query Posts {
   images: allInstagramPhoto {
     edges {
       node {
-        shortcode,
         thumbnail_src
       }
     }

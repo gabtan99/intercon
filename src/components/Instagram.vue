@@ -12,26 +12,18 @@
 
     <div class="img-container">
       <div class="left thumbnail">
-        <a :href="recentImages[0].url">
-          <img :src="recentImages[0].thumbnail" />
-        </a>
+        <img :src="recentImages[0].thumbnail" />
       </div>
 
       <div class="top thumbnail">
-        <a :href="recentImages[3].url">
-          <img :src="recentImages[3].thumbnail" />
-        </a>
+        <img :src="recentImages[3].thumbnail" />
       </div>
 
       <div class="right thumbnail">
-        <a :href="recentImages[2].url">
-          <img :src="recentImages[2].thumbnail" />
-        </a>
+        <img :src="recentImages[2].thumbnail" />
       </div>
       <div class="bottom thumbnail">
-        <a :href="recentImages[1].url">
-          <img :src="recentImages[1].thumbnail" />
-        </a>
+        <img :src="recentImages[1].thumbnail" />
       </div>
     </div>
   </div>
@@ -49,7 +41,6 @@ export default {
       const recent = this.images.slice(Math.max(this.images.length - 4, 0));
       return recent.map((item) => {
         return {
-          url: `https://www.instagram.com/p/${item.node.shortcode}/`,
           thumbnail: item.node.thumbnail_src,
         };
       });
