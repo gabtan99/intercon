@@ -11,46 +11,44 @@
     </div>
 
     <div class="img-container">
-      <div class="left thumbnail">
-        <img :src="recentImages[0].thumbnail" />
+      <div class="left thumbnail" v-if="!!images[0]">
+        <a :href="images[0].url">
+          <img :src="images[0].thumbnail" />
+        </a>
       </div>
 
-      <div class="top thumbnail">
-        <img :src="recentImages[3].thumbnail" />
+      <div class="top thumbnail" v-if="!!images[3]">
+        <a :href="images[3].url">
+          <img :src="images[3].thumbnail" />
+        </a>
       </div>
 
-      <div class="right thumbnail">
-        <img :src="recentImages[2].thumbnail" />
+      <div class="right thumbnail" v-if="!!images[2]">
+        <a :href="images[2].url">
+          <img :src="images[2].thumbnail" />
+        </a>
       </div>
-      <div class="bottom thumbnail">
-        <img :src="recentImages[1].thumbnail" />
+      <div class="bottom thumbnail" v-if="!!images[1]">
+        <a :href="images[1].url">
+          <img :src="images[1].thumbnail" />
+        </a>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { getRecentInstagram } from "@/services/instagram";
+
 export default {
   data() {
     return {
       settings: require("../../data/theme.json"),
+      images: [],
     };
   },
-  computed: {
-    recentImages: function() {
-      const recent = this.images.slice(Math.max(this.images.length - 4, 0));
-      return recent.map((item) => {
-        return {
-          thumbnail: item.node.thumbnail_src,
-        };
-      });
-    },
-  },
-  props: {
-    images: {
-      type: Array,
-      default: () => [],
-    },
+  async beforeCreate() {
+    this.images = await getRecentInstagram(4);
   },
 };
 </script>
