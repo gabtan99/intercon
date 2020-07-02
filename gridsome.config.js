@@ -67,13 +67,13 @@ module.exports = {
         },
       },
     },
-    {
-      use: "@zefman/gridsome-source-instagram",
-      options: {
-        username: "interconregenerative", // Instagram username
-        typeName: "InstagramPhoto", // The GraphQL type you want the photos to be added under. Defaults to InstagramPhoto
-      },
-    },
+    // {
+    //   use: "@zefman/gridsome-source-instagram",
+    //   options: {
+    //     username: "interconregenerative", // Instagram username
+    //     typeName: "InstagramPhoto", // The GraphQL type you want the photos to be added under. Defaults to InstagramPhoto
+    //   },
+    // },
     {
       use: "@gridsome/plugin-google-analytics",
       options: {

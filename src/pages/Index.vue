@@ -10,7 +10,7 @@
     <AboutSection />
     <TargetSection :targets="$page.targets.edges" />
     <Testimonies :testimonies="$page.testimonies.edges" />
-    <Instagram :images="$page.images.edges" />
+    <Instagram />
   </Layout>
 </template>
 
@@ -22,13 +22,6 @@ query Posts {
         id
         path
         title
-      }
-    }
-  },
-  images: allInstagramPhoto {
-    edges {
-      node {
-        thumbnail_src
       }
     }
   },
