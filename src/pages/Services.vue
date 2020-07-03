@@ -1,11 +1,11 @@
 <template>
   <Layout>
-    <PageHeader
+    <!-- <PageHeader
       :page_name="$page.pageConfig.page_name"
       :image="$page.pageConfig.header_image"
     />
     <ServicesSection :services="$page.services.edges"/>
-    <NewsletterModal currPage="SERVICES"/>
+    <NewsletterModal currPage="SERVICES"/> -->
   </Layout>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    {{ setAutoModal() }}
+    <!-- {{ setAutoModal() }}
 
     <PageHeader
       :page_name="$page.pageConfig.page_name"
@@ -24,7 +24,7 @@
         />
       </div>
     </div>
-    <NewsletterModal currPage="TARGETS" />
+    <NewsletterModal currPage="TARGETS" /> -->
   </Layout>
 </template>
 

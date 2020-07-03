@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="mb-5 position-relative service-header">
+    <!-- <div class="mb-5 position-relative service-header">
       <b-img-lazy
         class="service-header__image"
         :srcset="service.header_image.srcset"
@@ -153,7 +153,7 @@
           </div>
         </aside>
       </div>
-    </b-container>
+    </b-container> -->
   </Layout>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="journal">
+    <!-- <div class="journal">
       <div class="container journal-container">
         <div class="journal-header">
           <h1 v-html="$page.post.title" class="journal-title" />
@@ -22,7 +22,7 @@
 
         <JournalContent :content="$page.post.content" />
       </div>
-    </div>
+    </div> -->
   </Layout>
 </template>
 
