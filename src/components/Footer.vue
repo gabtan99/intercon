@@ -2,14 +2,14 @@
   <footer class="footer">
     <div class="container">
       <div class="mainContent">
-        <div class="row ">
+        <div class="row">
           <div class="col-md-2 links">
             <h2 class="font-gilroy-bold font-24">Links</h2>
             <div class="horizontal">
               <g-link to="/" class="link font-avenir-light font-16"
                 >Home</g-link
               >
-              <g-link to="/services/" class="link font-avenir-light font-16"
+              <!-- <g-link to="/services/" class="link font-avenir-light font-16"
                 >Services</g-link
               >
               <g-link to="/targets/" class="link font-avenir-light font-16"
@@ -17,7 +17,7 @@
               >
               <g-link to="/blog/" class="link font-avenir-light font-16"
                 >Blog</g-link
-              >
+              > -->
               <g-link to="/about/" class="link font-avenir-light font-16"
                 >About Us</g-link
               >

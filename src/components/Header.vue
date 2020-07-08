@@ -1,5 +1,5 @@
 <template>
-  <b-navbar type="light" sticky :class="scrollingShadow" style="z-index: 999">
+  <b-navbar type="light" sticky :class="scrollingShadow" style="z-index: 999;">
     <b-container fluid="lg" class="desktop-nav">
       <b-navbar-brand>
         <a href="/">
@@ -14,12 +14,12 @@
         <b-nav-item
           to="/"
           exact
-          class="mx-4 font-18 font-gilroy-bold header-nav-item "
+          class="mx-4 font-18 font-gilroy-bold header-nav-item"
           exact-active-class="header-nav-item--active"
         >
           Home
         </b-nav-item>
-        <b-nav-item
+        <!-- <b-nav-item
           to="/services"
           class="mx-4 font-18 font-gilroy-bold header-nav-item "
           active-class="header-nav-item--active"
@@ -41,11 +41,11 @@
           exact-active-class="header-nav-item--active"
         >
           Blog
-        </b-nav-item>
+        </b-nav-item> -->
         <b-nav-item
           to="/about"
           exact
-          class="mx-4 font-18 font-gilroy-bold header-nav-item "
+          class="mx-4 font-18 font-gilroy-bold header-nav-item"
           exact-active-class="header-nav-item--active"
         >
           About Us
@@ -72,7 +72,7 @@
           />
         </a>
       </b-navbar-brand>
-      <b-container class="ml-auto font-21 d-flex justify-content-end ">
+      <b-container class="ml-auto font-21 d-flex justify-content-end">
         <div class="outer-menu">
           <input class="checkbox-toggle" type="checkbox" />
           <div class="hamburger">
@@ -85,14 +85,14 @@
                   <b-nav-item
                     to="/"
                     exact
-                    class="mx-4 font-18 font-gilroy-bold header-nav-item "
+                    class="mx-4 font-18 font-gilroy-bold header-nav-item"
                     exact-active-class="header-nav-item--active"
                   >
                     Home
                   </b-nav-item>
-                  <b-nav-item
+                  <!-- <b-nav-item
                     to="/services"
-                    class="mx-4 font-18 font-gilroy-bold header-nav-item "
+                    class="mx-4 font-18 font-gilroy-bold header-nav-item"
                     active-class="header-nav-item--active"
                   >
                     Services
@@ -100,7 +100,7 @@
                   <b-nav-item
                     to="/targets"
                     exact
-                    class="mx-4 font-18 font-gilroy-bold header-nav-item "
+                    class="mx-4 font-18 font-gilroy-bold header-nav-item"
                     exact-active-class="header-nav-item--active"
                   >
                     Targets
@@ -108,15 +108,15 @@
                   <b-nav-item
                     to="/blog"
                     exact
-                    class="mx-4 font-18 font-gilroy-bold header-nav-item "
+                    class="mx-4 font-18 font-gilroy-bold header-nav-item"
                     exact-active-class="header-nav-item--active"
                   >
                     Blog
-                  </b-nav-item>
+                  </b-nav-item> -->
                   <b-nav-item
                     to="/about"
                     exact
-                    class="mx-4 font-18 font-gilroy-bold header-nav-item "
+                    class="mx-4 font-18 font-gilroy-bold header-nav-item"
                     exact-active-class="header-nav-item--active"
                   >
                     About Us
@@ -124,7 +124,7 @@
                   <b-nav-item
                     to="/contact"
                     exact
-                    class="mx-4 font-18 font-gilroy-bold header-nav-item "
+                    class="mx-4 font-18 font-gilroy-bold header-nav-item"
                     exact-active-class="header-nav-item--active"
                   >
                     Contact Us
