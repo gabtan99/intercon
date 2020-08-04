@@ -9,7 +9,7 @@
               <g-link to="/" class="link font-avenir-light font-16"
                 >Home</g-link
               >
-              <!-- <g-link to="/services/" class="link font-avenir-light font-16"
+              <g-link to="/services/" class="link font-avenir-light font-16"
                 >Services</g-link
               >
               <g-link to="/targets/" class="link font-avenir-light font-16"
@@ -17,7 +17,7 @@
               >
               <g-link to="/blog/" class="link font-avenir-light font-16"
                 >Blog</g-link
-              > -->
+              >
               <g-link to="/about/" class="link font-avenir-light font-16"
                 >About Us</g-link
               >
