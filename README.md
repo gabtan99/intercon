@@ -44,6 +44,22 @@ npm install
 npm run develop
 ```
 
+## Explore
+
+```bash
+# explore your queries
+npm run explore
+```
+
+## Deploy
+
+```bash
+# check if the build works
+npm run build
+
+# push or create a pull request to master (auto deployed to vercel)
+git push
+```
 
 ## Forestry (Content Management)
 
