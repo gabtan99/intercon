@@ -27,23 +27,49 @@ This project is developed by a small group of coding enthusiasts starting out in
   <a href="https://app.netlify.com/sites/gridsome-forestry/deploys"><img src="https://api.netlify.com/api/v1/badges/21965bf1-8f46-4201-afe9-98896cba865e/deploy-status" alt="Netlify Status"></a>
 </p>
 
+## Cloning
+
+```bash
+# clone the repo
+git clone https://github.com/gabtan99/intercon.git
+
+# install the dependencies
+npm install
+```
 
 ## Development
 
 ```bash
-# install Gridsome globally
-npm install --global @gridsome/cli
-
-# cd into the project directory
-cd gridsome-forestry-starter
-
-# install dependencies
-npm install
-
 # Start local dev server
 npm run develop
 ```
+ Site running at:
+  - Local:                 http://localhost:8080/
+  - Network:               http://192.168.1.xxx:8080/   
 
+## Explore
+
+```bash
+# explore your queries
+npm run explore
+```
+Explore GraphQL data at: http://localhost:8080/___explore
+
+## Deploy
+
+```bash
+# check if the build works
+npm run build
+
+# push or create a pull request to master (auto deployed to vercel)
+git push
+```
+
+## Testing
+
+```bash
+# NO TESTS YET
+```
 
 ## Forestry (Content Management)
 
