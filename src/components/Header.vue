@@ -90,7 +90,7 @@
                   >
                     Home
                   </b-nav-item>
-                  <!-- <b-nav-item
+                  <b-nav-item
                     to="/services"
                     class="mx-4 font-18 font-gilroy-bold header-nav-item"
                     active-class="header-nav-item--active"
@@ -112,7 +112,7 @@
                     exact-active-class="header-nav-item--active"
                   >
                     Blog
-                  </b-nav-item> -->
+                  </b-nav-item>
                   <b-nav-item
                     to="/about"
                     exact
