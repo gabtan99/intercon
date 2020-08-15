@@ -4,8 +4,8 @@
       :page_name="$page.pageConfig.page_name"
       :image="$page.pageConfig.header_image"
     />
-    <ServicesSection :services="$page.services.edges"/>
-    <NewsletterModal currPage="SERVICES"/>
+    <ServicesSection :services="$page.services.edges" />
+    <NewsletterModal currPage="SERVICES" />
   </Layout>
 </template>
 
@@ -36,55 +36,55 @@ query Service {
 </page-query>
 
 <script>
-  import ServicesSection from '@/components/ServicesSection';
-  import NewsletterModal from '@/components/NewsletterModal';
-  import PageHeader from '@/components/PageHeader';
+import ServicesSection from "@/components/ServicesSection";
+import NewsletterModal from "@/components/NewsletterModal";
+import PageHeader from "@/components/PageHeader";
 
-  export default {
-    metaInfo: {
-      title: 'Services | Intercon Regenerative Center',
-      meta: [
-        {
-          key: 'description',
-          name: 'description',
-          content: 'Services available for your target needs'
-        },
-        {
-          key: 'og:title',
-          name: 'og:title',
-          content: 'Services | Intercon Regenerative Center',
-        },
-        {
-          key: 'og:site_name',
-          name: 'og:site_name',
-          content: 'Intercon Regenerative Center',
-        },
-        {
-          key: 'og:image',
-          name: 'og:image',
-          content: require('@/assets/img/services-header.png'),
-        },
-        {
-          name: 'og:description',
-          name: 'og:description',
-          content: 'Here are the variety of services you can avail at Intercon Regenerative Center',
-        },
-      ],
-    },
-    components: {
-      ServicesSection,
-      NewsletterModal,
-      PageHeader
-    },
-    data() {
-      return {
-        page_name: 'Services',
-        image: 'services-header.png',
-      }
-    }
-  }
+export default {
+  metaInfo: {
+    title: "Services | Intercon Regenerative Center",
+    meta: [
+      {
+        key: "description",
+        name: "description",
+        content:
+          "At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ",
+      },
+      {
+        key: "og:title",
+        name: "og:title",
+        content: "Services | Intercon Regenerative Center",
+      },
+      {
+        key: "og:site_name",
+        name: "og:site_name",
+        content: "Intercon Regenerative Center",
+      },
+      {
+        key: "og:image",
+        name: "og:image",
+        content: require("@/assets/img/services-header.png"),
+      },
+      {
+        name: "og:description",
+        name: "og:description",
+        content:
+          "At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ",
+      },
+    ],
+  },
+  components: {
+    ServicesSection,
+    NewsletterModal,
+    PageHeader,
+  },
+  data() {
+    return {
+      page_name: "Services",
+      image: "services-header.png",
+    };
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
