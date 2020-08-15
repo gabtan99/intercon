@@ -32,6 +32,7 @@ import {
   faTimes,
   faStarOfLife,
   faCheck,
+  faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -54,7 +55,8 @@ library.add(
   faFemale,
   faTimes,
   faStarOfLife,
-  faCheck
+  faCheck,
+  faQuestionCircle
 );
 
 export default function(Vue, { head }) {
