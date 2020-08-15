@@ -37,7 +37,8 @@ export default {
       {
         key: "description",
         name: "description",
-        content: "Our Blog - Intercon Regenerative Center!",
+        content:
+          "At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ",
       },
       {
         key: "og:title",
@@ -57,7 +58,8 @@ export default {
       {
         name: "og:description",
         name: "og:description",
-        content: "Check out our blog!",
+        content:
+          "At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ",
       },
     ],
   },

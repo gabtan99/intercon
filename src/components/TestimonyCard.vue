@@ -53,8 +53,19 @@ img {
 .content {
   padding: 10px;
   color: var(--blue-branding-dark);
-  height: 18rem;
+  height: 20rem;
+  width: 100%;
   overflow: scroll;
+  margin-bottom: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
 }
 
 .author {
