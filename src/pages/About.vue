@@ -320,6 +320,17 @@ export default {
   color: var(--blue-branding-light);
 }
 
+@media only screen and (min-width: 1920px) {
+  .values-img {
+    grid-column: 1 / span 3;
+    margin: auto;
+  }
+
+  .values-card {
+    grid-column: 2 / span 5;
+  }
+}
+
 @media only screen and (max-width: 1054px) {
   .founder-section {
     max-height: 250px;
