@@ -89,7 +89,7 @@
       </div>
     </div>
 
-    <Testimonies :testimonies="$page.testimonies.edges" />
+    <FAQSection />
   </Layout>
 </template>
 
@@ -114,15 +114,8 @@ query Posts {
     founder_label
     founder_description
   },
-  testimonies: allTestimonies {
-    edges {
-      node {
-        name,
-        message,
-        image
-      }
-    }
-  }
+  
+  
 }
 
 </page-query>
@@ -130,7 +123,7 @@ query Posts {
 <script>
 import PageHeader from "@/components/PageHeader";
 import NewsletterModal from "@/components/NewsletterModal";
-import Testimonies from "@/components/Testimonies";
+import FAQSection from "@/components/FAQSection";
 
 export default {
   data() {
@@ -141,7 +134,7 @@ export default {
   components: {
     PageHeader,
     NewsletterModal,
-    Testimonies,
+    FAQSection,
   },
   metaInfo() {
     return {
@@ -218,7 +211,7 @@ export default {
   padding: 80px;
   justify-content: center;
   padding-bottom: 40px;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 .green-gradient {
@@ -340,7 +333,7 @@ export default {
     padding: 5px;
     justify-content: center;
     padding-bottom: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
   }
 
   .founder-card {
@@ -382,7 +375,7 @@ export default {
 
 @media only screen and (max-width: 975px) {
   .founder-section {
-    margin-bottom: 30%;
+    margin-bottom: 250px;
   }
 
   .who-img {
@@ -396,13 +389,13 @@ export default {
 
 @media only screen and (max-width: 600px) {
   .founder-section {
-    margin-bottom: 60%;
+    margin-bottom: 250px;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .founder-section {
-    margin-bottom: 80%;
+    margin-bottom: 250px;
   }
 }
 

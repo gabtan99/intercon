@@ -67,7 +67,7 @@ export default {
         key: "description",
         name: "description",
         content:
-          "Target groups that we offer to restore and regenerate for you!",
+          "At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ",
       },
       {
         key: "og:title",
@@ -88,7 +88,7 @@ export default {
         name: "og:description",
         name: "og:description",
         content:
-          "Check out the target groups that you wish to restore with the services we offer!",
+          "At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ",
       },
     ],
   },

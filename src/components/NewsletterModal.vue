@@ -71,7 +71,7 @@
 <script>
 import { signupNewsletter } from "@/services/newsletter";
 import * as ls from "@/util/localStorage";
-import { setSubscribed } from "@/util/localStorage";
+import { setSubscribed, setFirstVisit } from "@/util/localStorage";
 
 export default {
   props: ["currPage"],
@@ -113,7 +113,10 @@ export default {
       }
     },
     showModal() {
-      if (localStorage.isSubscribed !== "true") this.$refs["newsletter"].show();
+      if (localStorage.isSubscribed !== "true") {
+        setFirstVisit(false);
+        this.$refs["newsletter"].show();
+      }
     },
     hideModal() {
       this.$refs["newsletter"].hide();
