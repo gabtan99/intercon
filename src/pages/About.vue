@@ -405,4 +405,10 @@ export default {
     margin-bottom: 80%;
   }
 }
+
+@media only screen and (max-width: 320px) {
+  .founder-section {
+    margin-bottom: 125%;
+  }
+}
 </style>
