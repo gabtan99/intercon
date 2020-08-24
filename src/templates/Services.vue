@@ -314,11 +314,6 @@ export default {
 .service-header {
   width: 100%;
   max-height: 500px;
-  box-shadow: 0px 10px 10px var(--button-shadow);
-  -webkit-box-shadow: 0px 10px 10px var(--button-shadow);
-  -moz-box-shadow: 0px 10px 10px var(--button-shadow);
-  -o-box-shadow: 0px 10px 10px var(--button-shadow);
-  -ms-box-shadow: 0px 10px 10px var(--button-shadow);
 }
 
 .service-header__image {
@@ -339,6 +334,7 @@ export default {
   grid-template-columns: minmax(0, 1fr) 300px;
   grid-gap: 30px;
   grid-template-areas: "article aside";
+  margin-top: 7rem;
 }
 
 @media only screen and (max-width: 992px) {
