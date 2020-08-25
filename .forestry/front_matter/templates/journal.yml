@@ -1,6 +1,6 @@
 ---
 label: Journal
-hide_body: true
+hide_body: false
 fields:
 - name: header_image
   type: file
@@ -38,24 +38,6 @@ fields:
     time_format: ''
     export_format: YYYY-MM-DD
   default: now
-- name: introduction_content
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Introduction content
-- name: body_content
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Body content
 - name: content_image
   type: file
   config:
