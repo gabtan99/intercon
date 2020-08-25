@@ -44,4 +44,5 @@ fields:
     maxSize: 64
   label: Content Image
 pages:
+- journal/how-to-be-healthy-during-a-pandemic.md
 - journal/macos-development-environment.md
