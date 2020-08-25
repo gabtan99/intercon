@@ -2,6 +2,11 @@
 label: Journal
 hide_body: false
 fields:
+- name: header_image
+  type: file
+  config:
+    maxSize: 64
+  label: Header image
 - type: text
   name: title
   label: Title
@@ -35,5 +40,28 @@ fields:
     - Nichlas W. Andersen
   label: Author
   default: Nichlas W. Andersen
+- name: introduction_content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Introduction content
+- name: body_content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Body content
+- name: content_image
+  type: file
+  config:
+    maxSize: 64
+  label: Content Image
 pages:
 - journal/macos-development-environment.md
