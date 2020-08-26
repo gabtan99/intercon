@@ -13,7 +13,6 @@
           :blog="item.node"
         />
       </div>
-      <!-- <div></div> -->
     </div>
   </Layout>
 </template>
