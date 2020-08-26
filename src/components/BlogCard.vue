@@ -116,10 +116,20 @@ export default {
 }
 
 @media only screen and (max-width: 1000px) {
-  .service-card {
+  .blog-card {
     position: relative;
-    width: 100%;
-    margin: 5px;
+    width: 380px;
+    height: 380px;
+    margin: 20px 0px;
+    border: none;
+    padding: 0px;
+    box-shadow: 0 3px 3px 1px var(--gray-1);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .author-text {
+    padding: 3px;
+    margin: 0px 0px 0px 8px;
   }
 }
 </style>

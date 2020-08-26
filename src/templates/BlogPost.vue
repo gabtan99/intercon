@@ -68,7 +68,7 @@ export default {
   display: block;
   width: 100%;
   text-align: center;
-  padding: 2rem 0 3rem 0;
+  padding: 2rem 0 1.5rem 0;
 }
 
 .header-images {
@@ -79,20 +79,20 @@ export default {
 
 .journal-title {
   font-size: 3.4rem;
-  margin: 0 0 2rem 0;
+  margin: 1rem 0 1.5rem 0;
 }
 
 .date-style {
   margin: 2rem 0 0 0;
 }
 
-.breadcrumb {
+/* .breadcrumb {
   margin: 0;
   background: transparent;
   justify-content: center;
   padding: 1rem 0;
   font-size: 1.4rem;
-}
+} */
 
 .avatar-style {
   margin: 0px 5px;
@@ -108,5 +108,13 @@ export default {
 }
 .journal-meta > div:last-of-type {
   margin: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  .header-images {
+    max-width: 100%;
+    max-height: 50%;
+    object-fit: cover;
+  }
 }
 </style>

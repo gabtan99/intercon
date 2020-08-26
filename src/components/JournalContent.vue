@@ -54,4 +54,17 @@ h5,
 h6 {
   font-size: 1.15rem;
 }
+
+@media only screen and (max-width: 1000px) {
+  .journal-content {
+    width: 95%;
+    margin: auto;
+    text-justify: inter-word;
+  }
+
+  img[alt='image'] {
+    width: 100%;
+    max-height: 50%;
+  }
+}
 </style>

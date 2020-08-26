@@ -95,25 +95,29 @@ export default {
 .main-container {
   display: flex;
   justify-content: center;
-  padding: 40px 30px;
   width: 100%;
 }
 
 .blog-cards-container {
   display: flex;
   flex-wrap: wrap;
-  width: 70%;
+  padding: 1.75%;
+  flex-direction: row;
+  max-width: 70%;
 }
 
-@media (min-width: 560px) {
-  .journal-post {
-    padding: 3rem 0;
+@media only screen and (max-width: 1000px) {
+  .main-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
   }
-}
 
-@media (min-width: 860px) {
-  .journal-post {
-    padding: 5rem 0;
+  .blog-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
   }
 }
 </style>
