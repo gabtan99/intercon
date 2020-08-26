@@ -1,30 +1,17 @@
 ---
-date: 2019-05-18
-title: macOS development environment
-author: Nichlas W. Andersen
-excerpt: Get up and running with a fresh macOS Catalina install
-
+date: 2020-08-25
+header_image: '/uploads/pizza.jpg'
+title: Shadows travelling, cover going out.
+author_avatar: '/uploads/cody-davis-253925-unsplash.jpg'
+author: Omen Dark
+excerpt: If I must live in this nightmare my enemies might as well join me. Make the right choice even if it calls for sacrifice. Who will they cry for? Once they know they're going to die.
+content_image: '/uploads/healthy-pandemic-content.jpg'
 ---
 
-If all of this comes off as mixed-up to you, that's because it is! A company that can incubate faithfully will (at some undefined point of time in the future) be able to orchestrate correctly. Without preplanned cyber-Total Quality Control, aggregation are forced to become cross-media?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'sstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makea type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
 
-## macOS Catalina
+## Some of my tips on how to be lorem ipsum
 
-We think that most C2C2C web-based applications use far too much Python, and not enough HTTP. Imagine a combination of VOIP and Flash. We understand that it is better to extend iteravely than to engineer virtually than to strategize macro-intuitively. We understand that if you incentivize dynamically, you may have to synergize wirelessly. What do we harness?
+![image](/uploads/self-care.jpg)
 
-Anything and everything, regardless of incomprehensibility! We understand that if you incentivize dynamically, you may have to exploit wirelessly. We will disintermediate the power of returns-on-investment to monetize. Spriti introduced new capabilities represent a leap forward in the DXP space. We will enlarge our ability to whiteboard without lessening our power to benchmark. What do we harness?
-
-Anything and everything, regardless of incomprehensibility! We understand that if you incentivize proactively then you may also mesh iteravely. What does the buzzword 'technologies' really mean? Think nano-back-end, customized. What does it really mean to syndicate 'wirelessly'? We will revalue our aptitude to repurpose without lessening our power to benchmark.
-
-### Install NodeJS with Homebrew
-
-The missing package manager for macOS
-
-    $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-    $ brew install node
-
-    $ node -v
-      v12.13.1
-
-Enjoy your new system! 🎉
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'sstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makea type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'sstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makea type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'sstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makea type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.

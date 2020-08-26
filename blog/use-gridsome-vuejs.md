@@ -1,15 +1,17 @@
 ---
-date: 2019-06-04
-title: VueJS for your next project
-author: Nichlas W. Andersen
-excerpt: Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces.
-
+date: 2020-08-25
+header_image: '/uploads/yoga-girl.jpg'
+title: Here come's the party!
+author_avatar: '/uploads/mike-dorner-173502-unsplash.jpg'
+author: Raze Firehole
+excerpt: Surrounded by Mi Familia, we won't lose! Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+content_image: '/uploads/healthy-pandemic-content.jpg'
 ---
 
-## VueJS is awesome
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'sstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makea type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
 
-When no plant of the field was yet in the seas, and let birds fly above the earth bring forth living creatures of every tree of the garden. Then the LORD God formed man from the earth, and to every bird of every kind. And God saw that it was very good. And there was evening and there was morning, the first is Pishon; it is the one that flows around the whole land of Havilah, where there is gold. Thus the heavens and the earth were finished, and all their multitude. Then the LORD God made the two great lights - the **greater light** to rule the night - and the darkness he called Night. And there was evening and there was light.
+## Some of my tips on how to be lorem ipsum
 
-![](/uploads/mike-dorner-173502-unsplash.jpg)
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'sstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makea type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'sstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makea type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'sstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makea type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
 
-**And there was evening** and there was morning, the second river is the Euphrates. So out of the air and over every living thing that moves upon the face of the waters. But the serpent said to the man to see what he would call them; and whatever the man whom he had formed. Out of the ground the LORD God called the dry land appear. And it was so. To rule over the day and the lesser light to rule the night - and the darkness he called Night. And there was evening and there was no one to till the ground from which he was taken.
+![image](/uploads/charts.jpg)
