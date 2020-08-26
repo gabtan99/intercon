@@ -1,24 +1,17 @@
 ---
-date: 2019-06-07
-title: Gridsome with Forestry CMS
-author: Nichlas W. Andersen
-excerpt: Get up and running with Forestry CMS, a git-backed headless CMS with a slick editing interface.
-
+date: 2020-08-25
+header_image: '/uploads/charts.jpg'
+title: Look at me and know that I am by your side.
+author_avatar: '/uploads/ravi-pinisetti-nnKq4ZlTU4k-unsplash.jpg'
+author: Sage
+excerpt: My power does not end. Ask for aid and you shall receive it. Stand tall. We are VALORANT, we are fighters!
+content_image: '/uploads/healthy-pandemic-content.jpg'
 ---
-#### Use Forestry as a CMS for Gridsome
 
-[Forestry](https://forestry.io) is a git-based headless CMS that allow editorial teams to work on JAMstack sites.
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'sstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makea type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
 
-It comes with a slick user interface that empower editors to edit CommmonMark, YAML and JSON files.
+## Some of my tips on how to be lorem ipsum
 
-Forestry UI was designed by **Nichlas W. Andersen**.
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'sstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makea type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'sstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makea type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'sstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makea type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
 
-You can import this starter to Forestry and start editing and creating posts or projects right away.
-
-Forestry also comes with instant previews, for you to preview your content before publishing.
-
-When you save content in **Forestry**, it's commited back to your Git repository. If you link your repository to a service like **Netlify** or **Next**, on every push, your site will be deployed over to a CDN network.
-
-Enjoy the best development and user experience! 🚀
-
-![](/uploads/ian-dooley-281897-unsplash.jpg)
+![image](/uploads/yoga-girl.jpg)

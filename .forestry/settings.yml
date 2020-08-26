@@ -1,14 +1,14 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: "/static/admin"
+admin_path: '/static/admin'
 webhook_url:
 sections:
   - type: directory
     path: testimonies
     label: Testimonies
     create: documents
-    match: "**/*.md"
+    match: '**/*.md'
     new_doc_ext: md
     templates:
       - testimony
@@ -16,7 +16,7 @@ sections:
     path: targets
     label: Targets
     create: all
-    match: "**/*.md"
+    match: '**/*.md'
     new_doc_ext: md
     templates:
       - target
@@ -24,7 +24,7 @@ sections:
     path: services
     label: Services
     create: all
-    match: "**/*.md"
+    match: '**/*.md'
     new_doc_ext: md
     templates:
       - services
@@ -32,7 +32,7 @@ sections:
     path: blog
     label: Blog
     create: documents
-    match: "**/*.md"
+    match: '**/*.md'
     templates:
       - blog
   - type: document
@@ -42,14 +42,14 @@ sections:
     path: data/targets_page.json
     label: Targets Page
 upload_dir: uploads
-public_path: "/uploads"
-front_matter_path: ""
+public_path: '/uploads'
+front_matter_path: ''
 use_front_matter_path: false
-file_template: ":filename:"
+file_template: ':filename:'
 build:
   preview_output_directory: dist
   install_dependencies_command: npm install
   preview_docker_image: node:10
-  mount_path: "/srv"
-  working_dir: "/srv"
+  mount_path: '/srv'
+  working_dir: '/srv'
   instant_preview_command: npm run develop
