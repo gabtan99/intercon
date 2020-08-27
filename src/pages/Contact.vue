@@ -3,7 +3,7 @@
     <div class="main">
       <b-container class="container">
         <b-row class="form">
-          <b-col lg="5" class="form-container">
+          <b-col lg="5" class="form-container side-margin">
             <div>
               <div>
                 <h1 class="font-gilroy-bold font-42 blue">Get in touch</h1>
@@ -92,7 +92,7 @@
             </div>
           </b-col>
 
-          <b-col lg="6">
+          <b-col lg="6" class="padded">
             <div class="card-container">
               <div class="card">
                 <ClientOnly>
@@ -215,6 +215,12 @@ export default {
     var(--lightblue-gradient)
   );
 }
+
+.side-margin {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .form-item {
   width: 100%;
 }
