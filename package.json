@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "gridsome build",
+    "test": "jest",
     "develop": "gridsome develop",
     "explore": "gridsome explore",
     "preinstall": "npx npm-force-resolutions"
@@ -20,6 +21,7 @@
     "@gridsome/transformer-json": "^0.2.1",
     "@gridsome/transformer-remark": "^0.5.0",
     "axios": "^0.19.2",
+    "babel-jest": "^26.3.0",
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.12.0",
     "gridsome": "^0.7.13",
@@ -34,12 +36,28 @@
     "vuelayers": "^0.11.23"
   },
   "devDependencies": {
+    "@testing-library/vue": "^5.0.4",
+    "@vue/cli-plugin-unit-jest": "^4.5.4",
+    "@vue/test-utils": "^1.0.4",
+    "jest": "^26.4.2",
     "minimist": "^1.2.5",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",
-    "style-loader": "^1.2.0"
+    "style-loader": "^1.2.0",
+    "vue-jest": "^3.0.6"
   },
   "resolutions": {
     "minimist": "^1.2.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest",
+      ".*\\.(js)$": "babel-jest"
+    }
   }
 }
