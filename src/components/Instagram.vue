@@ -86,7 +86,7 @@ export default {
   display: flex;
   flex-direction: row;
   padding: 2rem;
-  padding-top: 5rem;
+  padding-top: 10rem;
   padding-bottom: 10rem;
   flex-wrap: wrap;
   justify-content: center;
