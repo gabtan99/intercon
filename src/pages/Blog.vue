@@ -96,7 +96,6 @@ export default {
     log: function () {
       console.log(this.$page.blogs.pageInfo)
     },
-    showMore: function () {},
   },
   components: {
     PageHeader,
@@ -145,20 +144,6 @@ export default {
 
 .active {
   color: var(--blue-branding);
-}
-
-.show-more-btn {
-  background-color: transparent;
-  box-shadow: 0 3px 3px 1px var(--gray-2);
-  border: none;
-  color: var(--blue-3);
-  transition: all 0.2s ease-in-out;
-}
-
-.show-more-btn:hover {
-  transform: scale(1.02);
-  box-shadow: 1px 5px 8px 2px var(--gray-2);
-  cursor: pointer;
 }
 
 @media only screen and (max-width: 1000px) {

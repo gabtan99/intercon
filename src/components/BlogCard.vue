@@ -118,8 +118,8 @@ export default {
 @media only screen and (max-width: 1000px) {
   .blog-card {
     position: relative;
-    width: 380px;
-    height: 380px;
+    max-height: 380px;
+    max-width: 380px;
     margin: 20px 0px;
     border: none;
     padding: 0px;
