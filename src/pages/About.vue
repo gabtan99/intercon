@@ -4,23 +4,25 @@
       :page_name="$page.pageConfig.page_name"
       :image="$page.pageConfig.header_image"
     />
-    <b-container fluid class="who-section">
-      <b-row fluid class="who-card">
-        <h1 class="font-gilroy-bold font-36 blue title">
-          {{ $page.pageConfig.about_company_title }}
-        </h1>
+    <div class="blue-gradient">
+      <b-container class="who-section">
+        <b-row class="who-card">
+          <h1 class="font-gilroy-bold font-36 blue title">
+            {{ $page.pageConfig.about_company_title }}
+          </h1>
 
-        <h1 class="font-avenir-light font-18">
-          {{ $page.pageConfig.about_company_description }}
-        </h1>
-      </b-row>
+          <h1 class="font-avenir-light font-18">
+            {{ $page.pageConfig.about_company_description }}
+          </h1>
+        </b-row>
 
-      <b-img
-        class="who-img"
-        :src="$page.pageConfig.about_company_image.src"
-        fluid
-      />
-    </b-container>
+        <b-img
+          class="who-img"
+          :src="$page.pageConfig.about_company_image.src"
+          fluid
+        />
+      </b-container>
+    </div>
 
     <div class="green-gradient">
       <b-container class="values-section">
@@ -180,11 +182,6 @@ export default {
   padding-left: 200px;
   justify-content: center;
   padding-bottom: 40px;
-  background-image: linear-gradient(
-    to top,
-    var(--white),
-    var(--lightblue-gradient)
-  );
   grid-template-rows: repeat(1, 0.1fr);
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   align-items: center;
@@ -214,6 +211,14 @@ export default {
   margin-bottom: 150px;
 }
 
+.blue-gradient {
+  background-image: linear-gradient(
+    to top,
+    var(--white),
+    var(--lightblue-gradient)
+  );
+}
+
 .green-gradient {
   background-image: linear-gradient(
     to bottom,
@@ -236,39 +241,16 @@ export default {
   margin: auto;
   width: 600px;
   background-color: #fff;
-  grid-column: 1 / span 3;
+  grid-column: 2 / span 3;
   grid-row: 1 / span 2;
-  padding-right: 150px;
+  padding-right: 130px;
 }
 
 .who-img {
   max-width: 421px;
   max-height: 421px;
-  grid-column: 3 / span 2;
+  grid-column: 4 / span 2;
   grid-row: 3 / span 1;
-}
-
-@media only screen and (max-width: 1300px) {
-  .who-section {
-    padding: 80px 160px;
-  }
-  .who-card {
-    padding: 40px;
-    box-shadow: 0px 5px 10px #76767629;
-    margin: auto;
-    width: 600px;
-    background-color: #fff;
-    grid-column: 2 / span 3;
-    grid-row: 1 / span 2;
-    padding-right: 130px;
-  }
-
-  .who-img {
-    max-width: 421px;
-    max-height: 421px;
-    grid-column: 4 / span 2;
-    grid-row: 3 / span 1;
-  }
 }
 
 .values-card {
@@ -313,6 +295,25 @@ export default {
   color: var(--blue-branding-light);
 }
 
+@media only screen and (max-width: 1200px) {
+  .who-card {
+    padding: 40px;
+    box-shadow: 0px 5px 10px #76767629;
+    width: 600px;
+    background-color: #fff;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+    padding-right: 130px;
+  }
+
+  .who-img {
+    max-width: 400px;
+    max-height: 400px;
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 1;
+  }
+}
+
 @media only screen and (max-width: 1054px) {
   .founder-section {
     max-height: 250px;
@@ -330,18 +331,25 @@ export default {
   }
 
   .who-section {
-    display: flex;
     padding: 20px;
     padding-top: 80px;
   }
 
   .who-card {
-    padding-right: 40px;
+    padding: 40px;
+    box-shadow: 0px 5px 10px #76767629;
+    width: 600px;
+    background-color: #fff;
+    grid-column: 2 / span 3;
+    grid-row: 1 / span 2;
+    padding-right: 130px;
   }
 
   .who-img {
-    max-width: 321px;
-    max-height: 321px;
+    max-width: 400px;
+    max-height: 400px;
+    grid-column: 4 / span 2;
+    grid-row: 3 / span 1;
   }
 
   .values-img {
@@ -362,9 +370,27 @@ export default {
   }
 }
 
-@media only screen and (max-width: 975px) {
+@media only screen and (max-width: 992px) {
   .founder-section {
     margin-bottom: 250px;
+  }
+
+  .who-section {
+    display: flex;
+  }
+
+  .who-card {
+    padding-right: 40px;
+  }
+
+  .who-card {
+    padding: 40px;
+    box-shadow: 0px 5px 10px #76767629;
+    width: 600px;
+    background-color: #fff;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+    padding-right: 40px;
   }
 
   .who-img {
