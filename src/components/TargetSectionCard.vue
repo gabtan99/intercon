@@ -41,7 +41,7 @@ export default {
 
 .card-style:hover {
   transform: scale(1.05);
-  box-shadow: 1px 5px 8px 2px var(--gray-2);
+  box-shadow: 1px 5px 8px 2px var(--gray-1);
   cursor: pointer;
 }
 
