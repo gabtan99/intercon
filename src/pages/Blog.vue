@@ -31,7 +31,7 @@ query ($page: Int) {
     header_image
     description_title
   },
-	blogs: allBlogPost (perPage: 4, page: $page) @paginate {
+	blogs: allBlogPost (perPage: 6, page: $page) @paginate {
     pageInfo {
       totalPages,
       currentPage,

@@ -139,10 +139,11 @@ export default {
 
 .cards-container {
   display: flex;
+  flex-grow: 1;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  width: 70%;
+  max-width: 65%;
   padding: 30px;
 }
 
