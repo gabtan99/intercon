@@ -275,7 +275,7 @@ export default {
   padding: 40px 20px;
   box-shadow: 0px 5px 10px #76767629;
   margin: auto;
-  width: 80%;
+  width: 88%;
   background-color: #fff;
   margin-top: 60px;
 }
@@ -323,11 +323,12 @@ export default {
     padding: 5px;
     justify-content: center;
     padding-bottom: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 140px;
   }
 
   .founder-card {
     width: 95%;
+    margin-top: 130px;
   }
 
   .who-section {
@@ -402,18 +403,29 @@ export default {
   }
 }
 
-@media only screen and (max-width: 600px) {
+/* TABLETS SUCH AS IPAD */
+@media only screen and (max-width: 800px) { 
   .founder-section {
     margin-bottom: 250px;
   }
+  .founder-card {
+    width: 90%;
+    margin-top: 80px;
+  }
 }
 
+/* PHONES SUCH AS IPHONE 6/X */
 @media only screen and (max-width: 500px) {
   .founder-section {
-    margin-bottom: 250px;
+    margin-bottom: 380px;
+  }
+  .who-img {
+    max-width: 300px;
+    max-height: 300px;
   }
 }
 
+/* PHONES SUCH AS IPHONE 5/SE */
 @media only screen and (max-width: 320px) {
   .founder-section {
     margin-bottom: 125%;
