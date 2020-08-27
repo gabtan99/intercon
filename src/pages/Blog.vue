@@ -5,22 +5,21 @@
       :image="$page.pageConfig.header_image"
     />
 
-      <div class="main-container">
-        <div class="blog-cards-container">
-          <BlogCard
-            v-for="item in $page.blogs.edges"
-            :key="item.node.id"
-            :blog="item.node"
-          />
-        </div>
-      </div>
-      <div class="show-more-div">
-        <Pager
-          :info="$page.blogs.pageInfo"
-          class="font-gilroy-medium font-18"
-          linkClass="pager-style"
+    <div class="main-container">
+      <div class="blog-cards-container">
+        <BlogCard
+          v-for="item in $page.blogs.edges"
+          :key="item.node.id"
+          :blog="item.node"
         />
       </div>
+    </div>
+    <div class="show-more-div">
+      <Pager
+        :info="$page.blogs.pageInfo"
+        class="font-gilroy-medium font-18"
+        linkClass="pager-style"
+      />
     </div>
   </Layout>
 </template>
