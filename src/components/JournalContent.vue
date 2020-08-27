@@ -38,7 +38,7 @@ img[alt='image'] {
 
 .content p {
   line-height: 1.8;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin: 2rem 0rem;
 }
 h2 {
