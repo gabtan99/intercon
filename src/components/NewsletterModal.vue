@@ -150,7 +150,6 @@ export default {
     },
   },
   mounted() {
-    this.scroll();
     localStorage.modalShown = false;
     if (localStorage.isFirstVisit === "true") {
       setTimeout(() => {
