@@ -28,7 +28,7 @@
               {{ service.title }}
             </span>
           </div>
-          <h2 class="mt-4 font-26" id="service-introduction">
+          <h2 class="mt-4 font-26 title" id="service-introduction">
             What is {{ service.title }}?
           </h2>
           <b-img-lazy
@@ -311,6 +311,10 @@ export default {
 </script>
 
 <style scoped>
+.title {
+  margin: 30px 0px;
+}
+
 .service-header {
   width: 100%;
   max-height: 500px;
@@ -334,7 +338,7 @@ export default {
   grid-template-columns: minmax(0, 1fr) 300px;
   grid-gap: 30px;
   grid-template-areas: "article aside";
-  margin-top: 7rem;
+  margin-top: 5rem;
 }
 
 @media only screen and (max-width: 992px) {
@@ -443,11 +447,10 @@ figcaption {
 }
 
 hr {
-  border: 1px solid var(--green-branding);
+  border: 1px solid;
 }
 
 a {
   display: block;
-  color: var(--green-branding-light);
 }
 </style>
