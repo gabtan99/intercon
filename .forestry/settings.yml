@@ -1,65 +1,55 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: "/static/admin"
-webhook_url: 
+admin_path: '/static/admin'
+webhook_url:
 sections:
-- type: document
-  path: data/targets_page.json
-  label: Target Page
-- type: directory
-  path: testimonies
-  label: Testimonies
-  create: documents
-  match: "**/*.md"
-  new_doc_ext: md
-  templates:
-  - testimony
-- type: document
-  path: data/home_page.json
-  label: Home Page
-- type: directory
-  path: targets
-  label: Targets
-  create: all
-  match: "**/*.md"
-  new_doc_ext: md
-  templates:
-  - target
-- type: directory
-  path: services
-  label: Services
-  create: all
-  match: "**/*.md"
-  new_doc_ext: md
-  templates:
-  - services
-- type: directory
-  path: projects
-  label: Projects
-  create: documents
-  match: "**/*.md"
-  templates:
-  - project
-- type: directory
-  path: journal
-  label: Journal
-  create: documents
-  match: "**/*.md"
-  templates:
-  - journal
-- type: document
-  path: data/theme.json
-  label: Theme config
+  - type: directory
+    path: testimonies
+    label: Testimonies
+    create: documents
+    match: '**/*.md'
+    new_doc_ext: md
+    templates:
+      - testimony
+  - type: directory
+    path: targets
+    label: Targets
+    create: all
+    match: '**/*.md'
+    new_doc_ext: md
+    templates:
+      - target
+  - type: directory
+    path: services
+    label: Services
+    create: all
+    match: '**/*.md'
+    new_doc_ext: md
+    templates:
+      - services
+  - type: directory
+    path: blog
+    label: Blog
+    create: documents
+    match: '**/*.md'
+    templates:
+      - blog
+  - type: document
+    path: data/theme.json
+    label: Theme config
+  - type: document
+    path: data/targets_page.json
+    label: Targets Page
 upload_dir: uploads
-public_path: "/uploads"
+public_path: '/uploads'
 front_matter_path: ''
 use_front_matter_path: false
-file_template: ":filename:"
+file_template: ':filename:'
 build:
   preview_output_directory: dist
   install_dependencies_command: npm install
   preview_docker_image: node:10
-  mount_path: "/srv"
-  working_dir: "/srv"
+  mount_path: '/srv'
+  working_dir: '/srv'
   instant_preview_command: npm run develop

@@ -1,46 +1,106 @@
 <template>
-    <div class="hero">
-        <h1 class="hero-title" v-html="settings.hero_title" />
-        <h2 class="hero-subtitle" v-html="settings.hero_subtitle" />
+  <div class="main">
+    <div class="col-lg-6">
+      <h1 class="hero-title font-gilroy-bold font-42">
+        {{ settings.hero_title }}
+      </h1>
+
+      <h1 class="hero-subtitle font-avenir-light font-24">
+        {{ settings.hero_subtitle }}
+      </h1>
+
+      <div class="hero-buttons">
+        <GreenButton :onClick="learnMore">
+          Learn More
+        </GreenButton>
+
+        <WhiteButton :onClick="watchVideo">
+          Watch <font-awesome :icon="['fab', 'youtube']" class="social" />
+        </WhiteButton>
+      </div>
     </div>
+
+    <div class="col-lg-6 image">
+      <b-img :src="require('../assets/img/hero-img.png')" fluid />
+    </div>
+
+    <youtube-modal
+      :showModal="showModal"
+      :hideModal="closeVideo"
+      :youtubeLink="settings.youtube_link"
+      :youtubeHandle="settings.youtube_handle"
+    />
+  </div>
 </template>
 
 <script>
+import GreenButton from "@/components/GreenButton";
+import WhiteButton from "@/components/WhiteButton";
+import Waves from "@/components/Waves";
+import YoutubeModal from "@/components/YoutubeModal";
+
 export default {
+  components: {
+    GreenButton,
+    WhiteButton,
+    Waves,
+    YoutubeModal,
+  },
   data() {
     return {
-      settings: require("../../data/theme.json")
-    }
-  }
-}
+      settings: require("../../data/theme.json"),
+      showModal: false,
+    };
+  },
+  methods: {
+    watchVideo() {
+      this.showModal = true;
+    },
+    closeVideo() {
+      this.showModal = false;
+    },
+    learnMore() {
+      this.$router.push("/about");
+    },
+  },
+};
 </script>
 
-<style>
-.hero {
-    text-align: center;
-    width: 480px;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 4rem 0 8rem 0;
+<style scoped>
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10% 1rem;
 }
 
 .hero-title {
-    font-size: 3rem;
-    font-weight: 700;
-    padding: 0;
-    margin: 0 0 2rem 0;
+  color: var(--blue-branding-dark);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
-.hero-title p,
-.hero-subtitle p {
-    margin: 0;
-    padding: 0;
-}
+
 .hero-subtitle {
-    font-size: 1.15em;
-    font-weight: 400;
-    line-height: 1.68;
-    padding: 0;
-    margin: 0;
-    opacity: 0.6;
+  margin-bottom: 4rem;
+}
+
+.hero-image {
+  margin-top: -4rem;
+}
+
+.hero-buttons {
+  margin-bottom: 1rem;
+}
+
+.white-button {
+  margin-left: 2rem;
+  /* margin-top: 2rem; */
+}
+
+@media only screen and (max-width: 1000px) {
+  .image {
+    display: none;
+  }
 }
 </style>

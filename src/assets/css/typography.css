@@ -1,0 +1,224 @@
+/**
+ * --------------------
+ * $TYPOGRAPHY
+ * --------------------
+ */
+
+/* Font Sizes */
+html {
+  font-size: 62.5% /* 10px */
+}
+
+.font-48 {
+  font-size: 4.8rem;
+}
+
+.font-42 {
+  font-size: 4.2rem;
+}
+
+.font-36 {
+  font-size: 3.6rem;
+}
+
+.font-26 {
+  font-size: 2.6rem;
+}
+
+.font-24 {
+  font-size: 2.4rem;
+}
+
+.font-21 {
+  font-size: 2.1rem;
+}
+
+.font-18 {
+  font-size: 1.8rem;
+}
+
+.font-16 {
+  font-size: 1.6rem;
+}
+
+/* Font Styles */
+
+@font-face {
+  font-family: Gilroy-Regular;
+  src: url(../fonts/Gilroy-Regular.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Gilroy-Light;
+  src: url(../fonts/Gilroy-Light.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Gilroy-Medium;
+  src: url(../fonts/Gilroy-Medium.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Gilroy-Heavy;
+  src: url(../fonts/Gilroy-Heavy.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url(../fonts/Gilroy-Bold.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Gilroy-ExtraBold;
+  src: url(../fonts/Gilroy-ExtraBold.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Avenir-Black;
+  src: url(../fonts/Avenir-Black.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Avenir-BlackOblique;
+  src: url(../fonts/Avenir-BlackOblique.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Avenir-Book;
+  src: url(../fonts/Avenir-Book.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Avenir-BookOblique;
+  src: url(../fonts/Avenir-BookOblique.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Avenir-Heavy;
+  src: url(../fonts/Avenir-Heavy.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Avenir-HeavyOblique;
+  src: url(../fonts/Avenir-HeavyOblique.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Avenir-Light;
+  src: url(../fonts/Avenir-Light.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Avenir-LightOblique;
+  src: url(../fonts/Avenir-LightOblique.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Avenir-Medium;
+  src: url(../fonts/Avenir-Medium.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Avenir-MediumOblique;
+  src: url(../fonts/Avenir-MediumOblique.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Avenir-Oblique;
+  src: url(../fonts/Avenir-Oblique.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Avenir-Roman;
+  src: url(../fonts/Avenir-Roman.otf);
+  font-display: swap;
+}
+
+.font-gilroy-regular{
+  font-family: Gilroy-Regular;
+}
+
+.font-gilroy-light{
+  font-family: Gilroy-Light;
+}
+
+.font-gilroy-medium{
+  font-family: Gilroy-Medium;
+}
+
+.font-gilroy-heavy{
+  font-family: Gilroy-Heavy;
+}
+
+.font-gilroy-bold{
+  font-family: Gilroy-Bold;
+}
+
+.font-gilroy-extra-bold{
+  font-family: Gilroy-ExtraBold;
+}
+
+.font-avenir-black{
+  font-family: Avenir-Black;
+}
+
+.font-avenir-black-oblique{
+  font-family: Avenir-BlackOblique;
+}
+
+.font-avenir-book{
+  font-family: Avenir-Book;
+}
+
+.font-avenir-book-oblique{
+  font-family: Avenir-BookOblique;
+}
+
+.font-avenir-heavy{
+  font-family: Avenir-Heavy;
+}
+
+.font-avenir-heavy-oblique{
+  font-family: Avenir-HeavyOblique;
+}
+
+.font-avenir-light{
+  font-family: Avenir-Light;
+}
+
+.font-avenir-light-oblique{
+  font-family: Avenir-LightOblique;
+}
+
+.font-avenir-medium{
+  font-family: Avenir-Medium;
+}
+
+.font-avenir-medium-oblique{
+  font-family: Avenir-MediumOblique;
+}
+
+.font-avenir-oblique{
+  font-family: Avenir-Oblique;
+}
+
+.font-avenir-roman{
+  font-family: Avenir-Roman;
+}

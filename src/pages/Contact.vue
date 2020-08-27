@@ -1,99 +1,335 @@
 <template>
   <Layout>
-    <div class="container">
+    <div class="main">
+      <b-container class="container">
+        <b-row class="form">
+          <b-col lg="5" class="form-container">
+            <div>
+              <div>
+                <h1 class="font-gilroy-bold font-42 blue">Get in touch</h1>
+                <p class="font-avenir-light font-18 blue">
+                  We're here to help and answer any questions you might have.
+                  Looking forward to hearing from you!
+                </p>
+              </div>
 
-      <div class="contact-header">
-        <h1 class="contact-title">Say hi!</h1>
-        <p>Leave me a note with any questions you might have, I'll get back to you as soon as possible.</p>
-      </div>
+              <form
+                action="https://formspree.io/xzbjjppn"
+                method="POST"
+                ref="contactform"
+                class="contact-form"
+                name="contact"
+                autocomplete="off"
+              >
+                <div class="sender-info">
+                  <div class="form-item">
+                    <label
+                      for="name"
+                      class="font-gilroy-medium font-16 blue required"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      class="font-gilroy-regular font-16 required"
+                      name="name"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="form-item">
+                    <label
+                      for="email"
+                      class="font-gilroy-medium font-16 blue required"
+                      >Email Address</label
+                    >
+                    <input
+                      type="_replyto"
+                      class="font-gilroy-regular font-16 required"
+                      name="email"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="form-item">
+                    <label
+                      for="subject"
+                      class="font-gilroy-medium font-16 blue required"
+                      >Subject</label
+                    >
+                    <select
+                      id="subject"
+                      name="subject"
+                      class="options font-gilroy-regular font-16 blue"
+                    >
+                      <option disabled selected value style="display:none;">
+                        ( Select a subject )
+                      </option>
+                      <option value="Inquiry">Inquiry</option>
+                      <option value="Appointment">Appointment</option>
+                      <option value="Customer Service">Customer Service</option>
+                      <option value="Others">Others</option>
+                    </select>
+                  </div>
+                  <div class="form-item">
+                    <label
+                      for="message"
+                      class="font-gilroy-medium font-16 blue required"
+                      >Message</label
+                    >
+                    <textarea
+                      name="message"
+                      class="font-gilroy-regular font-16 blue required"
+                    ></textarea>
+                  </div>
+                </div>
 
-      <form class="contact-form" name="contact">
+                <GreenButton class="submitBtn" :onClick="submitForm">
+                  Submit
+                  <font-awesome
+                    :icon="['fas', 'paper-plane']"
+                    class="plane-icon"
+                  />
+                </GreenButton>
+              </form>
+            </div>
+          </b-col>
 
-        <div class="sender-info">
-          <div>
-            <label for="name" class="label">Your name</label>
-            <input type="text" name="name" />
-          </div>
-          <div>
-            <label for="email" class="label">Your email</label>
-            <input type="email" name="email" />
-          </div>
-        </div>
+          <b-col lg="6">
+            <div class="card-container">
+              <div class="card">
+                <ClientOnly>
+                  <div class="map">
+                    <Map />
+                  </div>
+                </ClientOnly>
+                <div class="card-details">
+                  <b-row>
+                    <div class="col-sm-7 visit-us">
+                      <h2 class="font-gilroy-bold font-18 blue">Visit Us</h2>
+                      <span class="contact-info">
+                        <p class="font-avenir-light font-16 blue">
+                          210B Del Monte Ave, La Loma, Quezon City, 1114 Metro
+                          Manila
+                        </p>
+                        <br />
+                        <p class="font-avenir-light font-16 blue">
+                          8AM - 8PM
+                        </p>
+                      </span>
+                    </div>
 
-        <div class="message">
-          <label for="message" class="label">Message</label>
-          <textarea name="message"></textarea>
-        </div>
-
-        <button class="button">Submit form</button>
-
-      </form>
-
+                    <div class="col-sm-5">
+                      <h2 class="font-gilroy-bold font-18 blue">
+                        Get Social
+                      </h2>
+                      <span class="contact-info">
+                        <a
+                          href="https://www.facebook.com/interconregenerative/"
+                        >
+                          <font-awesome
+                            :icon="['fab', 'facebook-square']"
+                            class="social"
+                        /></a>
+                        <a
+                          href="https://www.instagram.com/interconregenerative/"
+                        >
+                          <font-awesome
+                            :icon="['fab', 'instagram']"
+                            class="social"
+                          />
+                        </a>
+                        <a
+                          href="mailto:info@interconregenerative.com"
+                          target="_top"
+                        >
+                          <font-awesome :icon="'envelope'" class="social" />
+                        </a>
+                      </span>
+                    </div>
+                  </b-row>
+                </div>
+              </div>
+            </div>
+          </b-col>
+        </b-row>
+      </b-container>
     </div>
   </Layout>
 </template>
 
 <script>
-export default {}
+import GreenButton from "@/components/GreenButton";
+import Map from "@/components/Map";
+
+export default {
+  components: {
+    GreenButton,
+    Map,
+  },
+  data() {
+    return {};
+  },
+  methods: {
+    submitForm() {
+      this.$refs.contactform.submit();
+    },
+  },
+  metaInfo() {
+    return {
+      title: `Contact Us - Intercon Regenerative Center`,
+      meta: [
+        {
+          key: "description",
+          name: "description",
+          content: `At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. `,
+        },
+        {
+          key: "og:title",
+          name: "og:title",
+          content: `Contact Us - Intercon Regenerative Center`,
+        },
+        {
+          key: "og:site_name",
+          name: "og:site_name",
+          content: "Intercon Regenerative Center",
+        },
+        {
+          key: "og:image",
+          name: "og:image",
+          content: require("@/assets/img/meta.jpg"),
+        },
+        {
+          name: "og:description",
+          name: "og:description",
+          content: `At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. `,
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style scoped>
-.contact-header {
-  padding: 2rem 0 4rem 0;
+.main {
+  background-image: linear-gradient(
+    to bottom,
+    var(--white),
+    var(--lightblue-gradient)
+  );
 }
-.contact-title {
-  font-size: 4rem;
-  margin: 0 0 4rem 0;
-  padding: 0;
+.form-item {
+  width: 100%;
 }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px;
+}
+
+.card {
+  width: 100%;
+
+  box-shadow: 0 4px 4px 0 rgba(155, 155, 155, 0.2);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 0px;
+  margin: 5% 0px;
+}
+
+.card-details {
+  padding: 35px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(155, 155, 155, 0.2);
+}
+
+label {
+  font-weight: 0;
+}
+
+label.required::after {
+  content: "*";
+  margin-left: 4px;
+  color: red;
+}
+
 .sender-info {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
 }
+
 .sender-info > div {
   flex: 1;
   margin-right: 4rem;
 }
+
 .sender-info > div:last-of-type {
   margin: 0;
 }
-input:focus,textarea:focus {
-  border-color: var(--color-contrast-1);
+
+input:focus,
+textarea:focus {
+  border-color: #006838;
 }
-input,textarea {
-  background: transparent;
-  border: 1px solid var(--color-base-1);
+
+input,
+textarea,
+select {
+  border: 1px solid var(--gray-2);
   outline: none;
   border-radius: 0.3rem;
   padding: 0.8rem 1rem;
   color: inherit;
-  font-size: 1rem;
   width: 100%;
+  margin-bottom: 1.5rem;
+  background-color: var(--white);
 }
+
 textarea {
   resize: none;
   height: 140px;
 }
-.button {
-  color: var(--color-base);
-  background: var(--color-contrast);
-  outline: none;
-  border: 0;
-  font-size: 0.8rem;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.3rem;
-  margin-top: 2rem;
-  cursor: pointer;
-  transition: opacity 0.25s ease;
-  font-size: 500;
-  letter-spacing: 0.035em;
+
+.icon {
+  margin-right: 20px;
+  font-size: 18px;
 }
-.button:hover {
-  opacity: 0.6;
+
+.social {
+  margin: 2px;
+  margin-right: 10px;
+  color: var(--gray-3);
+  font-size: 24px;
 }
-.button:focus {
-  border: 1px solid var(--color-base-1);
+
+.social:hover {
+  color: var(--gray-5);
+}
+
+.blue {
+  color: var(--blue-branding-dark);
+}
+
+.submitBtn {
+  float: right;
+}
+
+.plane-icon {
+  margin-left: 10px;
+}
+
+.form {
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 85px;
+  justify-content: center;
+}
+
+.form-container {
+  padding-bottom: 40px;
 }
 </style>
-
