@@ -23,7 +23,7 @@
     </b-container>
 
     <div class="green-gradient">
-      <b-container fluid class="values-section">
+      <b-container class="values-section">
         <b-img
           class="values-img"
           :src="$page.pageConfig.values_image.src"
@@ -311,17 +311,6 @@ export default {
 
 .light-blue {
   color: var(--blue-branding-light);
-}
-
-@media only screen and (min-width: 1920px) {
-  .values-img {
-    grid-column: 1 / span 3;
-    margin: auto;
-  }
-
-  .values-card {
-    grid-column: 2 / span 5;
-  }
 }
 
 @media only screen and (max-width: 1054px) {
