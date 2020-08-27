@@ -5,13 +5,14 @@
       :image="$page.pageConfig.header_image"
     />
 
-    <div class="main-container">
-      <div class="blog-cards-container">
-        <BlogCard
-          v-for="item in $page.blogs.edges"
-          :key="item.node.id"
-          :blog="item.node"
-        />
+      <div class="main-container">
+        <div class="blog-cards-container">
+          <BlogCard
+            v-for="item in $page.blogs.edges"
+            :key="item.node.id"
+            :blog="item.node"
+          />
+        </div>
       </div>
       <div class="show-more-div">
         <Pager
@@ -109,6 +110,7 @@ export default {
 .main-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
@@ -116,8 +118,9 @@ export default {
 .blog-cards-container {
   display: flex;
   flex-wrap: wrap;
-  padding: 1.75%;
   flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 40px;
   max-width: 70%;
 }
 
@@ -125,7 +128,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 0 30px 0;
+  padding-bottom: 30px;
 }
 
 .pager-style {

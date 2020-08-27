@@ -50,10 +50,9 @@ export default {
   position: relative;
   width: 380px;
   height: 380px;
-  margin: 20px;
   border: none;
   padding: 0px;
-  justify-content: center;
+  margin: 20px 0;
   box-shadow: 0 3px 3px 1px var(--gray-1);
   transition: all 0.2s ease-in-out;
 }
