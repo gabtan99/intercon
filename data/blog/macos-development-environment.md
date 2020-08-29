@@ -4,9 +4,9 @@ header_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598717457/uplo
 title: Get up and move! 10 home workouts to follow to get that strength and mobility.
 author_avatar: "/uploads/cody-davis-253925-unsplash.jpg"
 author: Omen Dark
-excerpt: If I must live in this nightmare my enemies might as well join me. Make the
-  right choice even if it calls for sacrifice. Who will they cry for? Once they know
-  they're going to die.
+excerpt: I spend a lot of time walking around in the woods and talking to trees, and
+  squirrels, and little rabbits and stuff. We'll throw some old gray clouds in here
+  just sneaking around and having fun.
 content_image: "/uploads/healthy-pandemic-content.jpg"
 
 ---
