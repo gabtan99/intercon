@@ -1,4 +1,14 @@
 ---
 label: FAQ
 hide_body: true
-fields: []
+fields:
+- name: question
+  type: text
+  config:
+    required: false
+  label: Question
+- name: answer
+  type: text
+  config:
+    required: false
+  label: Answer
