@@ -2,20 +2,37 @@
 label: Target
 hide_body: true
 fields:
-  - name: target_name
+- name: target_name
+  type: text
+  config:
+    required: false
+  description: title of the target
+  label: Target Name
+  hidden: false
+- name: background_color
+  type: color
+  config:
+    required: false
+    color_format: Hex
+  label: Background Color
+- name: target_description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Target Description
+- name: target_services
+  type: field_group_list
+  fields:
+  - name: service_name
     type: text
     config:
       required: false
-    description: title of the target
-    label: Target Name
-    hidden: false
-  - name: background_color
-    type: color
-    config:
-      required: false
-      color_format: Hex
-    label: Background Color
-  - name: target_description
+    label: Service Name
+  - name: service_description
     type: textarea
     default: ''
     config:
@@ -23,39 +40,19 @@ fields:
       wysiwyg: false
       schema:
         format: markdown
-    label: Target Description
-  - name: target_services
-    type: field_group_list
-    fields:
-      - name: service_name
-        type: text
-        config:
-          required: false
-        label: Service Name
-      - name: service_description
-        type: textarea
-        default: ''
-        config:
-          required: false
-          wysiwyg: false
-          schema:
-            format: markdown
-        label: Service Description
-      - name: service_url
-        type: text
-        config:
-          required: false
-        label: Service URL
-      - name: service_image
-        type: file
-        config:
-          maxSize: 250
-        label: Service Image
+    label: Service Description
+  - name: service_url
+    type: text
     config:
-      min:
-      max:
-      labelField:
-    label: Target Services
-pages:
-  - targets/skin_care.md
-  - targets/detoxification.md
+      required: false
+    label: Service URL
+  - name: service_image
+    type: file
+    config:
+      maxSize: 250
+    label: Service Image
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Target Services
