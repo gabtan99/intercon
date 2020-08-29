@@ -8,6 +8,10 @@ sections:
   label: Home
 - type: heading
   label: Services
+- type: document
+  path: data/services_page.json
+  label: All Services Page
+  match: "**/*"
 - type: heading
   label: Targets
 - type: heading
