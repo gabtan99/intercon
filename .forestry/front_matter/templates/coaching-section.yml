@@ -4,16 +4,16 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
 - type: text
   name: short_description
-  label: short_description
+  label: Short Description
 - type: text
   name: facebook_page_url
-  label: facebook_page_url
+  label: Facebook Page URL
 - type: textarea
   name: email
-  label: email
+  label: Email
 - type: file
   name: thumbnail_image
-  label: thumbnail_image
+  label: Thumbnail Image
