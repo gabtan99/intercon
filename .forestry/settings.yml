@@ -30,6 +30,10 @@ sections:
   new_doc_ext: md
   templates:
   - services
+- type: document
+  path: data/coaching_section.md
+  label: Functional Coaching
+  match: "**/*"
 - type: heading
   label: Targets
 - type: document
