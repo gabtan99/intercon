@@ -20,8 +20,7 @@
 
       <div class="status-div">
         <div class="author-div">
-          <b-avatar :src="blog.author_avatar.src" size="2rem"></b-avatar>
-          <span class="author-text">{{ blog.author }}</span>
+          <span class="author-text">by {{ blog.author }}</span>
         </div>
         <div class="date-div">
           {{ blog.date | moment("LL") }}
@@ -81,7 +80,7 @@ export default {
 .ellipsis-title {
   color: var(--blue-branding);
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -115,7 +114,6 @@ export default {
 
 .author-text {
   padding: 2px;
-  margin: 0px 0px 0px 8px;
 }
 
 @media only screen and (max-width: 1000px) {

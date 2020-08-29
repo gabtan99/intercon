@@ -324,6 +324,7 @@ export default {
   width: 100%;
   height: 500px;
   object-fit: cover;
+  filter: opacity(50%);
 }
 
 .service-header__title {

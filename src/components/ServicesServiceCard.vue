@@ -102,6 +102,7 @@ export default {
 }
 
 .service-card__title {
+  margin-top: 10px;
   color: var(--black-text);
 }
 
@@ -110,7 +111,7 @@ export default {
 }
 
 .service-card__content {
-  padding: 20px 0px;
+  padding: 10px 0px;
 }
 
 @media only screen and (max-width: 576px) {

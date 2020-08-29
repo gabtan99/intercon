@@ -4,17 +4,12 @@
       <div class="journal-header">
         <img class="header-images" :src="$page.post.header_image.src" />
         <h4 class="date-style font-gilroy-light font-16">
-          {{ $page.post.date | moment('LL') }}
+          {{ $page.post.date | moment("LL") }}
         </h4>
         <h2 v-html="$page.post.title" class="journal-title font-gilroy-bold" />
         <div class="author-div font-gilroy-regular font-16">
           by
-          <b-avatar
-            :src="$page.post.author_avatar.src"
-            variant="info"
-            size="5rem"
-            class="avatar-style"
-          ></b-avatar>
+
           {{ $page.post.author }}
         </div>
       </div>
@@ -28,7 +23,6 @@ query BlogPost ($path: String!) {
   post: blogPost (path: $path) {
     header_image
     title
-    author_avatar
     author
     date (format: "D. MMMM YYYY")
     timeToRead
@@ -39,12 +33,12 @@ query BlogPost ($path: String!) {
 </page-query>
 
 <script>
-import JournalContent from '@/components/JournalContent'
-import moment from 'vue-moment'
+import JournalContent from "@/components/JournalContent";
+import moment from "vue-moment";
 export default {
   methods: {
-    log: function () {
-      console.log(this.$page.post)
+    log: function() {
+      console.log(this.$page.post);
     },
   },
   components: {
@@ -53,9 +47,9 @@ export default {
   metaInfo() {
     return {
       title: this.$page.post.title,
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped>
