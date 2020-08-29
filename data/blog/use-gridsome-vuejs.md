@@ -4,8 +4,9 @@ header_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598716502/uplo
 title: You are what you eat, eat healthy and stay healthy!
 author_avatar: "/uploads/mike-dorner-173502-unsplash.jpg"
 author: Raze Kjellberg
-excerpt: Surrounded by Mi Familia, we won't lose! Lorem Ipsum is simply dummy text
-  of the printing and typesetting industry.
+excerpt: I spend a lot of time walking around in the woods and talking to trees, and
+  squirrels, and little rabbits and stuff. It's a very cold picture, I may have to
+  go get my coat. It’s about to freeze me to death.
 content_image: "/uploads/healthy-pandemic-content.jpg"
 
 ---
