@@ -4,10 +4,7 @@ hide_body: true
 fields:
 - type: text
   name: page_name
-  label: page_name
+  label: Page Title
 - type: file
   name: header_image
-  label: header_image
-- type: text
-  name: description_title
-  label: description_title
+  label: Header Image
