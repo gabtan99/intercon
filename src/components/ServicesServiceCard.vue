@@ -1,6 +1,5 @@
 <template>
   <b-row
-    align-v="center"
     class="mx-4 mb-5 service-card-block"
     no-gutters
     v-on:click="goToService(service.node.path)"
@@ -112,6 +111,14 @@ export default {
 @media only screen and (max-width: 576px) {
   .service-card__conditions-block {
     margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .service-card__thumbnail {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
