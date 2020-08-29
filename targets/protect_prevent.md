@@ -1,13 +1,13 @@
 ---
-target_name: Male Issues
+target_name: Protect and Prevent
 target_description:
-  We will help you solve your male issues. In this world, everything can be happy. This is where you take
+  Athletes need to take care of their bodies. In this world, everything can be happy. This is where you take
   out all your hostilities and frustrations. It's better than kicking the puppy dog
   around and all that so. With practice comes confidence. Everything is happy if you
   choose to make it that way. Don't fight it, use what happens. God gave you this
   gift of imagination. Use it.
-background_color: '#C0E1E8'
-target_icon: '/uploads/male.png'
+background_color: '#E2D8B9'
+target_icon: '/uploads/athleticism.png'
 target_services:
   - service_name: Infrared Sauna
     service_description:

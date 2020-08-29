@@ -43,7 +43,7 @@ query ($page: Int){
     description_title
     page_description
   },
-	targets: allTargets (perPage: 4, page: $page) @paginate {
+	targets: allTargets (perPage: 7, page: $page) @paginate {
     pageInfo {
       totalPages,
       currentPage 
@@ -157,7 +157,7 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  max-width: 65%;
+  max-width: 80%;
   padding: 30px;
 }
 
@@ -196,21 +196,21 @@ export default {
 
 @media only screen and (max-width: 1000px) {
   .main-container {
-    column-count: 1;
-    column-gap: 1em;
-    margin: 0 auto;
-    padding: 30px 0px 50px;
+    /* column-count: 1; */
+    /* column-gap: 1em; */
+    /* margin: 0 auto; */
+    padding: 20px 0px 30px;
     width: 100%;
   }
 
   .header-text {
     display: block;
-    text-align: left;
-    width: 70%;
+    text-align: center;
+    width: 90%;
   }
 
   .cards-container {
-    width: 80%;
+    max-width: 95%;
     padding: 0px;
   }
 }

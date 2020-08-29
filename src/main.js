@@ -3,6 +3,7 @@ import settings from '../data/theme.json'
 import BootstrapVue from 'bootstrap-vue'
 import VueYoutube from 'vue-youtube'
 import VueMoment from 'vue-moment'
+import VueMasonry from 'vue-masonry-css'
 
 //import VueLayers from 'vuelayers'
 
@@ -65,6 +66,7 @@ export default function (Vue, { head }) {
   Vue.use(BootstrapVue)
   Vue.use(VueYoutube)
   Vue.use(VueMoment)
+  Vue.use(VueMasonry)
   //Vue.use(VueLayers);
   Vue.component('Layout', DefaultLayout)
   Vue.component('font-awesome', FontAwesomeIcon)
