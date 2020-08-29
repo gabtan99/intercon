@@ -107,3 +107,5 @@ fields:
     schema:
       format: markdown
   label: Founder Description
+pages:
+- data/about_page.json
