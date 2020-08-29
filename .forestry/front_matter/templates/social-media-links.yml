@@ -1,4 +1,24 @@
 ---
 label: Social Media Links
 hide_body: true
-fields: []
+fields:
+- name: email
+  type: text
+  config:
+    required: false
+  label: Email
+- name: facebook_url
+  type: text
+  config:
+    required: false
+  label: Facebook URL
+- name: instagram_url
+  type: text
+  config:
+    required: false
+  label: Instagram URL
+- name: youtube_channel_url
+  type: text
+  config:
+    required: false
+  label: YouTube Channel URL
