@@ -16,7 +16,7 @@ fields:
   type: text
   config:
     required: false
-  label: Description Title
+  label: Page Description Title
 - name: page_description
   type: textarea
   default: ''

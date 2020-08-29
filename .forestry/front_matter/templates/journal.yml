@@ -12,11 +12,6 @@ fields:
   label: Title
   config:
     required: true
-- name: author_avatar
-  type: file
-  config:
-    maxSize: 64
-  label: Author Avatar
 - name: author
   type: text
   config:
