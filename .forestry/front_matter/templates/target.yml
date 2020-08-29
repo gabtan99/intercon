@@ -23,6 +23,8 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
+    min: 
+    max: 120
   label: Target Description
 - name: target_services
   type: field_group_list
