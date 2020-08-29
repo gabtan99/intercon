@@ -7,11 +7,12 @@
           {{ $page.post.date | moment('LL') }}
         </h4>
         <h2 v-html="$page.post.title" class="journal-title font-gilroy-bold" />
-        <div class="author-div font-gilroy-regular">
+        <div class="author-div font-gilroy-regular font-16">
           by
           <b-avatar
             :src="$page.post.author_avatar.src"
-            size="3rem"
+            variant="info"
+            size="5rem"
             class="avatar-style"
           ></b-avatar>
           {{ $page.post.author }}
@@ -86,16 +87,9 @@ export default {
   margin: 2rem 0 0 0;
 }
 
-/* .breadcrumb {
-  margin: 0;
-  background: transparent;
-  justify-content: center;
-  padding: 1rem 0;
-  font-size: 1.4rem;
-} */
-
 .avatar-style {
   margin: 0px 5px;
+  object-fit: cover;
 }
 
 .journal-meta {

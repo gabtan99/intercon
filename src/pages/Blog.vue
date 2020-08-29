@@ -13,13 +13,13 @@
           :blog="item.node"
         />
       </div>
-      <div class="show-more-div">
-        <Pager
-          :info="$page.blogs.pageInfo"
-          class="font-gilroy-medium font-18"
-          linkClass="pager-style"
-        />
-      </div>
+    </div>
+    <div class="show-more-div">
+      <Pager
+        :info="$page.blogs.pageInfo"
+        class="font-gilroy-medium font-18"
+        linkClass="pager-style"
+      />
     </div>
   </Layout>
 </template>
@@ -31,7 +31,7 @@ query ($page: Int) {
     header_image
     description_title
   },
-	blogs: allBlogPost (perPage: 4, page: $page) @paginate {
+	blogs: allBlogPost (perPage: 6, page: $page) @paginate {
     pageInfo {
       totalPages,
       currentPage,
@@ -109,6 +109,7 @@ export default {
 .main-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
@@ -116,8 +117,9 @@ export default {
 .blog-cards-container {
   display: flex;
   flex-wrap: wrap;
-  padding: 1.75%;
   flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 40px;
   max-width: 70%;
 }
 
@@ -125,7 +127,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 0 30px 0;
+  padding-bottom: 30px;
 }
 
 .pager-style {
