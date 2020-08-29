@@ -13,24 +13,24 @@
     <div class="img-container">
       <div class="left thumbnail" v-if="!!images[3]">
         <a :href="images[3].url">
-          <img :src="images[3].thumbnail" />
+          <img :src="images[3].thumbnail" alt="ig3" />
         </a>
       </div>
 
       <div class="top thumbnail" v-if="!!images[0]">
         <a :href="images[0].url">
-          <img :src="images[0].thumbnail" />
+          <img :src="images[0].thumbnail" alt="ig0" />
         </a>
       </div>
 
       <div class="right thumbnail" v-if="!!images[1]">
         <a :href="images[1].url">
-          <img :src="images[1].thumbnail" />
+          <img :src="images[1].thumbnail" alt="ig1" />
         </a>
       </div>
       <div class="bottom thumbnail" v-if="!!images[2]">
         <a :href="images[2].url">
-          <img :src="images[2].thumbnail" />
+          <img :src="images[2].thumbnail" alt="ig2" />
         </a>
       </div>
     </div>

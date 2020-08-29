@@ -10,7 +10,7 @@
       <h1 class="font-gilroy-bold font-36">
         {{ $page.pageConfig.description_title }}
       </h1>
-      <p class="font-avenir-light font-18">
+      <p class="font-avenir-light font-18 subheading">
         {{ $page.pageConfig.page_description }}
       </p>
     </div>
@@ -133,6 +133,8 @@ export default {
 
 .subheading {
   text-align: center;
+  max-width: 70%;
+  margin: auto;
 }
 
 .description {
