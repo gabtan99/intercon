@@ -5,7 +5,7 @@ admin_path: "/static/admin"
 webhook_url: 
 sections:
 - type: heading
-  label: Targets
+  label: Home
 - type: directory
   path: testimonies
   label: Testimonies
@@ -14,35 +14,45 @@ sections:
   new_doc_ext: md
   templates:
   - testimony
-- type: directory
-  path: targets
-  label: Targets
-  create: all
-  match: "**/*.md"
-  new_doc_ext: md
-  templates:
-  - target
+- type: heading
+  label: Services
 - type: directory
   path: services
-  label: Services
+  label: Services List
   create: all
   match: "**/*.md"
   new_doc_ext: md
   templates:
   - services
+- type: heading
+  label: Targets
+- type: document
+  path: data/targets_page.json
+  label: Targets Page
+- type: directory
+  path: targets
+  label: Targets List
+  create: all
+  match: "**/*.md"
+  new_doc_ext: md
+  templates:
+  - target
+- type: heading
+  label: Blog
 - type: directory
   path: blog
-  label: Blog
+  label: Blog Posts
   create: documents
   match: "**/*.md"
   templates:
   - blog
+- type: heading
+  label: About Us
+- type: heading
+  label: Others
 - type: document
   path: data/theme.json
   label: Theme config
-- type: document
-  path: data/targets_page.json
-  label: Targets Page
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
