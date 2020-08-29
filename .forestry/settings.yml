@@ -14,7 +14,7 @@ sections:
   label: Testimonies List
   create: documents
   match: "**/*.md"
-  new_doc_ext: ".md"
+  new_doc_ext: md
   templates:
   - testimony
 - type: heading
@@ -27,7 +27,7 @@ sections:
   label: Services List
   create: documents
   match: "**/*.md"
-  new_doc_ext: ".md"
+  new_doc_ext: md
   templates:
   - services
 - type: heading
@@ -40,7 +40,7 @@ sections:
   label: Targets List
   create: documents
   match: "**/*.md"
-  new_doc_ext: ".md"
+  new_doc_ext: md
   templates:
   - target
 - type: heading
@@ -53,7 +53,7 @@ sections:
   label: Blog Posts
   create: documents
   match: "**/*.md"
-  new_doc_ext: ".md"
+  new_doc_ext: md
   templates:
   - journal
 - type: heading
@@ -61,13 +61,12 @@ sections:
 - type: document
   path: data/about_page.json
   label: About Us Page
-  match: "**/*"
 - type: directory
   path: data/FAQ
-  label: Frequently Asked Questions
+  label: FAQs
   create: all
   match: "**/*.md"
-  new_doc_ext: ".md"
+  new_doc_ext: md
   templates:
   - faq
 - type: heading
@@ -75,7 +74,6 @@ sections:
 - type: document
   path: data/contact_details.json
   label: Contact Details
-  match: "**/*"
 - type: document
   path: data/socials.json
   label: Social Media Links
