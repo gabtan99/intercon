@@ -52,7 +52,7 @@ export default {
   height: 380px;
   border: none;
   padding: 0px;
-  margin: 20px 0;
+  margin: 15px 0;
   box-shadow: 0 3px 3px 1px var(--gray-1);
   transition: all 0.2s ease-in-out;
 }
