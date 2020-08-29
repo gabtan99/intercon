@@ -1,5 +1,9 @@
 <template>
-  <b-row class="mx-4 mb-5 service-card-block" no-gutters>
+  <b-row
+    class="mx-4 mb-5 service-card-block"
+    no-gutters
+    v-on:click="goToService('/functional-coaching')"
+  >
     <div class="col-lg-7 p-5 service-card__content">
       <h2 class="font-24 font-gilroy-bold mb-3 service-card__title">
         Functional Health and Wellness Coaching
