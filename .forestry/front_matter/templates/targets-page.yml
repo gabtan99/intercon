@@ -12,6 +12,7 @@ fields:
   config:
     maxSize: 
   label: Header Image
+  default: "/uploads/v1598707981/uploads/colon-hydrotherapy_y8aprf.png"
 - name: description_title
   type: text
   config:
