@@ -75,8 +75,8 @@ export default {
   padding: 20px;
   margin: 10px;
   background-color: var(--background-color);
-  height: 180px;
-  width: 220px;
+  height: 200px;
+  width: 250px;
   transition: all 0.2s ease-in-out;
   box-shadow: 0 3px 3px 1px var(--gray-1);
 }
