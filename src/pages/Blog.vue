@@ -115,12 +115,10 @@ export default {
 }
 
 .blog-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 30px 40px;
-  max-width: 70%;
+  display: grid;
+  justify-content: space-evenly;
+  grid-column-gap: 20px;
+  grid-template-columns: auto auto;
 }
 
 .show-more-div {
@@ -160,6 +158,15 @@ export default {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1366px) and (max-width: 1880px) {
+  .blog-cards-container {
+    display: grid;
+    justify-content: space-evenly;
+    grid-column-gap: 20px;
+    grid-template-columns: auto auto auto;
   }
 }
 </style>
