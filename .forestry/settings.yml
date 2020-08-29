@@ -22,11 +22,6 @@ sections:
 - type: document
   path: data/services_page.json
   label: Services Page
-  match: "**/*"
-  read_only: false
-- type: document
-  path: data/services_page.json
-  label: Services Page
 - type: directory
   path: data/services
   label: Services List
