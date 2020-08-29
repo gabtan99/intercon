@@ -1,7 +1,7 @@
 <template>
-  <b-container
-    class="mt-5"
-  >
+  <b-container class="mt-5">
+    <FunctionalCoaching />
+
     <ServicesServiceCard
       v-for="service in services"
       :key="service.node.id"
@@ -11,15 +11,16 @@
 </template>
 
 <script>
-  import ServicesServiceCard from "@/components/ServicesServiceCard"
-  export default {
-    components: {
-      ServicesServiceCard
-    },
-    props: ['services']
-  }
+import ServicesServiceCard from "@/components/ServicesServiceCard";
+import FunctionalCoaching from "@/components/FunctionalCoaching";
+
+export default {
+  components: {
+    ServicesServiceCard,
+    FunctionalCoaching,
+  },
+  props: ["services"],
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

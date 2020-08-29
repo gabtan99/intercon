@@ -1,48 +1,27 @@
 <template>
-  <Layout class="gray-bg">
-    <PageHeader
-      :page_name="$page.pageConfig.page_name"
-      :image="$page.pageConfig.header_image"
-    />
-    <ServicesSection :services="$page.services.edges" />
-    <NewsletterModal currPage="SERVICES" />
+  <Layout>
+    {{ setAutoModal() }}
+
+    <!-- <PageHeader
+      page_name="Functional Health and Wellness Coaching"
+      image="../uploads/colon-hydrotherapy.png"
+    /> -->
+
+    <div class="main-container">
+      This is the data
+    </div>
+    <NewsletterModal currPage="FUNCTIONALCOACHING" />
   </Layout>
 </template>
 
-<page-query>
-query Service {
-  pageConfig: pages (path: "/data/services-page/"){
-    page_name
-    header_image
-  },
-	services: allServices{
-    edges {
-      node {
-        id
-        title
-        path
-        preview_description
-        header_image
-        preview_benefits{
-          benefit
-        }
-        preview_conditions{
-          condition
-        }
-      }
-    }
-  }
-}
-</page-query>
-
 <script>
-import ServicesSection from "@/components/ServicesSection";
-import NewsletterModal from "@/components/NewsletterModal";
 import PageHeader from "@/components/PageHeader";
+import NewsletterModal from "@/components/NewsletterModal";
 
 export default {
   metaInfo: {
-    title: "Services | Intercon Regenerative Center",
+    title:
+      "Functional Health and Wellness Coaching | Intercon Regenerative Center",
     meta: [
       {
         key: "description",
@@ -53,7 +32,8 @@ export default {
       {
         key: "og:title",
         name: "og:title",
-        content: "Services | Intercon Regenerative Center",
+        content:
+          "Functional Health and Wellness Coaching | Intercon Regenerative Center",
       },
       {
         key: "og:site_name",
@@ -63,7 +43,7 @@ export default {
       {
         key: "og:image",
         name: "og:image",
-        content: require("@/assets/img/services-header.png"),
+        content: require("@/assets/img/target-header.png"),
       },
       {
         name: "og:description",
@@ -73,18 +53,28 @@ export default {
       },
     ],
   },
-  components: {
-    ServicesSection,
-    NewsletterModal,
-    PageHeader,
-  },
   data() {
     return {
-      page_name: "Services",
-      image: "services-header.png",
+      selectedTarget: "",
+      pageConfig: {},
     };
+  },
+  components: {
+    PageHeader,
+    NewsletterModal,
+  },
+  methods: {
+    setAutoModal: function() {
+      if (this.$route.params)
+        this.selectedTarget = this.$route.query.selectedTarget;
+    },
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+</style>

@@ -15,15 +15,15 @@
           title: this.singleService.title,
           customClass: 'font-avenir-medium font-16',
         }"
-        class="font-gilroy-medium font-18 ellipsis"
+        class="font-gilroy-medium font-18 ellipsis-title"
       >
         {{ singleService.title }}
       </h4>
       <b-card-text
-        class="font-avenir-light font-16"
-        style="margin-bottom: 10px;"
+        class="font-avenir-light font-16 ellipsis"
+        style="margin: 10px 0;"
       >
-        {{ servicesContent.service_description }}
+        {{ singleService.introduction }}
       </b-card-text>
 
       <div class="button-style">
@@ -47,6 +47,7 @@ query {
         title
         path
         header_image
+        introduction
       }
     }
   }
@@ -89,12 +90,20 @@ export default {
   object-fit: cover;
 }
 
-.ellipsis {
-  margin: 8px 0px 8px;
+.ellipsis-title {
   color: var(--blue-branding);
-  width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ellipsis {
+  margin: 15px 0px 15px;
+  color: var(--blue-branding);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 

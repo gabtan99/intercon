@@ -275,7 +275,7 @@ export default {
   padding: 40px 20px;
   box-shadow: 0px 5px 10px #76767629;
   margin: auto;
-  width: 88%;
+  max-width: 900px;
   background-color: #fff;
   margin-top: 60px;
 }
@@ -404,7 +404,7 @@ export default {
 }
 
 /* TABLETS SUCH AS IPAD */
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 800px) {
   .founder-section {
     margin-bottom: 250px;
   }

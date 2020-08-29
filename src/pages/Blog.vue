@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout class="gray-bg">
     <PageHeader
       :page_name="$page.pageConfig.page_name"
       :image="$page.pageConfig.header_image"
@@ -13,13 +13,13 @@
           :blog="item.node"
         />
       </div>
-      <div class="show-more-div">
-        <Pager
-          :info="$page.blogs.pageInfo"
-          class="font-gilroy-medium font-18"
-          linkClass="pager-style"
-        />
-      </div>
+    </div>
+    <div class="show-more-div">
+      <Pager
+        :info="$page.blogs.pageInfo"
+        class="font-gilroy-medium font-18"
+        linkClass="pager-style"
+      />
     </div>
   </Layout>
 </template>
@@ -31,7 +31,7 @@ query ($page: Int) {
     header_image
     description_title
   },
-	blogs: allBlogPost (perPage: 4, page: $page) @paginate {
+	blogs: allBlogPost (perPage: 6, page: $page) @paginate {
     pageInfo {
       totalPages,
       currentPage,
@@ -55,46 +55,46 @@ query ($page: Int) {
 </page-query>
 
 <script>
-import PageHeader from '@/components/PageHeader'
-import BlogCard from '@/components/BlogCard'
-import { Pager } from 'gridsome'
+import PageHeader from "@/components/PageHeader";
+import BlogCard from "@/components/BlogCard";
+import { Pager } from "gridsome";
 
 export default {
   metaInfo: {
-    title: 'Blog | Intercon Regenerative Center',
+    title: "Blog | Intercon Regenerative Center",
     meta: [
       {
-        key: 'description',
-        name: 'description',
+        key: "description",
+        name: "description",
         content:
-          'At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ',
+          "At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ",
       },
       {
-        key: 'og:title',
-        name: 'og:title',
-        content: 'Blog | Intercon Regenerative Center',
+        key: "og:title",
+        name: "og:title",
+        content: "Blog | Intercon Regenerative Center",
       },
       {
-        key: 'og:site_name',
-        name: 'og:site_name',
-        content: 'Intercon Regenerative Center',
+        key: "og:site_name",
+        name: "og:site_name",
+        content: "Intercon Regenerative Center",
       },
       {
-        key: 'og:image',
-        name: 'og:image',
-        content: require('@/assets/img/target-header.png'),
+        key: "og:image",
+        name: "og:image",
+        content: require("@/assets/img/target-header.png"),
       },
       {
-        name: 'og:description',
-        name: 'og:description',
+        name: "og:description",
+        name: "og:description",
         content:
-          'At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ',
+          "At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ",
       },
     ],
   },
   methods: {
-    log: function () {
-      console.log(this.$page.blogs.pageInfo)
+    log: function() {
+      console.log(this.$page.blogs.pageInfo);
     },
   },
   components: {
@@ -102,30 +102,31 @@ export default {
     BlogCard,
     Pager,
   },
-}
+};
 </script>
 
 <style scoped>
 .main-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
+  margin: 20px auto;
 }
 
 .blog-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1.75%;
-  flex-direction: row;
-  max-width: 70%;
+  display: grid;
+  justify-content: space-evenly;
+  grid-column-gap: 20px;
+  grid-template-columns: auto auto;
 }
 
 .show-more-div {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 0 30px 0;
+  padding-bottom: 30px;
 }
 
 .pager-style {
@@ -158,6 +159,15 @@ export default {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1880px) {
+  .blog-cards-container {
+    display: grid;
+    justify-content: space-evenly;
+    grid-column-gap: 20px;
+    grid-template-columns: auto auto auto;
   }
 }
 </style>

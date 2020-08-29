@@ -1,13 +1,8 @@
 ---
-target_name: Immune Support
-target_description:
-  With all of the diseases we have, we ned to help our immune system. In this world, everything can be happy. This is where you take
-  out all your hostilities and frustrations. It's better than kicking the puppy dog
-  around and all that so. With practice comes confidence. Everything is happy if you
-  choose to make it that way. Don't fight it, use what happens. God gave you this
-  gift of imagination. Use it.
-background_color: '#BED3E5'
-target_icon: '/uploads/gym.png'
+target_name: Age-Proof Regeneration
+target_description: Age-proof regeneration helps restore your youthful looks and makes you feel young and fresh!
+background_color: '#C0E1E8'
+target_icon: '/uploads/male.png'
 target_services:
   - service_name: Infrared Sauna
     service_description:

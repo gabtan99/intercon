@@ -8,9 +8,16 @@
   >
     {{ sectionTargetModal() }}
     <img class="icon-style" :src="target.target_icon.src" alt="icon" />
-    <span class="target-name font-18 font-gilroy-bold">
-      {{ target.target_name }}
-    </span>
+
+    <div class="card-content">
+      <span class="target-name font-21 font-gilroy-bold">
+        {{ target.target_name }}
+      </span>
+
+      <p class="ellipsis font-avenir-light font-16">
+        {{ target.target_description }}
+      </p>
+    </div>
 
     <b-modal
       centered
@@ -69,16 +76,18 @@ export default {
 
 <style scoped>
 .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   position: relative;
   border: none;
   border-radius: 3px;
-  padding: 20px;
-  margin: 10px;
   background-color: var(--background-color);
-  height: 180px;
-  width: 220px;
+  padding: 15px;
+  margin: 8px;
+  height: 150px;
+  width: 420px;
   transition: all 0.2s ease-in-out;
-  box-shadow: 0 3px 3px 1px var(--gray-1);
 }
 
 .card:hover {
@@ -88,16 +97,25 @@ export default {
 }
 
 .target-name {
-  position: absolute;
-  padding: 15px;
-  right: 0;
-  bottom: 0;
   color: var(--blue-branding);
 }
 
+.card-content {
+  margin-left: 15px;
+}
+
+.ellipsis {
+  margin: 3px 0px 3px;
+  color: var(--blue-branding);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .icon-style {
-  width: 32px;
-  height: 32px;
+  width: 64px;
+  height: 64px;
   border-radius: 500px;
 }
 
@@ -115,8 +133,9 @@ export default {
     position: relative;
     border: 1px solid #eeeeee;
     border-radius: 3px;
-    width: 300px;
+    width: 400px;
     height: 180px;
+    margin: 8px;
   }
 
   .close-icon {

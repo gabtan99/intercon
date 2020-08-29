@@ -52,3 +52,7 @@
   --black: #000000;
   --black-text: #000000;
 }
+
+.gray-bg {
+  background-color: #fdfdfd;
+}
