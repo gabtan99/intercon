@@ -1,25 +1,18 @@
 <template>
   <div>
-    <b-card
-      tag="article"
-      class="blog-card card-img-top"
-      v-on:click="goToBlog(blog.path)"
-      img-top
-      img-alt="image"
-      img-height="200"
-      :img-src="blog.header_image.src"
-    >
+    <b-card tag="article" class="blog-card" v-on:click="goToBlog(blog.path)">
+      <b-card-img alt="image" :src="blog.header_image.src" class="card-img" />
       <h4
         v-b-popover.hover.top="{
           title: this.blog.title,
           customClass: 'font-avenir-medium font-16',
         }"
-        class="font-gilroy-bold font-18 ellipsis-title"
+        class="font-gilroy-bold font-18 ellipsis-title card-padding"
       >
         {{ blog.title }}
       </h4>
       <b-card-text
-        class="font-avenir-light font-16 ellipsis"
+        class="font-avenir-light font-16 ellipsis card-padding"
         style="margin: 10px 0px;"
       >
         {{ blog.excerpt }}
@@ -57,10 +50,9 @@ export default {
   position: relative;
   width: 380px;
   height: 380px;
-  margin: 20px;
   border: none;
   padding: 0px;
-  justify-content: center;
+  margin: 20px 0;
   box-shadow: 0 3px 3px 1px var(--gray-1);
   transition: all 0.2s ease-in-out;
 }
@@ -71,8 +63,19 @@ export default {
   cursor: pointer;
 }
 
-.card-img-top {
+.card-img {
+  max-width: 380px;
+  height: 200px;
+  margin-bottom: 15px;
   object-fit: cover;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.card-padding {
+  padding: 0 1rem;
 }
 
 .ellipsis-title {

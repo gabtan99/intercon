@@ -28,18 +28,18 @@
 </template>
 
 <script>
-import TargetSectionCard from '@/components/TargetSectionCard'
+import TargetSectionCard from "@/components/TargetSectionCard";
 export default {
-  props: ['targets'],
+  props: ["targets"],
   methods: {
-    log: function (e) {
-      console.log(e)
+    log: function(e) {
+      console.log(e);
     },
   },
   components: {
     TargetSectionCard,
   },
-}
+};
 </script>
 
 <style scoped>
@@ -71,6 +71,7 @@ export default {
   flex-direction: column;
   align-items: center;
   text-decoration-color: var(--blue-branding);
+  margin: 20px;
 }
 
 @media only screen and (max-width: 1000px) {

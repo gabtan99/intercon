@@ -6,15 +6,15 @@
       </h1>
 
       <p class="about-subtitle font-avenir-book font-18">
-        We seek to enhance health and address issues by identifying
-        primary causes of illness and disease, through in-depth 
-        one-on-one consultations and specialized tests / diagnostics.
+        We seek to enhance health and address issues by identifying primary
+        causes of illness and disease, through in-depth one-on-one consultations
+        and specialized tests / diagnostics.
       </p>
     </div>
 
     <div class="about-details">
       <b-row class="lower">
-        <div class="col-lg-5 image">
+        <div class="col-lg-5 image p-5">
           <b-img
             fluid
             :src="require('../assets/img/about-section.png')"
@@ -22,7 +22,7 @@
           />
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 p-5">
           <div class="about-detail-item">
             <div class="title-div">
               <b-img
@@ -38,9 +38,9 @@
 
             <div>
               <p class="detail-info font-avenir-light font-18">
-                We seek to enhance health and address issues by identifying 
-                primary causes of illness and disease, through in-depth one-on-one 
-                consultations and specialized tests.
+                We seek to enhance health and address issues by identifying
+                primary causes of illness and disease, through in-depth
+                one-on-one consultations and specialized tests.
               </p>
             </div>
           </div>
@@ -61,9 +61,9 @@
 
             <div>
               <p class="detail-info font-avenir-light font-18">
-                We seek to enhance health and address issues by identifying 
-                primary causes of illness and disease, through in-depth one-on-one 
-                consultations and specialized tests.
+                We seek to enhance health and address issues by identifying
+                primary causes of illness and disease, through in-depth
+                one-on-one consultations and specialized tests.
               </p>
             </div>
           </div>
