@@ -14,12 +14,24 @@
         well-established treatment for decompression sickness, a hazard of scuba
         diving.
       </p>
-      <a href="https://www.facebook.com/interconregenerative/">
+      <a
+        href="https://www.facebook.com/interconregenerative/"
+        v-b-popover.hover.top="{
+          title: 'Functional Health with Janise Tang Piap',
+          customClass: 'font-avenir-medium font-20',
+        }"
+      >
         <font-awesome :icon="['fab', 'facebook-square']" class="social"
       /></a>
-      <a href="https://www.instagram.com/interconregenerative/">
-        <font-awesome icon="envelope" class="social" />
-      </a>
+
+      <font-awesome
+        icon="envelope"
+        class="social"
+        v-b-popover.hover.top="{
+          title: 'jantangpiap@interconregenerative.com',
+          customClass: 'font-avenir-medium font-20',
+        }"
+      />
     </div>
     <div class="col-lg-5 service-card__thumbnail-container">
       <g-image

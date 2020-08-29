@@ -101,7 +101,7 @@ export default {
 }
 
 .service-card__title {
-  color: var(--blue-branding);
+  color: var(--black-text);
 }
 
 .service-card__description {
