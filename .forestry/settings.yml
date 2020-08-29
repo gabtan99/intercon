@@ -9,28 +9,73 @@ sections:
 - type: document
   path: data/home_page.json
   label: Home Page
-  match: "**/*"
+- type: directory
+  path: data/testimonies
+  label: Testimonies List
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: ".md"
+  templates:
+  - testimony
 - type: heading
   label: Services
 - type: document
   path: data/services_page.json
   label: Services Page
+- type: directory
+  path: data/services
+  label: Services List
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: ".md"
+  templates:
+  - services
 - type: heading
   label: Targets
 - type: document
   path: data/targets_page.json
   label: Targets Page
-  match: "**/*"
+- type: directory
+  path: data/targets
+  label: Targets List
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: ".md"
+  templates:
+  - target
 - type: heading
   label: Blog
 - type: document
   path: data/blog_page.json
   label: Blogs Page
-  match: "**/*"
+- type: directory
+  path: data/blog
+  label: Blog Posts
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: ".md"
+  templates:
+  - journal
 - type: heading
   label: About Us
+- type: document
+  path: data/about_page.json
+  label: About Us Page
+  match: "**/*"
+- type: directory
+  path: data/FAQ
+  label: Frequently Asked Questions
+  create: all
+  match: "**/*.md"
+  new_doc_ext: ".md"
+  templates:
+  - faq
 - type: heading
   label: Others
+- type: document
+  path: data/contact_details.json
+  label: Contact Details
+  match: "**/*"
 - type: document
   path: data/socials.json
   label: Social Media Links
