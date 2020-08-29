@@ -6,16 +6,27 @@ webhook_url:
 sections:
 - type: heading
   label: Home
+- type: document
+  path: data/home_page.json
+  label: Home Page
+  match: "**/*"
 - type: heading
   label: Services
 - type: document
   path: data/services_page.json
-  label: All Services Page
-  match: "**/*"
+  label: Services Page
 - type: heading
   label: Targets
+- type: document
+  path: data/targets_page.json
+  label: Targets Page
+  match: "**/*"
 - type: heading
   label: Blog
+- type: document
+  path: data/blog_page.json
+  label: Blogs Page
+  match: "**/*"
 - type: heading
   label: About Us
 - type: heading
