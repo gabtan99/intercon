@@ -47,7 +47,7 @@ sections:
   label: Blog
 - type: document
   path: data/blog_page.json
-  label: Blogs Page
+  label: Blog Page
 - type: directory
   path: data/blog
   label: Blog Posts

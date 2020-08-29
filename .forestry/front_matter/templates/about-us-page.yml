@@ -1,6 +1,6 @@
 ---
 label: About Us Page
-hide_body: false
+hide_body: true
 fields:
 - name: page_name
   type: text
@@ -107,3 +107,5 @@ fields:
     schema:
       format: markdown
   label: Founder Description
+pages:
+- data/about_page.json
