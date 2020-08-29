@@ -1,4 +1,109 @@
 ---
 label: About Us Page
 hide_body: false
-fields: []
+fields:
+- name: page_name
+  type: text
+  config:
+    required: false
+  label: Page Name
+- name: header_image
+  type: file
+  config:
+    maxSize: 64
+  label: Header Image
+- name: about_company_title
+  type: text
+  config:
+    required: false
+  label: About Company Title
+- name: about_company_image
+  type: file
+  config:
+    maxSize: 64
+  label: About Company Image
+- name: about_company_description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: About Company Description
+- name: values_image
+  type: file
+  config:
+    maxSize: 64
+  label: Values Image
+- name: values_title
+  type: text
+  config:
+    required: false
+  label: Values Title
+- name: mission_title
+  type: text
+  config:
+    required: false
+  label: Mission Title
+- name: mission_description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Mission Description
+- name: vision_title
+  type: text
+  config:
+    required: false
+  label: Vision Title
+- name: vision_description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Vision Description
+- name: goal_title
+  type: text
+  config:
+    required: false
+  label: Goal Title
+- name: goal_description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Goal Description
+- name: founder_image
+  type: file
+  config:
+    maxSize: 64
+  label: Founder Image
+- name: founder_name
+  type: text
+  config:
+    required: false
+  label: Founder Name
+- name: founder_label
+  type: text
+  config:
+    required: false
+  label: Founder Label
+- name: founder_description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Founder Description
