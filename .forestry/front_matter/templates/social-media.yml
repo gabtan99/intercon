@@ -1,9 +1,0 @@
----
-label: Social Media
-hide_body: true
-fields:
-- name: email
-  type: text
-  config:
-    required: false
-  label: Email
