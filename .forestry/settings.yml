@@ -33,7 +33,6 @@ sections:
 - type: document
   path: data/coaching_section.md
   label: Functional Coaching
-  match: "**/*"
 - type: heading
   label: Targets
 - type: document
