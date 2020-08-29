@@ -8,3 +8,5 @@ fields:
 - type: file
   name: header_image
   label: Header Image
+pages:
+- data/services_page.json
