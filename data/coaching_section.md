@@ -1,5 +1,5 @@
 ---
-title: Look at me and know that I am by your side.
+title: Functional Health and Wellness Coaching
 short_description: awdjaowdj
 facebook_page_url: Sage
 email: My power does not end. Ask for aid and you shall receive it. Stand tall. We
