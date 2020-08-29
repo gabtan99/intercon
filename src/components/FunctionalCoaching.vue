@@ -14,6 +14,12 @@
         well-established treatment for decompression sickness, a hazard of scuba
         diving.
       </p>
+      <a href="https://www.facebook.com/interconregenerative/">
+        <font-awesome :icon="['fab', 'facebook-square']" class="social"
+      /></a>
+      <a href="https://www.instagram.com/interconregenerative/">
+        <font-awesome icon="envelope" class="social" />
+      </a>
     </div>
     <div class="col-lg-5 service-card__thumbnail-container">
       <g-image
@@ -102,5 +108,15 @@ export default {
 
 .service-card__list-item {
   color: var(--blue-content-text);
+}
+
+.social {
+  font-size: 20px;
+  margin: 0px 10px;
+  color: var(--gray-3);
+}
+
+.social:hover {
+  color: var(--black-text);
 }
 </style>
