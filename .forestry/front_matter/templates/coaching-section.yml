@@ -17,3 +17,5 @@ fields:
 - type: file
   name: thumbnail_image
   label: Thumbnail Image
+pages:
+- data/coaching_section.md
