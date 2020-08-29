@@ -1,0 +1,10 @@
+---
+label: New Serviecs Page
+hide_body: true
+fields:
+- type: text
+  name: page_name
+  label: page_name
+- type: file
+  name: header_image
+  label: header_image
