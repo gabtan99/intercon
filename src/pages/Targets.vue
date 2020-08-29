@@ -23,20 +23,31 @@
           :selectedTarget="selectedTarget"
         />
       </div>
+      <div class="show-more-div">
+        <Pager
+          :info="$page.targets.pageInfo"
+          class="font-gilroy-medium font-18"
+          linkClass="pager-style"
+        />
+      </div>
     </div>
     <NewsletterModal currPage="TARGETS" />
   </Layout>
 </template>
 
 <page-query>
-query {
+query ($page: Int){
   pageConfig: pages (path: "/data/targets-page/"){
     page_name
     header_image
     description_title
     page_description
   },
-	targets: allTargets {
+	targets: allTargets (perPage: 4, page: $page) @paginate {
+    pageInfo {
+      totalPages,
+      currentPage 
+    }
     edges {
       node {
         id
@@ -58,6 +69,7 @@ query {
 import TargetCard from '@/components/TargetCard'
 import PageHeader from '@/components/PageHeader'
 import NewsletterModal from '@/components/NewsletterModal'
+import { Pager } from 'gridsome'
 
 export default {
   metaInfo: {
@@ -102,6 +114,7 @@ export default {
     TargetCard,
     PageHeader,
     NewsletterModal,
+    Pager,
   },
   methods: {
     setAutoModal: function () {
@@ -132,8 +145,9 @@ export default {
 
 .main-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -153,6 +167,31 @@ export default {
   width: 70%;
   padding-top: 50px;
   margin: 0 auto;
+}
+
+.show-more-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.pager-style {
+  color: var(--gray-3);
+  margin: 10px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.pager-style:hover {
+  box-shadow: 1px 5px 8px 2px var(--gray-1);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.active {
+  color: var(--blue-branding);
 }
 
 @media only screen and (max-width: 1000px) {
