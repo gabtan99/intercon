@@ -2,28 +2,30 @@
   <div>
     <b-card tag="article" class="blog-card" v-on:click="goToBlog(blog.path)">
       <b-card-img alt="image" :src="blog.header_image.src" class="card-img" />
-      <h4
-        v-b-popover.hover.top="{
-          title: this.blog.title,
-          customClass: 'font-avenir-medium font-16',
-        }"
-        class="font-gilroy-bold font-18 ellipsis-title card-padding"
-      >
-        {{ blog.title }}
-      </h4>
-      <b-card-text
-        class="font-avenir-light font-16 ellipsis card-padding"
-        style="margin: 10px 0px;"
-      >
-        {{ blog.excerpt }}
-      </b-card-text>
+      <div class="text-wrapper">
+        <h4
+          v-b-popover.hover.top="{
+            title: this.blog.title,
+            customClass: 'font-avenir-medium font-16',
+          }"
+          class="font-gilroy-bold font-18 ellipsis-title "
+        >
+          {{ blog.title }}
+        </h4>
+        <b-card-text
+          class="font-avenir-light font-16 ellipsis "
+          style="margin: 10px 0px;"
+        >
+          {{ blog.excerpt }}
+        </b-card-text>
 
-      <div class="status-div">
-        <div class="author-div">
-          <span class="author-text">by {{ blog.author }}</span>
-        </div>
-        <div class="date-div">
-          {{ blog.date | moment("LL") }}
+        <div class="status-div">
+          <div class="author-div">
+            <span class="author-text">by {{ blog.author }}</span>
+          </div>
+          <div class="date-div">
+            {{ blog.date | moment("LL") }}
+          </div>
         </div>
       </div>
     </b-card>
@@ -73,8 +75,8 @@ export default {
   padding: 0;
 }
 
-.card-padding {
-  padding: 0 1rem;
+.text-wrapper {
+  padding: 0px 20px;
 }
 
 .ellipsis-title {
@@ -101,7 +103,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 15px 13px;
+  padding: 15px 20px;
   font-size: 1.2rem;
   left: 0;
   bottom: 0;

@@ -112,6 +112,7 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin: 20px auto;
 }
 
 .blog-cards-container {
