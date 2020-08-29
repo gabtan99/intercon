@@ -24,7 +24,7 @@
           <span class="author-text">{{ blog.author }}</span>
         </div>
         <div class="date-div">
-          {{ blog.date | moment('LL') }}
+          {{ blog.date | moment("LL") }}
         </div>
       </div>
     </b-card>
@@ -32,18 +32,18 @@
 </template>
 
 <script>
-import moment from 'vue-moment'
+import moment from "vue-moment";
 export default {
-  props: ['blog'],
+  props: ["blog"],
   methods: {
-    goToBlog: function (path) {
-      this.$router.push(path)
+    goToBlog: function(path) {
+      this.$router.push(path);
     },
-    log: function () {
-      console.log(this.blog.path)
+    log: function() {
+      console.log(this.blog.path);
     },
   },
-}
+};
 </script>
 <style scoped>
 .blog-card {
@@ -52,7 +52,7 @@ export default {
   height: 380px;
   border: none;
   padding: 0px;
-  margin: 15px 0;
+  margin: 20px 0;
   box-shadow: 0 3px 3px 1px var(--gray-1);
   transition: all 0.2s ease-in-out;
 }

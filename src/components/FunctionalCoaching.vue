@@ -25,8 +25,9 @@
       /></a>
 
       <font-awesome
+        id="email"
         icon="envelope"
-        class="social"
+        class="social email"
         v-b-popover.hover.top="{
           title: 'jantangpiap@interconregenerative.com',
           customClass: 'font-avenir-medium font-20',
@@ -55,6 +56,7 @@ export default {
 
 <style scoped>
 .service-card-block {
+  background-color: white;
   cursor: pointer;
   border-radius: 0.5rem;
   box-shadow: 0px 3px 6px var(--gray-2);
@@ -75,7 +77,7 @@ export default {
 }
 
 .service-card__thumbnail {
-  height: 200px;
+  height: 220px;
   width: 100%;
   object-fit: cover;
   -webkit-clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0% 100%);
@@ -99,6 +101,10 @@ export default {
 @media only screen and (max-width: 991px) {
   .service-card-block {
     flex-direction: column-reverse;
+  }
+  .service-card__thumbnail {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
   }
 }
 
@@ -130,5 +136,9 @@ export default {
 
 .social:hover {
   color: var(--black-text);
+}
+
+.email {
+  cursor: default;
 }
 </style>

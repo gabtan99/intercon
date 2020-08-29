@@ -9,11 +9,10 @@
         :alt="service.node.title"
         :src="service.node.header_image.src"
         :srcset="service.node.header_image.srcset"
-        height="280"
         class="service-card__thumbnail"
       />
     </div>
-    <div class="col-lg-8 p-5 service-card__content">
+    <div class="col-lg-8 px-5 service-card__content">
       <h2 class="font-26 font-gilroy-bold mb-3 service-card__title">
         {{ service.node.title }}
       </h2>
@@ -75,6 +74,7 @@ export default {
 
 <style scoped>
 .service-card-block {
+  background-color: white;
   cursor: pointer;
   border-radius: 0.5rem;
   box-shadow: 0px 3px 6px var(--gray-2);
@@ -84,6 +84,7 @@ export default {
   -ms-box-shadow: 0px 3px 6px var(--gray-2);
   transition: all ease-in 0.15s;
 }
+
 .service-card-block:hover {
   transform: translateX(0.5rem);
   transform: scale(1.01);
@@ -95,7 +96,7 @@ export default {
 }
 
 .service-card__thumbnail {
-  height: 280px;
+  height: 260px;
   width: 100%;
   object-fit: cover;
 }
@@ -106,6 +107,10 @@ export default {
 
 .service-card__description {
   color: var(--black-text);
+}
+
+.service-card__content {
+  padding: 20px 0px;
 }
 
 @media only screen and (max-width: 576px) {
@@ -119,6 +124,12 @@ export default {
     height: 300px;
     width: 100%;
     object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .service-card__content {
+    padding-bottom: 20px;
   }
 }
 

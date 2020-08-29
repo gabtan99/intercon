@@ -137,7 +137,7 @@ export default {
             case "SPECIFIC_SERVICE":
             case "TARGETS":
             case "SERVICES":
-              if (localStorage.modalShown === "false") {
+              if (localStorage.isModalShown === "false") {
                 this.showModal();
                 localStorage.modalShown = true;
               }

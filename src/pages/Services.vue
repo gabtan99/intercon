@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout class="gray-bg">
     <PageHeader
       :page_name="$page.pageConfig.page_name"
       :image="$page.pageConfig.header_image"

@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout class="gray-bg">
     {{ setAutoModal() }}
 
     <PageHeader
@@ -66,49 +66,49 @@ query ($page: Int){
 </page-query>
 
 <script>
-import TargetCard from '@/components/TargetCard'
-import PageHeader from '@/components/PageHeader'
-import NewsletterModal from '@/components/NewsletterModal'
-import { Pager } from 'gridsome'
+import TargetCard from "@/components/TargetCard";
+import PageHeader from "@/components/PageHeader";
+import NewsletterModal from "@/components/NewsletterModal";
+import { Pager } from "gridsome";
 
 export default {
   metaInfo: {
-    title: 'Targets | Intercon Regenerative Center',
+    title: "Targets | Intercon Regenerative Center",
     meta: [
       {
-        key: 'description',
-        name: 'description',
+        key: "description",
+        name: "description",
         content:
-          'At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ',
+          "At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ",
       },
       {
-        key: 'og:title',
-        name: 'og:title',
-        content: 'Targets | Intercon Regenerative Center',
+        key: "og:title",
+        name: "og:title",
+        content: "Targets | Intercon Regenerative Center",
       },
       {
-        key: 'og:site_name',
-        name: 'og:site_name',
-        content: 'Intercon Regenerative Center',
+        key: "og:site_name",
+        name: "og:site_name",
+        content: "Intercon Regenerative Center",
       },
       {
-        key: 'og:image',
-        name: 'og:image',
-        content: require('@/assets/img/target-header.png'),
+        key: "og:image",
+        name: "og:image",
+        content: require("@/assets/img/target-header.png"),
       },
       {
-        name: 'og:description',
-        name: 'og:description',
+        name: "og:description",
+        name: "og:description",
         content:
-          'At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ',
+          "At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ",
       },
     ],
   },
   data() {
     return {
-      selectedTarget: '',
+      selectedTarget: "",
       pageConfig: {},
-    }
+    };
   },
   components: {
     TargetCard,
@@ -117,12 +117,12 @@ export default {
     Pager,
   },
   methods: {
-    setAutoModal: function () {
+    setAutoModal: function() {
       if (this.$route.params)
-        this.selectedTarget = this.$route.query.selectedTarget
+        this.selectedTarget = this.$route.query.selectedTarget;
     },
   },
-}
+};
 </script>
 
 <style scoped>

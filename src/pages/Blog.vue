@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout class="gray-bg">
     <PageHeader
       :page_name="$page.pageConfig.page_name"
       :image="$page.pageConfig.header_image"
@@ -55,46 +55,46 @@ query ($page: Int) {
 </page-query>
 
 <script>
-import PageHeader from '@/components/PageHeader'
-import BlogCard from '@/components/BlogCard'
-import { Pager } from 'gridsome'
+import PageHeader from "@/components/PageHeader";
+import BlogCard from "@/components/BlogCard";
+import { Pager } from "gridsome";
 
 export default {
   metaInfo: {
-    title: 'Blog | Intercon Regenerative Center',
+    title: "Blog | Intercon Regenerative Center",
     meta: [
       {
-        key: 'description',
-        name: 'description',
+        key: "description",
+        name: "description",
         content:
-          'At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ',
+          "At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ",
       },
       {
-        key: 'og:title',
-        name: 'og:title',
-        content: 'Blog | Intercon Regenerative Center',
+        key: "og:title",
+        name: "og:title",
+        content: "Blog | Intercon Regenerative Center",
       },
       {
-        key: 'og:site_name',
-        name: 'og:site_name',
-        content: 'Intercon Regenerative Center',
+        key: "og:site_name",
+        name: "og:site_name",
+        content: "Intercon Regenerative Center",
       },
       {
-        key: 'og:image',
-        name: 'og:image',
-        content: require('@/assets/img/target-header.png'),
+        key: "og:image",
+        name: "og:image",
+        content: require("@/assets/img/target-header.png"),
       },
       {
-        name: 'og:description',
-        name: 'og:description',
+        name: "og:description",
+        name: "og:description",
         content:
-          'At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ',
+          "At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ",
       },
     ],
   },
   methods: {
-    log: function () {
-      console.log(this.$page.blogs.pageInfo)
+    log: function() {
+      console.log(this.$page.blogs.pageInfo);
     },
   },
   components: {
@@ -102,7 +102,7 @@ export default {
     BlogCard,
     Pager,
   },
-}
+};
 </script>
 
 <style scoped>
@@ -161,7 +161,7 @@ export default {
   }
 }
 
-@media only screen and (min-width: 1366px) and (max-width: 1880px) {
+@media only screen and (min-width: 1880px) {
   .blog-cards-container {
     display: grid;
     justify-content: space-evenly;
