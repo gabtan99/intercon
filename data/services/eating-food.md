@@ -1,7 +1,9 @@
 ---
 title: Eating Good Food
-preview_description: Everyone know the important of food. Food is the main energt source of all people. Food is mainly metabolised and changed into these energy giving carbohydrates, fats, proteins, and many other nutritious vitamins and minerals.
-header_image: "/uploads/nordwood-themes-ivP3TYdLvw0-unsplash.jpg"
+preview_description: Everyone know the important of food. Food is the main energt
+  source of all people. Food is mainly metabolised and changed into these energy giving
+  carbohydrates, fats, proteins, and many other nutritious vitamins and minerals.
+header_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598716502/uploads/food_wg2kqi.png
 introduction: |-
   Hyperbaric oxygen therapy involves breathing pure oxygen in a pressurized room or tube. Hyperbaric oxygen therapy is a well-established treatment for decompression sickness, a hazard of scuba diving. Other conditions treated with hyperbaric oxygen therapy include serious infections, bubbles of air in your blood vessels, and wounds that won't heal as a result of diabetes or radiation injury.
 
@@ -42,7 +44,7 @@ stats:
     instructions before your first hyperbaric oxygen therapy session.
   stats_list:
   - with_supporting_image: true
-    figure: '/uploads/ravi-pinisetti-nnKq4ZlTU4k-unsplash.jpg'
+    figure: "/uploads/ravi-pinisetti-nnKq4ZlTU4k-unsplash.jpg"
     caption: The flowers bloom like a flower in the darkness.
     content: A majority of flowers often get depressed just as much as humans do.
   summary: |-
@@ -61,7 +63,7 @@ preview_conditions:
 preview_benefits:
 - benefit: You Look Good
 - benefit: You Feel Good
-introduction_image: "/uploads/david-nuescheler-gUBJ9vSlky0-unsplash.jpg"
+introduction_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598716043/uploads/intro-image_hl8all.png
 header_color: "#000000"
 
 ---
