@@ -19,7 +19,6 @@ sections:
 - type: document
   path: data/socials.json
   label: Social Media Links
-  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''

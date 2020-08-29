@@ -20,7 +20,7 @@ fields:
     schema:
       format: html
   label: Hero Subtitle
-- name: about_title
+- name: about_section_title
   type: textarea
   default: ''
   config:
@@ -28,8 +28,8 @@ fields:
     wysiwyg: true
     schema:
       format: html
-  label: About Title
-- name: about_subtitle
+  label: About Section Title
+- name: about_section_description
   type: textarea
   default: ''
   config:
@@ -37,8 +37,8 @@ fields:
     wysiwyg: true
     schema:
       format: html
-  label: About Subtitle
-- name: about_detail_one_title
+  label: About Section Description
+- name: first_content_title
   type: textarea
   default: ''
   config:
@@ -46,8 +46,8 @@ fields:
     wysiwyg: true
     schema:
       format: html
-  label: About Detail One Title
-- name: about_detail_one_description
+  label: First About Section Content Title
+- name: first_content_description
   type: textarea
   default: ''
   config:
@@ -55,8 +55,8 @@ fields:
     wysiwyg: true
     schema:
       format: html
-  label: About Detail One Description
-- name: about_detail_two_title
+  label: First About Section Content Description
+- name: second_content_title
   type: textarea
   default: ''
   config:
@@ -64,8 +64,8 @@ fields:
     wysiwyg: true
     schema:
       format: html
-  label: About Detail Two Title
-- name: about_detail_two_description
+  label: Second About Section Content Title
+- name: second_content_description
   type: textarea
   default: ''
   config:
@@ -73,7 +73,7 @@ fields:
     wysiwyg: true
     schema:
       format: html
-  label: About Detail Two Description
+  label: Second About Section Content Description
 - name: target_title
   type: textarea
   default: ''
@@ -83,15 +83,6 @@ fields:
     schema:
       format: html
   label: Target Title
-- name: instagram_title
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: html
-  label: Instagram Title
 - name: testimony_title
   type: textarea
   default: ''
@@ -101,3 +92,12 @@ fields:
     schema:
       format: html
   label: Testimony Title
+- name: instagram_title
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html
+  label: Instagram Title
