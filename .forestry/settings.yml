@@ -80,7 +80,7 @@ sections:
 - type: document
   path: data/socials.json
   label: Social Media Links
-upload_dir: uploads
+upload_dir: uploads_dev
 public_path: https://res.cloudinary.com/dgq7s4lkp/image/upload
 front_matter_path: https://res.cloudinary.com/dgq7s4lkp/image/upload
 use_front_matter_path: true
