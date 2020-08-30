@@ -1,0 +1,16 @@
+---
+label: FAQ
+hide_body: true
+fields:
+- name: question
+  type: text
+  config:
+    required: false
+  label: Question
+- name: answer
+  type: text
+  config:
+    required: false
+  label: Answer
+pages:
+- data/FAQ/can-i-undergo-period.md

@@ -4,7 +4,7 @@ preview_description: Hyperbaric oxygen therapy involves breathing pure oxygen in
   pressurized room or tube. Our blood carries this oxygen throughout your body. This
   helps fight bacteria and stimulate the release of substances called growth factors
   and stem cells, which promote healing.
-header_image: "/uploads/hyperbaric.png"
+header_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598716366/uploads/hyperbaric-treatment_cpdoof.jpg
 introduction: |-
   Hyperbaric oxygen therapy involves breathing pure oxygen in a pressurized room or tube. Hyperbaric oxygen therapy is a well-established treatment for decompression sickness, a hazard of scuba diving. Other conditions treated with hyperbaric oxygen therapy include serious infections, bubbles of air in your blood vessels, and wounds that won't heal as a result of diabetes or radiation injury.
 
@@ -74,7 +74,7 @@ preview_benefits:
 - benefit: Optimizes Health
 - benefit: Prevents Disease Progression
 - benefit: One-on-one consultations
-introduction_image: "/uploads/cody-davis-253925-unsplash.jpg"
+introduction_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598716043/uploads/intro-image_hl8all.png
 header_color: "#000000"
 
 ---

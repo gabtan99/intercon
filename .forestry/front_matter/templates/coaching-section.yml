@@ -1,0 +1,21 @@
+---
+label: Coaching Section
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+- type: text
+  name: short_description
+  label: Short Description
+- type: text
+  name: facebook_page_url
+  label: Facebook Page URL
+- type: textarea
+  name: email
+  label: Email
+- type: file
+  name: thumbnail_image
+  label: Thumbnail Image
+pages:
+- data/coaching_section.md

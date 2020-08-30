@@ -1,10 +1,10 @@
 ---
 title: Colon Hydroscopy
-preview_description: Colon Hydroscopy involves breathing pure oxygen in a
-  pressurized room or tube. Our blood carries this oxygen throughout your body. This
-  helps fight bacteria and stimulate the release of substances called growth factors
-  and stem cells, which promote healing.
-header_image: "/uploads/benjamin-parker-694742-unsplash.jpg"
+preview_description: Colon Hydroscopy involves breathing pure oxygen in a pressurized
+  room or tube. Our blood carries this oxygen throughout your body. This helps fight
+  bacteria and stimulate the release of substances called growth factors and stem
+  cells, which promote healing.
+header_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598715945/uploads/colon-hydrotherapy_ivj3fe.png
 introduction: |-
   Hyperbaric oxygen therapy involves breathing pure oxygen in a pressurized room or tube. Hyperbaric oxygen therapy is a well-established treatment for decompression sickness, a hazard of scuba diving. Other conditions treated with hyperbaric oxygen therapy include serious infections, bubbles of air in your blood vessels, and wounds that won't heal as a result of diabetes or radiation injury.
 
@@ -55,7 +55,8 @@ stats:
 
     To effectively treat other conditions, hyperbaric oxygen therapy is used as part of a comprehensive treatment plan and administered with other therapies and drugs that fit your individual needs.
 external_reads:
-- title: RED LIGHT THERAPY AND NEAR INFRARED LED LIGHT THERAPY FOR YOUR JACUZZI® INFRARED SAUNA
+- title: RED LIGHT THERAPY AND NEAR INFRARED LED LIGHT THERAPY FOR YOUR JACUZZI® INFRARED
+    SAUNA
   link: https://infraredsauna.com/red-light-and-near-infrared-therapy/
 - title: Healtline - Red Light Therapy Benefits
   link: https://www.healthline.com/health/red-light-therapy
@@ -66,7 +67,7 @@ preview_benefits:
 - benefit: Improves blood rush
 - benefit: Makes lips pinker
 - benefit: Detoxified blood
-introduction_image: "/uploads/sauna.png"
+introduction_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598716043/uploads/intro-image_hl8all.png
 header_color: "#000000"
 
 ---
