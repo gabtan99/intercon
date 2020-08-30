@@ -2,6 +2,11 @@
 label: Contact Details
 hide_body: false
 fields:
+- name: email
+  type: text
+  config:
+    required: false
+  label: Email
 - name: address
   type: text
   config:
