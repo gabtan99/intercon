@@ -1,5 +1,6 @@
-import { mount, createLocalVue } from '@vue/test-utils'
+import { mount, createLocalVue, config } from '@vue/test-utils'
 import BootstrapVue from 'bootstrap-vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import Hero from '@/components/Hero'
 import GreenButton from "@/components/GreenButton";
@@ -8,6 +9,8 @@ import YoutubeModal from "@/components/YoutubeModal";
 
 const localVue = createLocalVue()
 localVue.use(BootstrapVue)
+localVue.component('font-awesome', FontAwesomeIcon)
+config.showDeprecationWarnings = false
 
 describe('Hero Section Component', () => {
 

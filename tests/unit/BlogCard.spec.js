@@ -1,10 +1,11 @@
-import { mount, createLocalVue } from '@vue/test-utils'
+import { mount, createLocalVue, config } from '@vue/test-utils'
 import BootstrapVue from 'bootstrap-vue'
 
 import BlogCard from '@/components/BlogCard'
 
 const localVue = createLocalVue()
 localVue.use(BootstrapVue)
+config.showDeprecationWarnings = false
 
 describe('Blog Card Component', () => {
 

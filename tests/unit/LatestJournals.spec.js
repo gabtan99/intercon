@@ -1,10 +1,11 @@
-import { mount, createLocalVue } from '@vue/test-utils'
+import { mount, createLocalVue, config } from '@vue/test-utils'
 import BootstrapVue from 'bootstrap-vue'
 
 import LatestJournals from '@/components/LatestJournals'
 
 const localVue = createLocalVue()
 localVue.use(BootstrapVue)
+config.showDeprecationWarnings = false
 
 describe('Journal Content Component', () => {
 

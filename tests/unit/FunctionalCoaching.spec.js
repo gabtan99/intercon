@@ -1,10 +1,11 @@
-import { mount, createLocalVue } from '@vue/test-utils'
+import { mount, createLocalVue, config } from '@vue/test-utils'
 import BootstrapVue from 'bootstrap-vue'
 
 import FunctionalCoaching from '@/components/FunctionalCoaching'
 
 const localVue = createLocalVue()
 localVue.use(BootstrapVue)
+config.showDeprecationWarnings = false
 
 describe('Functional Coaching Component', () => {
 
