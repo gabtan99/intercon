@@ -17,11 +17,6 @@ fields:
   config:
     required: false
   label: About Company Title
-- name: about_company_image
-  type: file
-  config:
-    maxSize: 64
-  label: About Company Image
 - name: about_company_description
   type: textarea
   default: ''
@@ -31,16 +26,21 @@ fields:
     schema:
       format: markdown
   label: About Company Description
-- name: values_image
+- name: about_company_image
   type: file
   config:
     maxSize: 64
-  label: Values Image
+  label: About Company Image
 - name: values_title
   type: text
   config:
     required: false
   label: Values Title
+- name: values_image
+  type: file
+  config:
+    maxSize: 64
+  label: Values Image
 - name: mission_title
   type: text
   config:
