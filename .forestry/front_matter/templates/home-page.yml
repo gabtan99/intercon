@@ -101,3 +101,5 @@ fields:
     schema:
       format: html
   label: Instagram Title
+pages:
+- data/home_page.json
