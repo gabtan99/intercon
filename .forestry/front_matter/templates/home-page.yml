@@ -3,103 +3,59 @@ label: Home Page
 hide_body: true
 fields:
 - name: hero_title
-  type: textarea
-  default: ''
+  type: text
   config:
     required: false
-    wysiwyg: true
-    schema:
-      format: html
   label: Hero Title
 - name: hero_subtitle
-  type: textarea
-  default: ''
+  type: text
   config:
     required: false
-    wysiwyg: true
-    schema:
-      format: html
   label: Hero Subtitle
 - name: about_section_title
-  type: textarea
-  default: ''
+  type: text
   config:
     required: false
-    wysiwyg: true
-    schema:
-      format: html
   label: About Section Title
 - name: about_section_description
-  type: textarea
-  default: ''
+  type: text
   config:
     required: false
-    wysiwyg: true
-    schema:
-      format: html
   label: About Section Description
-- name: first_content_title
-  type: textarea
-  default: ''
+- name: about_bullet_1_title
+  type: text
   config:
     required: false
-    wysiwyg: true
-    schema:
-      format: html
-  label: First About Section Content Title
-- name: first_content_description
-  type: textarea
-  default: ''
+  label: About Bullet 1 Title
+- name: about_bullet_1_description
+  type: text
   config:
     required: false
-    wysiwyg: true
-    schema:
-      format: html
-  label: First About Section Content Description
-- name: second_content_title
-  type: textarea
-  default: ''
+  label: About Bullet 1 Description
+- name: about_bullet_2_title
+  type: text
   config:
     required: false
-    wysiwyg: true
-    schema:
-      format: html
-  label: Second About Section Content Title
-- name: second_content_description
-  type: textarea
-  default: ''
+  label: About Bullet 2 Title
+- name: about_bullet_2_description
+  type: text
   config:
     required: false
-    wysiwyg: true
-    schema:
-      format: html
-  label: Second About Section Content Description
-- name: target_title
-  type: textarea
-  default: ''
+  label: About Bullet 2 Description
+- name: target_section_title
+  type: text
   config:
     required: false
-    wysiwyg: true
-    schema:
-      format: html
-  label: Target Title
-- name: testimony_title
-  type: textarea
-  default: ''
+  label: Target Section Title
+- name: testimony_section_title
+  type: text
   config:
     required: false
-    wysiwyg: true
-    schema:
-      format: html
-  label: Testimony Title
-- name: instagram_title
-  type: textarea
-  default: ''
+  label: Testimony Section Title
+- name: instagram_section_title
+  type: text
   config:
     required: false
-    wysiwyg: true
-    schema:
-      format: html
-  label: Instagram Title
+  label: Instagram Section Title
 pages:
 - data/home_page.json
