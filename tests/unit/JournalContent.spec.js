@@ -16,7 +16,7 @@ describe('Journal Content Component', () => {
         localVue
     })
 
-    it("renders components GreenButton, WhiteButton, and YoutubeModal", () => {
+    it("passes props: title and content properly", () => {
         expect(wrapper.props().title).toBe('Journal Content Title goes here');
         expect(wrapper.props().content).toBe('Journal Content actual Content goes here');
     })
