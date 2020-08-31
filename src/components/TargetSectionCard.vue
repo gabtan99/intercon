@@ -5,7 +5,7 @@
       style="text-decoration: none; color: inherit;"
     >
       <b-card class="card-style">
-        <img class="icon-style" :src="target.target_icon.src" alt="icon" />
+        <img class="icon-style" :src="target.target_icon" alt="icon" />
         <h4 class="font-gilroy-medium font-24">
           {{ target.target_name }}
         </h4>

@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <h1 class="font-gilroy-bold font-36 heading">
-      {{ $static.pageConfig.target_section_title }}
+      {{ targetConfig.target_section_title }}
     </h1>
 
     <div class="card-container">
@@ -14,7 +14,7 @@
           class="font-gilroy-medium font-36"
           style="color: var(--green-branding); cursor: default;"
         >
-          +6
+          +{{ targets.length - 3 }}
         </span>
         <a href="/targets">
           <span
@@ -29,18 +29,10 @@
   </div>
 </template>
 
-<static-query>
-query {
-  pageConfig: pages (path: "/data/home-page/"){
-    target_section_title
-  },
-}
-</static-query>
-
 <script>
 import TargetSectionCard from "@/components/TargetSectionCard";
 export default {
-  props: ["targets"],
+  props: ["targets", "targetConfig"],
   methods: {
     log: function(e) {
       console.log(e);

@@ -2,7 +2,7 @@
   <Layout>
     <div class="container main-container">
       <div class="journal-header">
-        <img class="header-images" :src="$page.post.header_image.src" />
+        <img class="header-images" :src="$page.post.header_image" />
         <h4 class="date-style font-gilroy-light font-16">
           {{ $page.post.date | moment('LL') }}
         </h4>

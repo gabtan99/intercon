@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <h1 class="header font-gilroy-bold font-36">
-      {{ $static.pageConfig.testimony_section_title }}
+      {{ testimoniesConfig.testimony_section_title }}
     </h1>
     <div class="card-container">
       <ClientOnly>
@@ -10,14 +10,6 @@
     </div>
   </div>
 </template>
-
-<static-query>
-query {
-  pageConfig: pages (path: "/data/home-page/"){
-    testimony_section_title
-  },
-}
-</static-query>
 
 <script>
 import TestimonyCarousel from "./TestimonyCarousel";
@@ -31,7 +23,7 @@ export default {
   components: {
     TestimonyCarousel,
   },
-  props: ["testimonies"],
+  props: ["testimonies", "testimoniesConfig"],
 };
 </script>
 

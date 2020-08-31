@@ -2,20 +2,51 @@
   <Layout>
     <NewsletterModal currPage="LANDING" />
     <div class="container">
-      <Hero />
+      <Hero :heroConfig="$page.heroConfig" :socials="$page.socials" />
       <!-- <ProjectsGrid :projects="$page.projects.edges" /> -->
     </div>
     <Waves />
     <!-- <LatestJournals :journals="$page.journals.edges" /> -->
-    <AboutSection />
-    <TargetSection :targets="$page.targets.edges" />
-    <Testimonies :testimonies="$page.testimonies.edges" />
-    <Instagram />
+    <AboutSection :aboutConfig="$page.aboutConfig" />
+    <TargetSection
+      :targets="$page.targets.edges"
+      :targetConfig="$page.targetConfig"
+    />
+    <Testimonies
+      :testimonies="$page.testimonies.edges"
+      :testimoniesConfig="$page.testimoniesConfig"
+    />
+    <Instagram :instagramConfig="$page.instagramConfig" />
   </Layout>
 </template>
 
 <page-query>
 query Posts {
+  targetConfig: pages (path: "/data/home-page/"){
+    target_section_title
+  },
+  instagramConfig: pages (path: "/data/home-page/"){
+    instagram_section_title
+  },
+  testimoniesConfig: pages (path: "/data/home-page/"){
+    testimony_section_title
+  },
+  aboutConfig: pages (path: "/data/home-page/"){
+    about_section_title
+    about_section_description
+    about_bullet_1_title
+    about_bullet_1_description
+    about_bullet_2_title
+    about_bullet_2_description
+  },
+  heroConfig: pages (path: "/data/home-page/"){
+    hero_title
+    hero_subtitle
+    youtube_handle
+  },
+  socials: pages (path: "/data/socials") {
+    youtube_channel_url
+  },
   blog: allBlogPost (perPage: 4) {
     edges {
       node {

@@ -2,11 +2,11 @@
   <div class="main">
     <div class="col-lg-6">
       <h1 class="hero-title font-gilroy-bold font-42">
-        {{ $static.pageConfig.hero_title }}
+        {{ heroConfig.hero_title }}
       </h1>
 
       <h1 class="hero-subtitle font-avenir-light font-24">
-        {{ $static.pageConfig.hero_subtitle }}
+        {{ heroConfig.hero_subtitle }}
       </h1>
 
       <div class="hero-buttons">
@@ -28,24 +28,11 @@
     <youtube-modal
       :showModal="showModal"
       :hideModal="closeVideo"
-      :youtubeLink="$static.socials.youtube_channel_url"
-      :youtubeHandle="$static.pageConfig.youtube_handle"
+      :youtubeLink="socials.youtube_channel_url"
+      :youtubeHandle="heroConfig.youtube_handle"
     />
   </div>
 </template>
-
-<static-query>
-query Posts  {
-  pageConfig: pages (path: "/data/home-page/"){
-    hero_title
-    hero_subtitle
-    youtube_handle
-  },
-  socials: pages (path: "/data/socials") {
-    youtube_channel_url
-  }
-}
-</static-query>
 
 <script>
 import GreenButton from "@/components/GreenButton";
@@ -54,6 +41,7 @@ import Waves from "@/components/Waves";
 import YoutubeModal from "@/components/YoutubeModal";
 
 export default {
+  props: ["heroConfig", "socials"],
   components: {
     GreenButton,
     WhiteButton,
