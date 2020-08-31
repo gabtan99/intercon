@@ -43,7 +43,7 @@ stats:
     and potentially a fire hazard. Ask a member of your health care team for specific
     instructions before your first hyperbaric oxygen therapy session.
   stats_list:
-  - with_supporting_image: true
+  - with_supporting_image: false
     figure: "/uploads/ravi-pinisetti-nnKq4ZlTU4k-unsplash.jpg"
     caption: The flowers bloom like a flower in the darkness.
     content: A majority of flowers often get depressed just as much as humans do.
