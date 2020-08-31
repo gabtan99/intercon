@@ -7,7 +7,7 @@
     }"
   >
     {{ sectionTargetModal() }}
-    <img class="icon-style" :src="target.target_icon.src" alt="icon" />
+    <img class="icon-style" :src="target.target_icon" alt="icon" />
 
     <div class="card-content">
       <span class="target-name font-21 font-gilroy-bold">
@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import TargetModalContent from '@/components/TargetModalContent'
+import TargetModalContent from "@/components/TargetModalContent";
 
 export default {
   data() {
@@ -48,30 +48,30 @@ export default {
       selected: this.selectedTarget,
       selectedTargetContent: {},
       selectedTargetServices: [],
-    }
+    };
   },
-  props: ['target', 'selectedTarget'],
+  props: ["target", "selectedTarget"],
   components: {
     TargetModalContent,
   },
   methods: {
-    show: function (target) {
-      this.selectedTargetContent = this.target
-      this.selectedTargetServices = this.target.target_services
-      this.showModal = true
+    show: function(target) {
+      this.selectedTargetContent = this.target;
+      this.selectedTargetServices = this.target.target_services;
+      this.showModal = true;
     },
-    close: function () {
-      this.showModal = false
-      this.$router.push('/targets')
+    close: function() {
+      this.showModal = false;
+      this.$router.push("/targets");
     },
-    sectionTargetModal: function () {
+    sectionTargetModal: function() {
       if (this.selectedTarget) {
         if (this.selectedTarget === this.target.target_name)
-          this.show(this.selectedTarget)
+          this.show(this.selectedTarget);
       }
     },
   },
-}
+};
 </script>
 
 <style scoped>

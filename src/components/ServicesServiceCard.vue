@@ -7,7 +7,7 @@
     <div class="col-lg-4 service-card__thumbnail-container">
       <g-image
         :alt="service.node.title"
-        :src="service.node.header_image.src"
+        :src="service.node.header_image"
         :srcset="service.node.header_image.srcset"
         class="service-card__thumbnail"
       />

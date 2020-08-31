@@ -30,14 +30,14 @@
 </template>
 
 <script>
-import GreenButton from '@/components/GreenButton'
-import WhiteButton from '@/components/WhiteButton'
-import Waves from '@/components/Waves'
-import YoutubeModal from '@/components/YoutubeModal'
+import GreenButton from "@/components/GreenButton";
+import WhiteButton from "@/components/WhiteButton";
+import Waves from "@/components/Waves";
+import YoutubeModal from "@/components/YoutubeModal";
 
 export default {
-  props: ['showModal', 'youtubeLink', 'youtubeHandle', 'hideModal'],
-}
+  props: ["showModal", "youtubeLink", "youtubeHandle", "hideModal"],
+};
 </script>
 
 <style scoped>
@@ -71,8 +71,8 @@ export default {
 
 .close-icon {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 20px;
+  right: 20px;
   font-size: 13pt;
   color: var(--gray-2);
   cursor: pointer;
@@ -86,8 +86,8 @@ export default {
   }
 
   .close-icon {
-    top: 13px;
-    right: 13px;
+    top: 20px;
+    right: 20px;
   }
 }
 </style>
