@@ -44,8 +44,8 @@ stats:
     and potentially a fire hazard. Ask a member of your health care team for specific
     instructions before your first hyperbaric oxygen therapy session.
   stats_list:
-  - with_supporting_image: true
-    figure: "/uploads/stats.png"
+  - with_supporting_image: false
+    figure: ''
     caption: Here are some stats.
     content: In 9 out of 10 scenarios, people don't live up to others' expectations.
   summary: |-
