@@ -37,11 +37,11 @@ fields:
   config:
     required: false
   label: About Bullet 1 Description
-- name: about_bullet_2_icon
-  type: text
+- name: about_2_bullet_2_icon
+  type: file
   config:
-    required: false
-  label: About Bullet 2 Icon
+    maxSize: 64
+  label: About 2 Bullet 2 Icon
 - name: about_bullet_2_title
   type: text
   config:
