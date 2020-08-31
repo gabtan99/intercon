@@ -1,7 +1,7 @@
 <template>
   <Layout class="gray-bg">
     <PageHeader
-      :page_name="$page.pageConfig.page_name"
+      :page_name="$page.pageConfig.page_title"
       :image="$page.pageConfig.header_image"
     />
     <ServicesSection :services="$page.services.edges" />
@@ -12,7 +12,7 @@
 <page-query>
 query Service {
   pageConfig: pages (path: "/data/services-page/"){
-    page_name
+    page_title
     header_image
   },
 	services: allServices{
@@ -77,12 +77,6 @@ export default {
     ServicesSection,
     NewsletterModal,
     PageHeader,
-  },
-  data() {
-    return {
-      page_name: "Services",
-      image: "services-header.png",
-    };
   },
 };
 </script>

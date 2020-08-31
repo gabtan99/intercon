@@ -56,25 +56,25 @@ query {
 
 <script>
 export default {
-  props: ['servicesContent'],
+  props: ["servicesContent"],
   data() {
     return {
       singleService: {},
-    }
+    };
   },
   methods: {
-    getServiceInfo: function (title) {
+    getServiceInfo: function(title) {
       this.$static.services.edges.map((item) => {
         if (title === item.node.title) {
-          this.singleService = item.node
+          this.singleService = item.node;
         }
-      })
+      });
     },
-    log: function (e) {
-      console.log(e)
+    log: function(e) {
+      console.log(e);
     },
   },
-}
+};
 </script>
 <style scoped>
 .service-card {
