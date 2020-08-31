@@ -53,7 +53,7 @@ export default {
   text-align: center;
   background-image: linear-gradient(
     to top,
-    var(--white),
+    #fcfcfc,
     var(--lightgreen-gradient)
   );
   padding: 10rem 0;

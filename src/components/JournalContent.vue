@@ -41,17 +41,20 @@ img[alt='image'] {
   font-size: 1.8rem;
   margin: 2rem 0rem;
 }
+
 h2 {
   font-family: Gilroy-Bold;
   font-size: 2.4rem;
   margin: 2rem 0rem;
 }
 h3 {
+  font-family: Gilroy-Bold;
   font-size: 1.5rem;
 }
 h4,
 h5,
 h6 {
+  font-family: Gilroy-Bold;
   font-size: 1.15rem;
 }
 

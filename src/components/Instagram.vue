@@ -83,7 +83,7 @@ export default {
 .main {
   background-image: linear-gradient(
     to bottom,
-    var(--white),
+    #fcfcfc,
     var(--lightblue-gradient)
   );
   display: flex;

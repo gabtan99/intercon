@@ -30,6 +30,7 @@ export default {
 <style scoped>
 .main {
   padding: 3% 13%;
+  background-color: #fcfcfc;
 }
 
 .header {
