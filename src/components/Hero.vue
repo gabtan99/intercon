@@ -15,7 +15,8 @@
         </GreenButton>
 
         <WhiteButton :onClick="watchVideo">
-          Watch <font-awesome :icon="['fab', 'youtube']" class="social" />
+          Watch
+          <font-awesome :icon="['fab', 'youtube']" class="social" />
         </WhiteButton>
       </div>
     </div>
@@ -34,10 +35,10 @@
 </template>
 
 <script>
-import GreenButton from "@/components/GreenButton";
-import WhiteButton from "@/components/WhiteButton";
-import Waves from "@/components/Waves";
-import YoutubeModal from "@/components/YoutubeModal";
+import GreenButton from '@/components/GreenButton'
+import WhiteButton from '@/components/WhiteButton'
+import Waves from '@/components/Waves'
+import YoutubeModal from '@/components/YoutubeModal'
 
 export default {
   components: {
@@ -48,22 +49,21 @@ export default {
   },
   data() {
     return {
-      settings: require("../../data/theme.json"),
       showModal: false,
-    };
+    }
   },
   methods: {
     watchVideo() {
-      this.showModal = true;
+      this.showModal = true
     },
     closeVideo() {
-      this.showModal = false;
+      this.showModal = false
     },
     learnMore() {
-      this.$router.push("/about");
+      this.$router.push('/about')
     },
   },
-};
+}
 </script>
 
 <style scoped>

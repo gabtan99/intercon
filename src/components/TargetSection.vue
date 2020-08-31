@@ -1,6 +1,8 @@
 <template>
   <div class="main">
-    <h1 class="font-gilroy-bold font-36 heading">Target Groups</h1>
+    <h1 class="font-gilroy-bold font-36 heading">
+      {{ $page.pageConfig.target_section_title }}
+    </h1>
 
     <div class="card-container">
       <TargetSectionCard :target="targets[0].node" />
@@ -27,19 +29,27 @@
   </div>
 </template>
 
+<page-query>
+query {
+  pageConfig: pages (path: "/data/home-page/"){
+    target_section_title
+  },
+}
+</page-query>
+
 <script>
-import TargetSectionCard from "@/components/TargetSectionCard";
+import TargetSectionCard from '@/components/TargetSectionCard'
 export default {
-  props: ["targets"],
+  props: ['targets'],
   methods: {
-    log: function(e) {
-      console.log(e);
+    log: function (e) {
+      console.log(e)
     },
   },
   components: {
     TargetSectionCard,
   },
-};
+}
 </script>
 
 <style scoped>

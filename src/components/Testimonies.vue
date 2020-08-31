@@ -1,6 +1,8 @@
 <template>
   <div class="main">
-    <h1 class="header font-gilroy-bold font-36">What Our Clients Say</h1>
+    <h1 class="header font-gilroy-bold font-36">
+      {{ $page.pageConfig.testimony_section_title }}
+    </h1>
     <div class="card-container">
       <ClientOnly>
         <testimony-carousel :testimonies="this.testimonies" />
@@ -9,21 +11,28 @@
   </div>
 </template>
 
+<page-query>
+query {
+  pageConfig: pages (path: "/data/home-page/"){
+    testimony_section_title
+  },
+}
+</page-query>
+
 <script>
-import TestimonyCarousel from "./TestimonyCarousel";
+import TestimonyCarousel from './TestimonyCarousel'
 
 export default {
   data() {
     return {
-      settings: require("../../data/theme.json"),
       items: [{}, {}, {}, {}, {}],
-    };
+    }
   },
   components: {
     TestimonyCarousel,
   },
-  props: ["testimonies"],
-};
+  props: ['testimonies'],
+}
 </script>
 
 <style scoped>

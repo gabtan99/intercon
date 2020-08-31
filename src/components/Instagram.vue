@@ -1,13 +1,16 @@
 <template>
   <div class="main">
     <div class="text-container">
-      <h1 class="header font-gilroy-bold font-48">Join Our <br />Community</h1>
+      <h1 class="header font-gilroy-bold font-48">
+        {{ $page.pageConfig.instagram_section_title }}
+      </h1>
 
       <a
         class="subheader font-avenir-book font-24"
         href="https://www.instagram.com/interconregenerative/"
-        >@interconregenerative</a
       >
+        @interconregenerative
+      </a>
     </div>
 
     <div class="img-container">
@@ -37,20 +40,28 @@
   </div>
 </template>
 
+<page-query>
+query {
+  pageConfig: pages (path: "/data/home-page/"){
+    instagram_section_title
+  },
+}
+</page-query>
+
 <script>
-import { getRecentInstagram } from "@/services/instagram";
+import { getRecentInstagram } from '@/services/instagram'
 
 export default {
   data() {
     return {
-      settings: require("../../data/theme.json"),
+      settings: require('../../data/theme.json'),
       images: [],
-    };
+    }
   },
   async beforeCreate() {
-    this.images = await getRecentInstagram(4);
+    this.images = await getRecentInstagram(4)
   },
-};
+}
 </script>
 
 <style scoped>
