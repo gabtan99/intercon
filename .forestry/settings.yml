@@ -83,7 +83,6 @@ sections:
 - type: document
   path: data/newsletter.json
   label: Newsletter Details
-  match: "**/*"
 upload_dir: uploads_dev
 public_path: https://res.cloudinary.com/dgq7s4lkp/image/upload
 front_matter_path: https://res.cloudinary.com/dgq7s4lkp/image/upload

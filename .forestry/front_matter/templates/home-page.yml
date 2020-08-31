@@ -22,6 +22,11 @@ fields:
   config:
     required: false
   label: About Section Description
+- name: about_bullet_1_icon
+  type: file
+  config:
+    maxSize: 64
+  label: About Bullet 1 Icon
 - name: about_bullet_1_title
   type: text
   config:
@@ -32,6 +37,11 @@ fields:
   config:
     required: false
   label: About Bullet 1 Description
+- name: about_bullet_2_icon
+  type: text
+  config:
+    required: false
+  label: About Bullet 2 Icon
 - name: about_bullet_2_title
   type: text
   config:
