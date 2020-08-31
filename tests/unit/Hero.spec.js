@@ -17,6 +17,16 @@ describe('Hero Section Component', () => {
   let watchVideo = jest.fn()
   let learnMore = jest.fn()
   const wrapper = mount(Hero, {
+    propsData: {
+      heroConfig: {
+        hero_title: "Hero Section Title",
+        hero_subtitle: "Hero SubSection Information",
+        youtube_handle: "Intercon Regenerative",
+      },
+      socials: {
+        youtube_channel_url: "https://www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw"
+      },
+    },
     methods: {
       watchVideo,
       learnMore,
@@ -28,6 +38,11 @@ describe('Hero Section Component', () => {
     expect(wrapper.findComponent(GreenButton).exists()).toBe(true)
     expect(wrapper.findComponent(WhiteButton).exists()).toBe(true)
     expect(wrapper.findComponent(YoutubeModal).exists()).toBe(true)
+  })
+
+  it("passes props (hero_title and hero_subtitle) properly", () => {
+    expect(wrapper.props().heroConfig.hero_title).toBe('Hero Section Title');
+    expect(wrapper.props().heroConfig.hero_subtitle).toBe('Hero SubSection Information');
   })
 
   it('calls watchVideo method when Watch button is clicked', () => {
