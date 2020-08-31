@@ -49,7 +49,7 @@ stats:
     caption: A gangly teen who did not live up to anyone's expectations.
     content: In 9 out of 10 scenarios, people don't live up to others' expectations.
   - with_supporting_image: true
-    figure: "/uploads/markus-spiske-516263-unsplash.jpg"
+    figure: ''
     caption: This teen is a squeamish yellow tone and has a film of fat surrounding
       it.
     content: In general teens are getting heavier as they grow more. However this
