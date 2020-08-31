@@ -39,6 +39,7 @@ img {
   margin: auto;
   margin-bottom: 10px;
   transition: all 0.2s ease-in-out;
+  background-color: white;
 }
 
 .testimony-card:hover {
