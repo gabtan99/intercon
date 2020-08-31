@@ -2,7 +2,6 @@ import { mount, createLocalVue, config } from '@vue/test-utils'
 import BootstrapVue from 'bootstrap-vue'
 
 import TargetCard from '@/components/TargetCard'
-import TargetModalContent from "@/components/TargetModalContent";
 
 const localVue = createLocalVue()
 localVue.use(BootstrapVue)
@@ -36,10 +35,6 @@ describe('Target Card Component', () => {
         localVue
     })
 
-    // it("renders components TargetModalContent", () => {
-    //     expect(wrapper.findComponent(TargetModalContent).exists()).toBe(true)
-    // })
-
     it("passes all props of target properly", () => {
         expect(wrapper.props().target.target_name).toBe('Age-Proof Regeneration');
         expect(wrapper.props().target.target_description).toBe('Age-proof regeneration helps restore your youthful looks');
@@ -53,9 +48,9 @@ describe('Target Card Component', () => {
         expect(wrapper.props().target.target_services[2].service_description).toBe("Oh Bob, you've done it this time");
     })
 
-    // it('calls goToBlog method when Blog Card is clicked', () => {
-    //     expect(goToBlog).not.toHaveBeenCalled()
-    //     wrapper.find('.blog-card').trigger('click')
-    //     expect(goToBlog).toHaveBeenCalled()
-    // })
+    it('calls "show" method when Target Card is clicked', () => {
+        expect(show).not.toHaveBeenCalled()
+        wrapper.find('.card').trigger('click')
+        expect(show).toHaveBeenCalled()
+    })
 })
