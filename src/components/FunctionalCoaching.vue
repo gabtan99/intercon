@@ -6,49 +6,62 @@
   >
     <div class="col-lg-7 p-5 service-card__content">
       <h2 class="font-24 font-gilroy-bold mb-3 service-card__title">
-        Functional Health and Wellness Coaching
+        {{ this.$static.coaching.title }}
       </h2>
       <p class="font-16 font-avenir-light mb-4 service-card__description">
-        Hyperbaric oxygen therapy involves breathing pure oxygen in a
-        pressurized room or tube. Hyperbaric oxygen therapy is a
-        well-established treatment for decompression sickness, a hazard of scuba
-        diving.
+        {{ this.$static.coaching.short_description }}
       </p>
       <a
-        href="https://www.facebook.com/interconregenerative/"
+        :href="$static.coaching.facebook_page_url"
         v-b-popover.hover.top="{
-          title: 'Functional Health with Janise Tang Piap',
+          title: $static.coaching.facebook_page_url,
           customClass: 'font-avenir-medium font-20',
         }"
       >
-        <font-awesome :icon="['fab', 'facebook-square']" class="social"
-      /></a>
+        <font-awesome :icon="['fab', 'facebook-square']" class="social" />
+      </a>
 
       <font-awesome
         id="email"
         icon="envelope"
         class="social email"
         v-b-popover.hover.top="{
-          title: 'jantangpiap@interconregenerative.com',
+          title: $static.coaching.email,
           customClass: 'font-avenir-medium font-20',
         }"
       />
     </div>
     <div class="col-lg-5 service-card__thumbnail-container">
-      <g-image class="service-card__thumbnail" alt="coachingpic" />
+      <g-image
+        class="service-card__thumbnail"
+        alt="coachingpic"
+        :src="$static.coaching.thumbnail_image"
+      />
     </div>
   </b-row>
 </template>
 
+<static-query>
+query {
+  coaching: coaching (path: "/data/coaching-section") {
+    title
+    short_description
+    facebook_page_url
+    email
+    thumbnail_image
+  }
+}
+</static-query>
+
 <script>
 export default {
-  props: ["service"],
+  props: ['service'],
   methods: {
     goToService(path) {
-      this.$router.push(path);
+      this.$router.push(path)
     },
   },
-};
+}
 </script>
 
 <style scoped>
