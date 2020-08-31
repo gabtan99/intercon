@@ -4,14 +4,14 @@ header_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598717101/uplo
 title:
   Stay happy and healthy with the new normal. Tools to use to strengthen relationships
   with friends and family.
-author_avatar: "/uploads/ravi-pinisetti-nnKq4ZlTU4k-unsplash.jpg"
+author_avatar: '/uploads/ravi-pinisetti-nnKq4ZlTU4k-unsplash.jpg'
 author: Jett Li
 excerpt:
   "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
   an unknown printer took a galley of type and scrambled it to makea type specimen
   book. "
-content_image: "/uploads/healthy-pandemic-content.jpg"
+content_image: '/uploads/healthy-pandemic-content.jpg'
 ---
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makea type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
@@ -20,4 +20,4 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'sstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makea type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'sstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makea type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'sstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makea type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
 
-![](https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598717913/uploads/vidchat_dpnpmm.jpg)
+![image](https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598717913/uploads/vidchat_dpnpmm.jpg)
