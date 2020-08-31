@@ -118,10 +118,7 @@
           </div>
         </div>
       </div>
-      <span
-        v-html="settings.footer"
-        class="copyright font-avenir-light font-16"
-      />
+      <span class="copyright font-avenir-light font-16" />
     </div>
   </footer>
 </template>
@@ -133,7 +130,6 @@ import { setSubscribed } from "@/util/localStorage";
 export default {
   data() {
     return {
-      settings: require("../../data/theme.json"),
       email: null,
       isLoading: false,
       isSuccess: false,

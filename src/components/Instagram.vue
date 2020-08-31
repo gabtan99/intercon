@@ -49,19 +49,19 @@ query {
 </page-query>
 
 <script>
-import { getRecentInstagram } from '@/services/instagram'
+import { getRecentInstagram } from "@/services/instagram";
 
 export default {
   data() {
     return {
-      settings: require('../../data/theme.json'),
+      settings: require("../../data/socials.json"),
       images: [],
-    }
+    };
   },
   async beforeCreate() {
-    this.images = await getRecentInstagram(4)
+    this.images = await getRecentInstagram(4);
   },
-}
+};
 </script>
 
 <style scoped>

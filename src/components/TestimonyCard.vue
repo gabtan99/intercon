@@ -10,11 +10,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      settings: require("../../data/theme.json"),
-    };
-  },
   props: ["image", "message", "name"],
 };
 </script>

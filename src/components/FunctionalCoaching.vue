@@ -35,10 +35,7 @@
       />
     </div>
     <div class="col-lg-5 service-card__thumbnail-container">
-      <g-image
-        src="../../uploads/brown-coffee.jpg"
-        class="service-card__thumbnail"
-      />
+      <g-image class="service-card__thumbnail" alt="coachingpic" />
     </div>
   </b-row>
 </template>

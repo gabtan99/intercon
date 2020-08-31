@@ -1,5 +1,4 @@
 import DefaultLayout from "~/layouts/Default.vue";
-import settings from "../data/theme.json";
 import BootstrapVue from "bootstrap-vue";
 import VueYoutube from "vue-youtube";
 import VueMoment from "vue-moment";
@@ -72,10 +71,6 @@ export default function(Vue, { head }) {
   head.script.push({
     src: require("./scripts/chatbot.js"),
   });
-
-  head.bodyAttrs = {
-    class: settings.dark_mode ? "dark" : "",
-  };
 
   head.meta.push({
     name: "keywords",

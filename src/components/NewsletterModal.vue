@@ -77,7 +77,6 @@ export default {
   props: ["currPage"],
   data() {
     return {
-      settings: require("../../data/theme.json"),
       email: null,
       isLoading: false,
       isSuccess: false,
