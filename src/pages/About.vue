@@ -18,7 +18,7 @@
 
         <b-img
           class="who-img"
-          :src="$page.pageConfig.about_company_image.src"
+          :src="$page.pageConfig.about_company_image"
           fluid
         />
       </b-container>
@@ -26,11 +26,7 @@
 
     <div class="green-gradient">
       <b-container class="values-section">
-        <b-img
-          class="values-img"
-          :src="$page.pageConfig.values_image.src"
-          fluid
-        />
+        <b-img class="values-img" :src="$page.pageConfig.values_image" fluid />
 
         <b-row class="values-card">
           <h1 class="font-gilroy-bold font-36 blue title">
@@ -71,7 +67,7 @@
           <div class="col-lg-2">
             <b-img
               class="founder-image"
-              :src="$page.pageConfig.founder_image.src"
+              :src="$page.pageConfig.founder_image"
               fluid
             />
           </div>

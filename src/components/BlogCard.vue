@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-card tag="article" class="blog-card" v-on:click="goToBlog(blog.path)">
-      <b-card-img alt="image" :src="blog.header_image.src" class="card-img" />
+      <b-card-img alt="image" :src="blog.header_image" class="card-img" />
       <div class="text-wrapper">
         <h4
           v-b-popover.hover.top="{

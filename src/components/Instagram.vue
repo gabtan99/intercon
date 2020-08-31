@@ -1,41 +1,52 @@
 <template>
   <div class="main">
     <div class="text-container">
-      <h1 class="header font-gilroy-bold font-48">Join Our <br />Community</h1>
+      <h1 class="header font-gilroy-bold font-48">
+        {{ $static.pageConfig.instagram_section_title }}
+      </h1>
 
       <a
         class="subheader font-avenir-book font-24"
         href="https://www.instagram.com/interconregenerative/"
-        >@interconregenerative</a
       >
+        @interconregenerative
+      </a>
     </div>
 
     <div class="img-container">
       <div class="left thumbnail" v-if="!!images[3]">
         <a :href="images[3].url">
-          <img :src="images[3].thumbnail" />
+          <img :src="images[3].thumbnail" alt="ig3" />
         </a>
       </div>
 
       <div class="top thumbnail" v-if="!!images[0]">
         <a :href="images[0].url">
-          <img :src="images[0].thumbnail" />
+          <img :src="images[0].thumbnail" alt="ig0" />
         </a>
       </div>
 
       <div class="right thumbnail" v-if="!!images[1]">
         <a :href="images[1].url">
-          <img :src="images[1].thumbnail" />
+          <img :src="images[1].thumbnail" alt="ig1" />
         </a>
       </div>
       <div class="bottom thumbnail" v-if="!!images[2]">
         <a :href="images[2].url">
-          <img :src="images[2].thumbnail" />
+          <img :src="images[2].thumbnail" alt="ig2" />
         </a>
       </div>
     </div>
   </div>
 </template>
+
+<static-query>
+query {
+  pageConfig: pages (path: "/data/home-page/"){
+    instagram_section_title
+  },
+}
+</static-query>
 
 <script>
 import { getRecentInstagram } from "@/services/instagram";
@@ -43,7 +54,6 @@ import { getRecentInstagram } from "@/services/instagram";
 export default {
   data() {
     return {
-      settings: require("../../data/theme.json"),
       images: [],
     };
   },

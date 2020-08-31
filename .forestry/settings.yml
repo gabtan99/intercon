@@ -1,55 +1,97 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: '/static/admin'
-webhook_url:
+admin_path: "/static/admin"
+webhook_url: 
 sections:
-  - type: directory
-    path: testimonies
-    label: Testimonies
-    create: documents
-    match: '**/*.md'
-    new_doc_ext: md
-    templates:
-      - testimony
-  - type: directory
-    path: targets
-    label: Targets
-    create: all
-    match: '**/*.md'
-    new_doc_ext: md
-    templates:
-      - target
-  - type: directory
-    path: services
-    label: Services
-    create: all
-    match: '**/*.md'
-    new_doc_ext: md
-    templates:
-      - services
-  - type: directory
-    path: blog
-    label: Blog
-    create: documents
-    match: '**/*.md'
-    templates:
-      - blog
-  - type: document
-    path: data/theme.json
-    label: Theme config
-  - type: document
-    path: data/targets_page.json
-    label: Targets Page
-upload_dir: uploads
-public_path: '/uploads'
-front_matter_path: ''
-use_front_matter_path: false
-file_template: ':filename:'
+- type: heading
+  label: Home
+- type: document
+  path: data/home_page.json
+  label: Home Page
+- type: directory
+  path: data/testimonies
+  label: Testimonies List
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: md
+  templates:
+  - testimony
+- type: heading
+  label: Services
+- type: document
+  path: data/services_page.json
+  label: Services Page
+- type: directory
+  path: data/services
+  label: Services List
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: md
+  templates:
+  - services
+- type: document
+  path: data/coaching_section.md
+  label: Functional Coaching
+- type: heading
+  label: Targets
+- type: document
+  path: data/targets_page.json
+  label: Targets Page
+- type: directory
+  path: data/targets
+  label: Targets List
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: md
+  templates:
+  - target
+- type: heading
+  label: Blog
+- type: document
+  path: data/blog_page.json
+  label: Blog Page
+- type: directory
+  path: data/blog
+  label: Blog Posts
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: md
+  templates:
+  - journal
+- type: heading
+  label: About Us
+- type: document
+  path: data/about_page.json
+  label: About Us Page
+- type: directory
+  path: data/FAQ
+  label: FAQs
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: md
+  templates:
+  - faq
+- type: heading
+  label: Others
+- type: document
+  path: data/contact_details.json
+  label: Contact Details
+- type: document
+  path: data/socials.json
+  label: Social Media Links
+- type: document
+  path: data/newsletter.json
+  label: Newsletter Details
+upload_dir: uploads_dev
+public_path: https://res.cloudinary.com/dgq7s4lkp/image/upload
+front_matter_path: https://res.cloudinary.com/dgq7s4lkp/image/upload
+use_front_matter_path: true
+file_template: ":filename:"
 build:
   preview_output_directory: dist
   install_dependencies_command: npm install
   preview_docker_image: node:10
-  mount_path: '/srv'
-  working_dir: '/srv'
+  mount_path: "/srv"
+  working_dir: "/srv"
   instant_preview_command: npm run develop

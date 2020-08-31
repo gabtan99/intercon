@@ -11,9 +11,6 @@
       <font-awesome class="close-icon" :icon="'times'" @click="hideModal" />
     </b-row>
     <div class="modal-style">
-      <h1 class="font-avenir-light title">
-        Subscribe to our channel and be part of our growing community!
-      </h1>
       <a class="font-gilroy-light font-18 youtube-link" :href="youtubeLink">
         <font-awesome :icon="['fab', 'youtube']" class="youtube-icon" />
         {{ youtubeHandle }}
@@ -74,8 +71,8 @@ export default {
 
 .close-icon {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 20px;
+  right: 20px;
   font-size: 13pt;
   color: var(--gray-2);
   cursor: pointer;
@@ -89,8 +86,8 @@ export default {
   }
 
   .close-icon {
-    top: 13px;
-    right: 13px;
+    top: 20px;
+    right: 20px;
   }
 }
 </style>

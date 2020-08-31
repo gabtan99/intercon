@@ -10,7 +10,7 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
-        path: "blog/**/*.md",
+        path: "data/blog/**/*.md",
         typeName: "BlogPost",
         resolveAbsolutePaths: true,
         remark: {
@@ -22,7 +22,7 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
-        path: "targets/**/*.md",
+        path: "data/targets/**/*.md",
         typeName: "Targets",
         resolveAbsolutePaths: true,
         remark: {
@@ -34,7 +34,7 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
-        path: "services/**/*.md",
+        path: "data/services/**/*.md",
         typeName: "Services",
         resolveAbsolutePaths: true,
         remark: {
@@ -46,7 +46,7 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
-        path: "testimonies/**/*.md",
+        path: "data/testimonies/**/*.md",
         typeName: "Testimonies",
         resolveAbsolutePaths: true,
         remark: {

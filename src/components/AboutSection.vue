@@ -2,19 +2,17 @@
   <div class="main">
     <div class="about-description">
       <h1 class="about-title font-gilroy-bold font-36">
-        About Our Company
+        {{ $static.pageConfig.about_section_title }}
       </h1>
 
       <p class="about-subtitle font-avenir-book font-18">
-        We seek to enhance health and address issues by identifying primary
-        causes of illness and disease, through in-depth one-on-one consultations
-        and specialized tests / diagnostics.
+        {{ $static.pageConfig.about_section_description }}
       </p>
     </div>
 
     <div class="about-details">
       <b-row class="lower">
-        <div class="col-lg-5 image p-5">
+        <div class="col-lg-5 image p-8">
           <b-img
             fluid
             :src="require('../assets/img/about-section.png')"
@@ -27,20 +25,18 @@
             <div class="title-div">
               <b-img
                 class="icon-style"
-                :src="require('../../uploads/skin.png')"
+                :src="require('../assets/img/bandaid.png')"
                 alt="icon"
               />
 
               <h1 class="detail-title font-gilroy-bold font-21">
-                Optimize Health & Lifestyle
+                {{ $static.pageConfig.about_bullet_1_title }}
               </h1>
             </div>
 
             <div>
               <p class="detail-info font-avenir-light font-18">
-                We seek to enhance health and address issues by identifying
-                primary causes of illness and disease, through in-depth
-                one-on-one consultations and specialized tests.
+                {{ $static.pageConfig.about_bullet_1_description }}
               </p>
             </div>
           </div>
@@ -49,21 +45,19 @@
             <div class="title-div">
               <b-img
                 class="icon-style"
-                :src="require('../../uploads/leaf.png')"
+                :src="require('../assets/img/leafy.png')"
                 alt="icon"
               />
               <div>
                 <h1 class="detail-title font-gilroy-bold font-21">
-                  Prevent and Halt Disease Prevention
+                  {{ $static.pageConfig.about_bullet_2_title }}
                 </h1>
               </div>
             </div>
 
             <div>
               <p class="detail-info font-avenir-light font-18">
-                We seek to enhance health and address issues by identifying
-                primary causes of illness and disease, through in-depth
-                one-on-one consultations and specialized tests.
+                {{ $static.pageConfig.about_bullet_2_description }}
               </p>
             </div>
           </div>
@@ -73,15 +67,21 @@
   </div>
 </template>
 
-<script>
-export default {
-  components: {},
-  data() {
-    return {
-      settings: require("../../data/theme.json"),
-    };
+<static-query>
+query {
+  pageConfig: pages (path: "/data/home-page/"){
+    about_section_title
+    about_section_description
+    about_bullet_1_title
+    about_bullet_1_description
+    about_bullet_2_title
+    about_bullet_2_description
   },
-};
+}
+</static-query>
+
+<script>
+export default {};
 </script>
 
 <style scoped>
@@ -104,11 +104,12 @@ p {
 
 .main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 30px 20px;
   padding-bottom: 40px;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   background: var(--lightgreen-gradient);
 }
 
@@ -124,16 +125,17 @@ p {
 
 .about-subtitle {
   margin-bottom: 4rem;
-  max-width: 60rem;
   padding: 0 2rem;
 }
 
 .about-details {
-  width: 90%;
+  width: 80%;
+  max-width: 90%;
 }
 
 .lower {
   justify-content: center;
+  align-items: center;
 }
 
 .about-detail-item {

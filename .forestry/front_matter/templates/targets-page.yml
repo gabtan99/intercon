@@ -6,17 +6,18 @@ fields:
   type: text
   config:
     required: false
-  label: Page Name
+  label: Page Title
 - name: header_image
   type: file
   config:
     maxSize: 
   label: Header Image
+  default: "/uploads/v1598707981/uploads/colon-hydrotherapy_y8aprf.png"
 - name: description_title
   type: text
   config:
     required: false
-  label: Description Title
+  label: Page Description Title
 - name: page_description
   type: textarea
   default: ''
@@ -26,3 +27,5 @@ fields:
     schema:
       format: markdown
   label: Page Description
+pages:
+- data/targets_page.json

@@ -2,60 +2,45 @@
 label: Target
 hide_body: true
 fields:
-  - name: target_name
+- name: target_name
+  type: text
+  config:
+    required: false
+  description: title of the target
+  label: Target Name
+  hidden: false
+- name: background_color
+  type: color
+  config:
+    required: false
+    color_format: Hex
+  label: Background Color
+- name: target_description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+    min: 
+    max: 120
+  label: Target Description
+- name: target_icon
+  type: file
+  config:
+    maxSize: 64
+  label: Target Icon
+- name: target_services
+  type: field_group_list
+  fields:
+  - name: service_name
     type: text
     config:
       required: false
-    description: title of the target
-    label: Target Name
-    hidden: false
-  - name: background_color
-    type: color
-    config:
-      required: false
-      color_format: Hex
-    label: Background Color
-  - name: target_description
-    type: textarea
-    default: ''
-    config:
-      required: false
-      wysiwyg: false
-      schema:
-        format: markdown
-    label: Target Description
-  - name: target_services
-    type: field_group_list
-    fields:
-      - name: service_name
-        type: text
-        config:
-          required: false
-        label: Service Name
-      - name: service_description
-        type: textarea
-        default: ''
-        config:
-          required: false
-          wysiwyg: false
-          schema:
-            format: markdown
-        label: Service Description
-      - name: service_url
-        type: text
-        config:
-          required: false
-        label: Service URL
-      - name: service_image
-        type: file
-        config:
-          maxSize: 250
-        label: Service Image
-    config:
-      min:
-      max:
-      labelField:
-    label: Target Services
-pages:
-  - targets/skin_care.md
-  - targets/detoxification.md
+    label: Service Name
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Target Services

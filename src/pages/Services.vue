@@ -78,12 +78,6 @@ export default {
     NewsletterModal,
     PageHeader,
   },
-  data() {
-    return {
-      page_name: "Services",
-      image: "services-header.png",
-    };
-  },
 };
 </script>
 

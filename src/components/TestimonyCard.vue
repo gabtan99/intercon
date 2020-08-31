@@ -1,7 +1,7 @@
 <template>
   <div class="testimony-card">
     <div class="img-container">
-      <img :src="this.image.src" />
+      <img :src="this.image" alt="testimonypic" />
       <p class="author font-gilroy-bold font-16">{{ this.name }}</p>
     </div>
     <p class="content font-avenir-oblique font-16">"{{ this.message }}"</p>
@@ -10,11 +10,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      settings: require("../../data/theme.json"),
-    };
-  },
   props: ["image", "message", "name"],
 };
 </script>
