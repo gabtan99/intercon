@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <h1 class="font-gilroy-bold font-36 heading">
-      {{ $page.pageConfig.target_section_title }}
+      {{ $static.pageConfig.target_section_title }}
     </h1>
 
     <div class="card-container">
@@ -29,27 +29,27 @@
   </div>
 </template>
 
-<page-query>
+<static-query>
 query {
   pageConfig: pages (path: "/data/home-page/"){
     target_section_title
   },
 }
-</page-query>
+</static-query>
 
 <script>
-import TargetSectionCard from '@/components/TargetSectionCard'
+import TargetSectionCard from "@/components/TargetSectionCard";
 export default {
-  props: ['targets'],
+  props: ["targets"],
   methods: {
-    log: function (e) {
-      console.log(e)
+    log: function(e) {
+      console.log(e);
     },
   },
   components: {
     TargetSectionCard,
   },
-}
+};
 </script>
 
 <style scoped>

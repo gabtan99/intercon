@@ -2,7 +2,7 @@
   <div class="main">
     <div class="text-container">
       <h1 class="header font-gilroy-bold font-48">
-        {{ $page.pageConfig.instagram_section_title }}
+        {{ $static.pageConfig.instagram_section_title }}
       </h1>
 
       <a
@@ -40,27 +40,27 @@
   </div>
 </template>
 
-<page-query>
+<static-query>
 query {
   pageConfig: pages (path: "/data/home-page/"){
     instagram_section_title
   },
 }
-</page-query>
+</static-query>
 
 <script>
-import { getRecentInstagram } from '@/services/instagram'
+import { getRecentInstagram } from "@/services/instagram";
 
 export default {
   data() {
     return {
       images: [],
-    }
+    };
   },
   async beforeCreate() {
-    this.images = await getRecentInstagram(4)
+    this.images = await getRecentInstagram(4);
   },
-}
+};
 </script>
 
 <style scoped>

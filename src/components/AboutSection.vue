@@ -2,11 +2,11 @@
   <div class="main">
     <div class="about-description">
       <h1 class="about-title font-gilroy-bold font-36">
-        {{ $page.pageConfig.about_section_title }}
+        {{ $static.pageConfig.about_section_title }}
       </h1>
 
       <p class="about-subtitle font-avenir-book font-18">
-        {{ $page.pageConfig.about_section_description }}
+        {{ $static.pageConfig.about_section_description }}
       </p>
     </div>
 
@@ -30,13 +30,13 @@
               />
 
               <h1 class="detail-title font-gilroy-bold font-21">
-                {{ $page.pageConfig.about_bullet_1_title }}
+                {{ $static.pageConfig.about_bullet_1_title }}
               </h1>
             </div>
 
             <div>
               <p class="detail-info font-avenir-light font-18">
-                {{ $page.pageConfig.about_bullet_1_description }}
+                {{ $static.pageConfig.about_bullet_1_description }}
               </p>
             </div>
           </div>
@@ -50,14 +50,14 @@
               />
               <div>
                 <h1 class="detail-title font-gilroy-bold font-21">
-                  {{ $page.pageConfig.about_bullet_2_title }}
+                  {{ $static.pageConfig.about_bullet_2_title }}
                 </h1>
               </div>
             </div>
 
             <div>
               <p class="detail-info font-avenir-light font-18">
-                {{ $page.pageConfig.about_bullet_2_description }}
+                {{ $static.pageConfig.about_bullet_2_description }}
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@
   </div>
 </template>
 
-<page-query>
+<static-query>
 query {
   pageConfig: pages (path: "/data/home-page/"){
     about_section_title
@@ -78,10 +78,10 @@ query {
     about_bullet_2_description
   },
 }
-</page-query>
+</static-query>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style scoped>

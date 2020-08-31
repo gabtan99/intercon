@@ -2,11 +2,11 @@
   <div class="main">
     <div class="col-lg-6">
       <h1 class="hero-title font-gilroy-bold font-42">
-        {{ $page.pageConfig.hero_title }}
+        {{ $static.pageConfig.hero_title }}
       </h1>
 
       <h1 class="hero-subtitle font-avenir-light font-24">
-        {{ $page.pageConfig.hero_subtitle }}
+        {{ $static.pageConfig.hero_subtitle }}
       </h1>
 
       <div class="hero-buttons">
@@ -28,14 +28,14 @@
     <youtube-modal
       :showModal="showModal"
       :hideModal="closeVideo"
-      :youtubeLink="$page.socials.youtube_channel_url"
-      :youtubeHandle="page.pageConfig.youtube_handle"
+      :youtubeLink="$static.socials.youtube_channel_url"
+      :youtubeHandle="$static.pageConfig.youtube_handle"
     />
   </div>
 </template>
 
-<page-query>
-query {
+<static-query>
+query Posts  {
   pageConfig: pages (path: "/data/home-page/"){
     hero_title
     hero_subtitle
@@ -45,13 +45,13 @@ query {
     youtube_channel_url
   }
 }
-</page-query>
+</static-query>
 
 <script>
-import GreenButton from '@/components/GreenButton'
-import WhiteButton from '@/components/WhiteButton'
-import Waves from '@/components/Waves'
-import YoutubeModal from '@/components/YoutubeModal'
+import GreenButton from "@/components/GreenButton";
+import WhiteButton from "@/components/WhiteButton";
+import Waves from "@/components/Waves";
+import YoutubeModal from "@/components/YoutubeModal";
 
 export default {
   components: {
@@ -63,20 +63,20 @@ export default {
   data() {
     return {
       showModal: false,
-    }
+    };
   },
   methods: {
     watchVideo() {
-      this.showModal = true
+      this.showModal = true;
     },
     closeVideo() {
-      this.showModal = false
+      this.showModal = false;
     },
     learnMore() {
-      this.$router.push('/about')
+      this.$router.push("/about");
     },
   },
-}
+};
 </script>
 
 <style scoped>
