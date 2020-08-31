@@ -2,7 +2,7 @@
   <div class="main">
     <div class="text-container">
       <h1 class="header font-gilroy-bold font-48">
-        {{ $static.pageConfig.instagram_section_title }}
+        {{ instagramConfig.instagram_section_title }}
       </h1>
 
       <a
@@ -40,18 +40,11 @@
   </div>
 </template>
 
-<static-query>
-query {
-  pageConfig: pages (path: "/data/home-page/"){
-    instagram_section_title
-  },
-}
-</static-query>
-
 <script>
 import { getRecentInstagram } from "@/services/instagram";
 
 export default {
+  props: ["instagramConfig"],
   data() {
     return {
       images: [],
