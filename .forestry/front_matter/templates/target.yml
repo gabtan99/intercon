@@ -27,10 +27,10 @@ fields:
     max: 120
   label: Target Description
 - name: target_icon
-  type: text
+  type: file
   config:
-    required: false
-  label: target_icon
+    maxSize: 64
+  label: Target Icon
 - name: target_services
   type: field_group_list
   fields:
