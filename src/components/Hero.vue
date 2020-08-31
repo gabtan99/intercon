@@ -28,11 +28,22 @@
     <youtube-modal
       :showModal="showModal"
       :hideModal="closeVideo"
-      :youtubeLink="settings.youtube_link"
-      :youtubeHandle="settings.youtube_handle"
+      :youtubeLink="$page.socials.youtube_channel_url"
+      :youtubeHandle="page.pageConfig.youtube_handle"
     />
   </div>
 </template>
+
+<page-query>
+query {
+  pageConfig: pages (path: "/data/home-page/"){
+    youtube_handle
+  },
+  socials: pages (path: "/data/socials") {
+    youtube_channel_url
+  }
+}
+</page-query>
 
 <script>
 import GreenButton from '@/components/GreenButton'

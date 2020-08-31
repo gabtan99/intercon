@@ -11,9 +11,6 @@
       <font-awesome class="close-icon" :icon="'times'" @click="hideModal" />
     </b-row>
     <div class="modal-style">
-      <h1 class="font-avenir-light title">
-        Subscribe to our channel and be part of our growing community!
-      </h1>
       <a class="font-gilroy-light font-18 youtube-link" :href="youtubeLink">
         <font-awesome :icon="['fab', 'youtube']" class="youtube-icon" />
         {{ youtubeHandle }}
@@ -33,14 +30,14 @@
 </template>
 
 <script>
-import GreenButton from "@/components/GreenButton";
-import WhiteButton from "@/components/WhiteButton";
-import Waves from "@/components/Waves";
-import YoutubeModal from "@/components/YoutubeModal";
+import GreenButton from '@/components/GreenButton'
+import WhiteButton from '@/components/WhiteButton'
+import Waves from '@/components/Waves'
+import YoutubeModal from '@/components/YoutubeModal'
 
 export default {
-  props: ["showModal", "youtubeLink", "youtubeHandle", "hideModal"],
-};
+  props: ['showModal', 'youtubeLink', 'youtubeHandle', 'hideModal'],
+}
 </script>
 
 <style scoped>
