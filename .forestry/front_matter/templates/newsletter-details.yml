@@ -1,4 +1,24 @@
 ---
 label: Newsletter Details
 hide_body: true
-fields: []
+fields:
+- name: modal_title
+  type: text
+  config:
+    required: false
+  label: Modal Title
+- name: modal_description
+  type: text
+  config:
+    required: false
+  label: Modal Description
+- name: footer_title
+  type: text
+  config:
+    required: false
+  label: Footer Title
+- name: footer_description
+  type: text
+  config:
+    required: false
+  label: Footer Description
