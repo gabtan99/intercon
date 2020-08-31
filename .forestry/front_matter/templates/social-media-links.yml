@@ -22,3 +22,5 @@ fields:
   config:
     required: false
   label: YouTube Channel URL
+pages:
+- data/socials.json
