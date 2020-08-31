@@ -62,5 +62,10 @@ fields:
   config:
     required: false
   label: Youtube Link
+- name: youtube_handle
+  type: text
+  config:
+    required: false
+  label: Youtube Handle
 pages:
 - data/home_page.json
