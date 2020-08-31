@@ -2,11 +2,11 @@
   <div class="main">
     <div class="col-lg-6">
       <h1 class="hero-title font-gilroy-bold font-42">
-        {{ settings.hero_title }}
+        {{ $page.pageConfig.hero_title }}
       </h1>
 
       <h1 class="hero-subtitle font-avenir-light font-24">
-        {{ settings.hero_subtitle }}
+        {{ $page.pageConfig.hero_subtitle }}
       </h1>
 
       <div class="hero-buttons">
@@ -37,6 +37,8 @@
 <page-query>
 query {
   pageConfig: pages (path: "/data/home-page/"){
+    hero_title
+    hero_subtitle
     youtube_handle
   },
   socials: pages (path: "/data/socials") {
