@@ -57,5 +57,10 @@ fields:
   config:
     required: false
   label: Instagram Section Title
+- name: youtube-link
+  type: text
+  config:
+    required: false
+  label: Youtube Link
 pages:
 - data/home_page.json
