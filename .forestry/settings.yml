@@ -2,87 +2,87 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: "/static/admin"
-webhook_url:
+webhook_url: 
 sections:
-  - type: heading
-    label: Home
-  - type: document
-    path: data/home_page.json
-    label: Home Page
-  - type: directory
-    path: data/testimonies
-    label: Testimonies List
-    create: documents
-    match: "**/*.md"
-    new_doc_ext: md
-    templates:
-      - testimony
-  - type: heading
-    label: Services
-  - type: document
-    path: data/services_page.json
-    label: Services Page
-  - type: directory
-    path: data/services
-    label: Services List
-    create: documents
-    match: "**/*.md"
-    new_doc_ext: md
-    templates:
-      - services
-  - type: document
-    path: data/coaching_section.md
-    label: Functional Coaching
-  - type: heading
-    label: Targets
-  - type: document
-    path: data/targets_page.json
-    label: Targets Page
-  - type: directory
-    path: data/targets
-    label: Targets List
-    create: documents
-    match: "**/*.md"
-    new_doc_ext: md
-    templates:
-      - target
-  - type: heading
-    label: Blog
-  - type: document
-    path: data/blog_page.json
-    label: Blog Page
-  - type: directory
-    path: data/blog
-    label: Blog Posts
-    create: documents
-    match: "**/*.md"
-    new_doc_ext: md
-    templates:
-      - journal
-  - type: heading
-    label: About Us
-  - type: document
-    path: data/about_page.json
-    label: About Us Page
-  - type: directory
-    path: data/FAQ
-    label: FAQs
-    create: documents
-    match: "**/*.md"
-    new_doc_ext: md
-    templates:
-      - faq
-  - type: heading
-    label: Others
-  - type: document
-    path: data/contact_details.json
-    label: Contact Details
-  - type: document
-    path: data/socials.json
-    label: Social Media Links
-  - type: document
-    path: data/newsletter.json
-    label: Newsletter Details
+- type: heading
+  label: Home
+- type: document
+  path: data/home_page.json
+  label: Home Page
+- type: directory
+  path: data/testimonies
+  label: Testimonies List
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: md
+  templates:
+  - testimony
+- type: heading
+  label: Services
+- type: document
+  path: data/services_page.json
+  label: Services Page
+- type: directory
+  path: data/services
+  label: Services List
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: md
+  templates:
+  - services
+- type: document
+  path: data/coaching_section.md
+  label: Functional Coaching
+- type: heading
+  label: Targets
+- type: document
+  path: data/targets_page.json
+  label: Targets Page
+- type: directory
+  path: data/targets
+  label: Targets List
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: md
+  templates:
+  - target
+- type: heading
+  label: Blog
+- type: document
+  path: data/blog_page.json
+  label: Blog Page
+- type: directory
+  path: data/blog
+  label: Blog Posts
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: md
+  templates:
+  - journal
+- type: heading
+  label: About Us
+- type: document
+  path: data/about_page.json
+  label: About Us Page
+- type: directory
+  path: data/FAQ
+  label: FAQs
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: md
+  templates:
+  - faq
+- type: heading
+  label: Others
+- type: document
+  path: data/contact_details.json
+  label: Contact Details
+- type: document
+  path: data/socials.json
+  label: Social Media Links
+- type: document
+  path: data/newsletter.json
+  label: Newsletter Details
 upload_dir: uploads_dev
 public_path: https://res.cloudinary.com/dgq7s4lkp/image/upload
 front_matter_path: https://res.cloudinary.com/dgq7s4lkp/image/upload
