@@ -12,7 +12,7 @@
 
     <div class="about-details">
       <b-row class="lower">
-        <div class="col-lg-5 image p-5">
+        <div class="col-lg-5 image p-8">
           <b-img
             fluid
             :src="require('../assets/img/about-section.png')"
@@ -104,11 +104,12 @@ p {
 
 .main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 30px 20px;
   padding-bottom: 40px;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   background: var(--lightgreen-gradient);
 }
 
@@ -124,16 +125,17 @@ p {
 
 .about-subtitle {
   margin-bottom: 4rem;
-  max-width: 60rem;
   padding: 0 2rem;
 }
 
 .about-details {
-  width: 90%;
+  width: 80%;
+  max-width: 90%;
 }
 
 .lower {
   justify-content: center;
+  align-items: center;
 }
 
 .about-detail-item {
