@@ -1,7 +1,7 @@
 <template>
   <Layout class="gray-bg">
     <PageHeader
-      :page_name="$page.pageConfig.page_title"
+      :page_name="$page.pageConfig.page_name"
       :image="$page.pageConfig.header_image"
     />
     <ServicesSection :services="$page.services.edges" />
@@ -12,7 +12,7 @@
 <page-query>
 query Service {
   pageConfig: pages (path: "/data/services-page/"){
-    page_title
+    page_name
     header_image
   },
 	services: allServices{
