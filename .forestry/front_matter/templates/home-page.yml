@@ -57,11 +57,6 @@ fields:
   config:
     required: false
   label: Instagram Section Title
-- name: youtube-link
-  type: text
-  config:
-    required: false
-  label: Youtube Link
 - name: youtube_handle
   type: text
   config:
