@@ -1,10 +1,11 @@
 ---
 title: Red Light Therapy
-preview_description: Red light therapy involves breathing pure oxygen in a pressurized
+preview_description:
+  Red light therapy involves breathing pure oxygen in a pressurized
   room or tube. Our blood carries this oxygen throughout your body. This helps fight
   bacteria and stimulate the release of substances called growth factors and stem
   cells, which promote healing.
-header_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598715966/uploads/red-light_ggx2ea.png
+header_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598761543/uploads_dev/placeholder_fww9hi.png
 introduction: |-
   Hyperbaric oxygen therapy involves breathing pure oxygen in a pressurized room or tube. Hyperbaric oxygen therapy is a well-established treatment for decompression sickness, a hazard of scuba diving. Other conditions treated with hyperbaric oxygen therapy include serious infections, bubbles of air in your blood vessels, and wounds that won't heal as a result of diabetes or radiation injury.
 
@@ -23,38 +24,42 @@ benefits:
 
     Hyperbaric oxygen therapy is used to treat several medical conditions. And medical institutions use it in different ways. Your doctor may suggest hyperbaric oxygen therapy if you have one of the following conditions:
   benefits_list:
-  - benefit: Gangrene
-  - benefit: Deafness, sudden
-  - benefit: Burn
-  - benefit: Bubbles of air in your blood vessels (arterial gas embolism)
-  - benefit: Brain abscesses
+    - benefit: Gangrene
+    - benefit: Deafness, sudden
+    - benefit: Burn
+    - benefit: Bubbles of air in your blood vessels (arterial gas embolism)
+    - benefit: Brain abscesses
 conditions:
-  introduction: 'The evidence is insufficient to support claims that hyperbaric oxygen
-    therapy can effectively treat the following conditions:'
+  introduction:
+    "The evidence is insufficient to support claims that hyperbaric oxygen
+    therapy can effectively treat the following conditions:"
   conditions_list:
-  - condition: Carbon monoxide poisoning
-  - condition: Crushing injury
-  - condition: Radiation injury
-  - condition: AIDS/HIV
+    - condition: Carbon monoxide poisoning
+    - condition: Crushing injury
+    - condition: Radiation injury
+    - condition: AIDS/HIV
 stats:
-  intro: Pure oxygen can cause fire if a spark or flame ignites a source of fuel.
+  intro:
+    Pure oxygen can cause fire if a spark or flame ignites a source of fuel.
     Because of this, you can't take items such as lighters or battery-powered devices
     into the hyperbaric oxygen therapy chamber. In addition, to limit sources of excess
     fuel, you may need to remove hair and skin care products that are petroleum based
     and potentially a fire hazard. Ask a member of your health care team for specific
     instructions before your first hyperbaric oxygen therapy session.
   stats_list:
-  - with_supporting_image: true
-    figure: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598761543/uploads_dev/placeholder_fww9hi.png
-    caption: A gangly teen who did not live up to anyone's expectations.
-    content: In 9 out of 10 scenarios, people don't live up to others' expectations.
-  - with_supporting_image: false
-    figure: ''
-    caption: This teen is a squeamish yellow tone and has a film of fat surrounding
-      it.
-    content: In general teens are getting heavier as they grow more. However this
-      can be curved whenever they start to exercise. This can be seen in the figure
-      below.
+    - with_supporting_image: true
+      figure: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598761543/uploads_dev/placeholder_fww9hi.png
+      caption: A gangly teen who did not live up to anyone's expectations.
+      content: In 9 out of 10 scenarios, people don't live up to others' expectations.
+    - with_supporting_image: false
+      figure: ""
+      caption:
+        This teen is a squeamish yellow tone and has a film of fat surrounding
+        it.
+      content:
+        In general teens are getting heavier as they grow more. However this
+        can be curved whenever they start to exercise. This can be seen in the figure
+        below.
   summary: |-
     To benefit from hyperbaric oxygen therapy, you'll likely need more than one session. The number of sessions depends on your medical condition. Some conditions, such as carbon monoxide poisoning, might be treated in three visits. Others, such as nonhealing wounds, may require 20 to 40 treatments.
 
@@ -62,19 +67,19 @@ stats:
 
     To effectively treat other conditions, hyperbaric oxygen therapy is used as part of a comprehensive treatment plan and administered with other therapies and drugs that fit your individual needs.
 external_reads:
-- title: RED LIGHT THERAPY AND NEAR INFRARED LED LIGHT THERAPY FOR YOUR JACUZZI® INFRARED
-    SAUNA
-  link: https://infraredsauna.com/red-light-and-near-infrared-therapy/
-- title: Healtline - Red Light Therapy Benefits
-  link: https://www.healthline.com/health/red-light-therapy
+  - title:
+      RED LIGHT THERAPY AND NEAR INFRARED LED LIGHT THERAPY FOR YOUR JACUZZI® INFRARED
+      SAUNA
+    link: https://infraredsauna.com/red-light-and-near-infrared-therapy/
+  - title: Healtline - Red Light Therapy Benefits
+    link: https://www.healthline.com/health/red-light-therapy
 preview_conditions:
-- condition: Inflammed Skin
-- condition: Skin Eczema
+  - condition: Inflammed Skin
+  - condition: Skin Eczema
 preview_benefits:
-- benefit: Improves blood rush
-- benefit: Makes lips pinker
-- benefit: Detoxified blood
-introduction_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598716043/uploads/intro-image_hl8all.png
+  - benefit: Improves blood rush
+  - benefit: Makes lips pinker
+  - benefit: Detoxified blood
+introduction_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598761543/uploads_dev/placeholder_fww9hi.png
 header_color: "#000000"
-
 ---
