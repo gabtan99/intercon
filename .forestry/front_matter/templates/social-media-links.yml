@@ -12,6 +12,11 @@ fields:
   config:
     required: false
   label: Instagram URL
+- name: instagram_handle
+  type: text
+  config:
+    required: false
+  label: Instagram Handle (@)
 - name: youtube_channel_url
   type: text
   config:
