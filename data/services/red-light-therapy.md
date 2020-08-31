@@ -45,11 +45,11 @@ stats:
     instructions before your first hyperbaric oxygen therapy session.
   stats_list:
   - with_supporting_image: true
-    figure: "/uploads/Ing-JohnAndrew-Y.jpg"
+    figure: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598761543/uploads_dev/placeholder_fww9hi.png
     caption: A gangly teen who did not live up to anyone's expectations.
     content: In 9 out of 10 scenarios, people don't live up to others' expectations.
-  - with_supporting_image: true
-    figure: "/uploads/markus-spiske-516263-unsplash.jpg"
+  - with_supporting_image: false
+    figure: ''
     caption: This teen is a squeamish yellow tone and has a film of fat surrounding
       it.
     content: In general teens are getting heavier as they grow more. However this

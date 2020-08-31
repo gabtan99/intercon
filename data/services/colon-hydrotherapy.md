@@ -45,7 +45,7 @@ stats:
     instructions before your first hyperbaric oxygen therapy session.
   stats_list:
   - with_supporting_image: true
-    figure: "/uploads/stats.png"
+    figure: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598761543/uploads_dev/placeholder_fww9hi.png
     caption: Here are some stats.
     content: In 9 out of 10 scenarios, people don't live up to others' expectations.
   summary: |-

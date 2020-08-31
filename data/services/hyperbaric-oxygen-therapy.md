@@ -48,8 +48,8 @@ stats:
     figure: ''
     caption: ''
     content: In 9 out of 10 scenarios, people don't live up to others' expectations.
-  - with_supporting_image: true
-    figure: "/uploads/markus-spiske-516263-unsplash.jpg"
+  - with_supporting_image: false
+    figure: ''
     caption: This teen is a squeamish yellow tone and has a film of fat surrounding
       it.
     content: In general teens are getting heavier as they grow more. However this

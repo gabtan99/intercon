@@ -2,70 +2,70 @@
 label: Home Page
 hide_body: true
 fields:
-  - name: hero_title
-    type: text
-    config:
-      required: false
-    label: Hero Title
-  - name: hero_subtitle
-    type: text
-    config:
-      required: false
-    label: Hero Subtitle
-  - name: about_section_title
-    type: text
-    config:
-      required: false
-    label: About Section Title
-  - name: about_section_description
-    type: text
-    config:
-      required: false
-    label: About Section Description
-  - name: about_bullet_1_icon
-    type: file
-    config:
-      maxSize: 64
-    label: About Bullet 1 Icon
-  - name: about_bullet_1_title
-    type: text
-    config:
-      required: false
-    label: About Bullet 1 Title
-  - name: about_bullet_1_description
-    type: text
-    config:
-      required: false
-    label: About Bullet 1 Description
-  - name: about_bullet_2_icon
-    type: text
-    config:
-      required: false
-    label: About Bullet 2 Icon
-  - name: about_bullet_2_title
-    type: text
-    config:
-      required: false
-    label: About Bullet 2 Title
-  - name: about_bullet_2_description
-    type: text
-    config:
-      required: false
-    label: About Bullet 2 Description
-  - name: target_section_title
-    type: text
-    config:
-      required: false
-    label: Target Section Title
-  - name: testimony_section_title
-    type: text
-    config:
-      required: false
-    label: Testimony Section Title
-  - name: instagram_section_title
-    type: text
-    config:
-      required: false
-    label: Instagram Section Title
+- name: hero_title
+  type: text
+  config:
+    required: false
+  label: Hero Title
+- name: hero_subtitle
+  type: text
+  config:
+    required: false
+  label: Hero Subtitle
+- name: about_section_title
+  type: text
+  config:
+    required: false
+  label: About Section Title
+- name: about_section_description
+  type: text
+  config:
+    required: false
+  label: About Section Description
+- name: about_bullet_1_icon
+  type: file
+  config:
+    maxSize: 64
+  label: About Bullet 1 Icon
+- name: about_bullet_1_title
+  type: text
+  config:
+    required: false
+  label: About Bullet 1 Title
+- name: about_bullet_1_description
+  type: text
+  config:
+    required: false
+  label: About Bullet 1 Description
+- name: about_bullet_2_icon
+  type: text
+  config:
+    required: false
+  label: About Bullet 2 Icon
+- name: about_bullet_2_title
+  type: text
+  config:
+    required: false
+  label: About Bullet 2 Title
+- name: about_bullet_2_description
+  type: text
+  config:
+    required: false
+  label: About Bullet 2 Description
+- name: target_section_title
+  type: text
+  config:
+    required: false
+  label: Target Section Title
+- name: testimony_section_title
+  type: text
+  config:
+    required: false
+  label: Testimony Section Title
+- name: instagram_section_title
+  type: text
+  config:
+    required: false
+  label: Instagram Section Title
 pages:
-  - data/home_page.json
+- data/home_page.json
