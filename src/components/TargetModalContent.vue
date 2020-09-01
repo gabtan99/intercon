@@ -1,7 +1,7 @@
 <template>
   <div class="target-content">
     <div style="display: flex; margin-bottom: 10px; align-items: center;">
-      <img class="icon-style" :src="targetContent.target_icon.src" alt="icon" />
+      <img class="icon-style" :src="targetContent.target_icon" alt="icon" />
       <h1
         class="font-gilroy-bold"
         style="padding-top: 1rem; padding-left: 0.5rem;"
@@ -25,14 +25,14 @@
 </template>
 
 <script>
-import TargetModalCard from '@/components/TargetModalCard'
+import TargetModalCard from "@/components/TargetModalCard";
 
 export default {
-  props: ['targetContent', 'targetServices'],
+  props: ["targetContent", "targetServices"],
   components: {
     TargetModalCard,
   },
-}
+};
 </script>
 
 <style scoped>

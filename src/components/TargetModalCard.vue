@@ -8,7 +8,7 @@
       img-top
       img-alt="image"
       img-height="150"
-      :img-src="singleService.header_image.src"
+      :img-src="singleService.header_image"
     >
       <h4
         v-b-popover.hover.top="{
