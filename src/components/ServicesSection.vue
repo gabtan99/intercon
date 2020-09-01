@@ -1,6 +1,6 @@
 <template>
   <b-container class="mt-5">
-    <FunctionalCoaching />
+    <FunctionalCoaching :coaching="coaching" />
 
     <ServicesServiceCard
       v-for="service in services"
@@ -19,7 +19,7 @@ export default {
     ServicesServiceCard,
     FunctionalCoaching,
   },
-  props: ["services"],
+  props: ["services", "coaching"],
 };
 </script>
 
