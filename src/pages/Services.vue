@@ -4,7 +4,10 @@
       :page_name="$page.pageConfig.page_name"
       :image="$page.pageConfig.header_image"
     />
-    <ServicesSection :services="$page.services.edges" />
+    <ServicesSection
+      :services="$page.services.edges"
+      :coaching="$page.coaching"
+    />
     <NewsletterModal currPage="SERVICES" />
   </Layout>
 </template>
@@ -31,6 +34,13 @@ query Service {
         }
       }
     }
+  },
+  coaching: coaching (path: "/data/coaching-section") {
+    title
+    short_description
+    facebook_page_url
+    email
+    thumbnail_image
   }
 }
 </page-query>

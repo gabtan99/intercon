@@ -1,5 +1,5 @@
 ---
-title: Functional Health and Wellness Coaching
+title: Functional Health and Wellness Coaching1
 short_description: awdjaowdj
 facebook_page_url: Sage
 email:

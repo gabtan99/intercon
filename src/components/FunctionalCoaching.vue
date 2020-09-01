@@ -6,15 +6,15 @@
   >
     <div class="col-lg-7 p-5 service-card__content">
       <h2 class="font-24 font-gilroy-bold mb-3 service-card__title">
-        {{ this.$static.coaching.title }}
+        {{ coaching.title }}
       </h2>
       <p class="font-16 font-avenir-light mb-4 service-card__description">
-        {{ this.$static.coaching.short_description }}
+        {{ coaching.short_description }}
       </p>
       <a
-        :href="$static.coaching.facebook_page_url"
+        :href="coaching.facebook_page_url"
         v-b-popover.hover.top="{
-          title: $static.coaching.facebook_page_url,
+          title: coaching.facebook_page_url,
           customClass: 'font-avenir-medium font-20',
         }"
       >
@@ -26,7 +26,7 @@
         icon="envelope"
         class="social email"
         v-b-popover.hover.top="{
-          title: $static.coaching.email,
+          title: coaching.email,
           customClass: 'font-avenir-medium font-20',
         }"
       />
@@ -35,33 +35,21 @@
       <g-image
         class="service-card__thumbnail"
         alt="coachingpic"
-        :src="$static.coaching.thumbnail_image"
+        :src="coaching.thumbnail_image"
       />
     </div>
   </b-row>
 </template>
 
-<static-query>
-query {
-  coaching: coaching (path: "/data/coaching-section") {
-    title
-    short_description
-    facebook_page_url
-    email
-    thumbnail_image
-  }
-}
-</static-query>
-
 <script>
 export default {
-  props: ['service'],
+  props: ["coaching"],
   methods: {
     goToService(path) {
-      this.$router.push(path)
+      this.$router.push(path);
     },
   },
-}
+};
 </script>
 
 <style scoped>
