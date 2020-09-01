@@ -12,7 +12,7 @@
 
     <div class="about-details">
       <b-row class="lower">
-        <div class="col-lg-4 image p-6">
+        <div class="col-lg-5 image p-5">
           <b-img
             fluid
             :src="require('../assets/img/about-section.png')"
@@ -20,7 +20,7 @@
           />
         </div>
 
-        <div class="col-lg-6 p-5">
+        <div class="col-lg-5 p-5">
           <div class="about-detail-item">
             <div class="title-div">
               <b-img
