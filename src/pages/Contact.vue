@@ -14,6 +14,7 @@
               </div>
 
               <form
+                action="https://formspree.io/xzbjjppn"
                 method="POST"
                 ref="contactform"
                 class="contact-form"
