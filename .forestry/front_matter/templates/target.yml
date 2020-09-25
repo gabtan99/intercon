@@ -6,6 +6,7 @@ fields:
   type: text
   config:
     required: false
+    max: 50
   description: title of the target
   label: Target Name
   hidden: false
@@ -24,7 +25,7 @@ fields:
     schema:
       format: markdown
     min: 
-    max: 120
+    max: 200
   label: Target Description
 - name: target_icon
   type: file
