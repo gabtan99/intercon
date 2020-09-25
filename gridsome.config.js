@@ -58,6 +58,18 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
+        path: 'data/FAQ/**/*.md',
+        typeName: 'FAQ',
+        resolveAbsolutePaths: true,
+        remark: {
+          externalLinksTarget: '_blank',
+          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+        },
+      },
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
         path: 'data/*.md',
         typeName: 'Coaching',
         resolveAbsolutePaths: true,

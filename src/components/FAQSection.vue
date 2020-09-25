@@ -8,13 +8,13 @@
         Frequently Asked Questions
       </h1>
     </div>
-    <div class="row">
-      <div class="col-lg-6 "><FAQItem /></div>
-      <div class="col-lg-6 "><FAQItem /></div>
-      <div class="col-lg-6"><FAQItem /></div>
-      <div class="col-lg-6"><FAQItem /></div>
-      <div class="col-lg-6"><FAQItem /></div>
-      <div class="col-lg-6"><FAQItem /></div>
+    <div class="row" v-for="item in faqs" v-bind:key="item.id">
+      <div class="col-lg-6">
+        <FAQItem 
+          :question="item.node.question"
+          :answer="item.node.answer"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -26,6 +26,7 @@ export default {
   components: {
     FAQItem,
   },
+  props: ["faqs"],
 };
 </script>
 

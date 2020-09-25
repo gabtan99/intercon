@@ -87,7 +87,9 @@
       </div>
     </div>
 
-    <FAQSection />
+    <FAQSection 
+      :faqs="$page.faqs.edges"
+    />
   </Layout>
 </template>
 
@@ -112,8 +114,14 @@ query Posts {
     founder_label
     founder_description
   },
-  
-  
+  faqs: allFaq {
+    edges {
+      node {
+        question,
+        answer,
+      }
+    }
+  }
 }
 
 </page-query>
