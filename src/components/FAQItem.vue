@@ -3,18 +3,20 @@
     <font-awesome :icon="'question-circle'" class="icon" />
     <div>
       <h4 class="font-avenir-medium font-21 line-spaced">
-        May tanong ka ba bro?
+        {{ this.question }}
       </h4>
       <p class="font-avenir-book font-18 answer line-spaced">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the
+        {{ this.answer }}
       </p>
     </div>
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  props: ["question", "answer",],
+};
+</script>
 
 <style scoped>
 .container {
