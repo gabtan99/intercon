@@ -5,7 +5,7 @@ fields:
 - name: name
   type: text
   config:
-    required: false
+    required: true
     max: 50
   label: Author Name
   description: Author of the testimony
@@ -18,7 +18,7 @@ fields:
   type: textarea
   default: ''
   config:
-    required: false
+    required: true
     wysiwyg: false
     schema:
       format: markdown
