@@ -11,21 +11,25 @@ fields:
   type: text
   config:
     required: false
+    max: 50
   label: Modal Title
 - name: modal_description
   type: text
   config:
     required: false
+    max: 120
   label: Modal Description
 - name: footer_title
   type: text
   config:
     required: false
+    max: 50
   label: Footer Title
 - name: footer_description
   type: text
   config:
     required: false
+    max: 120
   label: Footer Description
 pages:
 - data/newsletter.json
