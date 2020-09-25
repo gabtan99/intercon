@@ -7,11 +7,13 @@ fields:
   label: Title
   config:
     max: 50
+    required: true
 - type: text
   name: short_description
   label: Short Description
   config:
     max: 120
+    required: true
 - type: text
   name: facebook_page_url
   label: Facebook Page URL
