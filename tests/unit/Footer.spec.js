@@ -13,12 +13,23 @@ describe('Footer Component', () => {
     let showResult = jest.fn()
     let handleSubmit = jest.fn()
     const wrapper = mount(Footer, {
+        propsData: {
+            address: "210B Del Monte Ave, La Loma, Quezon City, 1114 Metro Manila",
+            mobile_number: "+63 9171234567",
+            phone_number: "+8888 1234",
+        },
         methods: {
-        handleChange,
-        showResult,
-        handleSubmit
+            handleChange,
+            showResult,
+            handleSubmit
         },
         localVue
+    })
+
+    it("passes props: address, mobile_number, and phone_number", () => {
+        expect(wrapper.props().address).toBe('210B Del Monte Ave, La Loma, Quezon City, 1114 Metro Manila');
+        expect(wrapper.props().mobile_number).toBe('+63 9171234567');
+        expect(wrapper.props().phone_number).toBe('+8888 1234');
     })
 
     it('calls handleChange method on input by the user', () => {
