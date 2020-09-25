@@ -5,7 +5,7 @@ fields:
 - name: page_name
   type: text
   config:
-    required: false
+    required: true
     max: 50
   label: Page Title
 - name: header_image
@@ -17,14 +17,14 @@ fields:
 - name: description_title
   type: text
   config:
-    required: false
+    required: true
     max: 50
   label: Page Description Title
 - name: page_description
   type: textarea
   default: ''
   config:
-    required: false
+    required: true
     wysiwyg: false
     schema:
       format: markdown
