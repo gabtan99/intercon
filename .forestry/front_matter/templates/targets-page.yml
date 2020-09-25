@@ -6,6 +6,7 @@ fields:
   type: text
   config:
     required: false
+    max: 50
   label: Page Title
 - name: header_image
   type: file
@@ -17,6 +18,7 @@ fields:
   type: text
   config:
     required: false
+    max: 50
   label: Page Description Title
 - name: page_description
   type: textarea
@@ -26,6 +28,7 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
+    max: 120
   label: Page Description
 pages:
 - data/targets_page.json
