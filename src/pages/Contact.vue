@@ -14,7 +14,6 @@
               </div>
 
               <form
-                action="https://formspree.io/xzbjjppn"
                 method="POST"
                 ref="contactform"
                 class="contact-form"
@@ -32,6 +31,7 @@
                       type="text"
                       class="font-gilroy-regular font-16 required"
                       name="name"
+                      ref="name"
                       autocomplete="off"
                     />
                   </div>
@@ -45,6 +45,7 @@
                       type="_replyto"
                       class="font-gilroy-regular font-16 required"
                       name="email"
+                      ref="email"
                       autocomplete="off"
                     />
                   </div>
@@ -57,12 +58,10 @@
                     <select
                       id="subject"
                       name="subject"
+                      ref="subject"
                       class="options font-gilroy-regular font-16 blue"
                     >
-                      <option disabled selected value style="display:none;">
-                        ( Select a subject )
-                      </option>
-                      <option value="Inquiry">Inquiry</option>
+                      <option selected value="Inquiry">Inquiry</option>
                       <option value="Appointment">Appointment</option>
                       <option value="Customer Service">Customer Service</option>
                       <option value="Others">Others</option>
@@ -76,6 +75,7 @@
                     >
                     <textarea
                       name="message"
+                      ref="message"
                       class="font-gilroy-regular font-16 blue required"
                     ></textarea>
                   </div>
@@ -169,7 +169,19 @@ export default {
   },
   methods: {
     submitForm() {
-      this.$refs.contactform.submit();
+      const { name, email, subject, message } = this.$refs;
+
+      if (name.value.length <= 0 || message.value.length <= 0) {
+        alert("Please fill up all fields before submitting.");
+      } else if (
+        !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+          email.value
+        )
+      ) {
+        alert("You have entered an invalid email address!");
+      } else {
+        this.$refs.contactform.submit();
+      }
     },
   },
   metaInfo() {
