@@ -5,6 +5,8 @@ fields:
 - type: text
   name: page_name
   label: Page Title
+  config:
+    max: 50
 - type: file
   name: header_image
   label: Header Image
