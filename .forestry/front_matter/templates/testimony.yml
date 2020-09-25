@@ -6,6 +6,7 @@ fields:
   type: text
   config:
     required: false
+    max: 50
   label: Author Name
   description: Author of the testimony
 - name: image
@@ -21,5 +22,6 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
+    max: 250
   label: Message
   description: Testimony Content
