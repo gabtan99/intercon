@@ -6,6 +6,7 @@ fields:
   type: text
   config:
     required: false
+    max: 50
   label: Page Title
 - name: header_image
   type: file
