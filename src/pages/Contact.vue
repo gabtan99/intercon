@@ -107,8 +107,7 @@
                       <h2 class="font-gilroy-bold font-18 blue">Visit Us</h2>
                       <span class="contact-info">
                         <p class="font-avenir-light font-16 blue">
-                          210B Del Monte Ave, La Loma, Quezon City, 1114 Metro
-                          Manila
+                          {{ $page.contactDetails.address }}
                         </p>
                         <br />
                         <p class="font-avenir-light font-16 blue">
@@ -155,6 +154,14 @@
     </div>
   </Layout>
 </template>
+
+<page-query>
+query Posts {
+  contactDetails: pages (path: "/data/contact-details/"){
+    address
+  },
+}
+</page-query>
 
 <script>
 import GreenButton from "@/components/GreenButton";
