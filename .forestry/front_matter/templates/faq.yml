@@ -5,12 +5,14 @@ fields:
 - name: question
   type: text
   config:
-    required: false
+    required: true
+    max: 200
   label: Question
 - name: answer
   type: text
   config:
-    required: false
+    required: true
+    max: 300
   label: Answer
 pages:
 - data/FAQ/can-i-undergo-period.md
