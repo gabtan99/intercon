@@ -6,14 +6,15 @@ fields:
 - name: title
   type: text
   config:
-    required: false
+    required: true
+    max: 50
   label: Service Name
   description: Name of the service
 - name: preview_description
   type: textarea
   default: ''
   config:
-    required: false
+    required: true
     wysiwyg: false
     schema:
       format: markdown
@@ -64,7 +65,7 @@ fields:
   type: color
   label: Header Color
   config:
-    required: false
+    required: true
     color_format: Hex
   description: The service name will be overlaid on top of the header image, provide
     a complementing color so text appears visible.
@@ -72,7 +73,7 @@ fields:
   type: textarea
   default: ''
   config:
-    required: false
+    required: true
     wysiwyg: false
     schema:
       format: markdown
