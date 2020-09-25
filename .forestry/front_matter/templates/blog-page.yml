@@ -7,6 +7,7 @@ fields:
   label: Page Title
   config:
     max: 120
+    required: true
 - type: file
   name: header_image
   label: Header Image
