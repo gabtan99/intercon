@@ -5,9 +5,13 @@ fields:
 - type: text
   name: title
   label: Title
+  config:
+    max: 50
 - type: text
   name: short_description
   label: Short Description
+  config:
+    max: 120
 - type: text
   name: facebook_page_url
   label: Facebook Page URL
