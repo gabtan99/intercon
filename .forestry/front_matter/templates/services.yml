@@ -238,7 +238,7 @@ fields:
     description: The link to the article
   config:
     min: 
-    max: 
+    max: 5
     labelField: 
   label: External Reads
   description: Links to articles that you might want to interest the readers with
