@@ -11,6 +11,8 @@
           by
           {{ $page.post.author }}
         </div>
+      </div>
+      <div class="ssbuttons">
         <SocialShareButtons />
       </div>
       <JournalContent :content="$page.post.content" :title="$page.post.title" />
@@ -89,6 +91,13 @@ export default {
 </script>
 
 <style scoped>
+.ssbuttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;

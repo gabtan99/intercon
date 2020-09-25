@@ -1,6 +1,7 @@
 <template>
   <Layout>
     <NewsletterModal currPage="LANDING" />
+
     <div class="container">
       <Hero :heroConfig="$page.heroConfig" :socials="$page.socials" />
       <!-- <ProjectsGrid :projects="$page.projects.edges" /> -->

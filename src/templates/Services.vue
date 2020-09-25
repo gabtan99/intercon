@@ -33,6 +33,9 @@
             What is {{ service.title }}?
           </h2>
 
+          <div class="ssbuttons">
+            <SocialShareButtons />
+          </div>
           <b-img-lazy
             fluid-grow
             center
@@ -318,8 +321,15 @@ export default {
 </script>
 
 <style scoped>
+.ssbuttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 15px 0px;
+}
+
 .title {
-  margin: 30px 0px;
+  margin: 0px 0px;
 }
 
 .service-header {
