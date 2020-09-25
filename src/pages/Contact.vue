@@ -32,6 +32,7 @@
                       type="text"
                       class="font-gilroy-regular font-16 required"
                       name="name"
+                      ref="name"
                       autocomplete="off"
                     />
                   </div>
@@ -45,6 +46,7 @@
                       type="_replyto"
                       class="font-gilroy-regular font-16 required"
                       name="email"
+                      ref="email"
                       autocomplete="off"
                     />
                   </div>
@@ -57,12 +59,10 @@
                     <select
                       id="subject"
                       name="subject"
+                      ref="subject"
                       class="options font-gilroy-regular font-16 blue"
                     >
-                      <option disabled selected value style="display:none;">
-                        ( Select a subject )
-                      </option>
-                      <option value="Inquiry">Inquiry</option>
+                      <option selected value="Inquiry">Inquiry</option>
                       <option value="Appointment">Appointment</option>
                       <option value="Customer Service">Customer Service</option>
                       <option value="Others">Others</option>
@@ -76,6 +76,7 @@
                     >
                     <textarea
                       name="message"
+                      ref="message"
                       class="font-gilroy-regular font-16 blue required"
                     ></textarea>
                   </div>
@@ -106,8 +107,7 @@
                       <h2 class="font-gilroy-bold font-18 blue">Visit Us</h2>
                       <span class="contact-info">
                         <p class="font-avenir-light font-16 blue">
-                          210B Del Monte Ave, La Loma, Quezon City, 1114 Metro
-                          Manila
+                          {{ $page.contactDetails.address }}
                         </p>
                         <br />
                         <p class="font-avenir-light font-16 blue">
@@ -155,6 +155,14 @@
   </Layout>
 </template>
 
+<page-query>
+query Posts {
+  contactDetails: pages (path: "/data/contact-details/"){
+    address
+  },
+}
+</page-query>
+
 <script>
 import GreenButton from "@/components/GreenButton";
 import Map from "@/components/Map";
@@ -169,7 +177,19 @@ export default {
   },
   methods: {
     submitForm() {
-      this.$refs.contactform.submit();
+      const { name, email, subject, message } = this.$refs;
+
+      if (name.value.length <= 0 || message.value.length <= 0) {
+        alert("Please fill up all fields before submitting.");
+      } else if (
+        !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+          email.value
+        )
+      ) {
+        alert("You have entered an invalid email address!");
+      } else {
+        this.$refs.contactform.submit();
+      }
     },
   },
   metaInfo() {

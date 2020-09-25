@@ -32,14 +32,14 @@
               <span class="contact-info">
                 <font-awesome :icon="'map-marker-alt'" class="icon" />
                 <p class="font-avenir-light font-16">
-                  210B Del Monte Ave, La Loma, Quezon City, 1114 Metro Manila
+                  {{ this.address }}
                 </p>
               </span>
 
               <span class="contact-info">
                 <font-awesome :icon="'phone-alt'" class="icon" />
                 <p class="font-avenir-light font-16">
-                  +63 9171234567 | +8888 1234
+                  {{ this.mobile_number }} | {{ this.phone_number }}
                 </p>
               </span>
 
@@ -136,6 +136,7 @@ export default {
       showMessage: null,
     };
   },
+  props: ["address", "mobile_number", "phone_number",],
   methods: {
     handleChange(text) {
       this.email = text.target.value;

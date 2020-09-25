@@ -3,8 +3,8 @@
     <div class="mb-5 position-relative service-header">
       <b-img-lazy
         class="service-header__image"
-        :srcset="service.header_image.srcset"
-        :src="service.header_image.src"
+        :srcset="service.header_image"
+        :src="service.header_image"
       >
       </b-img-lazy>
       <h1
@@ -28,15 +28,20 @@
               {{ service.title }}
             </span>
           </div>
+
           <h2 class="mt-4 font-26 title" id="service-introduction">
             What is {{ service.title }}?
           </h2>
+
+          <div class="ssbuttons">
+            <SocialShareButtons />
+          </div>
           <b-img-lazy
             fluid-grow
             center
             v-if="service.introduction_image"
-            :srcset="service.introduction_image.srcset"
-            :src="service.introduction_image.src"
+            :srcset="service.introduction_image"
+            :src="service.introduction_image"
           >
           </b-img-lazy>
           <p class="font-18">
@@ -198,6 +203,8 @@ query Services ($path: String!) {
 </page-query>
 
 <script>
+import SocialShareButtons from "@/components/SocialShareButtons";
+
 export default {
   metaInfo() {
     return {
@@ -300,6 +307,9 @@ export default {
       return this.$page.service;
     },
   },
+  components: {
+    SocialShareButtons,
+  },
   mounted() {
     console.log(this.$page.service);
     window.addEventListener("scroll", this.handleScroll);
@@ -311,8 +321,15 @@ export default {
 </script>
 
 <style scoped>
+.ssbuttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 15px 0px;
+}
+
 .title {
-  margin: 30px 0px;
+  margin: 0px 0px;
 }
 
 .service-header {

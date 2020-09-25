@@ -16,17 +16,19 @@
           </h1>
         </b-row>
 
-        <b-img
+        <g-image
           class="who-img"
           :src="$page.pageConfig.about_company_image"
-          fluid
         />
       </b-container>
     </div>
 
     <div class="green-gradient">
       <b-container class="values-section">
-        <b-img class="values-img" :src="$page.pageConfig.values_image" fluid />
+        <g-image 
+          class="values-img" 
+          :src="$page.pageConfig.values_image"
+        />
 
         <b-row class="values-card">
           <h1 class="font-gilroy-bold font-36 blue title">
@@ -65,10 +67,9 @@
       <div class="founder-section">
         <b-row class="founder-card">
           <div class="col-lg-2">
-            <b-img
+            <g-image
               class="founder-image"
               :src="$page.pageConfig.founder_image"
-              fluid
             />
           </div>
 
@@ -87,7 +88,9 @@
       </div>
     </div>
 
-    <FAQSection />
+    <FAQSection 
+      :faqs="$page.faqs.edges"
+    />
   </Layout>
 </template>
 
@@ -112,8 +115,14 @@ query Posts {
     founder_label
     founder_description
   },
-  
-  
+  faqs: allFaq {
+    edges {
+      node {
+        question,
+        answer,
+      }
+    }
+  }
 }
 
 </page-query>
@@ -193,7 +202,7 @@ export default {
   padding-top: 0px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-template-rows: repeat(2, 0.1fr);
-  margin-top: -80px;
+  /* margin-top: -80px; */
 }
 
 .founder-section {
@@ -243,8 +252,8 @@ export default {
 }
 
 .who-img {
-  max-width: 421px;
-  max-height: 421px;
+  width: 290px;
+  height: 290px;
   grid-column: 4 / span 2;
   grid-row: 3 / span 1;
 }
@@ -261,8 +270,8 @@ export default {
 }
 
 .values-img {
-  max-width: 390px;
-  max-height: 787px;
+  width: 350px;
+  height: 450px;
   grid-column: 2 / span 1;
   grid-row: 1 / span 2;
 }
@@ -277,8 +286,9 @@ export default {
 }
 
 .founder-image {
-  max-width: 120px;
-  max-height: 120px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
   margin: auto;
   display: block;
 }
@@ -303,8 +313,6 @@ export default {
   }
 
   .who-img {
-    max-width: 400px;
-    max-height: 400px;
     grid-column: 3 / span 2;
     grid-row: 3 / span 1;
   }
@@ -339,13 +347,11 @@ export default {
     background-color: #fff;
     grid-column: 2 / span 3;
     grid-row: 1 / span 2;
-    padding-right: 130px;
+    padding-right: 40px;
   }
 
   .who-img {
-    max-width: 400px;
-    max-height: 400px;
-    grid-column: 4 / span 2;
+    grid-column: 4 / span 4;
     grid-row: 3 / span 1;
   }
 
@@ -391,7 +397,7 @@ export default {
   }
 
   .who-img {
-    margin-top: -50px;
+    margin-top: -30px;
   }
 
   .founder-info {

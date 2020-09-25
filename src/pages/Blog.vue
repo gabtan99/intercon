@@ -21,6 +21,7 @@
         linkClass="pager-style"
       />
     </div>
+    <ComingSoon />
   </Layout>
 </template>
 
@@ -57,6 +58,7 @@ query ($page: Int) {
 <script>
 import PageHeader from "@/components/PageHeader";
 import BlogCard from "@/components/BlogCard";
+import ComingSoon from "@/components/ComingSoon";
 import { Pager } from "gridsome";
 
 export default {
@@ -101,6 +103,7 @@ export default {
     PageHeader,
     BlogCard,
     Pager,
+    ComingSoon,
   },
 };
 </script>
