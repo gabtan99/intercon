@@ -28,7 +28,7 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-    max: 120
+    max: 200
   label: Page Description
 pages:
 - data/targets_page.json
