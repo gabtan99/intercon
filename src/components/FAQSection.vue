@@ -8,8 +8,11 @@
         Frequently Asked Questions
       </h1>
     </div>
-    <div class="row" v-for="item in faqs" v-bind:key="item.id">
-      <div class="col-lg-6">
+    <div class="row">
+      <div v-if="!faqs || !faqs.length">
+        <ComingSoon />
+      </div>
+      <div class="col-lg-6" v-else v-for="item in faqs" v-bind:key="item.id">
         <FAQItem 
           :question="item.node.question"
           :answer="item.node.answer"
@@ -21,10 +24,12 @@
 
 <script>
 import FAQItem from "@/components/FAQItem";
+import ComingSoon from "@/components/ComingSoon";
 
 export default {
   components: {
     FAQItem,
+    ComingSoon,
   },
   props: ["faqs"],
 };
