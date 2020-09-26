@@ -15,9 +15,7 @@
       </div>
     </div>
 
-    <div class="ssbuttons">
-      <SocialShareButtons />
-    </div>
+    <div class="ssbuttons"></div>
 
     <NewsletterModal currPage="FUNCTIONALCOACHING" />
   </Layout>
@@ -34,7 +32,6 @@ query {
 <script>
 import PageHeader from "@/components/PageHeader";
 import NewsletterModal from "@/components/NewsletterModal";
-import SocialShareButtons from "@/components/SocialShareButtons";
 
 export default {
   metaInfo: {
@@ -80,7 +77,6 @@ export default {
   components: {
     PageHeader,
     NewsletterModal,
-    SocialShareButtons,
   },
   methods: {
     setAutoModal: function() {
@@ -98,7 +94,7 @@ export default {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 50px 0 20px 0;
+  padding: 50px 0;
 }
 
 .journal-content {

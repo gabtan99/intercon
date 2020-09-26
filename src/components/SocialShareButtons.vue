@@ -15,10 +15,12 @@
       data-show-count="false"
       >Tweet</a
     > -->
-    <Facebook :url="this.url" scale="2" class="icon" />
-    <Twitter :url="this.url" scale="2" class="icon" />
-    <Telegram :url="this.url" scale="2" class="icon" />
-    <Email :url="this.url" scale="2" class="icon" />
+    <client-only>
+      <Facebook :url="this.url" scale="2" class="icon" />
+      <Twitter :url="this.url" scale="2" class="icon" />
+      <Telegram :url="this.url" scale="2" class="icon" />
+      <Email :url="this.url" scale="2" class="icon" />
+    </client-only>
   </div>
 </template>
 
