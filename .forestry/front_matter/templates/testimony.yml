@@ -26,6 +26,7 @@ fields:
   label: Message
   description: Testimony Content
 pages:
+- data/testimonies/Katie.md
 - data/testimonies/Rosh.md
 - data/testimonies/Testimony1.md
 - data/testimonies/gabtan99.md
