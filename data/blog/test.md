@@ -1,7 +1,9 @@
 ---
-date: 2020-08-20T00:00:00+08:00
+date: 2020-08-20T00:00:00.000+08:00
 header_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598761543/uploads_dev/placeholder_fww9hi.png
-title: Lorem ipsum dolor sit amet, consectetuer adipiscin
+title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+  eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+  montes, nascetur ridiculus mus. Donec qu
 author_avatar: "/uploads/ravi-pinisetti-nnKq4ZlTU4k-unsplash.jpg"
 author: Lorem ipsum dolor sit amet
 excerpt: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
