@@ -6,8 +6,7 @@
 
 <style scoped>
 .main {
-  margin: 50px auto;
-  margin-bottom: 100px;
+  margin: 100px auto;
   display: flex;
   justify-content: center;
   align-items: center;

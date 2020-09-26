@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  props: ["question", "answer",],
+  props: ["question", "answer"],
 };
 </script>
 
@@ -29,7 +29,7 @@ export default {
 }
 
 .line-spaced {
-  line-height: 30px;
+  line-height: 25px;
 }
 
 .icon {

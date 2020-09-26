@@ -3,16 +3,18 @@
     <h1 class="header font-gilroy-bold font-36">
       {{ testimoniesConfig.testimony_section_title }}
     </h1>
-    <div class="card-container">
+    <div v-if="this.testimonies.length > 0" class="card-container">
       <ClientOnly>
         <testimony-carousel :testimonies="this.testimonies" />
       </ClientOnly>
     </div>
+    <ComingSoon v-else />
   </div>
 </template>
 
 <script>
 import TestimonyCarousel from "./TestimonyCarousel";
+import ComingSoon from "./ComingSoon";
 
 export default {
   data() {
@@ -22,6 +24,7 @@ export default {
   },
   components: {
     TestimonyCarousel,
+    ComingSoon,
   },
   props: ["testimonies", "testimoniesConfig"],
 };

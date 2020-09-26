@@ -5,9 +5,9 @@
     </h1>
 
     <div class="card-container">
-      <TargetSectionCard :target="targets[0].node" />
-      <TargetSectionCard :target="targets[1].node" />
-      <TargetSectionCard :target="targets[2].node" />
+      <TargetSectionCard :target="shuffled[0].node" />
+      <TargetSectionCard :target="shuffled[1].node" />
+      <TargetSectionCard :target="shuffled[2].node" />
 
       <div class="link-style">
         <span
@@ -32,11 +32,22 @@
 <script>
 import TargetSectionCard from "@/components/TargetSectionCard";
 export default {
+  data() {
+    return {
+      shuffled: [{}, {}, {}],
+    };
+  },
   props: ["targets", "targetConfig"],
   methods: {
     log: function(e) {
       console.log(e);
     },
+  },
+  mounted() {
+    this.shuffled = this.targets
+      .map((a) => ({ sort: Math.random(), value: a }))
+      .sort((a, b) => a.sort - b.sort)
+      .map((a) => a.value);
   },
   components: {
     TargetSectionCard,

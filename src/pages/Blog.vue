@@ -4,24 +4,26 @@
       :page_name="$page.pageConfig.page_name"
       :image="$page.pageConfig.header_image"
     />
-
-    <div class="main-container">
-      <div class="blog-cards-container">
-        <BlogCard
-          v-for="item in $page.blogs.edges"
-          :key="item.node.id"
-          :blog="item.node"
+    <div v-if="$page.blogs.edges.length > 0">
+      <div class="main-container">
+        <div class="blog-cards-container">
+          <BlogCard
+            v-for="item in $page.blogs.edges"
+            :key="item.node.id"
+            :blog="item.node"
+          />
+        </div>
+      </div>
+      <div class="show-more-div">
+        <Pager
+          :info="$page.blogs.pageInfo"
+          class="font-gilroy-medium font-18"
+          linkClass="pager-style"
         />
       </div>
     </div>
-    <div class="show-more-div">
-      <Pager
-        :info="$page.blogs.pageInfo"
-        class="font-gilroy-medium font-18"
-        linkClass="pager-style"
-      />
-    </div>
-    <ComingSoon />
+
+    <ComingSoon v-else />
   </Layout>
 </template>
 

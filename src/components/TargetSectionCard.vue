@@ -6,7 +6,7 @@
     >
       <b-card class="card-style">
         <img class="icon-style" :src="target.target_icon" alt="icon" />
-        <h4 class="font-gilroy-medium font-24">
+        <h4 class="font-gilroy-medium font-21">
           {{ target.target_name }}
         </h4>
         <b-card-text class="font-avenir-light font-16 text-style">
@@ -47,8 +47,8 @@ export default {
 }
 
 .icon-style {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 500px;
   color: var(--blue-branding);
   margin: auto;
