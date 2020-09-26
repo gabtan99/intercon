@@ -15,7 +15,7 @@
         <div class="col-lg-5 image p-5">
           <b-img
             fluid
-            :src="require('../assets/img/about-section.png')"
+            :src="aboutConfig.about_main_image"
             class="about-image"
           />
         </div>
