@@ -25,5 +25,3 @@ fields:
     max: 250
   label: Message
   description: Testimony Content
-pages:
-- data/testimonies/Gab.md
