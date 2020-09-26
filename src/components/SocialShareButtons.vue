@@ -15,18 +15,16 @@
       data-show-count="false"
       >Tweet</a
     > -->
-    <client-only>
+    <ClientOnly>
       <Facebook :url="this.url" scale="2" class="icon" />
       <Twitter :url="this.url" scale="2" class="icon" />
       <Telegram :url="this.url" scale="2" class="icon" />
       <Email :url="this.url" scale="2" class="icon" />
-    </client-only>
+    </ClientOnly>
   </div>
 </template>
 
 <script>
-import { Facebook, Twitter, Telegram, Email } from "vue-socialmedia-share";
-
 export default {
   data() {
     return {
@@ -62,10 +60,22 @@ export default {
     }
   },
   components: {
-    Facebook,
-    Twitter,
-    Telegram,
-    Email,
+    Facebook: () =>
+      import("vue-socialmedia-share")
+        .then((m) => m.Facebook)
+        .catch(), // Lazy load it in
+    Twitter: () =>
+      import("vue-socialmedia-share")
+        .then((m) => m.Twitter)
+        .catch(), // Lazy load it in
+    Telegram: () =>
+      import("vue-socialmedia-share")
+        .then((m) => m.Telegram)
+        .catch(), // Lazy load it in
+    Email: () =>
+      import("vue-socialmedia-share")
+        .then((m) => m.Email)
+        .catch(), // Lazy load it in
   },
 };
 </script>

@@ -12,6 +12,7 @@
           {{ $page.post.author }}
         </div>
       </div>
+
       <div class="ssbuttons">
         <SocialShareButtons />
       </div>
@@ -37,6 +38,7 @@ query BlogPost ($path: String!) {
 <script>
 import JournalContent from "@/components/JournalContent";
 import SocialShareButtons from "@/components/SocialShareButtons";
+
 import moment from "vue-moment";
 export default {
   metaInfo() {
