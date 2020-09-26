@@ -6,8 +6,8 @@
       tag="article"
       class="service-card card-img-top"
       img-top
+      img-fluid
       img-alt="image"
-      img-height="150"
       :img-src="singleService.header_image"
     >
       <h4
@@ -56,25 +56,25 @@ query {
 
 <script>
 export default {
-  props: ["servicesContent"],
+  props: ['servicesContent'],
   data() {
     return {
       singleService: {},
-    };
+    }
   },
   methods: {
-    getServiceInfo: function(title) {
+    getServiceInfo: function (title) {
       this.$static.services.edges.map((item) => {
         if (title === item.node.title) {
-          this.singleService = item.node;
+          this.singleService = item.node
         }
-      });
+      })
     },
-    log: function(e) {
-      console.log(e);
+    log: function (e) {
+      console.log(e)
     },
   },
-};
+}
 </script>
 <style scoped>
 .service-card {
@@ -88,6 +88,11 @@ export default {
 
 .card-img-top {
   object-fit: cover;
+}
+
+.card-img-top img[alt='image'] {
+  width: 230px;
+  height: 180px;
 }
 
 .ellipsis-title {

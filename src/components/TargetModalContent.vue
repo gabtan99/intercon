@@ -25,14 +25,14 @@
 </template>
 
 <script>
-import TargetModalCard from "@/components/TargetModalCard";
+import TargetModalCard from '@/components/TargetModalCard'
 
 export default {
-  props: ["targetContent", "targetServices"],
+  props: ['targetContent', 'targetServices'],
   components: {
     TargetModalCard,
   },
-};
+}
 </script>
 
 <style scoped>
