@@ -1,5 +1,5 @@
 ---
-title: Red Light Therapya
+title: Red Light Therapy
 preview_description: Red light therapy involves breathing pure oxygen in a pressurized
   room or tube. Our blood carries this oxygen throughout your body. This helps fight
   bacteria and stimulate the release of substances called growth factors and stem
