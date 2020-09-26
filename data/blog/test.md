@@ -1,15 +1,11 @@
 ---
 date: 2020-08-20T00:00:00.000+08:00
 header_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598761543/uploads_dev/placeholder_fww9hi.png
-title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-  eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-  montes, nascetur ridiculus mus. Donec qu
+title: An Apple a Day!
 author_avatar: "/uploads/ravi-pinisetti-nnKq4ZlTU4k-unsplash.jpg"
 author: Lorem ipsum dolor sit amet
-excerpt: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-  montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-  pretium quis, sem. Nulla consequat massa quis enim. Donec.
+excerpt: Sometimes apples are good for you but sometimes it keeps the good doctors
+  away! Finding out the balance would be fine if you were a weighing scale
 content_image: "/uploads/healthy-pandemic-content.jpg"
 
 ---
