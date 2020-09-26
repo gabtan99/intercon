@@ -25,7 +25,7 @@
             <div class="title-div">
               <b-img
                 class="icon-style"
-                :src="require('../assets/img/bandaid.png')"
+                :src="aboutConfig.about_bullet_1_icon"
                 alt="icon"
               />
 
@@ -45,7 +45,7 @@
             <div class="title-div">
               <b-img
                 class="icon-style"
-                :src="require('../assets/img/leafy.png')"
+                :src="aboutConfig.about_bullet_1_icon"
                 alt="icon"
               />
               <div>

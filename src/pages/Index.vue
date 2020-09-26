@@ -39,6 +39,8 @@ query Posts {
     about_bullet_1_description
     about_bullet_2_title
     about_bullet_2_description
+    about_bullet_1_icon
+    about_bullet_2_icon
   },
   heroConfig: pages (path: "/data/home-page/"){
     hero_title
