@@ -1,9 +1,9 @@
 ---
-name: Lorem ipsum dolor sit amet, consectetur porttitor.
-image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1598761543/uploads_dev/placeholder_fww9hi.png
-message: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac ipsum mi.
-  Curabitur ligula erat, fermentum quis integer.Lorem ipsum dolor sit amet, consectetur
-  adipiscing elit. Sed ac ipsum mi. Curabitur ligula erat, fermentum quis integer.Lorem
-  ips.
+name: Clark Wayne
+image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1601132004/uploads_dev/sample-profile-pic_qfkdjm.png
+message: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis
+  leo non eros malesuada sollicitudin. In quis convallis leo. Fusce hendrerit nulla
+  at sem dignissim, et consequat tellus tempus. Curabitur ut aliquam orci. Cras libero
+  molestie.
 
 ---
