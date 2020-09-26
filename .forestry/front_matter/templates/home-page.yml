@@ -70,7 +70,7 @@ fields:
 - name: testimony_section_title
   type: text
   config:
-    required: false
+    required: true
     max: 50
   label: Testimony Section Title
 - name: instagram_section_title
