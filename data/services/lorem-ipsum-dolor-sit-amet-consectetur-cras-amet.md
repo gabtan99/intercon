@@ -49,9 +49,16 @@ conditions:
   - condition: Lorem ipsum dolor sit amet eleifend.
   - condition: Lorem ipsum dolor sit amet eleifend.
 stats:
-  intro: ''
+  intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra
+    velit nec nisi ultricies, nec tincidunt justo cursus. Nullam accumsan, tellus
+    vel pellentesque tempus, mauris mauris vestibulum mauris, eget ullamcorper magna
+    leo non urna. Orci odio.
   stats_list:
-  - content: ''
+  - content: Lorem ipsum dolor sit amet eleifend.2
+    with_supporting_image: true
+    figure: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1601112743/uploads_dev/clipart3508841_kjeo3l.png
+    caption: ''
+  - content: Lorem ipsum dolor sit amet eleifend.
     with_supporting_image: false
     figure: ''
     caption: ''
