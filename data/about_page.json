@@ -1,10 +1,10 @@
 {
   "page_name": "Lorem ipsum dolor sit amet, consectetuer adipiscin",
-  "header_image": "",
-  "about_company_image": "",
+  "header_image": "https://res.cloudinary.com/dgq7s4lkp/image/upload/v1601137363/uploads_dev/blog_fvh7lz.jpg",
+  "about_company_image": "https://res.cloudinary.com/dgq7s4lkp/image/upload/v1601137363/uploads_dev/blog_fvh7lz.jpg",
   "about_company_title": "Lorem ipsum dolor sit amet, consectetuer adipiscin",
   "about_company_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.",
-  "values_image": "",
+  "values_image": "https://res.cloudinary.com/dgq7s4lkp/image/upload/v1601137363/uploads_dev/blog_fvh7lz.jpg",
   "values_title": "Lorem ipsum dolor sit amet, consectetuer adipiscin",
   "mission_title": "Lorem ipsum dolor sit amet, consectetuer adipiscin",
   "mission_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, prscwqsa",
@@ -12,7 +12,7 @@
   "vision_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, prscwqsa",
   "goal_title": "Lorem ipsum dolor sit amet, consectetuer adipiscin",
   "goal_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, prscwqsa",
-  "founder_image": "",
+  "founder_image": "https://res.cloudinary.com/dgq7s4lkp/image/upload/v1601137363/uploads_dev/blog_fvh7lz.jpg",
   "founder_name": "Lorem ipsum dolor sit amet, consecte",
   "founder_label": "Lorem ipsum dolor sit amet, consectetuer adipiscin",
   "founder_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec."
