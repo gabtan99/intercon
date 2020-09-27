@@ -55,8 +55,8 @@ stats:
     leo non urna. Orci odio.
   stats_list:
   - content: Lorem ipsum dolor sit amet eleifend.2
-    with_supporting_image: false
-    figure: ''
+    with_supporting_image: true
+    figure: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1601137363/uploads_dev/blog_fvh7lz.jpg
     caption: this is a caption
   - content: Lorem ipsum dolor sit amet eleifend.
     with_supporting_image: false
