@@ -72,17 +72,6 @@ sections:
   new_doc_ext: md
   templates:
   - faq
-- type: heading
-  label: Others
-- type: document
-  path: data/contact_details.json
-  label: Contact Details
-- type: document
-  path: data/socials.json
-  label: Social Media Links
-- type: document
-  path: data/newsletter.json
-  label: Newsletter Details
 upload_dir: uploads_dev
 public_path: https://res.cloudinary.com/dgq7s4lkp/image/upload
 front_matter_path: https://res.cloudinary.com/dgq7s4lkp/image/upload

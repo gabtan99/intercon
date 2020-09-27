@@ -31,5 +31,3 @@ fields:
     required: true
     max: 120
   label: Footer Description
-pages:
-- data/newsletter.json
