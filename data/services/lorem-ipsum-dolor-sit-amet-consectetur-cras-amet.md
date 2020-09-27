@@ -57,7 +57,7 @@ stats:
   - content: Lorem ipsum dolor sit amet eleifend.2
     with_supporting_image: true
     figure: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1601112743/uploads_dev/clipart3508841_kjeo3l.png
-    caption: ''
+    caption: this is a caption
   - content: Lorem ipsum dolor sit amet eleifend.
     with_supporting_image: false
     figure: ''
