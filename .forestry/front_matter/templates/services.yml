@@ -243,3 +243,5 @@ fields:
     labelField: 
   label: External Reads
   description: Links to articles that you might want to interest the readers with
+pages:
+- data/services/lorem-ipsum-dolor-sit-amet-consectetur-cras-amet.md
