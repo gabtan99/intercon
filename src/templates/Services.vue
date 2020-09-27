@@ -5,8 +5,7 @@
         class="service-header__image"
         :srcset="service.header_image"
         :src="service.header_image"
-      >
-      </b-img-lazy>
+      ></b-img-lazy>
       <h1
         class="font-48 text-center position-absolute service-header__title"
         v-bind:style="{ color: service.header_color }"
@@ -23,7 +22,7 @@
                 <span>Services</span>
               </g-link>
             </span>
-            <span> > </span>
+            <span>></span>
             <span class="service-breadcrumb__current">
               {{ service.title }}
             </span>
@@ -42,8 +41,7 @@
             v-if="service.introduction_image"
             :srcset="service.introduction_image"
             :src="service.introduction_image"
-          >
-          </b-img-lazy>
+          ></b-img-lazy>
           <p class="font-18">
             {{ service.introduction }}
           </p>
@@ -88,10 +86,9 @@
                 fluid
                 center
                 :srcset="stat.figure.srcset"
-                :src="stat.figure.src"
+                :src="stat.figure"
                 :alt="stat.caption"
-              >
-              </b-img-lazy>
+              ></b-img-lazy>
               <figcaption
                 class="mt-2 text-center font-16 font-avenir-book-oblique"
               >
@@ -203,121 +200,119 @@ query Services ($path: String!) {
 </page-query>
 
 <script>
-import SocialShareButtons from "@/components/SocialShareButtons";
+import SocialShareButtons from '@/components/SocialShareButtons'
 
 export default {
   metaInfo() {
     return {
-      title: `${
-        this.$page.service.title
-      } | Services | Intercon Regenerative Center`,
+      title: `${this.$page.service.title} | Services | Intercon Regenerative Center`,
       meta: [
         {
-          key: "description",
-          name: "description",
+          key: 'description',
+          name: 'description',
           content: `Learn more about ${this.$page.service.title}`,
         },
         {
-          key: "og:title",
-          name: "og:title",
+          key: 'og:title',
+          name: 'og:title',
           content: `${this.$page.service.title} | Intercon Regenerative Center`,
         },
         {
-          key: "og:site_name",
-          name: "og:site_name",
-          content: "Intercon Regenerative Center",
+          key: 'og:site_name',
+          name: 'og:site_name',
+          content: 'Intercon Regenerative Center',
         },
         {
-          key: "og:image",
-          name: "og:image",
+          key: 'og:image',
+          name: 'og:image',
           content: `${this.$page.service.header_image.src}`,
         },
         {
-          name: "og:description",
-          name: "og:description",
+          name: 'og:description',
+          name: 'og:description',
           content: `A comprehensive read about ${this.$page.service.title}`,
         },
       ],
-    };
+    }
   },
   data() {
-    return {};
+    return {}
   },
   methods: {
     scrollToLocation(hash) {
-      let links = document.getElementsByClassName("service-aside__link");
+      let links = document.getElementsByClassName('service-aside__link')
       for (let i = 0; i < links.length; i++) {
-        links[i].classList.remove("service-aside__link--active");
+        links[i].classList.remove('service-aside__link--active')
       }
-      let button = document.getElementById(`${hash}-button`);
-      button.classList.add("service-aside__link--active");
-      let section = document.getElementById(hash);
+      let button = document.getElementById(`${hash}-button`)
+      button.classList.add('service-aside__link--active')
+      let section = document.getElementById(hash)
       let rect = section.getBoundingClientRect(),
         scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      window.scrollTo(scrollLeft + rect.left, scrollTop + rect.top - 150);
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      window.scrollTo(scrollLeft + rect.left, scrollTop + rect.top - 150)
     },
     handleScroll(e) {
-      let introductionSection = document.getElementById("service-introduction"),
-        historySection = document.getElementById("service-history"),
-        benefitsSection = document.getElementById("service-benefits"),
-        conditionsSection = document.getElementById("service-conditions"),
-        statisticsSection = document.getElementById("service-statistics");
+      let introductionSection = document.getElementById('service-introduction'),
+        historySection = document.getElementById('service-history'),
+        benefitsSection = document.getElementById('service-benefits'),
+        conditionsSection = document.getElementById('service-conditions'),
+        statisticsSection = document.getElementById('service-statistics')
 
       let introductionRect = introductionSection.getBoundingClientRect(),
         historyRect = historySection.getBoundingClientRect(),
         benefitsRect = benefitsSection.getBoundingClientRect(),
         conditionsRect = conditionsSection.getBoundingClientRect(),
-        statisticsRect = statisticsSection.getBoundingClientRect();
+        statisticsRect = statisticsSection.getBoundingClientRect()
 
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop,
-        offset = -160;
+        offset = -160
 
       let introductionY = introductionRect.top + scrollTop + offset,
         historyY = historyRect.top + scrollTop + offset,
         benefitsY = benefitsRect.top + scrollTop + offset,
         conditionsY = conditionsRect.top + scrollTop + offset,
-        statisticsY = statisticsRect.top + scrollTop + offset;
+        statisticsY = statisticsRect.top + scrollTop + offset
 
       let currentY = window.scrollY,
-        hash = "service-introduction";
+        hash = 'service-introduction'
 
       if (currentY > introductionY && currentY <= historyY) {
-        hash = "service-introduction";
+        hash = 'service-introduction'
       } else if (currentY > historyY && currentY <= benefitsY) {
-        hash = "service-history";
+        hash = 'service-history'
       } else if (currentY > benefitsY && currentY <= conditionsY) {
-        hash = "service-benefits";
+        hash = 'service-benefits'
       } else if (currentY > conditionsY && currentY <= statisticsY) {
-        hash = "service-conditions";
+        hash = 'service-conditions'
       } else if (currentY > statisticsY) {
-        hash = "service-statistics";
+        hash = 'service-statistics'
       }
 
-      let links = document.getElementsByClassName("service-aside__link");
+      let links = document.getElementsByClassName('service-aside__link')
       for (let i = 0; i < links.length; i++) {
-        links[i].classList.remove("service-aside__link--active");
+        links[i].classList.remove('service-aside__link--active')
       }
-      let button = document.getElementById(`${hash}-button`);
-      button.classList.add("service-aside__link--active");
+      let button = document.getElementById(`${hash}-button`)
+      button.classList.add('service-aside__link--active')
     },
   },
   computed: {
     service() {
-      return this.$page.service;
+      return this.$page.service
     },
   },
   components: {
     SocialShareButtons,
   },
   mounted() {
-    console.log(this.$page.service);
-    window.addEventListener("scroll", this.handleScroll);
+    console.log(this.$page.service)
+    window.addEventListener('scroll', this.handleScroll)
   },
   beforeDestroy() {
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll)
   },
-};
+}
 </script>
 
 <style scoped>
@@ -355,7 +350,7 @@ export default {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 300px;
   grid-gap: 30px;
-  grid-template-areas: "article aside";
+  grid-template-areas: 'article aside';
   margin-top: 5rem;
 }
 

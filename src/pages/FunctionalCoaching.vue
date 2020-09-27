@@ -102,7 +102,7 @@ export default {
   text-justify: inter-word;
 }
 
-img[alt="image"] {
+.journal-content img {
   display: block;
   margin: 0 auto;
   object-fit: cover;
