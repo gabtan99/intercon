@@ -1,5 +1,5 @@
 ---
-title: UV Ray Theraphy
+title: UV Ray Therapy
 preview_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
   tristique mollis varius. Mauris vehicula feugiat elit, sed cursus risus hendrerit
   sit amet. Cras at malesuada purus. Duis et lacus quis quam pharetra condimentum.
