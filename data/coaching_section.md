@@ -7,7 +7,7 @@ email: itc@intercon.com
 thumbnail_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1601183993/uploads_dev/interior_yellow_office_121457_2560x1080_xsimla.jpg
 
 ---
-# Functional Coaching
+## Functional Coaching
 
 ## Overview
 
