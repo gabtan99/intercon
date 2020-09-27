@@ -54,6 +54,8 @@ stats:
     porttitor. Phasellus eget varius sapien. Proin iaculis ipsum vitae elit euismod,
     in interdum purus tristique. Integer in molestie lectus, id suscipit justo. Sed
     ac feugiat elit.
-external_reads: []
+external_reads:
+- title: What are the most healthy foods?
+  link: https://www.medicalnewstoday.com/articles/245259
 
 ---
