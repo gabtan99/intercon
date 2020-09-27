@@ -6,6 +6,7 @@ target_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui
   amet, consectetur adipiscing elit. Duis consectetur cons.
 target_icon: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1601134695/uploads_dev/chat_gcwrbb.png
 target_services:
+- service_name: Eating Good Food
 - service_name: Red Light Therapy
 
 ---
