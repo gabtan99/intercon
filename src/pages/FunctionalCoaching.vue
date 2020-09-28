@@ -30,61 +30,61 @@ query {
 </page-query>
 
 <script>
-import PageHeader from '@/components/PageHeader'
-import NewsletterModal from '@/components/NewsletterModal'
+import PageHeader from "@/components/PageHeader";
+import NewsletterModal from "@/components/NewsletterModal";
 
 export default {
   metaInfo: {
     title:
-      'Functional Health and Wellness Coaching | Intercon Regenerative Center',
+      "Functional Health and Wellness Coaching | Intercon Regenerative Center",
     meta: [
       {
-        key: 'description',
-        name: 'description',
+        key: "description",
+        name: "description",
         content:
-          'At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ',
+          "At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ",
       },
       {
-        key: 'og:title',
-        name: 'og:title',
+        key: "og:title",
+        name: "og:title",
         content:
-          'Functional Health and Wellness Coaching | Intercon Regenerative Center',
+          "Functional Health and Wellness Coaching | Intercon Regenerative Center",
       },
       {
-        key: 'og:site_name',
-        name: 'og:site_name',
-        content: 'Intercon Regenerative Center',
+        key: "og:site_name",
+        name: "og:site_name",
+        content: "Intercon Regenerative Center",
       },
       {
-        key: 'og:image',
-        name: 'og:image',
-        content: require('@/assets/img/target-header.png'),
+        key: "og:image",
+        name: "og:image",
+        content: require("@/assets/img/target-header.png"),
       },
       {
-        name: 'og:description',
-        name: 'og:description',
+        name: "og:description",
+        name: "og:description",
         content:
-          'At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ',
+          "At Intercon Regenerative Center, we seek to enhance health and address issues by identifying  primary causes of illness and disease, through in-depth one-on-one consultations and specialized tests/ diagnostics. We aim to develop personalized treatment protocols to optimize health, prevent and halt progression of disease and repair damaged organs. ",
       },
     ],
   },
   data() {
     return {
-      selectedTarget: '',
+      selectedTarget: "",
       pageConfig: {},
-    }
+    };
   },
   components: {
     PageHeader,
     NewsletterModal,
   },
   methods: {
-    setAutoModal: function () {
+    setAutoModal: function() {
       if (this.$route.params)
-        this.selectedTarget = this.$route.query.selectedTarget
+        this.selectedTarget = this.$route.query.selectedTarget;
     },
   },
-}
+};
 </script>
 
 <style>
@@ -98,7 +98,7 @@ export default {
 }
 
 .journal-content {
-  width: 80%;
+  max-width: 1000px;
   text-justify: inter-word;
 }
 
@@ -139,7 +139,7 @@ h6 {
     text-justify: inter-word;
   }
 
-  img[alt='image'] {
+  img[alt="image"] {
     width: 100%;
     max-height: 50%;
   }
