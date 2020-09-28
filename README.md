@@ -1,7 +1,7 @@
 <img src="/src/assets/img/irc-logo-brand.png">
 <h2 text-align="center" align="center">About the Project</h2>
 <p align="center">
-  <p text-align="center">This project hosts the new website for <a href="https://www.facebook.com/interconregenerative">Intercon Regenerative Center</a>, an alternative and hollistic health service which aims to optimize the body’s innate self healing abilities & boost the immune system with natural and non-invasive scientific based therapies. They want to educate, inspire & empower our clients to live a life of optimal health with therapies they might not know they needed.</p>
+  <p text-align="center">This project hosts the new website for <a href="https://www.facebook.com/interconregenerative">Intercon Regenerative Center</a>, an alternative and holistic health service which aims to optimize the body’s innate self healing abilities & boost the immune system with natural and non-invasive scientific based therapies. They want to educate, inspire & empower our clients to live a life of optimal health with therapies they might not know they needed.</p>
 </p>
 
 ## The Team
@@ -18,7 +18,7 @@ This project is developed by a small group of coding enthusiasts starting out in
 <p align="center">
   <img src="https://file-xidfrcjkaq.now.sh/" height="240">
   <h3 align="center">Gridsome x Forestry</h3>
-  <p align="center">A starter-kit by Nichlas W. Andersen<p>
+  <p align="center">A starter-kit by Nicholas W. Andersen<p>
 </p>
 
 <p align="center">
