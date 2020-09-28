@@ -7,6 +7,7 @@ preview_conditions:
 - condition: You will feel good
 - condition: You will look good
 preview_benefits:
+- benefit: Thirsty
 - benefit: Hungry
 header_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1601195589/uploads_dev/nordwood-themes-ivP3TYdLvw0-unsplash.0b85c65.91963b8a33753e4d0b795a6c4e8334e9_cmafd9.jpg
 header_color: "#000000"
