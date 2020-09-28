@@ -33,3 +33,5 @@ fields:
     time_format: ''
     export_format: YYYY-MM-DD
   default: now
+pages:
+- data/blog/why-exercise-during-quarantine.md
