@@ -30,7 +30,6 @@ query BlogPost ($path: String!) {
     date (format: "D. MMMM YYYY")
     timeToRead
     content
-    content_image
   }
 }
 </page-query>
