@@ -46,6 +46,6 @@ fields:
     labelField: 
   label: Target Services
 pages:
-- data/targets/Athleticism.md
+- data/targets/brain_boost.md
 - data/targets/digestive_wellness.md
 - data/targets/strong_heart.md
