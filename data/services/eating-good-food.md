@@ -4,6 +4,7 @@ preview_description: Everyone knows the importance of food. Food isthe main ener
   source of all people. Food is mainly metabolised and changed into these energy giving
   carbohydrates, fats, proteins, and many other nutritious vitamins and minerals.
 preview_conditions:
+- condition: Better Appetite
 - condition: You will feel good
 - condition: You will look good
 preview_benefits:
