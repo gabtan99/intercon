@@ -5,7 +5,7 @@ target_description: Bodies should be protected from diseases. Preventative measu
 background_color: "#E2D8B9"
 target_icon: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1601264137/uploads_dev/shield_dbt258.png
 target_services:
-- service_name: Ketogenic Rehabilition
+- service_name: Ketogenic Rehabilitiation
 - service_name: Eating Good Food
 - service_name: Infrared Sauna
   service_description: Just a little indication. And I know you're saying, 'Oh Bob,
