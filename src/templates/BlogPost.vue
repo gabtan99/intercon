@@ -63,7 +63,7 @@ export default {
         {
           key: "og:image",
           name: "og:image",
-          content: `${this.$page.post.header_image.src}`,
+          content: `${this.$page.post.header_image}`,
         },
         {
           name: "og:description",

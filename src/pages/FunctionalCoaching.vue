@@ -58,7 +58,7 @@ export default {
       {
         key: "og:image",
         name: "og:image",
-        content: require("@/assets/img/target-header.png"),
+        content: require("@/assets/img/irc-logo-brand.png"),
       },
       {
         name: "og:description",
