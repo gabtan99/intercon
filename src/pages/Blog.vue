@@ -49,8 +49,6 @@ query ($page: Int) {
         author
         date
         header_image
-        author_avatar
-        timeToRead
       }
     }
   }
