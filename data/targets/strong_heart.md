@@ -8,6 +8,5 @@ target_icon: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1601263996/uploa
 target_services:
 - service_name: Ketogenic Rehabilitiation
 - service_name: Eating Good Food
-- service_name: Ketogenic Rehabilition
 
 ---
