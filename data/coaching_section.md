@@ -1,7 +1,7 @@
 ---
-title: Lorem ipsum dolor sit amet, consectetur tincidunt.
-short_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-  accumsan risus neque, a pretium mi tristique a porttitor.
+title: Functional Coaching and Welfare
+short_description: We provid the best ways for you to relax and make your body feel
+  new again.
 facebook_page_url: 'https://www.facebook.com/interconregenerative '
 email: itc@intercon.com
 thumbnail_image: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1601183993/uploads_dev/interior_yellow_office_121457_2560x1080_xsimla.jpg
