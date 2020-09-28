@@ -58,7 +58,7 @@ sections:
   match: "**/*.md"
   new_doc_ext: md
   templates:
-  - journal
+  - blog
 - type: heading
   label: About Us
 - type: document
