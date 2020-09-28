@@ -1,10 +1,7 @@
 ---
-question: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-  montes, nascetur ridiculus mus. Donec qu
-answer: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-  eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-  montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-  pretium quis, sem. Nulla consequat massa quis enim. Donec.
+question: How can I keep track of my medications?
+answer: Keep an updated list of your prescriptions, with dosages, frequencies, side
+  effects, and your reasons for taking them. Carry the list with you, especially when
+  seeing a doctor or another medical provider.
 
 ---
