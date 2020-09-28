@@ -1,10 +1,7 @@
 ---
-question: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-  montes, nascetur ridiculus mus. Donec qu
-answer: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-  eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-  montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-  pretium quis, sem. Nulla consequat massa quis enim. Donec.
+question: Why are some patients in isolation?
+answer: Patients are isolated to prevent the spread of disease to other people in
+  the medical environment. Isolated persons are typically either highly contagious
+  or infected by a treatment-resistant organism.
 
 ---
