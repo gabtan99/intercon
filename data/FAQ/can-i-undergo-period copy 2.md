@@ -1,10 +1,8 @@
 ---
-question: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-  montes, nascetur ridiculus mus. Donec qu
-answer: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-  eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-  montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-  pretium quis, sem. Nulla consequat massa quis enim. Donec.
+question: What do I need to tell the members of my treatment team?
+answer: You should tell them anything you think is relevant to your care. They need
+  to know how you’re feeling, and how that changes from day to day. They need to know
+  your medical history, your family’s medical history, your current prescriptions,
+  and any allergies.
 
 ---
