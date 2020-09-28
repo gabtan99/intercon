@@ -1,10 +1,7 @@
 ---
-question: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-  montes, nascetur ridiculus mus. Donec qu
-answer: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-  eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-  montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-  pretium quis, sem. Nulla consequat massa quis enim. Donec.
+question: 'Why does the nursing staff ask if I have to use the bathroom so often? '
+answer: This is another safety precaution. Your nurses ask you about using the bathroom
+  as a way of preventing falls. If a nurse is present, he or she can assist you in
+  getting to and from the bathroom.
 
 ---
