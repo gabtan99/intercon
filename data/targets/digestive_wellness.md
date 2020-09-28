@@ -6,7 +6,7 @@ target_description: The stomach is a sac-like organ that holds food and starts t
   emptied.
 target_icon: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1601264137/uploads_dev/stomach_wj9cgi.png
 target_services:
-- service_name: Ketogenic Rehabilition
+- service_name: Ketogenic Rehabilitiation
 - service_name: Eating Good Food
 - service_name: Infrared Sauna
 
