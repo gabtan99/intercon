@@ -1,10 +1,7 @@
 ---
-question: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-  montes, nascetur ridiculus mus. Donec qu
-answer: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-  eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-  montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-  pretium quis, sem. Nulla consequat massa quis enim. Donec.
+question: Why are members of my treatment team looking at the computer so often?
+answer: his system supports your care by providing and recording treatment plans,
+  order sets, and medications. Epic also facilitates the correct treatment being provided
+  by alerting healthcare providers to your treatment plan and changes in your condition.
 
 ---
