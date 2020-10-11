@@ -5,7 +5,7 @@ target_description: We will help you solve your sugar management. In this world,
 background_color: "#C0E1E8"
 target_icon: https://res.cloudinary.com/dgq7s4lkp/image/upload/v1601264137/uploads_dev/candy_gichbz.png
 target_services:
-- service_name: Ketogenic Rehabilition
+- service_name: Ketogenic Rehabilitiation
 - service_name: Eating Good Food
 - service_name: Infrared Sauna
 
