@@ -1,5 +1,5 @@
 <template>
-  <b-container class="mt-5">
+  <b-container class="mt-5 container">
     <FunctionalCoaching :coaching="coaching" />
 
     <ServicesServiceCard
@@ -15,9 +15,9 @@
 </template>
 
 <script>
-import ServicesServiceCard from '@/components/ServicesServiceCard'
-import FunctionalCoaching from '@/components/FunctionalCoaching'
-import { Pager } from 'gridsome'
+import ServicesServiceCard from "@/components/ServicesServiceCard";
+import FunctionalCoaching from "@/components/FunctionalCoaching";
+import { Pager } from "gridsome";
 
 export default {
   components: {
@@ -25,8 +25,8 @@ export default {
     FunctionalCoaching,
     Pager,
   },
-  props: ['services', 'coaching', 'pageInfo'],
-}
+  props: ["services", "coaching", "pageInfo"],
+};
 </script>
 
 <style>
@@ -36,6 +36,10 @@ export default {
   align-items: center;
   margin: 10px;
   padding: 10px;
+}
+
+.container {
+  margin-bottom: 100px;
 }
 
 .pagination-style a {

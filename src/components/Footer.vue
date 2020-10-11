@@ -118,7 +118,10 @@
           </div>
         </div>
       </div>
-      <span class="copyright font-avenir-light font-16" />
+      <span class="copyright font-avenir-light font-16">
+        &copy; Intercon Regenerative Center
+        {{ new Date().getFullYear() }}. All Rights Reserved.
+      </span>
     </div>
   </footer>
 </template>
@@ -136,7 +139,7 @@ export default {
       showMessage: null,
     };
   },
-  props: ["address", "mobile_number", "phone_number",],
+  props: ["address", "mobile_number", "phone_number"],
   methods: {
     handleChange(text) {
       this.email = text.target.value;
