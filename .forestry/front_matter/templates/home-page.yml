@@ -21,14 +21,14 @@ fields:
     required: true
     max: 300
     min: 
-  label: Hero Title
+  label: Youtube Video Link
 - name: youtube_handle
   type: text
   config:
     required: true
     max: 300
     min: 
-  label: Hero Title
+  label: Youtube Channel Name
 - name: about_section_title
   type: text
   config:
