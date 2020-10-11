@@ -30,6 +30,7 @@
       :hideModal="closeVideo"
       :youtubeLink="socials.youtube_channel_url"
       :youtubeHandle="heroConfig.youtube_handle"
+      :videoLink="heroConfig.youtube_link"
     />
   </div>
 </template>

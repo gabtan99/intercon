@@ -47,6 +47,7 @@ query Posts {
     hero_title
     hero_subtitle
     youtube_handle
+    youtube_link
   },
   socials: pages (path: "/data/socials") {
     youtube_channel_url

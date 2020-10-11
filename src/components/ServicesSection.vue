@@ -29,7 +29,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .pagination-style {
   display: flex;
   justify-content: center;

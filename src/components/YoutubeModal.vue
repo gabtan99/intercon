@@ -23,7 +23,7 @@
         :player-vars="{
           autoplay: 1,
         }"
-        video-id="r1ZLSbQ0r0I"
+        :video-id="video_id"
       />
     </div>
   </b-modal>
@@ -36,7 +36,22 @@ import Waves from "@/components/Waves";
 import YoutubeModal from "@/components/YoutubeModal";
 
 export default {
-  props: ["showModal", "youtubeLink", "youtubeHandle", "hideModal"],
+  data() {
+    return {
+      video_id: "",
+    };
+  },
+  props: [
+    "showModal",
+    "youtubeLink",
+    "youtubeHandle",
+    "hideModal",
+    "videoLink",
+  ],
+  mounted() {
+    this.video_id = this.videoLink.split("v=")[1];
+    console.log(this.video_id);
+  },
 };
 </script>
 
