@@ -17,7 +17,11 @@
       :testimonies="$page.testimonies.edges"
       :testimoniesConfig="$page.testimoniesConfig"
     />
-    <Instagram :instagramConfig="$page.instagramConfig" />
+    <Instagram
+      :instagramConfig="$page.instagramConfig"
+      :instagramHandle="$page.socials.instagram_handle"
+      :instagramLink="$page.socials.instagram_link"
+    />
   </Layout>
 </template>
 
@@ -51,6 +55,10 @@ query Posts {
   },
   socials: pages (path: "/data/socials") {
     youtube_channel_url
+    instagram_handle
+    instagram_url
+    facebook_url
+    email
   },
   blog: allBlogPost (perPage: 4) {
     edges {

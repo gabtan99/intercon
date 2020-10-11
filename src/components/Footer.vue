@@ -46,7 +46,7 @@
               <span class="contact-info">
                 <font-awesome :icon="'envelope'" class="icon" />
                 <p class="font-avenir-light font-16">
-                  info@interconregenerative.com
+                  {{ socials.email }}
                 </p>
               </span>
             </div>
@@ -102,15 +102,15 @@
                 Uh oh! Something went wrong.
               </p>
               <div class="row social-icons">
-                <a href="https://www.facebook.com/interconregenerative/">
+                <a :href="socials.facebook_url">
                   <font-awesome
                     :icon="['fab', 'facebook-square']"
                     class="social"
                 /></a>
-                <a href="https://www.instagram.com/interconregenerative/">
+                <a :href="socials.instagram_url">
                   <font-awesome :icon="['fab', 'instagram']" class="social" />
                 </a>
-                <a href="https://www.instagram.com/interconregenerative/">
+                <a :href="socials.youtube_channel_url">
                   <font-awesome :icon="['fab', 'youtube']" class="social" />
                 </a>
               </div>
@@ -139,7 +139,7 @@ export default {
       showMessage: null,
     };
   },
-  props: ["address", "mobile_number", "phone_number"],
+  props: ["address", "mobile_number", "phone_number", "socials"],
   methods: {
     handleChange(text) {
       this.email = text.target.value;

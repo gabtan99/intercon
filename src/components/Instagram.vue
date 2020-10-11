@@ -5,11 +5,8 @@
         {{ instagramConfig.instagram_section_title }}
       </h1>
 
-      <a
-        class="subheader font-avenir-book font-24"
-        href="https://www.instagram.com/interconregenerative/"
-      >
-        @interconregenerative
+      <a class="subheader font-avenir-book font-24" :href="instagramLink">
+        @{{ instagramHandle }}
       </a>
     </div>
 
@@ -44,7 +41,7 @@
 import { getRecentInstagram } from "@/services/instagram";
 
 export default {
-  props: ["instagramConfig"],
+  props: ["instagramConfig", "instagramHandle", "instagramLink"],
   data() {
     return {
       images: [],

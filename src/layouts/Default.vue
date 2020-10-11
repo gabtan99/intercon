@@ -3,10 +3,11 @@
     <Header />
     <slot />
     <NewsletterModal />
-    <Footer 
+    <Footer
       :address="$static.contactDetails.address"
       :phone_number="$static.contactDetails.phone_number"
       :mobile_number="$static.contactDetails.mobile_number"
+      :socials="$static.socials"
     />
   </div>
 </template>
@@ -18,14 +19,20 @@ query Posts {
     phone_number
     mobile_number
   },
+  socials: pages (path: "/data/socials") {
+    youtube_channel_url
+    instagram_url
+    facebook_url
+    email
+  },
 }
 </static-query>
 
 <script>
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import NewsletterModal from '@/components/NewsletterModal'
-import { setFirstVisit } from '@/util/localStorage'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import NewsletterModal from "@/components/NewsletterModal";
+import { setFirstVisit } from "@/util/localStorage";
 
 export default {
   components: {
@@ -34,9 +41,9 @@ export default {
     NewsletterModal,
   },
   mounted() {
-    setFirstVisit()
+    setFirstVisit();
   },
-}
+};
 </script>
 
 <style></style>

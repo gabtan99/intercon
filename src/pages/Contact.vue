@@ -121,23 +121,19 @@
                         Get Social
                       </h2>
                       <span class="contact-info">
-                        <a
-                          href="https://www.facebook.com/interconregenerative/"
-                        >
+                        <a :href="$page.socials.facebook_url">
                           <font-awesome
                             :icon="['fab', 'facebook-square']"
                             class="social"
                         /></a>
-                        <a
-                          href="https://www.instagram.com/interconregenerative/"
-                        >
+                        <a :href="$page.socials.instagram_url">
                           <font-awesome
                             :icon="['fab', 'instagram']"
                             class="social"
                           />
                         </a>
                         <a
-                          href="mailto:info@interconregenerative.com"
+                          :href="`mailto:${$page.socials.email}`"
                           target="_top"
                         >
                           <font-awesome :icon="'envelope'" class="social" />
@@ -159,6 +155,11 @@
 query Posts {
   contactDetails: pages (path: "/data/contact-details/"){
     address
+  },
+  socials: pages (path: "/data/socials") {
+    email
+    facebook_url
+    instagram_url
   },
 }
 </page-query>
