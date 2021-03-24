@@ -2,95 +2,96 @@
 // Learn more: https://gridsome.org/docs/config
 
 module.exports = {
-  siteName: 'Intercon Regenerative Center',
+  siteName: "Intercon Regenerative Center",
   siteUrl: `https://www.interconregenerative.com`,
-  host: '0.0.0.0',
-  titleTemplate: '%s',
+  host: "0.0.0.0",
+  titleTemplate: "%s",
   plugins: [
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'data/blog/**/*.md',
-        typeName: 'BlogPost',
+        path: "data/blog/**/*.md",
+        typeName: "BlogPost",
         resolveAbsolutePaths: true,
         remark: {
-          externalLinksTarget: '_blank',
-          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
         },
       },
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'data/targets/**/*.md',
-        typeName: 'Targets',
+        path: "data/targets/**/*.md",
+        typeName: "Targets",
         resolveAbsolutePaths: true,
         remark: {
-          externalLinksTarget: '_blank',
-          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
         },
       },
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'data/services/**/*.md',
-        typeName: 'Services',
+        path: "data/services/**/*.md",
+        typeName: "Services",
         resolveAbsolutePaths: true,
         remark: {
-          externalLinksTarget: '_blank',
-          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
         },
       },
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'data/testimonies/**/*.md',
-        typeName: 'Testimonies',
+        path: "data/testimonies/**/*.md",
+        typeName: "Testimonies",
         resolveAbsolutePaths: true,
         remark: {
-          externalLinksTarget: '_blank',
-          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
         },
       },
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'data/FAQ/**/*.md',
-        typeName: 'FAQ',
+        path: "data/FAQ/**/*.md",
+        typeName: "FAQ",
         resolveAbsolutePaths: true,
         remark: {
-          externalLinksTarget: '_blank',
-          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
         },
       },
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'data/*.md',
-        typeName: 'Coaching',
+        path: "data/*.md",
+        typeName: "Coaching",
         resolveAbsolutePaths: true,
         remark: {
-          externalLinksTarget: '_blank',
-          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
         },
       },
     },
     {
-      use: '@gridsome/plugin-sitemap',
+      use: "@gridsome/plugin-sitemap",
       options: {
         cacheTime: 600000, // default
         config: {
-          '/*': {
-            changefreq: 'weekly',
+          "/*": {
+            changefreq: "weekly",
             priority: 0.5,
           },
         },
       },
     },
+    // OUTDATED 2020
     // {
     //   use: "@zefman/gridsome-source-instagram",
     //   options: {
@@ -99,27 +100,27 @@ module.exports = {
     //   },
     // },
     {
-      use: '@gridsome/plugin-google-analytics',
+      use: "@gridsome/plugin-google-analytics",
       options: {
-        id: process.env.GA_TRACKING_ID || 'UA-164792439-1',
+        id: process.env.GA_TRACKING_ID || "UA-164792439-1",
       },
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'data/**/*.json',
-        typeName: 'Pages',
+        path: "data/**/*.json",
+        typeName: "Pages",
         resolveAbsolutePaths: true,
         remark: {
-          externalLinksTarget: '_blank',
-          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
         },
       },
     },
   ],
   transformers: {
     remark: {
-      plugins: ['@gridsome/remark-prismjs'],
+      plugins: ["@gridsome/remark-prismjs"],
     },
   },
-}
+};

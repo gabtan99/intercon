@@ -22,7 +22,7 @@
     </div>
 
     <div class="col-lg-6 image">
-      <b-img :src="require('../assets/img/hero-img.png')" fluid />
+      <b-img :src="heroConfig.hero_image" fluid />
     </div>
 
     <youtube-modal

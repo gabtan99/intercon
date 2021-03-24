@@ -2,101 +2,106 @@
 label: Home Page
 hide_body: true
 fields:
-- name: hero_title
-  type: text
-  config:
-    required: true
-    max: 50
-    min: 
-  label: Hero Title
-- name: hero_subtitle
-  type: text
-  config:
-    required: true
-    max: 120
-  label: Hero Subtitle
-- name: youtube_link
-  type: text
-  config:
-    required: true
-    max: 300
-    min: 
-  label: Youtube Video Link
-- name: youtube_handle
-  type: text
-  config:
-    required: true
-    max: 300
-    min: 
-  label: Youtube Channel Name
-- name: about_section_title
-  type: text
-  config:
-    required: true
-    max: 50
-  label: About Section Title
-- name: about_main_image
-  type: file
-  config:
-    maxSize: 64
-  label: About Main Picture
-- name: about_section_description
-  type: text
-  config:
-    required: true
-    max: 120
-  label: About Section Description
-- name: about_bullet_1_icon
-  type: file
-  config:
-    maxSize: 64
-  label: About Bullet 1 Icon
-- name: about_bullet_1_title
-  type: text
-  config:
-    required: true
-    max: 50
-  label: About Bullet 1 Title
-- name: about_bullet_1_description
-  type: text
-  config:
-    required: true
-    max: 120
-  label: About Bullet 1 Description
-- name: about_2_bullet_2_icon
-  type: file
-  config:
-    maxSize: 64
-  label: About 2 Bullet 2 Icon
-- name: about_bullet_2_title
-  type: text
-  config:
-    required: true
-    max: 50
-  label: About Bullet 2 Title
-- name: about_bullet_2_description
-  type: text
-  config:
-    required: true
-    max: 120
-  label: About Bullet 2 Description
-- name: target_section_title
-  type: text
-  config:
-    required: true
-    max: 50
-  label: Target Section Title
-- name: testimony_section_title
-  type: text
-  config:
-    required: true
-    max: 50
-  label: Testimony Section Title
-- name: instagram_section_title
-  type: text
-  config:
-    required: true
-    max: 50
-  label: Instagram Section Title
+  - name: hero_title
+    type: text
+    config:
+      required: true
+      max: 50
+      min:
+    label: Hero Title
+  - name: hero_subtitle
+    type: text
+    config:
+      required: true
+      max: 120
+    label: Hero Subtitle
+  - name: hero_image
+    type: file
+    config:
+      maxSize: 64
+    label: Hero Picture
+  - name: youtube_link
+    type: text
+    config:
+      required: true
+      max: 300
+      min:
+    label: Youtube Video Link
+  - name: youtube_handle
+    type: text
+    config:
+      required: true
+      max: 300
+      min:
+    label: Youtube Channel Name
+  - name: about_section_title
+    type: text
+    config:
+      required: true
+      max: 50
+    label: About Section Title
+  - name: about_main_image
+    type: file
+    config:
+      maxSize: 64
+    label: About Main Picture
+  - name: about_section_description
+    type: text
+    config:
+      required: true
+      max: 120
+    label: About Section Description
+  - name: about_bullet_1_icon
+    type: file
+    config:
+      maxSize: 64
+    label: About Bullet 1 Icon
+  - name: about_bullet_1_title
+    type: text
+    config:
+      required: true
+      max: 50
+    label: About Bullet 1 Title
+  - name: about_bullet_1_description
+    type: text
+    config:
+      required: true
+      max: 120
+    label: About Bullet 1 Description
+  - name: about_2_bullet_2_icon
+    type: file
+    config:
+      maxSize: 64
+    label: About 2 Bullet 2 Icon
+  - name: about_bullet_2_title
+    type: text
+    config:
+      required: true
+      max: 50
+    label: About Bullet 2 Title
+  - name: about_bullet_2_description
+    type: text
+    config:
+      required: true
+      max: 120
+    label: About Bullet 2 Description
+  - name: target_section_title
+    type: text
+    config:
+      required: true
+      max: 50
+    label: Target Section Title
+  - name: testimony_section_title
+    type: text
+    config:
+      required: true
+      max: 50
+    label: Testimony Section Title
+  - name: instagram_section_title
+    type: text
+    config:
+      required: true
+      max: 50
+    label: Instagram Section Title
 pages:
-- data/home_page.json
+  - data/home_page.json

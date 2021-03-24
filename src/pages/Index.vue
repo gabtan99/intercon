@@ -20,7 +20,7 @@
     <Instagram
       :instagramConfig="$page.instagramConfig"
       :instagramHandle="$page.socials.instagram_handle"
-      :instagramLink="$page.socials.instagram_link"
+      :instagramUrl="$page.socials.instagram_url"
     />
   </Layout>
 </template>
@@ -50,6 +50,7 @@ query Posts {
   heroConfig: pages (path: "/data/home-page/"){
     hero_title
     hero_subtitle
+    hero_image
     youtube_handle
     youtube_link
   },

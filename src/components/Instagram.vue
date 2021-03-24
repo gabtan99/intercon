@@ -5,7 +5,7 @@
         {{ instagramConfig.instagram_section_title }}
       </h1>
 
-      <a class="subheader font-avenir-book font-24" :href="instagramLink">
+      <a class="subheader font-avenir-book font-24" :href="instagramUrl">
         @{{ instagramHandle }}
       </a>
     </div>
@@ -41,7 +41,7 @@
 import { getRecentInstagram } from "@/services/instagram";
 
 export default {
-  props: ["instagramConfig", "instagramHandle", "instagramLink"],
+  props: ["instagramConfig", "instagramHandle", "instagramUrl"],
   data() {
     return {
       images: [],
@@ -96,7 +96,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 10%;
   padding: 20px 0px;
 }
 
