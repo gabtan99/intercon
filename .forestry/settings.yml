@@ -72,9 +72,19 @@ sections:
   new_doc_ext: md
   templates:
   - faq
+- type: heading
+  label: General
 - type: document
   path: data/socials.json
   label: Social Media
+- type: document
+  path: data/contact_details.json
+  label: Contact Details
+  match: "**/*"
+- type: document
+  path: data/newsletter.json
+  label: Newsletter Popup
+  match: "**/*"
 upload_dir: uploads_dev
 public_path: https://res.cloudinary.com/dgq7s4lkp/image/upload
 front_matter_path: https://res.cloudinary.com/dgq7s4lkp/image/upload
