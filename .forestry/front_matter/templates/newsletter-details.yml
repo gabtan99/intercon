@@ -2,11 +2,11 @@
 label: Newsletter Details
 hide_body: true
 fields:
-- name: modal_image
+- name: newsletter_image
   type: file
   config:
     maxSize: 64
-  label: Modal Image
+  label: Newsletter Image
 - name: modal_title
   type: text
   config:
