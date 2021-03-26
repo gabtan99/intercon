@@ -110,9 +110,6 @@
                           {{ $page.contactDetails.address }}
                         </p>
                         <br />
-                        <p class="font-avenir-light font-16 blue">
-                          8AM - 8PM
-                        </p>
                       </span>
                     </div>
 

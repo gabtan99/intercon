@@ -52,10 +52,12 @@
             </div>
           </div>
           <div class="col-md newsletter">
-            <h2 class="font-gilroy-bold font-24">Subscribe to Newsletter</h2>
+            <h2 class="font-gilroy-bold font-24">
+              {{ this.$static.newsletterConfig.footer_title }}
+            </h2>
             <div class="horizontal">
               <p class="font-avenir-light font-16">
-                You can trust us. we only send promo offers, not a single spam
+                {{ this.$static.newsletterConfig.footer_description }}
               </p>
               <form
                 @submit.prevent="handleSubmit"
@@ -125,6 +127,15 @@
     </div>
   </footer>
 </template>
+
+<static-query>
+query {
+  newsletterConfig: pages (path: "/data/newsletter"){
+    footer_description,
+    footer_title
+  }
+}
+</static-query>
 
 <script>
 import { signupNewsletter } from "@/services/newsletter";

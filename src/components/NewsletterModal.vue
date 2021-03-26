@@ -16,14 +16,17 @@
         @click="$bvModal.hide('modal-lg')"
       />
       <div id="container">
-        <img src="../assets/img/modal-picture.png" class="picture" />
+        <img
+          :src="this.$static.newsletterConfig.newsletter_image"
+          class="picture"
+        />
         <div id="content-container">
           <div id="text-container">
             <h1 style="text-align:center" class="font-gilroy-medium font-36">
-              Join Our Community!
+              {{ this.$static.newsletterConfig.modal_title }}
             </h1>
             <h3 style="text-align:center" class="font-gilroy-light font-21">
-              Get the most recent news for Health, Therapy, Wellness, and more.
+              {{ this.$static.newsletterConfig.modal_description }}
             </h3>
           </div>
           <div id="form-container">
@@ -67,6 +70,16 @@
     </b-modal>
   </div>
 </template>
+
+<static-query>
+query {
+  newsletterConfig: pages (path: "/data/newsletter"){
+    modal_title,
+    modal_description,
+    newsletter_image
+  }
+}
+</static-query>
 
 <script>
 import { signupNewsletter } from "@/services/newsletter";
@@ -257,5 +270,12 @@ input {
   .picture {
     display: none;
   }
+}
+
+.picture {
+  max-width: 300px;
+  height: 500px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 </style>

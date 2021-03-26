@@ -16,19 +16,13 @@
           </h1>
         </b-row>
 
-        <g-image
-          class="who-img"
-          :src="$page.pageConfig.about_company_image"
-        />
+        <g-image class="who-img" :src="$page.pageConfig.about_company_image" />
       </b-container>
     </div>
 
     <div class="green-gradient">
       <b-container class="values-section">
-        <g-image 
-          class="values-img" 
-          :src="$page.pageConfig.values_image"
-        />
+        <g-image class="values-img" :src="$page.pageConfig.values_image" />
 
         <b-row class="values-card">
           <h1 class="font-gilroy-bold font-36 blue title">
@@ -88,9 +82,7 @@
       </div>
     </div>
 
-    <FAQSection 
-      :faqs="$page.faqs.edges"
-    />
+    <FAQSection :faqs="$page.faqs.edges" />
   </Layout>
 </template>
 
@@ -225,6 +217,7 @@ export default {
 }
 
 .green-gradient {
+  padding-top: 200px;
   background-image: linear-gradient(
     to bottom,
     var(--white),
