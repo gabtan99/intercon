@@ -35,7 +35,7 @@
     "vuelayers": "^0.11.23"
   },
   "devDependencies": {
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.0"
